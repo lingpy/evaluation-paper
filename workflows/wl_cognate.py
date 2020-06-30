@@ -22,5 +22,4 @@ finally:
 # convert to full cognate
 cogids2cogid(part, ref='cogids', cognates='lebor_cogid')
 
-
-part.output("tsv", filename="HM-wordlist-partial", prettify=False)
+part.output("tsv", filename="HM-wordlist-lebor", prettify=False)
