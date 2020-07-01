@@ -5,9 +5,10 @@ from lexibank_ratliffhmongmien import Dataset as ratliffhmongmien
 from lexibank_wold import Dataset as wold
 from pyconcepticon import Concepticon
 from cldfcatalog import Config
-'''
+
+"""
 This script merged chen and wold data, and add ratliff's cognates as references
-'''
+"""
 # set up structure
 columns = [
     "local_id",
@@ -55,24 +56,24 @@ ratliff = Wordlist.from_cldf(
     ratliffhmongmien().cldf_dir.joinpath("cldf-metadata.json").as_posix(),
     columns=columns,
     namespace=namespace,
-    filter=lambda row: row['language_id'] in languages.keys()
+    filter=lambda row: row["language_id"] in languages.keys(),
 )
 chen = Wordlist.from_cldf(
     chenhmongmien().cldf_dir.joinpath("cldf-metadata.json").as_posix(),
     columns=columns,
     namespace=namespace,
-    filter=lambda row: row['language_id'] in languages.keys()
+    filter=lambda row: row["language_id"] in languages.keys(),
 )
 
 whitehmong = Wordlist.from_cldf(
     wold().cldf_dir.joinpath("cldf-metadata.json").as_posix(),
     columns=columns,
     namespace=namespace,
-    filter=lambda row: row['language_id'] == 'WhiteHmong'
+    filter=lambda row: row["language_id"] == "WhiteHmong",
 )
 
 # cognate id info from ratliff, need to confirm with Mattis
-ratliff.add_entries('classification', 'doculect', lambda x: languages[x][0])
+ratliff.add_entries("classification", "doculect", lambda x: languages[x][0])
 
 # merging
 concepts = set()
@@ -86,27 +87,32 @@ ds = [whitehmong, chen]
 for dataset in ds:
     for idx, c, l in dataset.iter_rows("concepticon", "doculect"):
         if c in concepts:
-            tmp = [dataset[idx, x] for x in Combine[0][:13]]+[languages[l][0]]
+            tmp = [dataset[idx, x] for x in Combine[0][:13]] + [languages[l][0]]
             Combine[entry_id] = tmp
             entry_id += 1
 
 # adding info
 Combine_wl = Wordlist(Combine)
-Combine_wl.add_entries('ratliff_form', 'classification', lambda x:'')
-used_cogid=set()
-for idx, concept, language, classification in Combine_wl.iter_rows('concept', 'doculect', 'classification'):
+Combine_wl.add_entries("ratliff_form", "classification", lambda x: "")
+used_cogid = set()
+for idx, concept, language, classification in Combine_wl.iter_rows(
+    "concept", "doculect", "classification"
+):
     for ridx in ratliff:
-        if concept==ratliff[ridx,'concept'] and classification == ratliff[ridx, 'classification']:
-            Combine_wl[idx,'cogid'] = ratliff[ridx, 'cogid']
-            Combine_wl[idx,'ratliff_form']=ratliff[ridx, 'tokens']
-            used_cogid.add(ratliff[ridx, 'cogid'])
-Combine_wl.output('tsv', filename='HM-wordlist-for-evaluate', prettify=False)
+        if (
+            concept == ratliff[ridx, "concept"]
+            and classification == ratliff[ridx, "classification"]
+        ):
+            Combine_wl[idx, "cogid"] = ratliff[ridx, "cogid"]
+            Combine_wl[idx, "ratliff_form"] = ratliff[ridx, "tokens"]
+            used_cogid.add(ratliff[ridx, "cogid"])
+Combine_wl.output("tsv", filename="HM-wordlist-for-evaluate", prettify=False)
 
 # fix cogid ==0
-min_cogid = max(used_cogid)+1
+min_cogid = max(used_cogid) + 1
 for idx in Combine_wl:
-    if Combine_wl[idx, 'cogid']==0:
-        Combine_wl[idx, 'cogid']=min_cogid
-        min_cogid +=1
+    if Combine_wl[idx, "cogid"] == 0:
+        Combine_wl[idx, "cogid"] = min_cogid
+        min_cogid += 1
 
 Combine_wl.output("tsv", filename="HM-wordlist", prettify=False)
