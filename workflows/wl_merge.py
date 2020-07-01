@@ -92,11 +92,13 @@ for dataset in ds:
 
 # adding info
 Combine_wl = Wordlist(Combine)
+Combine_wl.add_entries('ratliff_form', 'classification', lambda x:'')
 used_cogid=set()
 for idx, concept, language, classification in Combine_wl.iter_rows('concept', 'doculect', 'classification'):
     for ridx in ratliff:
         if concept==ratliff[ridx,'concept'] and classification == ratliff[ridx, 'classification']:
             Combine_wl[idx,'cogid'] = ratliff[ridx, 'cogid']
+            Combine_wl[idx,'ratliff_form']=ratliff[ridx, 'tokens']
             used_cogid.add(ratliff[ridx, 'cogid'])
 Combine_wl.output('tsv', filename='HM-wordlist-for-evaluate', prettify=False)
 
