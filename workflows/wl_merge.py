@@ -2,7 +2,7 @@ from lingpy import *
 from lingpy import Wordlist
 from lexibank_chenhmongmien import Dataset as chenhmongmien
 from lexibank_ratliffhmongmien import Dataset as ratliffhmongmien
-from lexibank_wold import Dataset as wold
+from lexibank_heimbachwhitehmong import Dataset as heimbachwhitehmong
 from pyconcepticon import Concepticon
 from cldfcatalog import Config
 
@@ -66,10 +66,9 @@ chen = Wordlist.from_cldf(
 )
 
 whitehmong = Wordlist.from_cldf(
-    wold().cldf_dir.joinpath("cldf-metadata.json").as_posix(),
+    heimbachwhitehmong().cldf_dir.joinpath("cldf-metadata.json").as_posix(),
     columns=columns,
     namespace=namespace,
-    filter=lambda row: row["language_id"] == "WhiteHmong",
 )
 
 # cognate id info from ratliff, need to confirm with Mattis

@@ -49,38 +49,40 @@ def get_structure(sequence):
                         "z",
                         "ʁ",
                         "m",
-                        "wj/ɥ"
+                        "wj/ɥ",
                     },
                 )
             )
         ]
     return list("+".join(out))
 
+
 # cogids2cogid
-def cogids2cogid(wordlist, ref='cogids', cognates='cogid',
-    morphemes='morphemes'):
+def cogids2cogid(wordlist, ref="cogids", cognates="cogid", morphemes="morphemes"):
     C, M = {}, {}
     current = 1
     for concept in wordlist.rows:
-        base = split_text(strip_brackets(concept))[0].upper().replace(' ', '_')
+        base = split_text(strip_brackets(concept))[0].upper().replace(" ", "_")
         idxs = wordlist.get_list(row=concept, flat=True)
         cogids = defaultdict(list)
         for idx in idxs:
             M[idx] = [c for c in wordlist[idx, ref]]
             for cogid in basictypes.ints(wordlist[idx, ref]):
                 cogids[cogid] += [idx]
-        for i, (cogid, idxs) in enumerate(sorted(cogids.items(), key=lambda x: len(x[1]),
-                reverse=True)):
+        for i, (cogid, idxs) in enumerate(
+            sorted(cogids.items(), key=lambda x: len(x[1]), reverse=True)
+        ):
             for idx in idxs:
                 if idx not in C:
                     C[idx] = current
                     M[idx][M[idx].index(cogid)] = base
                 else:
-                    M[idx][M[idx].index(cogid)] = '_'+base.lower()
+                    M[idx][M[idx].index(cogid)] = "_" + base.lower()
             current += 1
     wordlist.add_entries(cognates, C, lambda x: x)
     if morphemes:
         wordlist.add_entries(morphemes, M, lambda x: x)
+
 
 # partial cognate
 try:
