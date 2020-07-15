@@ -1,10 +1,11 @@
 from lingpy import *
 from lingpy.compare.partial import Partial
-from lebor.algorithm import cogids2cogid
 from linse.annotate import seallable
+from collections import defaultdict
 from lingrex.colex import find_colexified_alignments, find_bad_internal_alignments
 from lingrex.align import template_alignment
 from linse.transform import morphemes
+from clldutils.text import strip_brackets, split_text
 
 # define function
 def get_structure(sequence):
@@ -47,12 +48,39 @@ def get_structure(sequence):
                         "ɹ",
                         "z",
                         "ʁ",
+                        "m",
+                        "wj/ɥ"
                     },
                 )
             )
         ]
     return list("+".join(out))
 
+# cogids2cogid
+def cogids2cogid(wordlist, ref='cogids', cognates='cogid',
+    morphemes='morphemes'):
+    C, M = {}, {}
+    current = 1
+    for concept in wordlist.rows:
+        base = split_text(strip_brackets(concept))[0].upper().replace(' ', '_')
+        idxs = wordlist.get_list(row=concept, flat=True)
+        cogids = defaultdict(list)
+        for idx in idxs:
+            M[idx] = [c for c in wordlist[idx, ref]]
+            for cogid in basictypes.ints(wordlist[idx, ref]):
+                cogids[cogid] += [idx]
+        for i, (cogid, idxs) in enumerate(sorted(cogids.items(), key=lambda x: len(x[1]),
+                reverse=True)):
+            for idx in idxs:
+                if idx not in C:
+                    C[idx] = current
+                    M[idx][M[idx].index(cogid)] = base
+                else:
+                    M[idx][M[idx].index(cogid)] = '_'+base.lower()
+            current += 1
+    wordlist.add_entries(cognates, C, lambda x: x)
+    if morphemes:
+        wordlist.add_entries(morphemes, M, lambda x: x)
 
 # partial cognate
 try:
@@ -109,4 +137,4 @@ template_alignment(
 # convert to full cognate
 cogids2cogid(alms, ref="crossids", cognates="lebor_cogid")
 
-alms.output("tsv", filename="HM-wordlist-lebor", prettify=False)
+alms.output("tsv", filename="HM-wordlist-cogids2cogid", prettify=False)

@@ -2,7 +2,7 @@ from lingpy import *
 from lingpy.evaluate.acd import bcubes
 from lingpy.evaluate.acd import diff, _get_bcubed_score
 
-wl = Wordlist("HM-wordlist-lebor.tsv")
+wl = Wordlist("HM-wordlist-cogids2cogid.tsv")
 
 D = {0: wl.columns}
 didx = 1
