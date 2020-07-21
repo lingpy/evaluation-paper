@@ -2,9 +2,10 @@ from lingpy import *
 from lingpy import Wordlist
 from lexibank_chenhmongmien import Dataset as chenhmongmien
 from lexibank_ratliffhmongmien import Dataset as ratliffhmongmien
-from lexibank_heimbachwhitehmong import Dataset as heimbachwhitehmong
+from lexibank_wold import Dataset as wold
 from pyconcepticon import Concepticon
 from cldfcatalog import Config
+from linse.annotate import soundclass
 
 """
 This script merged chen and wold data, and add ratliff's cognates as references
@@ -24,6 +25,8 @@ columns = [
     "form",
     "segments",
     "cogid_cognateset_id",
+    "tone_class",
+    "tone_value"
 ]
 namespace = {
     "id": "lexibank_id",
@@ -39,6 +42,8 @@ namespace = {
     "concept_concepticon_id": "concepticon",
     "parameter_id": "concepticon_id",
     "cogid_cognateset_id": "cogid",
+    "tone_class":"tone_class",
+    "tone_value":"tone_value"
 }
 
 concepticon = Concepticon(Config.from_file().get_clone("concepticon"))
@@ -66,13 +71,47 @@ chen = Wordlist.from_cldf(
 )
 
 whitehmong = Wordlist.from_cldf(
-    heimbachwhitehmong().cldf_dir.joinpath("cldf-metadata.json").as_posix(),
+    wold().cldf_dir.joinpath("cldf-metadata.json").as_posix(),
     columns=columns,
     namespace=namespace,
+    filter=lambda row:row['language_id'] in languages.keys()
 )
 
-# cognate id info from ratliff, need to confirm with Mattis
+# cognate id info from ratliff
 ratliff.add_entries("classification", "doculect", lambda x: languages[x][0])
+
+# add tone information to the correspondence datasets
+chen_tones = {}
+for each in chenhmongmien().raw_dir.read_csv('hm-tones.tsv', delimiter='\t',dicts=True):
+    if each['Language_ID'] not in chen_tones.keys():
+        chen_tones[each['Language_ID']]={}
+    chen_tones[each['Language_ID']][each['Tone']]=each['Tone_category']
+
+for idx, doculect, token in chen.iter_rows('doculect','tokens'):
+    tmp_toneclass=[]
+    tmp_tonevalue=[]
+    for t, s in zip(token, soundclass(token,'cv')):
+        if s == 'T':
+            tmp_toneclass.append(chen_tones[doculect].get(t,'?'))
+            tmp_tonevalue.append(t)
+    chen[idx,'tone_class']=tmp_toneclass
+    chen[idx,'tone_value']=tmp_tonevalue
+
+wold_tones={}
+for each in wold().etc_dir.read_csv('tones.tsv', delimiter='\t',dicts=True):
+    if each['Doculect'] not in wold_tones.keys():
+        wold_tones[each['Doculect']]={}
+    wold_tones[each['Doculect']][each['Tones']]=each['ToneClass']
+
+for idx, doculect, token in whitehmong.iter_rows('doculect','tokens'):
+    tmp_toneclass=[]
+    tmp_tonevalue=[]
+    for t, s in zip(token, soundclass(token,'cv')):
+        if s == 'T':
+            tmp_toneclass.append(wold_tones[doculect].get(t,'?'))
+            tmp_tonevalue.append(t)
+    whitehmong[idx,'tone_class']=tmp_toneclass
+    whitehmong[idx,'tone_value']=tmp_tonevalue
 
 # merging
 concepts = set()
@@ -86,7 +125,7 @@ ds = [whitehmong, chen]
 for dataset in ds:
     for idx, c, l in dataset.iter_rows("concepticon", "doculect"):
         if c in concepts:
-            tmp = [dataset[idx, x] for x in Combine[0][:13]] + [languages[l][0]]
+            tmp = [dataset[idx, x] for x in Combine[0][:15]] + [languages[l][0]]
             Combine[entry_id] = tmp
             entry_id += 1
 
