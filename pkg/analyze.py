@@ -126,7 +126,7 @@ template_alignment(
     segments="tokens",
 )
 # convert to full cognate
-cogids2cogid(alms, ref="crossids", cognates="lebor_cogid")
+cogids2cogid(alms, ref="crossids", cognates="autocogid")
 
 alms.output(
         "tsv", 
