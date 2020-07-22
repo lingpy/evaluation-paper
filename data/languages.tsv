@@ -1,0 +1,25 @@
+ID	NameInSource	Location	Name	Dataset
+NorthernQiandongMiao	1 Northern Qiandong Miao [hea]	Yanghao	NorthernQiandong	ratliffhmongmien
+NorthernQiandong	Qiandong, North	Yanghao 养蒿	NorthernQiandongMiao	chenhmongmien
+WesternXiangxiMiao	2 Western Xiangxi Miao [mmr]	Jiwei	WesternXiangxi	ratliffhmongmien
+WesternXiangxi	Xiangxi, West	Jewei , Layiping 腊乙坪	WesternXiangxiMiao	chenhmongmien
+CentralMashanHmong	4 Central Mashan Hmong [hmm]	Zongdi	SouthernChuanqiandian	ratliffhmongmien
+SouthernGuizhouChuanqiandian	Chuanqiandian, Southern Guizhou	Zongdi 宗地	CentralMashanHmong	chenhmongmien
+Luopohe	5 Luopohe Hmong [hml]	Fuyuan	Luopohe	ratliffhmongmien
+EasternLuobuohe	Luobuohe, Eastern	Shibanzhai 石板寨	Luopohe	chenhmongmien
+WesternLuobuohe	Luobuohe, Western	Gaozhai 高寨	Luopohe	chenhmongmien
+JiongnaiBunu	6 Jiongnai Bunu [pnu]	Jiongnai	Jiongnai	ratliffhmongmien
+Jiongnai	Jiongnai	Longhua 龙华	JiongnaiBunu	chenhmongmien
+PaHng	7 Pa-Hng [pha]	Pa-Hng	Baheng	ratliffhmongmien
+WesternBaheng	Baheng, West	Gundong 滚董	PaHng	chenhmongmien
+EasternBaheng	Baheng, East	Mao'ao 毛坳	PaHng	chenhmongmien
+luMien	8 Iu Mien [ium]	Mien	Mien	ratliffhmongmien
+Mien	Mien	Longding 龙定	luMien	chenhmongmien
+KimMun	9 Kim Mun [mji]	Mun	KimMun	ratliffhmongmien
+KimMun	Kim Mun	Yanyuan 烟园	KimMun	chenhmongmien
+BiaoMon	10 Biao Mon [bmt]	Biao Min	BiaoMin	ratliffhmongmien
+BiaoMin	Biao Min	Shuanglong 双龙	BiaoMon	chenhmongmien
+DzaoMin	11 Dzao Min [bpn]	Dzao Min	ZaoMin	ratliffhmongmien
+ZaoMin	Zao Min	Youling 油岭	DzaoMin	chenhmongmien
+WhiteHmong	White Hmong	Thailand and Laos	HmongDaw	wold
+HmongDaw	3 Hmong Daw [mww]	Thailand and Laos	WhiteHmong	ratliffhmongmien

@@ -1,3 +1,6 @@
+"""
+Analyze the data according to a cognate detection workflow.
+"""
 from lingpy import *
 from lingpy.compare.partial import Partial
 from linse.annotate import seallable
@@ -6,6 +9,9 @@ from lingrex.colex import find_colexified_alignments, find_bad_internal_alignmen
 from lingrex.align import template_alignment
 from linse.transform import morphemes
 from clldutils.text import strip_brackets, split_text
+
+from util import base_path
+
 
 # define function
 def get_structure(sequence):
@@ -19,38 +25,10 @@ def get_structure(sequence):
                 seallable(
                     m,
                     medials={
-                        "j",
-                        "w",
-                        "jw",
-                        "wj",
-                        "i̯",
-                        "u̯",
-                        "i̯u̯",
-                        "u̯i̯",
-                        "iu",
-                        "ui",
-                        "y",
-                        "ɥ",
-                        "l",
-                        "lj",
-                        "lʲ",
-                        "r",
-                        "rj",
-                        "rʲ",
-                        "ʐ",
-                        "ʑ",
-                        "ʂ",
-                        "ʂ",
-                        "rʷ",
-                        "lʷ",
-                        "u/w",
-                        "i/j",
-                        "ɹ",
-                        "z",
-                        "ʁ",
-                        "m",
-                        "wj/ɥ",
-                    },
+                        "j", "w", "jw", "wj", "i̯", "u̯", "i̯u̯", "u̯i̯", "iu",
+                        "ui", "y", "ɥ", "l", "lj", "lʲ", "r", "rj", "rʲ", "ʐ",
+                        "ʑ", "ʂ", "ʂ", "rʷ", "lʷ", "u/w", "i/j", "ɹ", "z", "ʁ",
+                        "m", "wj/ɥ"},
                 )
             )
         ]
@@ -86,27 +64,38 @@ def cogids2cogid(wordlist, ref="cogids", cognates="cogid", morphemes="morphemes"
 
 # partial cognate
 try:
-    part = Partial("HM-wordlist-partial.bin.tsv")
+    part = Partial(base_path.joinpath("hmong-mien-partial.bin.tsv").as_posix())
 except:
-    part = Partial("HM-wordlist-for-evaluate.tsv", segments="tokens")
+    part = Partial(base_path.joinpath(
+        "hmong-mien-wordlist.tsv").as_posix(), 
+        segments="tokens")
     part.get_partial_scorer(runs=10000)
-    part.output("tsv", filename="HM-wordlist.bin", ignore=[], prettify=False)
+    part.output(
+            "tsv",
+            filename=base_path.joinpath("hmong-mien-partial.bin").as_posix(), 
+            ignore=[], prettify=False)
 finally:
     part.partial_cluster(
         method="lexstat",
         threshold=0.55,
         ref="cogids",
-        mode="global",
-        gop=-2,
         cluster_method="infomap",
     )
-part.output("tsv", filename="HM-wordlist-partial", prettify=False)
+
+part.output(
+        "tsv", 
+        filename=base_path.joinpath("hmong-mien-partial").as_posix(), 
+        prettify=False, ignore='all')
+
 # partial to cross-semantic
-alms = Alignments("HM-wordlist-partial.tsv", ref="cogids")
+alms = Alignments(
+        base_path.joinpath("hmong-mien-partial.tsv").as_posix(), 
+        ref="cogids")
 alms.add_entries(
     "structure", "tokens", lambda x: get_structure(x),
 )
 print("[i] added segments")
+
 D = {0: [c for c in alms.columns]}
 for idx, tokens, structure in alms.iter_rows("tokens", "structure"):
     if len(tokens) != len(structure):
@@ -123,8 +112,8 @@ template_alignment(
     template="imnct+imnct+imnct+imnct+imnct+imnct",
     structure="structure",
     fuzzy=True,
-    segments="tokens",
-)
+    segments="tokens"
+    )
 find_bad_internal_alignments(alms)
 find_colexified_alignments(alms, cognates="cogids", segments="tokens", ref="crossids")
 # re-align
@@ -139,4 +128,7 @@ template_alignment(
 # convert to full cognate
 cogids2cogid(alms, ref="crossids", cognates="lebor_cogid")
 
-alms.output("tsv", filename="HM-wordlist-cogids2cogid", prettify=False)
+alms.output(
+        "tsv", 
+        filename=base_path.joinpath("hmong-mien-alignments").as_posix(), 
+        prettify=False)
