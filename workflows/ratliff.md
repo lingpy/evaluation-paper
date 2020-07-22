@@ -162,48 +162,48 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept BE ALIVE
 False Positives: 0.00
-False Negatives: 0.38
-Accuracy:        0.77
+False Negatives: 0.62
+Accuracy:        0.55
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 113 | EasternLuobuohe | t ə ⁰/² + ʑ e ³¹ | ʑ i ᴬ/¹ | 1 | 1
 114 | WesternLuobuohe | t ə ⁰/² + ʑ e ³¹ | ʑ i ᴬ/¹ | 1 | 1
-112 | WhiteHmong | tɕ i/j a ˥˧/⁵³ + ʂ i/j ə ˧/³³ | c i/j a ² | 1 | 1
 115 | SouthernGuizhouChuanqiandian | tɕ e n ⁵³ | tɕ ei n ² | 2 | 1
+112 | WhiteHmong | tɕ i/j a ˥˧/⁵³ + ʂ i/j ə ˧/³³ | c i/j a ² | 3 | 1
 
 ## Concept BE HUNGRY
 False Positives: 0.00
-False Negatives: 0.67
-Accuracy:        0.50
+False Negatives: 0.57
+Accuracy:        0.60
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 122 | EasternBaheng | ɕ ei ³⁵ | s a ¹ | 1 | 1
+117 | EasternLuobuohe | tsʰ e ³¹ | tsʰ e ᴬ/¹ | 1 | 1
 124 | KimMun | ʃ a ¹¹ | s a ¹’/¹ | 1 | 1
+118 | WesternLuobuohe | tsʰ e ³¹ | tsʰ e ᴬ/¹ | 1 | 1
 120 | WesternXiangxi | ɕ i ³⁵ | ɕ i ¹ | 1 | 1
-117 | EasternLuobuohe | tsʰ e ³¹ | tsʰ e ᴬ/¹ | 2 | 1
-118 | WesternLuobuohe | tsʰ e ³¹ | tsʰ e ᴬ/¹ | 2 | 1
-116 | WhiteHmong | tʃʰ ai ˥/⁵⁵ + p l a ˥/⁵⁵ | ʈʂʰ ai ¹ | 2 | 1
-123 | Mien | ŋ o ²¹ | ɕ a ¹ | 3 | 1
-119 | SouthernGuizhouChuanqiandian | ⁿk ɪ ¹³ + ɳ ɔ ³⁵ | s e ¹ᵇ/¹ | 3 | 1
-121 | WesternBaheng | ŋ o ⁴² | s a ¹ | 3 | 1
+123 | Mien | ŋ o ²¹ | ɕ a ¹ | 2 | 1
+119 | SouthernGuizhouChuanqiandian | ⁿk ɪ ¹³ + ɳ ɔ ³⁵ | s e ¹ᵇ/¹ | 2 | 1
+121 | WesternBaheng | ŋ o ⁴² | s a ¹ | 2 | 1
+116 | WhiteHmong | tʃʰ ai ˥/⁵⁵ + p l a ˥/⁵⁵ | ʈʂʰ ai ¹ | 3 | 1
 
 ## Concept BEAN OR PEA
 False Positives: 0.00
-False Negatives: 0.64
-Accuracy:        0.52
+False Negatives: 0.31
+Accuracy:        0.81
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 134 | BiaoMin | tʰ ə t ²¹ | tʰ ə n ⁸/²⁴ | 1 | 1
+130 | EasternBaheng | tʰ u ³¹ | t ɯ ⁸/²⁴ | 1 | 1
+131 | Jiongnai | t o ¹² | t ɔ ⁸/²⁴ | 1 | 1
 133 | KimMun | ˀt a p ⁴² | t ɔ p ⁸/²⁴ | 1 | 1
 132 | Mien | t o p ²² | t o p ⁸/²⁴ | 1 | 1
+128 | NorthernQiandong | t ə ³¹ | t ə ⁸/²⁴ | 1 | 1
+127 | SouthernGuizhouChuanqiandian | t u ²¹ | t u ⁸/²⁴ | 1 | 1
+129 | WesternBaheng | t u ⁴² | t ɯ ⁸/²⁴ | 1 | 1
 135 | ZaoMin | t u p ²² | t u p ⁸/²⁴ | 1 | 1
-130 | EasternBaheng | tʰ u ³¹ | t ɯ ⁸/²⁴ | 2 | 1
-131 | Jiongnai | t o ¹² | t ɔ ⁸/²⁴ | 2 | 1
-128 | NorthernQiandong | t ə ³¹ | t ə ⁸/²⁴ | 2 | 1
-127 | SouthernGuizhouChuanqiandian | t u ²¹ | t u ⁸/²⁴ | 2 | 1
-129 | WesternBaheng | t u ⁴² | t ɯ ⁸/²⁴ | 2 | 1
-125 | EasternLuobuohe | q o ⁰/⁵ + ʁ o ²⁴ | n o ᴰ/⁴ | 3 | 1
-126 | WesternLuobuohe | ʔ ə ⁰/² + n o ³¹ | n o ᴰ/⁴ | 4 | 1
+125 | EasternLuobuohe | q o ⁰/⁵ + ʁ o ²⁴ | n o ᴰ/⁴ | 2 | 1
+126 | WesternLuobuohe | ʔ ə ⁰/² + n o ³¹ | n o ᴰ/⁴ | 3 | 1
 
 ## Concept BEAR
 False Positives: 0.00
@@ -303,6 +303,26 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 183 | WesternXiangxi | q o ³⁵ + tɕʰ i ³⁵ | tɕʰ i ¹ | 2 | 1
 179 | WhiteHmong | p l a ˥/⁵⁵ | cʰ au ¹ | 3 | 1
 
+## Concept BIRD
+False Positives: 0.00
+False Negatives: 0.14
+Accuracy:        0.92
+ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
+--- | --- | --- | --- | --- | --- 
+209 | BiaoMin | n̥ ɔ ²¹ | n̥ ɔ ⁸/²⁴ | 1 | 1
+205 | EasternBaheng | t a ŋ ³⁵ + n u ŋ ³¹ | m õ ⁶/¹³ | 1 | 1
+199 | EasternLuobuohe | q o ⁰/⁵ + n o ²⁴ | n o ᶜ/³ | 1 | 1
+206 | Jiongnai | n ɒ ŋ ¹¹ | n w a ŋ ⁶/¹³ | 1 | 1
+208 | KimMun | n o ⁴² | n ɔ ⁶/¹³ | 1 | 1
+207 | Mien | n o ²² | n u ⁸/²⁴ | 1 | 1
+203 | NorthernQiandong | n ə ¹³ | n ə ⁶/¹³ | 1 | 1
+201 | SouthernGuizhouChuanqiandian | n ə ŋ ¹³ | n ə ŋ ⁶/¹³ | 1 | 1
+200 | WesternLuobuohe | n o ³⁵ | n o ᶜ/³ | 1 | 1
+202 | WesternXiangxi | t ɑ ³⁵ + n u ⁴² | n u ⁶/¹³ | 1 | 1
+198 | WhiteHmong | n o ŋ ˧˩/³¹ | n ɔ ŋ ⁶/¹³ | 1 | 1
+210 | ZaoMin | n o ²² | n ɔu ⁸/²⁴ | 1 | 1
+204 | WesternBaheng | t a ŋ ³⁵ + m o ŋ ⁵⁵ | m õ ⁶/¹³ | 2 | 1
+
 ## Concept BITE
 False Positives: 0.00
 False Negatives: 0.27
@@ -343,8 +363,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept BLACK
 False Positives: 0.00
-False Negatives: 0.29
-Accuracy:        0.83
+False Negatives: 0.42
+Accuracy:        0.73
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 244 | BiaoMin | tɕ a ⁵³ | k j a ⁷/³ | 1 | 1
@@ -353,31 +373,31 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 243 | KimMun | k j a ³⁵ | k j a ⁷/³ | 3 | 1
 236 | EasternLuobuohe | t ə ⁰/² + q l a ŋ ³¹ | q l a ŋ ᴬ/¹ | 2 | 2
 241 | Jiongnai | k l a ŋ ⁴⁴ | k l a ŋ ¹ | 2 | 2
-240 | NorthernQiandong | ɬ ɛ ³³ | l̥ ɛ ¹ | 2 | 2
 238 | SouthernGuizhouChuanqiandian | ɬ o ŋ ³² | l̥ o ŋ ¹ᵃ/¹ | 2 | 2
 237 | WesternLuobuohe | t ə ⁰/² + q l ɑ ŋ ³¹ | q l a ŋ ᴬ/¹ | 2 | 2
 239 | WesternXiangxi | q w e ³⁵ | q w e ¹ | 2 | 2
-235 | WhiteHmong | d u ˥/⁵⁵ | d u ¹ | 4 | 2
+240 | NorthernQiandong | ɬ ɛ ³³ | l̥ ɛ ¹ | 4 | 2
+235 | WhiteHmong | d u ˥/⁵⁵ | d u ¹ | 5 | 2
 
 ## Concept BLOOD
 False Positives: 0.00
-False Negatives: 0.67
-Accuracy:        0.49
+False Negatives: 0.38
+Accuracy:        0.77
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 257 | BiaoMin | s a n ³⁵ | s a n ³ | 1 | 1
+253 | EasternBaheng | ⁿtɕʰ e ³¹³ | ȵ̥ e ³ | 1 | 1
+247 | EasternLuobuohe | t ə ⁰/² + ⁿtsʰ e n ⁴⁴ | ˀʈʂʰ e n ᴮ/² | 1 | 1
 256 | KimMun | ʃ aː m ⁵¹ | s aː m ³ | 1 | 1
 255 | Mien | dz j aː m ⁵³ | ɕ a m ³ | 1 | 1
 251 | NorthernQiandong | ɕʰ a ŋ ³⁵ | ɕʰ a ŋ ³ | 1 | 1
+249 | SouthernGuizhouChuanqiandian | ⁿts u/w a ²³² | ⁿʈs u/w a ³ᵇ/³ | 1 | 1
+248 | WesternLuobuohe | t ə ⁰/² + ⁿtsʰ e n ⁴⁴ | ˀʈʂʰ e n ᴮ/² | 1 | 1
+250 | WesternXiangxi | ⁿtɕʰ i ⁴⁴ | ⁿtɕʰ i ³ | 1 | 1
 258 | ZaoMin | ʑ a m ²⁴ | dz j ɛ m ³ | 1 | 1
-253 | EasternBaheng | ⁿtɕʰ e ³¹³ | ȵ̥ e ³ | 2 | 1
-247 | EasternLuobuohe | t ə ⁰/² + ⁿtsʰ e n ⁴⁴ | ˀʈʂʰ e n ᴮ/² | 2 | 1
-249 | SouthernGuizhouChuanqiandian | ⁿts u/w a ²³² | ⁿʈs u/w a ³ᵇ/³ | 2 | 1
-248 | WesternLuobuohe | t ə ⁰/² + ⁿtsʰ e n ⁴⁴ | ˀʈʂʰ e n ᴮ/² | 2 | 1
-250 | WesternXiangxi | ⁿtɕʰ i ⁴⁴ | ⁿtɕʰ i ³ | 2 | 1
-254 | Jiongnai | θ i ⁵³ | θ i ³ | 3 | 1
-246 | WhiteHmong | ⁿtʃʱ a ˧˦/³⁴ | ⁿʈʂʰ a ³ | 3 | 1
-252 | WesternBaheng | ȵ̊ ei ³¹ | ȵ̥ e ³ | 4 | 1
+254 | Jiongnai | θ i ⁵³ | θ i ³ | 2 | 1
+246 | WhiteHmong | ⁿtʃʱ a ˧˦/³⁴ | ⁿʈʂʰ a ³ | 2 | 1
+252 | WesternBaheng | ȵ̊ ei ³¹ | ȵ̥ e ³ | 3 | 1
 
 ## Concept BLOW (WITH MOUTH)
 False Positives: 0.00
@@ -506,18 +526,18 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept BRAID (VERB) OR WEAVE (BASKET)
 False Positives: 0.00
-False Negatives: 0.56
-Accuracy:        0.61
+False Negatives: 0.69
+Accuracy:        0.48
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 346 | EasternLuobuohe | χ ɛ ³¹ | h e n ᴬ/¹ | 1 | 1
-351 | Jiongnai | h a n ⁴⁴ | x a n ¹ | 1 | 1
-350 | NorthernQiandong | h ei ³³ | h ei ¹ | 1 | 1
-348 | SouthernGuizhouChuanqiandian | h æ n ²² | ɦ æi n ¹ᵇ/¹ | 1 | 1
 347 | WesternLuobuohe | χ i ³¹ | h e n ᴬ/¹ | 1 | 1
-349 | WesternXiangxi | tsʰ o ⁴⁴ | h ɛ ¹ | 2 | 1
-344 | WhiteHmong | ⁿts i/j a ˩/¹¹ | h i/j a ¹ | 3 | 1
-345 | WhiteHmong | h i/j a ˥/⁵⁵ | h i/j a ¹ | 4 | 1
+345 | WhiteHmong | h i/j a ˥/⁵⁵ | h i/j a ¹ | 1 | 1
+351 | Jiongnai | h a n ⁴⁴ | x a n ¹ | 2 | 1
+350 | NorthernQiandong | h ei ³³ | h ei ¹ | 2 | 1
+348 | SouthernGuizhouChuanqiandian | h æ n ²² | ɦ æi n ¹ᵇ/¹ | 2 | 1
+349 | WesternXiangxi | tsʰ o ⁴⁴ | h ɛ ¹ | 3 | 1
+344 | WhiteHmong | ⁿts i/j a ˩/¹¹ | h i/j a ¹ | 4 | 1
 
 ## Concept BREAK (DESTROY OR GET DESTROYED)
 False Positives: 0.00
@@ -538,8 +558,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 361 | Mien | h u ⁵³ | n au ³ | 4 | 2
 
 ## Concept BRIGHT
-False Positives: 0.48
-False Negatives: 0.00
+False Positives: 0.34
+False Negatives: 0.30
 Accuracy:        0.68
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
@@ -548,25 +568,25 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 379 | Mien | g wj/ɥ a ŋ ³³ | g w a ŋ ¹ | 1 | 1
 382 | ZaoMin | v j a ŋ ⁴⁴ | v j a ŋ ¹ | 1 | 1
 374 | EasternLuobuohe | t ə ⁰/² + ʁ w e n ³¹ | ʁ w e n ᴬ/¹ | 1 | 2
-378 | Jiongnai | k w i ³³ | k u/w i ² | 1 | 2
 377 | NorthernQiandong | f a ŋ ⁵⁵ | f a ŋ ² | 1 | 2
-376 | SouthernGuizhouChuanqiandian | x w a ⁵³ | ʰw u/w a ² | 1 | 2
 375 | WesternLuobuohe | ʁ w e n ³¹ | ʁ w e n ᴬ/¹ | 1 | 2
-373 | WhiteHmong | k a ˥˧/⁵³ | k a ² | 1 | 2
+378 | Jiongnai | k w i ³³ | k u/w i ² | 2 | 2
+376 | SouthernGuizhouChuanqiandian | x w a ⁵³ | ʰw u/w a ² | 2 | 2
+373 | WhiteHmong | k a ˥˧/⁵³ | k a ² | 2 | 2
 
 ## Concept BURN
-False Positives: 0.00
-False Negatives: 0.19
-Accuracy:        0.89
+False Positives: 0.14
+False Negatives: 0.40
+Accuracy:        0.70
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 396 | EasternBaheng | t ai ³¹ | pʰ o ³ | 1 | 1
 397 | Jiongnai | ⁿt au ⁵⁵ | v̥ a ³ | 1 | 1
 395 | WesternBaheng | q a ŋ ³⁵ | pʰ o ³ | 3 | 1
 391 | EasternLuobuohe | ʑ i ²⁴ | ʈʂ u ᴮ/² | 2 | 2
-394 | NorthernQiandong | tɕ i n ¹³ | ȶ u ³ | 2 | 2
 393 | SouthernGuizhouChuanqiandian | tɕ i ¹³ | ʂ ɔ ³ᵃ/³ | 2 | 2
 392 | WesternLuobuohe | ʑ e ³⁵ | ʈʂ u ᴮ/² | 2 | 2
+394 | NorthernQiandong | tɕ i n ¹³ | ȶ u ³ | 3 | 2
 
 ## Concept BURY
 False Positives: 0.00
@@ -917,19 +937,19 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept COMB
 False Positives: 0.00
-False Negatives: 0.67
-Accuracy:        0.50
+False Negatives: 0.59
+Accuracy:        0.58
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 612 | EasternBaheng | l a ⁰/³ + h ei ³⁵ | ɦ j i ⁶/¹³ | 1 | 1
-611 | WesternBaheng | ʔ a ⁰/³ + j i ⁴⁴ | ɦ j i ⁶/¹³ | 1 | 1
-607 | WesternLuobuohe | ʔ ə ⁰/² + j i ³⁵ | wj/ɥ i ᶜ/³ | 1 | 1
 606 | EasternLuobuohe | q o ⁰/⁵ + j i ²⁴ | wj/ɥ i ᶜ/³ | 2 | 1
-613 | Jiongnai | w i ¹¹ | v i ⁶/¹³ | 3 | 1
-610 | NorthernQiandong | ɣ a ¹³ | ɣ a ⁶/¹³ | 4 | 1
-608 | SouthernGuizhouChuanqiandian | ʐ ə ¹³ | ʐ əa ⁶/¹³ | 4 | 1
-609 | WesternXiangxi | q o ³⁵ + ʐ a ⁴² | ʐ a ⁶/¹³ | 4 | 1
-605 | WhiteHmong | ʐ u/w a ˧˩/³¹ | ʐ u/w a ⁶/¹³ | 4 | 1
+613 | Jiongnai | w i ¹¹ | v i ⁶/¹³ | 2 | 1
+611 | WesternBaheng | ʔ a ⁰/³ + j i ⁴⁴ | ɦ j i ⁶/¹³ | 2 | 1
+607 | WesternLuobuohe | ʔ ə ⁰/² + j i ³⁵ | wj/ɥ i ᶜ/³ | 2 | 1
+610 | NorthernQiandong | ɣ a ¹³ | ɣ a ⁶/¹³ | 3 | 1
+608 | SouthernGuizhouChuanqiandian | ʐ ə ¹³ | ʐ əa ⁶/¹³ | 3 | 1
+609 | WesternXiangxi | q o ³⁵ + ʐ a ⁴² | ʐ a ⁶/¹³ | 3 | 1
+605 | WhiteHmong | ʐ u/w a ˧˩/³¹ | ʐ u/w a ⁶/¹³ | 3 | 1
 
 ## Concept COMB OF BIRD
 False Positives: 0.00
@@ -992,24 +1012,6 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 646 | KimMun | ʃ u ³⁵ + k l aːu ⁴² | s u ⁷/³ | 1 | 1
 645 | Mien | ts o ⁵⁵ | tɕ w o ⁷/³ | 2 | 1
 
-## Concept COOKED
-False Positives: 0.12
-False Negatives: 0.16
-Accuracy:        0.86
-ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
---- | --- | --- | --- | --- | --- 
-657 | BiaoMin | tʰ j ɔ ²¹ | ȶʰ ɔ ⁸/²⁴ | 1 | 1
-656 | Mien | ts o ²² | tɕ w o ⁸/²⁴ | 1 | 1
-647 | WhiteHmong | ʂ i/j a ˧˦/³⁴ | ʂ i/j a ³ | 1 | 2
-654 | EasternBaheng | ɕ e ŋ ³¹³ | s ɪ̃ ³ | 2 | 2
-648 | EasternLuobuohe | t ə ⁰/² + ʂ e n ⁵⁵ | s e n ᴮ/² | 2 | 2
-655 | Jiongnai | θ ə ŋ ⁵³ | θ e ŋ ³ | 2 | 2
-652 | NorthernQiandong | ɕʰ a ŋ ³⁵ | ɕʰ a ŋ ³ | 2 | 2
-650 | SouthernGuizhouChuanqiandian | s æ n ²³² | s æi n ³ᵇ/³ | 2 | 2
-653 | WesternBaheng | s e ŋ ³¹ | s ɪ̃ ³ | 2 | 2
-649 | WesternLuobuohe | s e n ⁵⁵ | s e n ᴮ/² | 2 | 2
-651 | WesternXiangxi | ɕ ɛ ⁴⁴ | ɕ ɛ ³ | 2 | 2
-
 ## Concept COOKED RICE
 False Positives: 0.00
 False Negatives: 0.32
@@ -1065,17 +1067,17 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept CROOKED
 False Positives: 0.00
-False Negatives: 0.61
-Accuracy:        0.56
+False Negatives: 0.45
+Accuracy:        0.71
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 689 | EasternBaheng | l j ei ³¹³ | ŋ ɔ ¹ | 1 | 1
 684 | EasternLuobuohe | t ə ⁰/² + ⁿkʰ o ³³ | ˀkʰ a ᴰ/⁴ | 2 | 1
+686 | SouthernGuizhouChuanqiandian | ⁿk w o ¹³ | ⁿk o ⁷ᵇ/³ | 2 | 1
 685 | WesternLuobuohe | ⁿkʰ a ³¹ + l ɑ ³¹ | ˀkʰ a ᴰ/⁴ | 2 | 1
 687 | WesternXiangxi | ⁿkʰ u ⁴⁴ | ⁿkʰ u ⁷/³ | 2 | 1
 683 | WhiteHmong | ⁿkʱ au ˩/¹¹ | ⁿkʰ au ⁷/³ | 2 | 1
-686 | SouthernGuizhouChuanqiandian | ⁿk w o ¹³ | ⁿk o ⁷ᵇ/³ | 3 | 1
-688 | WesternBaheng | ŋ ɔ ³⁵ | ŋ ɔ ¹ | 4 | 1
+688 | WesternBaheng | ŋ ɔ ³⁵ | ŋ ɔ ¹ | 3 | 1
 
 ## Concept CROSS
 False Positives: 0.00
@@ -1198,15 +1200,15 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept DITCH
 False Positives: 0.00
-False Negatives: 0.48
-Accuracy:        0.68
+False Negatives: 0.64
+Accuracy:        0.53
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 792 | EasternLuobuohe | tɕ o ³¹ + k u ŋ ³¹ | k o ŋ ᴬ/¹ | 1 | 1
-796 | Jiongnai | tʃ ə ŋ ⁵³ | k j ɐ ŋ ¹ | 1 | 1
-793 | WesternLuobuohe | tɕ o ŋ ³¹ + k o ŋ ³¹ | k o ŋ ᴬ/¹ | 1 | 1
-795 | NorthernQiandong | k o ŋ ³³ | k o ŋ ¹ | 2 | 1
-794 | SouthernGuizhouChuanqiandian | k a ŋ ³² + ʑ u ⁵⁵ | k a ŋ ¹ᵃ/¹ | 2 | 1
+796 | Jiongnai | tʃ ə ŋ ⁵³ | k j ɐ ŋ ¹ | 2 | 1
+793 | WesternLuobuohe | tɕ o ŋ ³¹ + k o ŋ ³¹ | k o ŋ ᴬ/¹ | 2 | 1
+795 | NorthernQiandong | k o ŋ ³³ | k o ŋ ¹ | 3 | 1
+794 | SouthernGuizhouChuanqiandian | k a ŋ ³² + ʑ u ⁵⁵ | k a ŋ ¹ᵃ/¹ | 3 | 1
 
 ## Concept DOG
 False Positives: 0.00
@@ -1230,27 +1232,27 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept DOOR
 False Positives: 0.00
-False Negatives: 0.50
-Accuracy:        0.67
+False Negatives: 0.62
+Accuracy:        0.55
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 831 | BiaoMin | k l ɛ ³¹ | k l ɛ ² | 1 | 1
-820 | WhiteHmong | qʰ o ˧˦/³⁴ + r o ŋ ˥˧/⁵³ | ʈ ɔ ŋ ² | 1 | 1
+830 | KimMun | g j a ŋ ³³ | k eː ŋ ² | 1 | 1
+829 | Mien | k ɛ ŋ ³¹ | k ɛ ŋ ² | 1 | 1
 827 | EasternBaheng | t j u ŋ ³³ | tɕ ɔ̃ ² | 2 | 1
-821 | EasternLuobuohe | ʔ a ⁰/² + ʐ u ŋ ³¹ | ʐ o ŋ ᴬ/¹ | 2 | 1
-828 | Jiongnai | ʃ ɒ ŋ ³³ | ʃ w a ŋ ² | 2 | 1
-830 | KimMun | g j a ŋ ³³ | k eː ŋ ² | 2 | 1
-829 | Mien | k ɛ ŋ ³¹ | k ɛ ŋ ² | 2 | 1
-823 | SouthernGuizhouChuanqiandian | ʂ a ŋ ⁵³ | ʂ a ŋ ² | 2 | 1
-826 | WesternBaheng | tɕ a ŋ ³³ | tɕ ɔ̃ ² | 2 | 1
-822 | WesternLuobuohe | ʔ ə ⁰/² + ʐ o ŋ ³¹ | ʐ o ŋ ᴬ/¹ | 2 | 1
-825 | NorthernQiandong | t j u ⁵⁵ | ȶ u ² | 3 | 1
-824 | WesternXiangxi | p ɑ ³¹ + ʈ u ³¹ | ʈ u ² | 3 | 1
+825 | NorthernQiandong | t j u ⁵⁵ | ȶ u ² | 2 | 1
+824 | WesternXiangxi | p ɑ ³¹ + ʈ u ³¹ | ʈ u ² | 2 | 1
+821 | EasternLuobuohe | ʔ a ⁰/² + ʐ u ŋ ³¹ | ʐ o ŋ ᴬ/¹ | 3 | 1
+828 | Jiongnai | ʃ ɒ ŋ ³³ | ʃ w a ŋ ² | 3 | 1
+823 | SouthernGuizhouChuanqiandian | ʂ a ŋ ⁵³ | ʂ a ŋ ² | 3 | 1
+826 | WesternBaheng | tɕ a ŋ ³³ | tɕ ɔ̃ ² | 3 | 1
+822 | WesternLuobuohe | ʔ ə ⁰/² + ʐ o ŋ ³¹ | ʐ o ŋ ᴬ/¹ | 3 | 1
+820 | WhiteHmong | qʰ o ˧˦/³⁴ + r o ŋ ˥˧/⁵³ | ʈ ɔ ŋ ² | 3 | 1
 
 ## Concept DOVE
-False Positives: 0.36
-False Negatives: 0.15
-Accuracy:        0.73
+False Positives: 0.38
+False Negatives: 0.00
+Accuracy:        0.77
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 839 | EasternBaheng | k o ⁵⁵ + ts ɿ ⁰/³ | ŋ o ¹ | 1 | 1
@@ -1259,23 +1261,23 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 837 | NorthernQiandong | q o ³³ | q o ¹ | 1 | 1
 835 | SouthernGuizhouChuanqiandian | ⁿk æ ³² + s o ŋ ²² | ⁿk a ¹ᵃ/¹ | 1 | 1
 838 | WesternBaheng | ʔ a ⁰/³ + qʰ ei ³¹ | ŋ o ¹ | 1 | 1
+834 | WesternLuobuohe | ʔ ə ⁰/² + ⁿq ɑ ³³ | ˀq a ᴬ/¹ | 1 | 1
 836 | WesternXiangxi | t ɑ ³⁵ + ⁿq o ³⁵ | ⁿq o ¹ | 1 | 1
 832 | WhiteHmong | ⁿq u/w a ˥/⁵⁵ | ⁿq u/w a ¹ | 1 | 1
-834 | WesternLuobuohe | ʔ ə ⁰/² + ⁿq ɑ ³³ | ˀq a ᴬ/¹ | 2 | 1
 842 | KimMun | p a ³³ + k oː p ⁵⁵ | k ɔ p ⁷/³ | 1 | 2
 841 | Mien | p e ²¹ + k o p ⁵⁵ | k o p ⁷/³ | 1 | 2
 843 | ZaoMin | p a ²² + k o ⁴⁴ | k u ⁷/³ | 1 | 2
 
 ## Concept DRIP (EMIT LIQUID)
 False Positives: 0.20
-False Negatives: 0.68
-Accuracy:        0.45
+False Negatives: 0.63
+Accuracy:        0.50
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 852 | BiaoMin | l a ³⁵ | d j a n ⁷/³ | 1 | 1
 851 | Mien | l j əu ²¹ | d j e p ⁷/³ | 1 | 1
 850 | Mien | f ui ⁵³ | d j e p ⁷/³ | 3 | 1
-853 | ZaoMin | h i ⁴² | d ɛ p ⁷/³ | 6 | 1
+853 | ZaoMin | h i ⁴² | d ɛ p ⁷/³ | 3 | 1
 849 | NorthernQiandong | ɬ ɛ ⁵⁵ | ȵ ə ⁶/¹³ | 1 | 2
 846 | WesternLuobuohe | l u ³⁵ | ⁿʈʂ u ᶜ/³ | 1 | 2
 845 | EasternLuobuohe | s y ²⁴ | ⁿʈʂ u ᶜ/³ | 2 | 2
@@ -1357,8 +1359,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept EAR
 False Positives: 0.00
-False Negatives: 0.43
-Accuracy:        0.73
+False Negatives: 0.31
+Accuracy:        0.81
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 908 | BiaoMin | b l au ³¹ + k au ⁴² + ts a ŋ ³⁵ | b l au ² | 1 | 1
@@ -1367,22 +1369,23 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 907 | Jiongnai | ⁿp j a ³³ | ⁿp j a ² | 1 | 1
 902 | SouthernGuizhouChuanqiandian | ⁿp ʐ æ ⁵³ | ⁿp ʐ æ ² | 1 | 1
 901 | WesternLuobuohe | ʔ ə ⁰/² + ⁿb j i ³¹ | ⁿp j i ᴬ/¹ | 1 | 1
+903 | WesternXiangxi | ʈ o ŋ ³¹ + m ʐ ɯ ³¹ | m ʐ ɯ ² | 1 | 1
 899 | WhiteHmong | p o ˥/⁵⁵ + ⁿtʃ e ˧˩/³¹ | ⁿʈʂ e ² | 1 | 1
 909 | ZaoMin | b j u ⁵³ + k au ⁴² | b j u ² | 1 | 1
 904 | NorthernQiandong | q a ³³ + z ɛ ⁵⁵ | z ɛ ² | 2 | 1
 905 | WesternBaheng | qʰ o ŋ ³¹ + nʲ o ³³ | m j o ² | 3 | 1
-903 | WesternXiangxi | ʈ o ŋ ³¹ + m ʐ ɯ ³¹ | m ʐ ɯ ² | 3 | 1
 
 ## Concept EARLY
 False Positives: 0.00
-False Negatives: 0.27
-Accuracy:        0.84
+False Negatives: 0.14
+Accuracy:        0.92
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 921 | BiaoMin | d j au ³⁵ | d j əu ³ | 1 | 1
 917 | EasternBaheng | ⁿts o ³¹³ | ȵ o ³ | 1 | 1
 911 | EasternLuobuohe | ⁿts əu ⁵⁵ | ˀʈʂ u ᴮ/² | 1 | 1
 918 | Jiongnai | ⁿtʃ u ⁵³ | ⁿtʃ u ³ | 1 | 1
+920 | KimMun | g j eu ⁵¹ | g j ɔu ³ | 1 | 1
 919 | Mien | dz j u ⁵³ | d j eu ³ | 1 | 1
 915 | NorthernQiandong | s o ⁵⁵ | s o ³ | 1 | 1
 913 | SouthernGuizhouChuanqiandian | ⁿts o ⁴² | ⁿʈs o ³ᵃ/³ | 1 | 1
@@ -1390,8 +1393,7 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 914 | WesternXiangxi | ⁿts o ⁴⁴ | ⁿʈs o ³ | 1 | 1
 910 | WhiteHmong | ⁿts o ˧˦/³⁴ | ⁿʈs ɔ ³ | 1 | 1
 922 | ZaoMin | d u ²⁴ | d u ³ | 1 | 1
-920 | KimMun | g j eu ⁵¹ | g j ɔu ³ | 2 | 1
-916 | WesternBaheng | ȵ o ³¹ | ȵ o ³ | 3 | 1
+916 | WesternBaheng | ȵ o ³¹ | ȵ o ³ | 2 | 1
 
 ## Concept EARTHEN JUG
 False Positives: 0.00
@@ -1462,8 +1464,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept EIGHT
 False Positives: 0.00
-False Negatives: 0.64
-Accuracy:        0.53
+False Negatives: 0.66
+Accuracy:        0.50
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 973 | BiaoMin | ɕ ɛ t ²¹ | h j ɛ n ⁸/²⁴ | 1 | 1
@@ -1477,8 +1479,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 964 | WesternLuobuohe | ʑ ɑ ³¹ | ʑ a ᴰ/⁴ | 2 | 1
 966 | WesternXiangxi | ʑ i ²² | ʑ i ⁸/²⁴ | 2 | 1
 970 | Jiongnai | j e ¹² | j e ⁸/²⁴ | 3 | 1
-968 | WesternBaheng | j i ⁴² | j i ⁸/²⁴ | 3 | 1
-962 | WhiteHmong | j i ˨˩˧/²¹³ | j i ⁸/²⁴ | 3 | 1
+968 | WesternBaheng | j i ⁴² | j i ⁸/²⁴ | 4 | 1
+962 | WhiteHmong | j i ˨˩˧/²¹³ | j i ⁸/²⁴ | 4 | 1
 
 ## Concept EYE
 False Positives: 0.00
@@ -1521,8 +1523,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept FAN (OBJECT)
 False Positives: 0.00
-False Negatives: 0.77
-Accuracy:        0.38
+False Negatives: 0.71
+Accuracy:        0.45
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1027 | BiaoMin | b j ɛ t ²¹ | b j ɛ n ⁸/²⁴ | 1 | 1
@@ -1530,6 +1532,7 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1026 | KimMun | b j aː p ⁴² | b j aː p ⁸/²⁴ | 1 | 1
 1025 | Mien | b j a p ²² | b j a p ⁸/²⁴ | 1 | 1
 1018 | WesternLuobuohe | ʔ ə ⁰/² + ⁿb j i ³¹ + m ɑ ³⁵ | ⁿp z i ᴰ/⁴ | 1 | 1
+1028 | ZaoMin | ʑ a p ²² | dz j ɛ p ⁸/²⁴ | 1 | 1
 1017 | EasternLuobuohe | tɕʰ a ŋ ³³ + l a ŋ ³³ | ⁿp z i ᴰ/⁴ | 2 | 1
 1021 | NorthernQiandong | z e n ³¹ | z e n ⁸/²⁴ | 2 | 1
 1016 | WhiteHmong | ⁿts u/w a ˨˩˧/²¹³ | ⁿʈs u/w a ⁸/²⁴ | 2 | 1
@@ -1537,26 +1540,25 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1019 | SouthernGuizhouChuanqiandian | ⁿp j a ²¹ | ⁿp j a ⁸/²⁴ | 4 | 1
 1022 | WesternBaheng | n i ⁴² + l j o ŋ ³³ | m i ⁸/²⁴ | 5 | 1
 1020 | WesternXiangxi | q o ³⁵ + m j ɑ ⁴⁴ | m j ɑ ⁷/³ | 6 | 1
-1028 | ZaoMin | ʑ a p ²² | dz j ɛ p ⁸/²⁴ | 7 | 1
 
 ## Concept FAR
 False Positives: 0.00
-False Negatives: 0.15
-Accuracy:        0.92
+False Negatives: 0.54
+Accuracy:        0.63
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1039 | BiaoMin | k u ³³ | k u ¹ | 1 | 1
 1035 | EasternBaheng | k o ³⁵ | k o ¹ | 1 | 1
-1030 | EasternLuobuohe | t ə ⁰/² + q w ei ³¹ | q w ei ᴬ/¹ | 1 | 1
-1036 | Jiongnai | k w a ⁴⁴ | k w a ¹ | 1 | 1
 1038 | KimMun | k o ³³ | k u ¹ | 1 | 1
 1037 | Mien | k u ³³ | k o ¹ | 1 | 1
-1032 | SouthernGuizhouChuanqiandian | h u/w æ ³² | ʰw æ ¹ᵃ/¹ | 1 | 1
 1034 | WesternBaheng | k o ³⁵ | k o ¹ | 1 | 1
-1031 | WesternLuobuohe | t ə ⁰/² + q w ei ³¹ | q w ei ᴬ/¹ | 1 | 1
 1033 | WesternXiangxi | q ɯ ³⁵ | q ɯ ¹ | 1 | 1
 1040 | ZaoMin | k ɔ ⁴⁴ | k ɔu ¹ | 1 | 1
-1029 | WhiteHmong | d e ˥/⁵⁵ | d e ¹ | 2 | 1
+1030 | EasternLuobuohe | t ə ⁰/² + q w ei ³¹ | q w ei ᴬ/¹ | 2 | 1
+1036 | Jiongnai | k w a ⁴⁴ | k w a ¹ | 2 | 1
+1032 | SouthernGuizhouChuanqiandian | h u/w æ ³² | ʰw æ ¹ᵃ/¹ | 2 | 1
+1031 | WesternLuobuohe | t ə ⁰/² + q w ei ³¹ | q w ei ᴬ/¹ | 2 | 1
+1029 | WhiteHmong | d e ˥/⁵⁵ | d e ¹ | 3 | 1
 
 ## Concept FAT (OBESE)
 False Positives: 0.00
@@ -1652,6 +1654,26 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1091 | WhiteHmong | ⁿt i ˧˦/³⁴ + t e ˩/¹¹ | ⁿʈ i ³ | 1 | 2
 1095 | SouthernGuizhouChuanqiandian | t u ³² + ʂ e ¹¹ | ⁿʈ i ³ᵃ/³ | 2 | 2
 
+## Concept FIRE
+False Positives: 0.00
+False Negatives: 0.27
+Accuracy:        0.84
+ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
+--- | --- | --- | --- | --- | --- 
+1112 | BiaoMin | t əu ⁴² | t əu ⁴ | 1 | 1
+1108 | EasternBaheng | q a ⁰/³ + t eu ¹¹ | t ɤ ⁴ | 1 | 1
+1109 | Jiongnai | t au ³¹ | t au ⁴ | 1 | 1
+1111 | KimMun | ˀt əu ³¹ | t ɔu ⁴ | 1 | 1
+1110 | Mien | t əu ²³¹ | t ou ⁴ | 1 | 1
+1106 | NorthernQiandong | t u ¹¹ | t u ⁴ | 1 | 1
+1104 | SouthernGuizhouChuanqiandian | t ɯ ¹¹ | t ɯ ⁴ | 1 | 1
+1107 | WesternBaheng | q a ⁰/³ + t au ¹¹ | t ɤ ⁴ | 1 | 1
+1105 | WesternXiangxi | p j i ⁴⁴ + t ə ²² | t ə ⁴ | 1 | 1
+1101 | WhiteHmong | t aɯ ˩/¹¹ | t aɯ ⁴ | 1 | 1
+1113 | ZaoMin | t u ⁴⁴ | t u ⁴ | 1 | 1
+1102 | EasternLuobuohe | q o ⁰/⁵ + z o ⁵⁵ | ð o ᴮ/² | 2 | 1
+1103 | WesternLuobuohe | ʔ ə ⁰/² + ð o ⁵⁵ | ð o ᴮ/² | 3 | 1
+
 ## Concept FIREWOOD
 False Positives: 0.00
 False Negatives: 0.38
@@ -1683,20 +1705,40 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1122 | WhiteHmong | ⁿtʃ e ˩/¹¹ | ⁿʈʂ e ⁴ | 2 | 1
 1128 | WesternBaheng | nʲ o ¹¹ | m j o ⁴ | 3 | 1
 
+## Concept FIVE
+False Positives: 0.00
+False Negatives: 0.36
+Accuracy:        0.78
+ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
+--- | --- | --- | --- | --- | --- 
+1146 | BiaoMin | p l a ³³ | p l a ¹ | 1 | 1
+1142 | EasternBaheng | p j a ³⁵ | p j a ¹ | 1 | 1
+1136 | EasternLuobuohe | p j a ³¹ | p j a ᴬ/¹ | 1 | 1
+1143 | Jiongnai | p ui ⁴⁴ | p u/w i ¹ | 1 | 1
+1145 | KimMun | p j a ³⁵ | p j a ¹ | 1 | 1
+1144 | Mien | p a ³³ | p l a ¹ | 1 | 1
+1138 | SouthernGuizhouChuanqiandian | p ʐ ɿ ³² | p ʐ ɪ ¹ᵃ/¹ | 1 | 1
+1137 | WesternLuobuohe | p a ³¹ | p j a ᴬ/¹ | 1 | 1
+1139 | WesternXiangxi | p ʐ ɑ ³⁵ | p ʐ ɑ ¹ | 1 | 1
+1147 | ZaoMin | p j a ⁴² | p j ɛ ⁵ | 1 | 1
+1140 | NorthernQiandong | ts a ³³ | ts a ¹ | 2 | 1
+1141 | WesternBaheng | t j a ³⁵ | p j a ¹ | 2 | 1
+1135 | WhiteHmong | tʃ i ˥/⁵⁵ | ʈʂ i ¹ | 2 | 1
+
 ## Concept FLOW
 False Positives: 0.00
-False Negatives: 0.67
-Accuracy:        0.50
+False Negatives: 0.52
+Accuracy:        0.65
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1164 | BiaoMin | tʰ ui ³³ | l j ɔu ⁶/¹³ | 1 | 1
-1163 | KimMun | g j eu ³³ | g j ɔu ⁶/¹³ | 4 | 1
-1162 | Mien | l j əu ³¹ | g j eu ⁶/¹³ | 4 | 1
+1163 | KimMun | g j eu ³³ | g j ɔu ⁶/¹³ | 3 | 1
+1162 | Mien | l j əu ³¹ | g j eu ⁶/¹³ | 3 | 1
 1158 | EasternLuobuohe | ⁿd əu ²⁴ | q l u ᴮ/² | 2 | 2
-1161 | Jiongnai | ð e ³³ | l j ɔu ⁴ | 3 | 2
-1159 | WesternLuobuohe | q l u ⁵⁵ | q l u ᴮ/² | 5 | 2
-1157 | WhiteHmong | ⁿt ɯ ˩/¹¹ | ⁿʈ ɯ ⁴ | 6 | 2
-1160 | WesternLuobuohe | qʰ l e n ³⁵ | q l u ᴮ/² | 7 | 2
+1161 | Jiongnai | ð e ³³ | l j ɔu ⁴ | 2 | 2
+1157 | WhiteHmong | ⁿt ɯ ˩/¹¹ | ⁿʈ ɯ ⁴ | 2 | 2
+1159 | WesternLuobuohe | q l u ⁵⁵ | q l u ᴮ/² | 4 | 2
+1160 | WesternLuobuohe | qʰ l e n ³⁵ | q l u ᴮ/² | 5 | 2
 
 ## Concept FLY (INSECT)
 False Positives: 0.00
@@ -1736,16 +1778,16 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept FOOT
 False Positives: 0.00
-False Negatives: 0.61
-Accuracy:        0.56
+False Negatives: 0.44
+Accuracy:        0.71
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1201 | EasternLuobuohe | t ə ⁰/² + t o ²⁴ | t o ᶜ/³ | 1 | 1
+1203 | SouthernGuizhouChuanqiandian | t ə ⁵⁵ | t ə ⁵ᵃ/⁵ | 1 | 1
 1202 | WesternLuobuohe | t ə ⁰/² + t o ³⁵ | t o ᶜ/³ | 1 | 1
 1200 | WhiteHmong | k o ˧/³³ + t aɯ ˧/³³ | t aɯ ⁵ | 1 | 1
 1205 | NorthernQiandong | l ɛ ³³ | t u ⁵ | 2 | 1
 1204 | WesternXiangxi | q o ³⁵ + ɬ ɔ ³⁵ | t ə ⁵ | 2 | 1
-1203 | SouthernGuizhouChuanqiandian | t ə ⁵⁵ | t ə ⁵ᵃ/⁵ | 3 | 1
 
 ## Concept FORGET
 False Positives: 0.35
@@ -1788,12 +1830,11 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept FRAGRANT
 False Positives: 0.00
-False Negatives: 0.66
-Accuracy:        0.50
+False Negatives: 0.67
+Accuracy:        0.49
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1235 | BiaoMin | x u/w ə ³³ | d a ŋ ¹ | 1 | 1
-1238 | EasternBaheng | ⁿt ei ³⁵ | n ɛ ¹ | 1 | 1
 1242 | BiaoMin | d a ŋ ³³ | d a ŋ ¹ | 2 | 1
 1232 | EasternBaheng | h j u ŋ ⁵⁵ | n ɛ ¹ | 2 | 1
 1233 | Jiongnai | ʃ a ŋ ⁴⁴ | ⁿʈ e n ¹ | 2 | 1
@@ -1801,10 +1842,11 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1234 | Mien | h u ŋ ³³ | d aː ŋ ¹ | 2 | 1
 1231 | WesternBaheng | ɕ a ŋ ³³ | n ɛ ¹ | 2 | 1
 1236 | ZaoMin | v o ŋ ⁴⁴ | d ɔ ŋ ¹ | 2 | 1
-1239 | Jiongnai | ⁿt e n ⁴⁴ | ⁿʈ e n ¹ | 3 | 1
-1240 | Mien | d aː ŋ ³³ | d aː ŋ ¹ | 4 | 1
-1237 | WesternBaheng | n ai ³⁵ | n ɛ ¹ | 5 | 1
-1243 | ZaoMin | d o ŋ ⁴⁴ | d ɔ ŋ ¹ | 6 | 1
+1238 | EasternBaheng | ⁿt ei ³⁵ | n ɛ ¹ | 3 | 1
+1239 | Jiongnai | ⁿt e n ⁴⁴ | ⁿʈ e n ¹ | 4 | 1
+1240 | Mien | d aː ŋ ³³ | d aː ŋ ¹ | 5 | 1
+1237 | WesternBaheng | n ai ³⁵ | n ɛ ¹ | 6 | 1
+1243 | ZaoMin | d o ŋ ⁴⁴ | d ɔ ŋ ¹ | 7 | 1
 
 ## Concept FROG
 False Positives: 0.00
@@ -1878,18 +1920,18 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept GALL BLADDER
 False Positives: 0.00
-False Negatives: 0.66
-Accuracy:        0.51
+False Negatives: 0.38
+Accuracy:        0.77
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1307 | EasternBaheng | l a ⁰/³ + ʑ i ŋ ³⁵ | tɕ e ¹ | 1 | 1
 1305 | NorthernQiandong | ɕ i n ³³ | ɕ e n ¹ | 1 | 1
 1301 | EasternLuobuohe | kʰ u ⁵⁵ + t ɛ ⁵⁵ | ts e ᴬ/¹ | 2 | 1
+1303 | SouthernGuizhouChuanqiandian | s ei ³² | s ei ¹ᵃ/¹ | 2 | 1
+1306 | WesternBaheng | ʔ a ⁰/³ + tɕ ei ³⁵ | tɕ e ¹ | 2 | 1
 1302 | WesternLuobuohe | t ə ⁰/² + ts e ³¹ | ts e ᴬ/¹ | 2 | 1
+1304 | WesternXiangxi | q o ³⁵ + tɕ i ³⁵ | tɕ i ¹ | 2 | 1
 1308 | ZaoMin | t eu ⁴⁴ | t ɛu ¹ | 2 | 1
-1303 | SouthernGuizhouChuanqiandian | s ei ³² | s ei ¹ᵃ/¹ | 3 | 1
-1306 | WesternBaheng | ʔ a ⁰/³ + tɕ ei ³⁵ | tɕ e ¹ | 3 | 1
-1304 | WesternXiangxi | q o ³⁵ + tɕ i ³⁵ | tɕ i ¹ | 3 | 1
 
 ## Concept GARDEN
 False Positives: 0.13
@@ -1921,8 +1963,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept GHOST
 False Positives: 0.00
-False Negatives: 0.58
-Accuracy:        0.59
+False Negatives: 0.62
+Accuracy:        0.55
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1347 | BiaoMin | m̥ j ɛ n ³⁵ | m̥ j ɛ n ³ | 1 | 1
@@ -1930,15 +1972,15 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1348 | ZaoMin | m j a n ²⁴ | m j ɛ n ³ | 1 | 1
 1346 | KimMun | ŋ w a n ⁵¹ | ŋ w aː n ³ | 4 | 1
 1342 | EasternBaheng | k w ei ³⁵ | k w ɛ ¹ | 2 | 2
-1344 | Jiongnai | k l i ⁴⁴ | k l i ¹ | 2 | 2
 1341 | WesternBaheng | k w ai ³⁵ | k w ɛ ¹ | 2 | 2
 1339 | WesternXiangxi | t ɑ ³⁵ + q w ei ³⁵ | q w ei ¹ | 2 | 2
 1336 | EasternLuobuohe | q o ⁰/⁵ + q l e n ³¹ | q l e n ᴬ/¹ | 3 | 2
+1344 | Jiongnai | k l i ⁴⁴ | k l i ¹ | 3 | 2
 1340 | NorthernQiandong | ɬ j a ŋ ³³ | ȴ̥ a ŋ ¹ | 3 | 2
-1338 | SouthernGuizhouChuanqiandian | ɬ u/w a ³² | l̥ u/w a ¹ᵃ/¹ | 3 | 2
 1337 | WesternLuobuohe | ʔ ə ⁰/² + q l e n ³¹ | q l e n ᴬ/¹ | 3 | 2
-1335 | WhiteHmong | d a ˥/⁵⁵ | d a ¹ | 5 | 2
-1343 | EasternBaheng | p j au ³³ | k w ɛ ¹ | 6 | 2
+1338 | SouthernGuizhouChuanqiandian | ɬ u/w a ³² | l̥ u/w a ¹ᵃ/¹ | 5 | 2
+1335 | WhiteHmong | d a ˥/⁵⁵ | d a ¹ | 6 | 2
+1343 | EasternBaheng | p j au ³³ | k w ɛ ¹ | 7 | 2
 
 ## Concept GINGER
 False Positives: 0.00
@@ -2030,9 +2072,9 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1406 | KimMun | ŋ w a ⁵¹ | w a ³ | 2 | 1
 
 ## Concept GRAVE
-False Positives: 0.38
-False Negatives: 0.33
-Accuracy:        0.64
+False Positives: 0.42
+False Negatives: 0.19
+Accuracy:        0.68
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1417 | BiaoMin | ts əu ³⁵ | ts əu ³ | 1 | 1
@@ -2040,10 +2082,10 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1415 | Mien | ts əu ⁵³ | θ ou ³ | 1 | 1
 1414 | EasternBaheng | ts ei ⁵⁵ | ȵ e ⁵ | 1 | 2
 1410 | SouthernGuizhouChuanqiandian | ⁿts u/w a ⁵⁵ | ⁿʈs u/w a ⁵ᵃ/⁵ | 1 | 2
+1413 | WesternBaheng | ʔ a ⁰/³ + ȵ ei ⁵⁵ | ȵ e ⁵ | 1 | 2
 1411 | WesternXiangxi | q o ³⁵ + ⁿts ei ⁵³ | ⁿʈs ei ⁵ | 1 | 2
 1409 | WhiteHmong | qʰ o ˧˦/³⁴ + ⁿtsʱ a ˧/³³ | ⁿʈs a ⁵ | 1 | 2
 1412 | NorthernQiandong | f a ŋ ⁵⁵ + l j a ŋ ⁵⁵ | s a ŋ ⁵ | 2 | 2
-1413 | WesternBaheng | ʔ a ⁰/³ + ȵ ei ⁵⁵ | ȵ e ⁵ | 3 | 2
 
 ## Concept GROW UP
 False Positives: 0.00
@@ -2145,6 +2187,15 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1482 | ZaoMin | n e ²⁴ | n ɛi ³ | 1 | 1
 1474 | WesternXiangxi | h e n ⁴⁴ | h ei ³ | 2 | 1
 
+## Concept HEN
+False Positives: 0.00
+False Negatives: 0.50
+Accuracy:        0.67
+ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
+--- | --- | --- | --- | --- | --- 
+1484 | KimMun | tʃ ai ³⁵ + ȵ ei ³¹ | k j aː n ⁵ | 1 | 1
+1483 | Mien | tɕ ai ³³ + ȵ ei ²³¹ | k aː n ⁵ | 2 | 1
+
 ## Concept HOOF
 False Positives: 0.00
 False Negatives: 0.32
@@ -2159,8 +2210,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept HOT
 False Positives: 0.00
-False Negatives: 0.46
-Accuracy:        0.70
+False Negatives: 0.67
+Accuracy:        0.49
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1538 | BiaoMin | b əi ²⁴ | k l œ n ¹ | 1 | 1
@@ -2168,15 +2219,15 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1529 | SouthernGuizhouChuanqiandian | s o ²³² | k o ŋ ¹ᵃ/¹ | 2 | 1
 1527 | EasternLuobuohe | k a ŋ ³¹ | k a ŋ ᴬ/¹ | 3 | 1
 1535 | Jiongnai | kʰ j a ŋ ⁴⁴ | kʰ j a ŋ ¹ | 3 | 1
-1537 | KimMun | k j oː m ³⁵ | k j ɔː m ¹ | 3 | 1
-1536 | Mien | k oː m ³³ | k ɔ m ¹ | 3 | 1
 1532 | NorthernQiandong | kʰ i ³³ | kʰ i ¹ | 3 | 1
 1530 | SouthernGuizhouChuanqiandian | k o ŋ ³² | k o ŋ ¹ᵃ/¹ | 3 | 1
 1533 | WesternBaheng | m ɔ ⁵³ + q a ŋ ³⁵ | k ɔ̃ ¹ | 3 | 1
 1528 | WesternLuobuohe | q ɑ ŋ ³¹ | k a ŋ ᴬ/¹ | 3 | 1
 1526 | WhiteHmong | k u ˥/⁵⁵ | k u ¹ | 3 | 1
-1539 | ZaoMin | ts a m ⁴⁴ | ts a m ¹ | 3 | 1
-1531 | WesternXiangxi | ⁿtɕ e ⁵³ | c e ¹ | 4 | 1
+1537 | KimMun | k j oː m ³⁵ | k j ɔː m ¹ | 4 | 1
+1536 | Mien | k oː m ³³ | k ɔ m ¹ | 4 | 1
+1539 | ZaoMin | ts a m ⁴⁴ | ts a m ¹ | 4 | 1
+1531 | WesternXiangxi | ⁿtɕ e ⁵³ | c e ¹ | 5 | 1
 
 ## Concept HOUSE
 False Positives: 0.00
@@ -2218,15 +2269,15 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1596 | WesternXiangxi | q o ³⁵ + ɕ e ⁴⁴ | ɕ e ³ | 3 | 2
 
 ## Concept IRON
-False Positives: 0.35
-False Negatives: 0.12
-Accuracy:        0.75
+False Positives: 0.43
+False Negatives: 0.00
+Accuracy:        0.73
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1615 | BiaoMin | ɬ j a ⁵³ | ɬ j a ⁷/³ | 1 | 1
+1614 | KimMun | g j a ¹¹ | g j a ⁷'/³ | 1 | 1
 1613 | Mien | ɬ j e ⁵⁵ | g j a ⁷/³ | 1 | 1
 1616 | ZaoMin | l j a ⁴⁴ | l j ɛ ⁷/³ | 1 | 1
-1614 | KimMun | g j a ¹¹ | g j a ⁷'/³ | 2 | 1
 1611 | EasternBaheng | ɬ u ⁵⁵ | l̥ ɯ ⁵ | 1 | 2
 1605 | EasternLuobuohe | q o ⁰/⁵ + ɬ o ²⁴ | l̥ o ᶜ/³ | 1 | 2
 1612 | Jiongnai | ɬ o ³⁵ | l̥ ɔ ⁵ | 1 | 2
@@ -2313,8 +2364,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept LAZY
 False Positives: 0.14
-False Negatives: 0.50
-Accuracy:        0.63
+False Negatives: 0.43
+Accuracy:        0.69
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1677 | BiaoMin | l ui ⁴² | l w əi ⁶/¹³ | 1 | 1
@@ -2322,12 +2373,12 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1675 | Mien | l ui ²¹ | l w ei ⁶/¹³ | 1 | 1
 1674 | EasternBaheng | ɬ ai ³¹ | ŋ ɛ ⁴ | 1 | 2
 1668 | EasternLuobuohe | ⁿg a ŋ ⁵⁵ | ⁿk a ŋ ᴮ/² | 2 | 2
+1670 | SouthernGuizhouChuanqiandian | ⁿtɕ e n ¹¹ | ⁿtɕ ei n ⁴ | 2 | 2
 1669 | WesternLuobuohe | ⁿg ɑ ŋ ⁵⁵ | ⁿk a ŋ ᴮ/² | 2 | 2
 1667 | WhiteHmong | t u ˥/⁵⁵ + ⁿk e ŋ ˧˩/³¹ | ⁿk ɛ ŋ ⁴ | 2 | 2
 1672 | NorthernQiandong | ŋ i ¹¹ | ŋ i ⁴ | 3 | 2
 1673 | WesternBaheng | ŋ e ¹¹ | ŋ ɛ ⁴ | 3 | 2
 1671 | WesternXiangxi | ȵ e ²² | ɲ e ⁴ | 3 | 2
-1670 | SouthernGuizhouChuanqiandian | ⁿtɕ e n ¹¹ | ⁿtɕ ei n ⁴ | 4 | 2
 
 ## Concept LEAD (GUIDE)
 False Positives: 0.41
@@ -2412,58 +2463,58 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1724 | ZaoMin | ʑ a p ²² | dz j ɛ p ⁸/²⁴ | 3 | 2
 
 ## Concept LIQUOR
-False Positives: 0.31
-False Negatives: 0.13
-Accuracy:        0.77
+False Positives: 0.42
+False Negatives: 0.00
+Accuracy:        0.73
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1733 | BiaoMin | ts u ³³ | t i/j u ³ | 1 | 1
-1732 | Mien | t j u ⁵³ + k aː m ³³ | t i/j u ³ | 2 | 1
-1734 | ZaoMin | d j u ²⁴ + t j u ⁴⁴ | d i/j u ³ | 2 | 1
-1725 | EasternLuobuohe | tɕ o ⁵⁵ + ˀj ɛ ³¹ | tɕ o ᴮ/² | 2 | 2
-1731 | Jiongnai | tʃ au ⁵³ + k e n ⁴⁴ | tʃ au ³ | 2 | 2
-1729 | NorthernQiandong | tɕ u ³⁵ + q a ŋ ³³ + n a ŋ ⁵⁵ | tɕ u ³ | 2 | 2
-1727 | SouthernGuizhouChuanqiandian | tɕ ə ⁴² + h u/w a ³² + ʐ ɪ ³² | tɕ ə ³ᵃ/³ | 2 | 2
-1730 | WesternBaheng | tɕ eu ³¹ + q ai ³⁵ | tɕ ɤ ³ | 2 | 2
-1726 | WesternLuobuohe | tɕ o ⁵⁵ + ˀj æ ³¹ | tɕ o ᴮ/² | 2 | 2
-1728 | WesternXiangxi | tɕ ɯ ⁴⁴ + tɕ ɑ ŋ ²² | tɕ ɯ ³ | 2 | 2
+1732 | Mien | t j u ⁵³ + k aː m ³³ | t i/j u ³ | 1 | 1
+1734 | ZaoMin | d j u ²⁴ + t j u ⁴⁴ | d i/j u ³ | 1 | 1
+1725 | EasternLuobuohe | tɕ o ⁵⁵ + ˀj ɛ ³¹ | tɕ o ᴮ/² | 1 | 2
+1731 | Jiongnai | tʃ au ⁵³ + k e n ⁴⁴ | tʃ au ³ | 1 | 2
+1729 | NorthernQiandong | tɕ u ³⁵ + q a ŋ ³³ + n a ŋ ⁵⁵ | tɕ u ³ | 1 | 2
+1727 | SouthernGuizhouChuanqiandian | tɕ ə ⁴² + h u/w a ³² + ʐ ɪ ³² | tɕ ə ³ᵃ/³ | 1 | 2
+1730 | WesternBaheng | tɕ eu ³¹ + q ai ³⁵ | tɕ ɤ ³ | 1 | 2
+1726 | WesternLuobuohe | tɕ o ⁵⁵ + ˀj æ ³¹ | tɕ o ᴮ/² | 1 | 2
+1728 | WesternXiangxi | tɕ ɯ ⁴⁴ + tɕ ɑ ŋ ²² | tɕ ɯ ³ | 1 | 2
 
 ## Concept LIVER
 False Positives: 0.00
-False Negatives: 0.65
-Accuracy:        0.52
+False Negatives: 0.54
+Accuracy:        0.63
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1754 | BiaoMin | ɬ a n ³³ | ɬ a n ¹ | 1 | 1
+1751 | Jiongnai | ⁿkʰ e n ⁴⁴ | ⁿkʰ e ŋ ¹’/¹ | 1 | 1
 1753 | KimMun | g j a n ¹¹ | g j e n ¹’/¹ | 1 | 1
 1752 | Mien | ɬ a n ³³ | g a n ¹ | 1 | 1
 1750 | EasternBaheng | q ai ³⁵ + h e ŋ ³⁵ | h ɪ̃ ¹ | 2 | 1
-1751 | Jiongnai | ⁿkʰ e n ⁴⁴ | ⁿkʰ e ŋ ¹’/¹ | 2 | 1
-1744 | EasternLuobuohe | m u ³¹ + ʂ ɛ ³¹ | s e n ᴬ/¹ | 3 | 1
-1748 | NorthernQiandong | fʰ u ³⁵ + z ɛ ¹³ + ʈʂ o ŋ ⁴⁴ | xʰ i ¹ | 3 | 1
-1746 | SouthernGuizhouChuanqiandian | ʐ æ ²² | ʐ æi n ¹ᵇ/¹ | 3 | 1
-1745 | WesternLuobuohe | t ə ⁰/² + ⁿb u ³¹ + s e n ³¹ | s e n ᴬ/¹ | 3 | 1
-1747 | WesternXiangxi | ʂ ɛ ³⁵ | ʂ ɛ ¹ | 3 | 1
-1743 | WhiteHmong | ʂ i/j a ˥/⁵⁵ | ʂ i/j a ¹ | 3 | 1
-1749 | WesternBaheng | tɕ i ³³ | h ɪ̃ ¹ | 4 | 1
+1744 | EasternLuobuohe | m u ³¹ + ʂ ɛ ³¹ | s e n ᴬ/¹ | 2 | 1
+1748 | NorthernQiandong | fʰ u ³⁵ + z ɛ ¹³ + ʈʂ o ŋ ⁴⁴ | xʰ i ¹ | 2 | 1
+1746 | SouthernGuizhouChuanqiandian | ʐ æ ²² | ʐ æi n ¹ᵇ/¹ | 2 | 1
+1745 | WesternLuobuohe | t ə ⁰/² + ⁿb u ³¹ + s e n ³¹ | s e n ᴬ/¹ | 2 | 1
+1747 | WesternXiangxi | ʂ ɛ ³⁵ | ʂ ɛ ¹ | 2 | 1
+1743 | WhiteHmong | ʂ i/j a ˥/⁵⁵ | ʂ i/j a ¹ | 2 | 1
+1749 | WesternBaheng | tɕ i ³³ | h ɪ̃ ¹ | 3 | 1
 
 ## Concept LOW
 False Positives: 0.00
-False Negatives: 0.74
-Accuracy:        0.41
+False Negatives: 0.79
+Accuracy:        0.34
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1782 | BiaoMin | x ɔ ²¹ | h ɔ ⁴ | 1 | 1
-1781 | KimMun | h a ⁴² | h a ⁴ | 1 | 1
-1780 | Mien | ʔ ai ⁵³ | h a ⁴ | 1 | 1
-1775 | SouthernGuizhouChuanqiandian | h ɪ ¹¹ | h ɪ ⁴ | 1 | 1
 1778 | EasternBaheng | ⁿq e ¹¹ | ŋ e ⁴ | 2 | 1
 1776 | NorthernQiandong | k a ¹¹ | k a ⁴ | 2 | 1
 1772 | WhiteHmong | q i ˩/¹¹ | q e ⁴ | 2 | 1
 1773 | EasternLuobuohe | t ə ⁰/² + ʁ a ⁵⁵ | ʁ a ᴮ/² | 3 | 1
 1779 | Jiongnai | tʃ e ³¹ | tʃ e ⁴ | 3 | 1
-1777 | WesternBaheng | ŋ i ¹¹ | ŋ e ⁴ | 4 | 1
-1774 | WesternLuobuohe | ʁ ɑ ⁵⁵ | ʁ a ᴮ/² | 5 | 1
+1781 | KimMun | h a ⁴² | h a ⁴ | 4 | 1
+1780 | Mien | ʔ ai ⁵³ | h a ⁴ | 4 | 1
+1775 | SouthernGuizhouChuanqiandian | h ɪ ¹¹ | h ɪ ⁴ | 4 | 1
+1777 | WesternBaheng | ŋ i ¹¹ | ŋ e ⁴ | 5 | 1
+1774 | WesternLuobuohe | ʁ ɑ ⁵⁵ | ʁ a ᴮ/² | 6 | 1
 
 ## Concept LUNG
 False Positives: 0.00
@@ -2496,15 +2547,15 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept MATERNAL AUNT (WIFE OF MOTHER'S BROTHER)
 False Positives: 0.00
-False Negatives: 0.56
-Accuracy:        0.61
+False Negatives: 0.32
+Accuracy:        0.81
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1801 | BiaoMin | m j a ŋ ³¹ | m j a ŋ ² | 1 | 1
+1800 | KimMun | ŋ w a ŋ ³³ | ŋ w a ŋ ² | 1 | 1
 1798 | Mien | m j a ŋ ³¹ | m w a ŋ ² | 1 | 1
 1802 | ZaoMin | m j a ŋ ⁵³ | m j a ŋ ² | 1 | 1
-1800 | KimMun | ŋ w a ŋ ³³ | ŋ w a ŋ ² | 2 | 1
-1799 | Mien | ʔ au ⁵³ | m w a ŋ ² | 3 | 1
+1799 | Mien | ʔ au ⁵³ | m w a ŋ ² | 2 | 1
 
 ## Concept MEAT
 False Positives: 0.00
@@ -2529,8 +2580,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept MEDICINE
 False Positives: 0.00
-False Negatives: 0.31
-Accuracy:        0.81
+False Negatives: 0.17
+Accuracy:        0.91
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1826 | BiaoMin | ɕ a ³³ | h j a ¹ | 1 | 1
@@ -2539,26 +2590,26 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1824 | Jiongnai | ð j a ⁴⁴ | ð j a ¹ | 1 | 1
 1821 | NorthernQiandong | tɕ a ³³ | tɕ a ¹ | 1 | 1
 1819 | SouthernGuizhouChuanqiandian | k a ³² | k a ¹ᵃ/¹ | 1 | 1
+1822 | WesternBaheng | ȵ a ³⁵ | ȵ a ¹ | 1 | 1
 1818 | WesternLuobuohe | ʔ ə ⁰/² + k a ³¹ | k a ᴬ/¹ | 1 | 1
 1820 | WesternXiangxi | ⁿk ɑ ³⁵ | ⁿk ɑ ¹ | 1 | 1
 1827 | ZaoMin | ts ei ⁴⁴ | ts ɛi ¹ | 1 | 1
 1825 | KimMun | ŋ w a ⁵¹ | g j aːi ¹ | 2 | 1
-1822 | WesternBaheng | ȵ a ³⁵ | ȵ a ¹ | 3 | 1
 
 ## Concept MELT
-False Positives: 0.33
-False Negatives: 0.62
-Accuracy:        0.48
+False Positives: 0.31
+False Negatives: 0.58
+Accuracy:        0.52
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1834 | BiaoMin | ʑ u/w ə ³¹ | wj/ɥ ə ² | 1 | 1
 1835 | ZaoMin | ʑ i ŋ ⁵³ | dz i ŋ ² | 3 | 1
 1832 | EasternBaheng | ʑ e ³³ | j e ² | 1 | 2
 1828 | SouthernGuizhouChuanqiandian | ʑ u/w a ⁵³ | ʑ u/w a ² | 1 | 2
+1829 | WesternXiangxi | tɕ i ⁴⁴ + ʑ i n ³¹ | ʑ i ² | 1 | 2
 1833 | Jiongnai | j o ³³ | ȵ i ² | 2 | 2
 1831 | WesternBaheng | j e ³³ | j e ² | 2 | 2
 1830 | NorthernQiandong | ʑ a ŋ ⁵⁵ | ʑ a ŋ ² | 3 | 2
-1829 | WesternXiangxi | tɕ i ⁴⁴ + ʑ i n ³¹ | ʑ i ² | 3 | 2
 
 ## Concept MONEY
 False Positives: 0.00
@@ -2603,9 +2654,9 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1869 | EasternLuobuohe | tɕ i n ³¹ + ˀʑ u ŋ ⁵⁵ + m a ⁵⁵ | ˀʑ o ŋ ᴮ/² | 1 | 1
 1872 | NorthernQiandong | k a ŋ ³³ + ʑ u ³⁵ + t a ³⁵ + l o ⁴⁴ | ʑ u ³ | 2 | 1
 1871 | SouthernGuizhouChuanqiandian | k u/w a ⁴² + ʑ a ŋ ⁴² | ʑ a ŋ ³ᵃ/³ | 2 | 1
-1873 | WesternBaheng | q ai ³⁵ + t u ³¹ + l u ³⁵ | j õ ³ | 2 | 1
 1870 | WesternLuobuohe | tɕ i n ³¹ + ˀȵ o ŋ ⁵⁵ | ˀʑ o ŋ ᴮ/² | 2 | 1
-1868 | WhiteHmong | j o ŋ ˧˦/³⁴ + tʃʰ a ˥˧/⁵³ + tɕ u ˨˩˧/²¹³ | j ɔ ŋ ³ | 3 | 1
+1868 | WhiteHmong | j o ŋ ˧˦/³⁴ + tʃʰ a ˥˧/⁵³ + tɕ u ˨˩˧/²¹³ | j ɔ ŋ ³ | 2 | 1
+1873 | WesternBaheng | q ai ³⁵ + t u ³¹ + l u ³⁵ | j õ ³ | 3 | 1
 
 ## Concept MOTHER
 False Positives: 0.00
@@ -2695,20 +2746,20 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept NAVEL
 False Positives: 0.00
-False Negatives: 0.34
-Accuracy:        0.80
+False Negatives: 0.48
+Accuracy:        0.68
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1941 | BiaoMin | d i t ⁵³ + t ei ²⁴ | d i n ⁷/³ | 1 | 1
 1933 | EasternLuobuohe | ʔ a ⁰/² + ⁿt o ³³ + ȵ i ⁵⁵ | ˀt o ᴰ/⁴ | 1 | 1
 1938 | Jiongnai | tʰ e ⁴⁴ + ⁿt u ⁵⁵ | ⁿʈ u ⁷/³ | 1 | 1
-1940 | KimMun | ȵ au ³¹ + d oː t ⁵⁵ | d uː t ⁷'/³ | 1 | 1
 1937 | NorthernQiandong | p u ⁵³ + t u ⁵³ | t u ⁷/³ | 1 | 1
 1935 | SouthernGuizhouChuanqiandian | h o ŋ ²³² + ⁿt ə ⁴⁴ | ⁿʈ ə ⁷ᵃ/³ | 1 | 1
 1934 | WesternLuobuohe | ʔ ə ⁰/² + ⁿt o ³¹ + tɕʰ u ³¹ | ˀt o ᴰ/⁴ | 1 | 1
 1932 | WhiteHmong | p u ˥˧/⁵³ + ⁿt aɯ ˩/¹¹ | ⁿʈ aɯ ⁷/³ | 1 | 1
-1939 | Mien | k ə ³¹ + s j e ³³ + n u t ⁵⁵ | d u t ⁷/³ | 2 | 1
-1936 | WesternXiangxi | p u ⁴⁴ + l u ⁴⁴ + q ɛ ⁴⁴ | ⁿʈ u ⁷/³ | 3 | 1
+1940 | KimMun | ȵ au ³¹ + d oː t ⁵⁵ | d uː t ⁷'/³ | 2 | 1
+1939 | Mien | k ə ³¹ + s j e ³³ + n u t ⁵⁵ | d u t ⁷/³ | 3 | 1
+1936 | WesternXiangxi | p u ⁴⁴ + l u ⁴⁴ + q ɛ ⁴⁴ | ⁿʈ u ⁷/³ | 4 | 1
 
 ## Concept NEAR
 False Positives: 0.00
@@ -2746,8 +2797,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept NEEDLE (FOR SEWING)
 False Positives: 0.14
-False Negatives: 0.25
-Accuracy:        0.80
+False Negatives: 0.12
+Accuracy:        0.87
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1973 | BiaoMin | tɕ ɛ n ³³ | tɕ ɛ n ¹ | 1 | 1
@@ -2757,12 +2808,12 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 1969 | EasternBaheng | k u ŋ ³⁵ | k ɔ̃ ¹ | 1 | 2
 1963 | EasternLuobuohe | q o ⁰/⁵ + k u ŋ ³¹ | k o ŋ ᴬ/¹ | 1 | 2
 1970 | Jiongnai | tʃ ɒ ŋ ⁴⁴ | tʃ w a ŋ ¹ | 1 | 2
+1967 | NorthernQiandong | tɕ u ³³ | tɕ u ¹ | 1 | 2
 1965 | SouthernGuizhouChuanqiandian | k a ŋ ³² | k a ŋ ¹ᵃ/¹ | 1 | 2
 1968 | WesternBaheng | k a ŋ ³⁵ | k ɔ̃ ¹ | 1 | 2
 1964 | WesternLuobuohe | ʔ ə ⁰/² + k o ŋ ³¹ | k o ŋ ᴬ/¹ | 1 | 2
 1966 | WesternXiangxi | q o ³⁵ + tɕ u ³⁵ | tɕ u ¹ | 1 | 2
 1962 | WhiteHmong | k o ŋ ˥/⁵⁵ | k ɔ ŋ ¹ | 1 | 2
-1967 | NorthernQiandong | tɕ u ³³ | tɕ u ¹ | 3 | 2
 
 ## Concept NEW
 False Positives: 0.00
@@ -2786,23 +2837,23 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept NINE
 False Positives: 0.00
-False Negatives: 0.63
-Accuracy:        0.54
+False Negatives: 0.14
+Accuracy:        0.92
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 1999 | BiaoMin | ʑ u ³¹ | j u ² | 1 | 1
+1995 | EasternBaheng | k o ³³ | k o ⁵ | 1 | 1
 1989 | EasternLuobuohe | ʑ a ³¹ | ʑ a ᴬ/¹ | 1 | 1
+1996 | Jiongnai | tʃ u ³³ | tʃ u ² | 1 | 1
+1998 | KimMun | d u ³³ | d u ² | 1 | 1
 1993 | NorthernQiandong | tɕ ə ⁵⁵ | tɕ ə ² | 1 | 1
 1991 | SouthernGuizhouChuanqiandian | tɕ a ⁵³ | tɕ a ² | 1 | 1
+1994 | WesternBaheng | k o ³³ | k o ⁵ | 1 | 1
 1990 | WesternLuobuohe | tɕ ɑ ³¹ | ʑ a ᴬ/¹ | 1 | 1
 1992 | WesternXiangxi | tɕ o ³¹ | tɕ o ² | 1 | 1
 1988 | WhiteHmong | tɕ u/w a ˥˧/⁵³ | c u/w a ² | 1 | 1
-1995 | EasternBaheng | k o ³³ | k o ⁵ | 2 | 1
-1994 | WesternBaheng | k o ³³ | k o ⁵ | 2 | 1
-2000 | ZaoMin | k u ⁵³ | k u ² | 2 | 1
-1996 | Jiongnai | tʃ u ³³ | tʃ u ² | 3 | 1
-1998 | KimMun | d u ³³ | d u ² | 3 | 1
-1997 | Mien | d o ᶠ/⁰ | d u ² | 4 | 1
+2000 | ZaoMin | k u ⁵³ | k u ² | 1 | 1
+1997 | Mien | d o ᶠ/⁰ | d u ² | 2 | 1
 
 ## Concept NOSE
 False Positives: 0.00
@@ -2883,30 +2934,30 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept PANGOLIN
 False Positives: 0.00
-False Negatives: 0.79
-Accuracy:        0.35
+False Negatives: 0.74
+Accuracy:        0.41
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2045 | EasternBaheng | ŋ */ə ŋ̍ ⁰/³ + k w ei ³¹ | ɦ j e ⁶/¹³ | 1 | 1
 2039 | EasternLuobuohe | q o ⁰/⁵ + ⁿɢ ɛ ³¹ + tsʰ e ³¹ + l i ²⁴ + v ei ⁵⁵ | wj/ɥ o ŋ ᴬ/¹ | 2 | 1
+2046 | Mien | l ai ²¹ | g ai ⁶/¹³ | 2 | 1
 2040 | WesternLuobuohe | j ø ŋ ³¹ + ⁿdʑ e ³⁵ | wj/ɥ o ŋ ᴬ/¹ | 2 | 1
 2047 | KimMun | g j ai ⁴² | g j ai ⁶/¹³ | 3 | 1
-2046 | Mien | l ai ²¹ | g ai ⁶/¹³ | 4 | 1
-2043 | NorthernQiandong | ɣ o ¹³ | ɣ o ⁶/¹³ | 5 | 1
-2041 | SouthernGuizhouChuanqiandian | ʐ o ¹³ | ʐ o ⁶/¹³ | 5 | 1
-2042 | WesternXiangxi | t ɑ ³⁵ + ʐ ɔ ⁴² | ʐ ɔ ⁶/¹³ | 5 | 1
-2044 | WesternBaheng | j ei ⁴⁴ | ɦ j e ⁶/¹³ | 6 | 1
+2043 | NorthernQiandong | ɣ o ¹³ | ɣ o ⁶/¹³ | 4 | 1
+2041 | SouthernGuizhouChuanqiandian | ʐ o ¹³ | ʐ o ⁶/¹³ | 4 | 1
+2042 | WesternXiangxi | t ɑ ³⁵ + ʐ ɔ ⁴² | ʐ ɔ ⁶/¹³ | 4 | 1
+2044 | WesternBaheng | j ei ⁴⁴ | ɦ j e ⁶/¹³ | 5 | 1
 
 ## Concept PAPER
-False Positives: 0.41
-False Negatives: 0.14
+False Positives: 0.34
+False Negatives: 0.25
 Accuracy:        0.70
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2059 | BiaoMin | t j əi ³⁵ | ȶ əi ³ | 1 | 1
 2058 | KimMun | tʃ ei ⁵¹ | ȶ ei ³ | 1 | 1
 2057 | Mien | ts ei ⁵³ | tɕ ei ³ | 1 | 1
-2060 | ZaoMin | ts i ²⁴ | ts i ³ | 1 | 1
+2060 | ZaoMin | ts i ²⁴ | ts i ³ | 3 | 1
 2055 | EasternBaheng | q a ⁰/³ + ⁿt au ³¹³ | n ɔ ³ | 1 | 2
 2049 | EasternLuobuohe | q o ⁰/⁵ + ⁿt o ⁵⁵ | ˀt o ᴮ/² | 1 | 2
 2056 | Jiongnai | ⁿt au ⁵³ | ⁿʈ au ³ | 1 | 2
@@ -3055,29 +3106,19 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2141 | Mien | dz o m ⁵³ + t au ³¹ | dʑ u m ⁶/¹³ | 2 | 1
 2137 | WesternXiangxi | p j i ⁴⁴ + k ɯ ³⁵ + ⁿtɕ ɯ ⁵³ | ⁿtɕ ɯ ⁵ | 2 | 1
 
-## Concept PLANT (SOMETHING)
-False Positives: 0.00
-False Negatives: 0.44
-Accuracy:        0.71
-ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
---- | --- | --- | --- | --- | --- 
-2144 | SouthernGuizhouChuanqiandian | tɕ o ŋ ¹³ | tɕ o ŋ ⁶/¹³ | 1 | 1
-2145 | WesternXiangxi | ⁿtɕ u ⁴⁴ | tɕ ɑ ŋ ⁶/¹³ | 2 | 1
-2143 | WhiteHmong | tɕ o ˧˩/³¹ | c ɔ ⁶/¹³ | 2 | 1
-
 ## Concept PURE
 False Positives: 0.00
-False Negatives: 0.61
-Accuracy:        0.56
+False Negatives: 0.45
+Accuracy:        0.71
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2157 | EasternBaheng | ⁿp j o ³⁵ | n ɪ̃ ¹ | 1 | 1
 2152 | EasternLuobuohe | t ə ⁰/² + ⁿtsʰ e ³¹ | ˀʈʂʰ e ᴬ/¹ | 2 | 1
 2158 | Mien | ɕ əu ²⁴ | dz a ŋ ¹ | 2 | 1
 2155 | NorthernQiandong | ɕʰ i ³³ | ɕʰ i ¹ | 2 | 1
+2154 | SouthernGuizhouChuanqiandian | ⁿts æ n ²² | ⁿʈs æi n ¹ᵇ/¹ | 2 | 1
 2153 | WesternLuobuohe | ⁿtsʰ e ³¹ | ˀʈʂʰ e ᴬ/¹ | 2 | 1
-2154 | SouthernGuizhouChuanqiandian | ⁿts æ n ²² | ⁿʈs æi n ¹ᵇ/¹ | 3 | 1
-2156 | WesternBaheng | ȵ̊ i ³⁵ | n ɪ̃ ¹ | 4 | 1
+2156 | WesternBaheng | ȵ̊ i ³⁵ | n ɪ̃ ¹ | 3 | 1
 
 ## Concept PUT ON
 False Positives: 0.00
@@ -3101,23 +3142,23 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept RAIN (PRECIPITATION)
 False Positives: 0.00
-False Negatives: 0.37
-Accuracy:        0.77
+False Negatives: 0.14
+Accuracy:        0.93
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2200 | BiaoMin | b l ə ⁴² | b l ə ⁶/¹³ | 1 | 1
-2199 | KimMun | b u ŋ ⁴² | b u ŋ ⁶/¹³ | 4 | 1
-2198 | Mien | b u ŋ ²¹ | b l u ŋ ⁶/¹³ | 4 | 1
-2201 | ZaoMin | b i ŋ ²² | b i ŋ ⁶/¹³ | 4 | 1
+2199 | KimMun | b u ŋ ⁴² | b u ŋ ⁶/¹³ | 1 | 1
+2198 | Mien | b u ŋ ²¹ | b l u ŋ ⁶/¹³ | 1 | 1
+2201 | ZaoMin | b i ŋ ²² | b i ŋ ⁶/¹³ | 1 | 1
 2196 | EasternBaheng | ʔ a ⁰/³ + n u ŋ ³¹ | m õ ⁶/¹³ | 2 | 2
 2197 | Jiongnai | n ə ŋ ¹¹ | n ɐ ŋ ⁶/¹³ | 2 | 2
 2194 | NorthernQiandong | n o ŋ ¹³ | n o ŋ ⁶/¹³ | 2 | 2
 2192 | SouthernGuizhouChuanqiandian | n ə ŋ ¹³¹ | n a ŋ ⁶/¹³ | 2 | 2
+2195 | WesternBaheng | ʔ a ŋ ³⁵ + m o ŋ ⁵⁵ | m õ ⁶/¹³ | 2 | 2
 2191 | WesternLuobuohe | n o ³⁵ | n o ŋ ᶜ/³ | 2 | 2
 2193 | WesternXiangxi | n o ŋ ⁴² | n o ŋ ⁶/¹³ | 2 | 2
 2189 | WhiteHmong | n a ˧˩/³¹ | n a ⁶/¹³ | 2 | 2
 2190 | EasternLuobuohe | ˀʑ o ³³ | n o ŋ ᶜ/³ | 3 | 2
-2195 | WesternBaheng | ʔ a ŋ ³⁵ + m o ŋ ⁵⁵ | m õ ⁶/¹³ | 5 | 2
 
 ## Concept RED
 False Positives: 0.00
@@ -3151,8 +3192,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept REPAIR
 False Positives: 0.00
-False Negatives: 0.42
-Accuracy:        0.74
+False Negatives: 0.40
+Accuracy:        0.75
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2237 | BiaoMin | b j a ³⁵ | b j a ³ | 1 | 1
@@ -3165,8 +3206,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2230 | WesternXiangxi | ⁿp ɑ ⁴⁴ | ⁿp ɑ ³ | 1 | 1
 2238 | ZaoMin | b j a ²⁴ | b j ɛ ³ | 1 | 1
 2234 | Jiongnai | ʍ u ŋ ⁵³ | ⁿp a n ³ | 2 | 1
-2232 | WesternBaheng | m a ³¹ | m a ³ | 3 | 1
-2228 | WesternLuobuohe | tɕ o ³¹ | ˀp a ᴮ/² | 4 | 1
+2232 | WesternBaheng | m a ³¹ | m a ³ | 2 | 1
+2228 | WesternLuobuohe | tɕ o ³¹ | ˀp a ᴮ/² | 3 | 1
 
 ## Concept RICE
 False Positives: 0.12
@@ -3262,14 +3303,14 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2324 | SouthernGuizhouChuanqiandian | ɬ ə ⁵⁵ | l̥ ə ⁵ᵃ/⁵ | 2 | 2
 
 ## Concept SCOLD
-False Positives: 0.00
+False Positives: 0.25
 False Negatives: 0.33
-Accuracy:        0.80
+Accuracy:        0.71
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2330 | EasternLuobuohe | q ɛ ²⁴ | q e ᶜ/³ | 1 | 1
 2331 | WesternLuobuohe | q æ ³⁵ | q e ᶜ/³ | 1 | 1
-2332 | SouthernGuizhouChuanqiandian | h e ⁵⁵ | h e ⁵ᵃ/⁵ | 3 | 1
+2332 | SouthernGuizhouChuanqiandian | h e ⁵⁵ | h e ⁵ᵃ/⁵ | 2 | 1
 2333 | Mien | h e m ²⁴ | h eː m ⁵ | 2 | 2
 
 ## Concept SEEDLING
@@ -3358,32 +3399,32 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept SHARP
 False Positives: 0.12
-False Negatives: 0.42
-Accuracy:        0.70
+False Negatives: 0.59
+Accuracy:        0.56
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2425 | BiaoMin | l ai ⁴² | l ai ⁶/¹³ | 1 | 1
-2422 | Jiongnai | ⁿk j a ¹¹ | ⁿk j a ⁶/¹³ | 1 | 1
-2424 | KimMun | g j ai ⁴² | g j ai ⁶/¹³ | 1 | 1
 2423 | Mien | l ai ²¹ | g ai ⁶/¹³ | 1 | 1
-2421 | NorthernQiandong | ɣ a ¹³ | ɣ a ⁶/¹³ | 1 | 1
-2420 | WesternXiangxi | ʐ ɑ ⁴² | ʐ ɑ ⁶/¹³ | 1 | 1
 2417 | EasternLuobuohe | t ə ⁰/² + ⁿts ei ²⁴ | wj/ɥ a ᶜ/³ | 2 | 1
-2418 | WesternLuobuohe | j æ ³⁵ | wj/ɥ a ᶜ/³ | 3 | 1
-2426 | ZaoMin | h e ²² | h ɛi ⁶/¹³ | 4 | 1
+2422 | Jiongnai | ⁿk j a ¹¹ | ⁿk j a ⁶/¹³ | 3 | 1
+2424 | KimMun | g j ai ⁴² | g j ai ⁶/¹³ | 3 | 1
+2421 | NorthernQiandong | ɣ a ¹³ | ɣ a ⁶/¹³ | 3 | 1
+2420 | WesternXiangxi | ʐ ɑ ⁴² | ʐ ɑ ⁶/¹³ | 3 | 1
+2418 | WesternLuobuohe | j æ ³⁵ | wj/ɥ a ᶜ/³ | 4 | 1
+2426 | ZaoMin | h e ²² | h ɛi ⁶/¹³ | 5 | 1
 2419 | SouthernGuizhouChuanqiandian | ⁿts æ ⁵⁵ | ⁿʈs æ ⁵ᵃ/⁵ | 2 | 2
 2416 | WhiteHmong | ⁿtʃ e ˧/³³ | ⁿʈʂ e ⁵ | 2 | 2
 
 ## Concept SHARPEN (SOMETHING)
-False Positives: 0.00
+False Positives: 0.11
 False Negatives: 0.60
-Accuracy:        0.57
+Accuracy:        0.55
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2437 | BiaoMin | m j a ⁴² | ɖ au ⁵ | 1 | 1
+2438 | ZaoMin | ʑ u ⁴² | dz i/j u ⁵ | 3 | 1
 2436 | KimMun | g j oːu ³¹ | g j ɔu ⁵¹ | 4 | 1
 2435 | Mien | dz j əu ²⁴ | dʑ eu ⁵ | 5 | 1
-2438 | ZaoMin | ʑ u ⁴² | dz i/j u ⁵ | 7 | 1
 2433 | EasternBaheng | h o ³¹³ | h o ³ | 2 | 2
 2434 | Jiongnai | h u ⁵³ | x u ³ | 2 | 2
 2429 | SouthernGuizhouChuanqiandian | ɦ o ²³² | h o ³ᵇ/³ | 2 | 2
@@ -3395,14 +3436,14 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept SHEARS
 False Positives: 0.00
-False Negatives: 0.62
-Accuracy:        0.55
+False Negatives: 0.38
+Accuracy:        0.77
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2441 | BiaoMin | dʑ au ³⁵ | g j au ³ | 1 | 1
-2440 | KimMun | tʃ eu ⁵¹ | ɖ iːu ³ | 2 | 1
-2439 | Mien | tɕ əu ⁵³ | j eu ³ | 2 | 1
-2442 | ZaoMin | g eu ²⁴ | g ɛu ³ | 3 | 1
+2440 | KimMun | tʃ eu ⁵¹ | ɖ iːu ³ | 1 | 1
+2439 | Mien | tɕ əu ⁵³ | j eu ³ | 1 | 1
+2442 | ZaoMin | g eu ²⁴ | g ɛu ³ | 2 | 1
 
 ## Concept SHELL
 False Positives: 0.00
@@ -3448,17 +3489,6 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2466 | ZaoMin | b u n ²⁴ | b u n ³ | 1 | 1
 2457 | WesternLuobuohe | ⁿʈ u ³¹ | p o ŋ ᴮ/² | 2 | 1
 2455 | WhiteHmong | t u/w a ˧/³³ | p ɔ ³ | 2 | 1
-
-## Concept SHOULDER
-False Positives: 0.00
-False Negatives: 0.38
-Accuracy:        0.77
-ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
---- | --- | --- | --- | --- | --- 
-2481 | EasternLuobuohe | p ə ⁰/⁵ + v u ²⁴ | v u ᶜ/³ | 1 | 1
-2483 | WesternXiangxi | q o ³⁵ + p ə ⁴² | p ə ⁶/¹³ | 1 | 1
-2480 | WhiteHmong | s u ˥/⁵⁵ + p ɯ ˧˩/³¹ | p ɯ ⁶/¹³ | 1 | 1
-2482 | WesternLuobuohe | ʔ ə ⁰/² + s u ³¹ + v u ³⁵ | v u ᶜ/³ | 2 | 1
 
 ## Concept SHRINK
 False Positives: 0.00
@@ -3516,8 +3546,8 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept SIX
 False Positives: 0.00
-False Negatives: 0.46
-Accuracy:        0.70
+False Negatives: 0.63
+Accuracy:        0.54
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2526 | BiaoMin | k l ɔ ⁵³ | k l ɔ ⁷/³ | 1 | 1
@@ -3527,12 +3557,12 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2516 | EasternLuobuohe | ʈ o ²⁴ | ʈʂ o ᶜ/³ | 2 | 1
 2523 | Jiongnai | tʃ o ³⁵ | tʃ ɔ ⁵ | 2 | 1
 2520 | NorthernQiandong | t j u ⁴⁴ | ȶ u ⁵ | 2 | 1
-2518 | SouthernGuizhouChuanqiandian | ʂ u ⁵⁵ | ʂ u ⁵ᵃ/⁵ | 2 | 1
-2521 | WesternBaheng | tɕ u ⁵⁵ | tɕ ɯ ⁵ | 2 | 1
 2517 | WesternLuobuohe | ʈ o ³⁵ | ʈʂ o ᶜ/³ | 2 | 1
 2519 | WesternXiangxi | ʈ ɔ ⁵³ | ʈ ɔ ⁵ | 2 | 1
 2527 | ZaoMin | t o ⁴⁴ | t ɔu ⁷/³ | 2 | 1
-2515 | WhiteHmong | r au ˧/³³ | ʈ au ⁵ | 3 | 1
+2518 | SouthernGuizhouChuanqiandian | ʂ u ⁵⁵ | ʂ u ⁵ᵃ/⁵ | 3 | 1
+2521 | WesternBaheng | tɕ u ⁵⁵ | tɕ ɯ ⁵ | 3 | 1
+2515 | WhiteHmong | r au ˧/³³ | ʈ au ⁵ | 4 | 1
 
 ## Concept SKIN
 False Positives: 0.00
@@ -3552,14 +3582,14 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2532 | WesternXiangxi | q o ³⁵ + c ɔ ⁵³ | t ə ³ | 3 | 1
 
 ## Concept SKIRT
-False Positives: 0.35
-False Negatives: 0.28
-Accuracy:        0.68
+False Positives: 0.34
+False Negatives: 0.39
+Accuracy:        0.63
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2548 | BiaoMin | t j u n ³¹ | ȶ w ə n ² | 1 | 1
 2547 | KimMun | tʃ u n ³³ + tʃʰ oː ŋ ¹¹ | ȶ u n ² | 1 | 1
-2549 | ZaoMin | k o n ⁵³ | k ɔ n ² | 1 | 1
+2549 | ZaoMin | k o n ⁵³ | k ɔ n ² | 2 | 1
 2545 | EasternBaheng | q a ⁰/³ + t e ŋ ³⁵ | t ĩ ¹ | 1 | 2
 2539 | EasternLuobuohe | q o ⁰/⁵ + t e n ³¹ | t e n ᴬ/¹ | 1 | 2
 2541 | SouthernGuizhouChuanqiandian | t æ n ³² | t æi n ¹ᵃ/¹ | 1 | 2
@@ -3743,39 +3773,39 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept STONE
 False Positives: 0.00
-False Negatives: 0.50
-Accuracy:        0.67
+False Negatives: 0.71
+Accuracy:        0.45
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2697 | BiaoMin | l au ³³ | l au ¹ | 1 | 1
 2695 | Mien | l ə ³¹ + p ei ⁵³ | g au ¹ | 1 | 1
 2693 | EasternBaheng | l a ⁰/³ + ʑ o ³⁵ | j o ¹ | 2 | 1
-2687 | EasternLuobuohe | ʔ a ⁰/² + ˀj i ³¹ | ʔ ɥ i ᴬ/¹ | 2 | 1
 2691 | NorthernQiandong | ɣ i ³³ | ɣ i ¹ | 2 | 1
 2689 | SouthernGuizhouChuanqiandian | ʐ æ ³² | ʐ æ ¹ᵃ/¹ | 2 | 1
-2692 | WesternBaheng | q a ⁰/³ + j o ³⁵ | j o ¹ | 2 | 1
-2688 | WesternLuobuohe | ʔ ə ⁰/² + ˀj e ³¹ | ʔ ɥ i ᴬ/¹ | 2 | 1
 2690 | WesternXiangxi | q o ³⁵ + ʐ ɯ ³⁵ | ʐ ɯ ¹ | 2 | 1
 2698 | ZaoMin | ʑ u ⁴⁴ | dz u ¹ | 2 | 1
-2694 | Jiongnai | ⁿk j a ⁴⁴ | ⁿk j a ¹ | 3 | 1
-2696 | KimMun | g j au ³⁵ | g j au ¹ | 3 | 1
+2687 | EasternLuobuohe | ʔ a ⁰/² + ˀj i ³¹ | ʔ ɥ i ᴬ/¹ | 3 | 1
+2688 | WesternLuobuohe | ʔ ə ⁰/² + ˀj e ³¹ | ʔ ɥ i ᴬ/¹ | 3 | 1
+2694 | Jiongnai | ⁿk j a ⁴⁴ | ⁿk j a ¹ | 4 | 1
+2696 | KimMun | g j au ³⁵ | g j au ¹ | 4 | 1
+2692 | WesternBaheng | q a ⁰/³ + j o ³⁵ | j o ¹ | 4 | 1
 
 ## Concept STOVE
 False Positives: 0.00
-False Negatives: 0.58
-Accuracy:        0.59
+False Negatives: 0.54
+Accuracy:        0.63
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2708 | EasternBaheng | l a ⁰/³ + ts au ⁵⁵ | tɕ ɔ ¹ | 1 | 1
 2710 | Mien | dz u ²⁴ | d o ⁵¹ | 1 | 1
+2706 | NorthernQiandong | q a ³³ + s o ⁴⁴ | s o ⁵ | 1 | 1
+2705 | SouthernGuizhouChuanqiandian | h o ŋ ²³² + s o ³⁵ | s o ⁵ᵇ/⁵ | 1 | 1
+2707 | WesternBaheng | l u ³³ + s ɔ ⁵⁵ | tɕ ɔ ¹ | 1 | 1
+2703 | WhiteHmong | qʰ o ˧˦/³⁴ + ts o ˩/¹¹ | ts ɔ ⁷/³ | 1 | 1
 2709 | Jiongnai | tʃ au ⁵³ + kʰ u ŋ ⁵³ | ts u ⁷/³ | 2 | 1
 2711 | KimMun | k a ⁰/² + d o ³³ | d u ⁵ | 2 | 1
-2706 | NorthernQiandong | q a ³³ + s o ⁴⁴ | s o ⁵ | 2 | 1
-2705 | SouthernGuizhouChuanqiandian | h o ŋ ²³² + s o ³⁵ | s o ⁵ᵇ/⁵ | 2 | 1
-2703 | WhiteHmong | qʰ o ˧˦/³⁴ + ts o ˩/¹¹ | ts ɔ ⁷/³ | 2 | 1
 2704 | WhiteHmong | qʰ o ˧˦/³⁴ + tɕ u ˥/⁵⁵ | ts ɔ ⁷/³ | 2 | 1
-2707 | WesternBaheng | l u ³³ + s ɔ ⁵⁵ | tɕ ɔ ¹ | 3 | 1
-2712 | ZaoMin | t o ⁴² | t ɔu ⁵ | 4 | 1
+2712 | ZaoMin | t o ⁴² | t ɔu ⁵ | 3 | 1
 
 ## Concept STRAW SANDAL
 False Positives: 0.00
@@ -3788,15 +3818,15 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2719 | KimMun | ŋ w a ⁵¹ + t u ¹¹ | tθ u ⁷'/³ | 2 | 1
 
 ## Concept STRENGTH
-False Positives: 0.12
-False Negatives: 0.46
-Accuracy:        0.67
+False Positives: 0.00
+False Negatives: 0.36
+Accuracy:        0.78
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2730 | BiaoMin | kʰ l a ⁵³ | kʰ l a ⁷/³ | 1 | 1
 2729 | Mien | kʰ a ⁵⁵ | kʰ a ⁷/³ | 1 | 1
-2728 | Jiongnai | ʃ ei ⁵⁵ + ⁿk j əu ¹¹ | ⁿk j eu ⁶/¹³ | 1 | 2
 2727 | EasternBaheng | ʑ a ³¹ | j a ⁶/¹³ | 2 | 2
+2728 | Jiongnai | ʃ ei ⁵⁵ + ⁿk j əu ¹¹ | ⁿk j eu ⁶/¹³ | 2 | 2
 2725 | NorthernQiandong | ɣ ə ¹³ | ɣ ə ⁶/¹³ | 2 | 2
 2723 | SouthernGuizhouChuanqiandian | ʐ u ¹³ | ʐ u ⁶/¹³ | 2 | 2
 2724 | WesternXiangxi | ʐ o ⁴² | ʐ o ⁶/¹³ | 2 | 2
@@ -3875,6 +3905,25 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2795 | KimMun | h eu ⁴² | h ɔu ⁶/¹³ | 3 | 1
 2794 | Mien | h əu ²¹ | h ou ⁶/¹³ | 3 | 1
 
+## Concept TEA
+False Positives: 0.44
+False Negatives: 0.00
+Accuracy:        0.71
+ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
+--- | --- | --- | --- | --- | --- 
+2807 | BiaoMin | t j a ³¹ | ȶ a ² | 1 | 1
+2806 | KimMun | tʃ a ³³ | ȶ a ² | 1 | 1
+2805 | Mien | ts a ³¹ | tɕ a ² | 1 | 1
+2808 | ZaoMin | t a ⁵³ | t a ² | 1 | 1
+2803 | EasternBaheng | tɕ i ¹¹ | tɕ i ⁴ | 1 | 2
+2797 | EasternLuobuohe | ʔ a ⁰/² + ʑ i ⁵⁵ | ʑ i ᴮ/² | 1 | 2
+2804 | Jiongnai | tʃ i ³¹ | tʃ i ⁴ | 1 | 2
+2801 | NorthernQiandong | tɕ i n ¹¹ | tɕ e n ⁴ | 1 | 2
+2799 | SouthernGuizhouChuanqiandian | tɕ i ¹¹ | tɕ i ⁴ | 1 | 2
+2802 | WesternBaheng | tɕ i ¹¹ | tɕ i ⁴ | 1 | 2
+2798 | WesternLuobuohe | ʔ ə ⁰/² + ʑ i ⁵⁵ | ʑ i ᴮ/² | 1 | 2
+2800 | WesternXiangxi | c i ²² | c i ⁴ | 1 | 2
+
 ## Concept TEN
 False Positives: 0.00
 False Negatives: 0.66
@@ -3945,19 +3994,6 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2846 | WesternXiangxi | t a ³⁵ | t a ¹ | 2 | 2
 2842 | WhiteHmong | t u/w a ˥/⁵⁵ | t u/w a ¹ | 2 | 2
 
-## Concept THIN (SLIM)
-False Positives: 0.00
-False Negatives: 0.28
-Accuracy:        0.84
-ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
---- | --- | --- | --- | --- | --- 
-2859 | EasternBaheng | tʰ au ⁵⁵ | ⁿʑ i ⁶/¹³ | 1 | 1
-2860 | Jiongnai | ⁿtʃ e ¹¹ | ⁿtʃ e ⁶/¹³ | 1 | 1
-2855 | SouthernGuizhouChuanqiandian | ⁿts o ¹³ | ⁿʈs o ⁶/¹³ | 1 | 1
-2858 | WesternBaheng | tʰ ɔ ⁵⁵ | ⁿʑ i ⁶/¹³ | 1 | 1
-2856 | WesternXiangxi | ⁿts ei ⁵³ | ⁿʈs ei ⁵ | 1 | 1
-2857 | NorthernQiandong | s o ⁴⁴ | s u ⁵ | 2 | 1
-
 ## Concept THIRSTY
 False Positives: 0.33
 False Negatives: 0.48
@@ -3995,30 +4031,30 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2876 | WesternBaheng | m */ə m̩/m ³¹ | n */ə */n ³ | 2 | 1
 
 ## Concept THORN
-False Positives: 0.17
-False Negatives: 0.57
-Accuracy:        0.57
+False Positives: 0.20
+False Negatives: 0.37
+Accuracy:        0.71
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2883 | EasternLuobuohe | ʔ a ⁰/² + v u ⁵⁵ | v u ᴮ/² | 1 | 1
+2887 | NorthernQiandong | p ə ¹¹ | p ə ⁴ | 1 | 1
+2885 | SouthernGuizhouChuanqiandian | p ɯ ¹¹ | p ɯ ⁴ | 1 | 1
 2884 | WesternLuobuohe | t ə ⁰/² + v u ⁵⁵ | v u ᴮ/² | 1 | 1
-2887 | NorthernQiandong | p ə ¹¹ | p ə ⁴ | 3 | 1
-2885 | SouthernGuizhouChuanqiandian | p ɯ ¹¹ | p ɯ ⁴ | 3 | 1
-2886 | WesternXiangxi | q o ³⁵ + t o ²² | t o ⁴ | 4 | 1
+2886 | WesternXiangxi | q o ³⁵ + t o ²² | t o ⁴ | 3 | 1
+2889 | Mien | b ɔ ²² | j i m ³ | 1 | 2
 2890 | KimMun | dʒ i m ⁵¹ | ɖ i m ³ | 2 | 2
 2888 | Mien | dʑ i m ⁵³ | j i m ³ | 2 | 2
-2889 | Mien | b ɔ ²² | j i m ³ | 3 | 2
 
 ## Concept THUNDER
-False Positives: 0.24
+False Positives: 0.32
 False Negatives: 0.32
-Accuracy:        0.72
+Accuracy:        0.68
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 2922 | EasternBaheng | ʑ e ⁵⁵ + ⁿp o ³⁵ | m o ¹ | 1 | 1
 2924 | Mien | p u ³¹ + ʔ oː ŋ ³³ | b u ¹ | 1 | 1
+2921 | WesternBaheng | m o ³⁵ | m o ¹ | 1 | 1
 2925 | KimMun | p a ³³ + g aː ŋ ³⁵ | b u ⁵ | 2 | 1
-2921 | WesternBaheng | m o ³⁵ | m o ¹ | 2 | 1
 2926 | ZaoMin | b j a ⁴⁴ + k u ŋ ⁴⁴ | b j au ¹ | 2 | 1
 2916 | EasternLuobuohe | t ə ⁰/² + s u ³¹ | s u ᴬ/¹ | 1 | 2
 2923 | Jiongnai | h u ⁴⁴ + j a k ⁵⁵ | x u ¹ | 1 | 2
@@ -4041,22 +4077,6 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 2927 | WhiteHmong | kʰ i ˧/³³ | qʰ ai ¹ | 1 | 1
 2932 | Jiongnai | t u ³³ | kʰ ai ¹ | 2 | 1
 2930 | SouthernGuizhouChuanqiandian | h e ²² | h e ¹ᵇ/¹ | 3 | 1
-
-## Concept TILE
-False Positives: 0.00
-False Negatives: 0.49
-Accuracy:        0.67
-ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
---- | --- | --- | --- | --- | --- 
-2953 | BiaoMin | ŋ ɔ ⁴² | ŋ ɔ ⁴ | 1 | 1
-2950 | EasternBaheng | ŋ w a ¹¹ | w a ⁴ | 1 | 1
-2952 | KimMun | ŋ w a ²³¹ | ŋ w a ⁴ | 1 | 1
-2951 | Mien | ŋ w a ²³¹ | ŋ w a ⁴ | 1 | 1
-2954 | ZaoMin | ŋ a ⁴⁴ | ŋ a ⁴ | 1 | 1
-2946 | EasternLuobuohe | q o ⁰/⁵ + w a ⁵⁵ | w a ᴮ/² | 2 | 1
-2948 | SouthernGuizhouChuanqiandian | w ə ¹¹ | w aə ⁴ | 2 | 1
-2949 | WesternBaheng | w a ¹¹ | w a ⁴ | 2 | 1
-2947 | WesternLuobuohe | ʔ ə ⁰/² + w ɑ ⁵⁵ | w a ᴮ/² | 2 | 1
 
 ## Concept TONGUE
 False Positives: 0.00
@@ -4167,23 +4187,23 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept VEGETABLES
 False Positives: 0.00
-False Negatives: 0.38
-Accuracy:        0.77
+False Negatives: 0.66
+Accuracy:        0.50
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 3048 | BiaoMin | l ai ³³ | l ai ¹ | 1 | 1
 3046 | Mien | l ai ³³ | g ai ¹ | 1 | 1
 3044 | EasternBaheng | ʑ i ³⁵ | ɦ j i ¹ | 2 | 1
 3038 | EasternLuobuohe | q o ⁰/⁵ + ˀʑ u ³¹ | ʔ ɥ u ᴬ/¹ | 2 | 1
-3045 | Jiongnai | j e ⁴⁴ | j i ¹ | 2 | 1
-3047 | KimMun | g j ai ³⁵ | g j ai ¹ | 2 | 1
 3042 | NorthernQiandong | ɣ o ³³ | ɣ u ¹ | 2 | 1
 3040 | SouthernGuizhouChuanqiandian | ʐ ɔ ³² | ʐ ɔ ¹ᵃ/¹ | 2 | 1
-3043 | WesternBaheng | j i ³⁵ | ɦ j i ¹ | 2 | 1
-3039 | WesternLuobuohe | ʔ ə ⁰/² + ˀj y ³¹ | ʔ ɥ u ᴬ/¹ | 2 | 1
 3041 | WesternXiangxi | ʐ ei ³⁵ | ʐ ei ¹ | 2 | 1
 3037 | WhiteHmong | ʐ au ˥/⁵⁵ | ʐ au ¹ | 2 | 1
-3049 | ZaoMin | ʔ e ⁴⁴ | ɛi ¹ | 3 | 1
+3045 | Jiongnai | j e ⁴⁴ | j i ¹ | 3 | 1
+3047 | KimMun | g j ai ³⁵ | g j ai ¹ | 3 | 1
+3043 | WesternBaheng | j i ³⁵ | ɦ j i ¹ | 3 | 1
+3039 | WesternLuobuohe | ʔ ə ⁰/² + ˀj y ³¹ | ʔ ɥ u ᴬ/¹ | 3 | 1
+3049 | ZaoMin | ʔ e ⁴⁴ | ɛi ¹ | 4 | 1
 
 ## Concept VILLAGE
 False Positives: 0.00
@@ -4224,20 +4244,20 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 
 ## Concept WAKE UP
 False Positives: 0.00
-False Negatives: 0.64
-Accuracy:        0.53
+False Negatives: 0.68
+Accuracy:        0.48
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 3087 | EasternBaheng | tɕ au ⁵⁵ | tɕ i ⁸/²⁴ | 1 | 1
 3086 | WesternBaheng | tɕ o ⁵⁵ + ȵ̥ i ³⁵ | tɕ i ⁸/²⁴ | 1 | 1
-3083 | WhiteHmong | tʃ i ˨˩˧/²¹³ + dʱ e ŋ ˧˦/³⁴ | ʈʂ i ⁸/²⁴ | 1 | 1
 3084 | EasternLuobuohe | ʔ i ⁵⁵ + q ɹ əu ³³ + t ə ⁰/² + p u ŋ ²⁴ | z a ᴰ/⁴ | 2 | 1
 3092 | EasternBaheng | ɕ a ŋ ³¹ | tɕ i ⁸/²⁴ | 3 | 1
 3088 | EasternLuobuohe | z a ³³ | z a ᴰ/⁴ | 3 | 1
 3090 | SouthernGuizhouChuanqiandian | s i ²¹ + ŋ ɔ ⁴⁴ | s i ⁸/²⁴ | 3 | 1
 3091 | WesternBaheng | s o ³⁵ + tɕ i ⁴² | tɕ i ⁸/²⁴ | 3 | 1
-3085 | WesternLuobuohe | ts u ³⁵ + ts u ³⁵ | z a ᴰ/⁴ | 3 | 1
-3089 | WesternLuobuohe | z ɑ ³¹ | z a ᴰ/⁴ | 4 | 1
+3089 | WesternLuobuohe | z ɑ ³¹ | z a ᴰ/⁴ | 3 | 1
+3085 | WesternLuobuohe | ts u ³⁵ + ts u ³⁵ | z a ᴰ/⁴ | 4 | 1
+3083 | WhiteHmong | tʃ i ˨˩˧/²¹³ + dʱ e ŋ ˧˦/³⁴ | ʈʂ i ⁸/²⁴ | 5 | 1
 
 ## Concept WALK
 False Positives: 0.00
@@ -4438,37 +4458,18 @@ ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 3228 | NorthernQiandong | v i ⁵⁵ | a ³ | 3 | 1
 3229 | NorthernQiandong | nʲ a ŋ ³³ | a ³ | 4 | 1
 
-## Concept WING
-False Positives: 0.00
-False Negatives: 0.38
-Accuracy:        0.77
-ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
---- | --- | --- | --- | --- | --- 
-3252 | EasternBaheng | q a ⁰/³ + t e ⁵³ | t e ⁷/³ | 1 | 1
-3246 | EasternLuobuohe | ʔ a ⁰/² + t a ³³ | t a ᴰ/⁴ | 1 | 1
-3253 | Jiongnai | k a ⁴⁴ + ð e ⁵⁵ | ð e ⁷/³ | 1 | 1
-3250 | NorthernQiandong | q a ³³ + t a ⁵³ | t a ⁷/³ | 1 | 1
-3248 | SouthernGuizhouChuanqiandian | t ɪ ⁴⁴ | t i ⁷ᵃ/³ | 1 | 1
-3251 | WesternBaheng | q a ⁰/³ + t ei ⁵³ | t e ⁷/³ | 1 | 1
-3247 | WesternLuobuohe | t ə ⁰/² + t ɑ ⁵⁵ | t a ᴰ/⁴ | 1 | 1
-3249 | WesternXiangxi | q o ³⁵ + t ei ⁴⁴ | t ei ⁷/³ | 1 | 1
-3245 | WhiteHmong | t i ˩/¹¹ | t i ⁷/³ | 1 | 1
-3255 | KimMun | d aː t ⁵⁵ | d aː t ⁷/³ | 2 | 1
-3254 | Mien | d aː t ⁵⁵ | d aː t ⁷/³ | 2 | 1
-3256 | ZaoMin | d o t ⁴⁴ | d ɔ t ⁷/³ | 2 | 1
-
 ## Concept WRAP
 False Positives: 0.00
-False Negatives: 0.67
-Accuracy:        0.50
+False Negatives: 0.78
+Accuracy:        0.36
 ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)
 --- | --- | --- | --- | --- | --- 
 3258 | EasternLuobuohe | v i ²⁴ | qʰ u ᴮ/² | 1 | 1
 3262 | Jiongnai | k l ui ¹¹ | kʰ au ³ | 2 | 1
 3261 | NorthernQiandong | ɣ i ¹³ | qʰ ɛ ³ | 3 | 1
 3260 | SouthernGuizhouChuanqiandian | ʐ i ¹³ | h ou ³ᵇ/³ | 3 | 1
-3257 | WhiteHmong | qʰ ɯ ˧˦/³⁴ | qʰ ɯ ³ | 3 | 1
 3259 | WesternLuobuohe | tɕ i ⁵⁵ + tɕ e ³¹ | qʰ u ᴮ/² | 4 | 1
+3257 | WhiteHmong | qʰ ɯ ˧˦/³⁴ | qʰ ɯ ³ | 5 | 1
 
 ## Concept YEAR
 False Positives: 0.00
