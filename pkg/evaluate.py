@@ -6,6 +6,7 @@ from lingpy.evaluate.acd import bcubes
 from lingpy.evaluate.acd import diff, _get_bcubed_score
 from util import base_path
 
+
 def renumber(liste):
     x = {}
     count = 1
@@ -32,22 +33,29 @@ for idx in wl:
         didx += 1
 
 wl_filtered = Wordlist(D)
-print('[!] Bcubes with normal cogids')
+print("[!] Bcubes with normal cogids")
 bcubes(wl_filtered, "autocogid", "cogid")
 
 # check with ratliff index
-print('[!] Bcubes with Ratliff index')
-wl_filtered.add_entries('auto2cogid', 'autocogid', lambda x:x)
+print("[!] Bcubes with Ratliff index")
+wl_filtered.add_entries("auto2cogid", "autocogid", lambda x: x)
 C = {}
 for idx in wl_filtered:
-    ratliff_index = wl_filtered[idx, 'ratliff_index']
+    ratliff_index = wl_filtered[idx, "ratliff_index"]
     if ratliff_index:
         ratliff_index = int(ratliff_index)
-        cogid = wl_filtered[idx, 'cogids'][ratliff_index]
-        wl_filtered[idx, 'auto2cogid']=cogid
-        #C[idx] = cogid
-#wl_filtered.add_entries('auto2cogid', C, lambda : x)
-bcubes(wl_filtered, 'auto2cogid', 'cogid')
+        cogid = wl_filtered[idx, "cogids"][ratliff_index]
+        wl_filtered[idx, "auto2cogid"] = cogid
+        # C[idx] = cogid
+# wl_filtered.add_entries('auto2cogid', C, lambda : x)
+bcubes(wl_filtered, "auto2cogid", "cogid")
+
+wl_filtered.output(
+    "tsv",
+    filename=base_path.joinpath("hmong-mien-evaluation-output").as_posix(),
+    ignore="all",
+    prettify=False,
+)
 
 text = ""
 for concept in wl_filtered.rows:
