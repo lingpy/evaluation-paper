@@ -32,8 +32,22 @@ for idx in wl:
         didx += 1
 
 wl_filtered = Wordlist(D)
+print('[!] Bcubes with normal cogids')
 bcubes(wl_filtered, "autocogid", "cogid")
 
+# check with ratliff index
+print('[!] Bcubes with Ratliff index')
+wl_filtered.add_entries('auto2cogid', 'autocogid', lambda x:x)
+C = {}
+for idx in wl_filtered:
+    ratliff_index = wl_filtered[idx, 'ratliff_index']
+    if ratliff_index:
+        ratliff_index = int(ratliff_index)
+        cogid = wl_filtered[idx, 'cogids'][ratliff_index]
+        wl_filtered[idx, 'auto2cogid']=cogid
+        #C[idx] = cogid
+#wl_filtered.add_entries('auto2cogid', C, lambda : x)
+bcubes(wl_filtered, 'auto2cogid', 'cogid')
 
 text = ""
 for concept in wl_filtered.rows:
