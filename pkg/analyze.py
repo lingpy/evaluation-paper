@@ -3,6 +3,7 @@ Analyze the data according to a cognate detection workflow.
 """
 from lingpy import *
 from lingpy.compare.partial import Partial
+from lingpy.compare import partial
 from linse.annotate import seallable
 from collections import defaultdict
 from lingrex.colex import find_colexified_alignments, find_bad_internal_alignments
@@ -25,10 +26,38 @@ def get_structure(sequence):
                 seallable(
                     m,
                     medials={
-                        "j", "w", "jw", "wj", "i̯", "u̯", "i̯u̯", "u̯i̯", "iu",
-                        "ui", "y", "ɥ", "l", "lj", "lʲ", "r", "rj", "rʲ", "ʐ",
-                        "ʑ", "ʂ", "ʂ", "rʷ", "lʷ", "u/w", "i/j", "ɹ", "z", "ʁ",
-                        "m", "wj/ɥ"},
+                        "j",
+                        "w",
+                        "jw",
+                        "wj",
+                        "i̯",
+                        "u̯",
+                        "i̯u̯",
+                        "u̯i̯",
+                        "iu",
+                        "ui",
+                        "y",
+                        "ɥ",
+                        "l",
+                        "lj",
+                        "lʲ",
+                        "r",
+                        "rj",
+                        "rʲ",
+                        "ʐ",
+                        "ʑ",
+                        "ʂ",
+                        "ʂ",
+                        "rʷ",
+                        "lʷ",
+                        "u/w",
+                        "i/j",
+                        "ɹ",
+                        "z",
+                        "ʁ",
+                        "m",
+                        "wj/ɥ",
+                    },
                 )
             )
         ]
@@ -66,31 +95,34 @@ def cogids2cogid(wordlist, ref="cogids", cognates="cogid", morphemes="morphemes"
 try:
     part = Partial(base_path.joinpath("hmong-mien-partial.bin.tsv").as_posix())
 except:
-    part = Partial(base_path.joinpath(
-        "hmong-mien-wordlist.tsv").as_posix(), 
-        segments="tokens")
+    part = Partial(
+        base_path.joinpath("hmong-mien-wordlist.tsv").as_posix(), segments="tokens"
+    )
     part.get_partial_scorer(runs=10000)
     part.output(
-            "tsv",
-            filename=base_path.joinpath("hmong-mien-partial.bin").as_posix(), 
-            ignore=[], prettify=False)
+        "tsv",
+        filename=base_path.joinpath("hmong-mien-partial.bin").as_posix(),
+        ignore=[],
+        prettify=False,
+    )
 finally:
     part.partial_cluster(
-        method="lexstat",
-        threshold=0.55,
-        ref="cogids",
-        cluster_method="infomap",
+        method="lexstat", threshold=0.50, ref="cogids", cluster_method="infomap",
     )
+    part.add_cognate_ids("cogids", "Strict_cogid", idtype="strict")
+    part.add_cognate_ids("cogids", "Loose_cogid", idtype="loose")
 
 part.output(
-        "tsv", 
-        filename=base_path.joinpath("hmong-mien-partial").as_posix(), 
-        prettify=False, ignore='all')
+    "tsv",
+    filename=base_path.joinpath("hmong-mien-partial").as_posix(),
+    prettify=False,
+    ignore="all",
+)
 
-# partial to cross-semantic
-alms = Alignments(
-        base_path.joinpath("hmong-mien-partial.tsv").as_posix(), 
-        ref="cogids")
+# partial to cross-semantic (later for networkcog)
+alms = Alignments(base_path.joinpath("hmong-mien-partial.tsv").as_posix(), ref="cogids")
+
+## partial to cross-semantic
 alms.add_entries(
     "structure", "tokens", lambda x: get_structure(x),
 )
@@ -112,8 +144,8 @@ template_alignment(
     template="imnct+imnct+imnct+imnct+imnct+imnct",
     structure="structure",
     fuzzy=True,
-    segments="tokens"
-    )
+    segments="tokens",
+)
 find_bad_internal_alignments(alms)
 find_colexified_alignments(alms, cognates="cogids", segments="tokens", ref="crossids")
 # re-align
@@ -125,10 +157,11 @@ template_alignment(
     fuzzy=True,
     segments="tokens",
 )
-# convert to full cognate
-cogids2cogid(alms, ref="crossids", cognates="autocogid")
+# convert to networkcogid
+cogids2cogid(alms, ref="crossids", cognates="Network_cogid")
 
 alms.output(
-        "tsv", 
-        filename=base_path.joinpath("hmong-mien-alignments").as_posix(), 
-        prettify=False)
+    "tsv",
+    filename=base_path.joinpath("hmong-mien-alignments").as_posix(),
+    prettify=False,
+)

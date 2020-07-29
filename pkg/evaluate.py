@@ -33,22 +33,28 @@ for idx in wl:
         didx += 1
 
 wl_filtered = Wordlist(D)
-print("[!] Bcubes with normal cogids")
-bcubes(wl_filtered, "autocogid", "cogid")
+print("[Title] Normal cogid v.s. Ratliff congate")
+bcubes(wl_filtered, "network_cogid", "cogid")
 
 # check with ratliff index
-print("[!] Bcubes with Ratliff index")
-wl_filtered.add_entries("auto2cogid", "autocogid", lambda x: x)
-C = {}
+print("[Title] Salien part v.s. Ratliff cognate")
+wl_filtered.add_entries("network2cogid", "network_cogid", lambda x: x)
 for idx in wl_filtered:
     ratliff_index = wl_filtered[idx, "ratliff_index"]
     if ratliff_index:
         ratliff_index = int(ratliff_index)
         cogid = wl_filtered[idx, "cogids"][ratliff_index]
-        wl_filtered[idx, "auto2cogid"] = cogid
-        # C[idx] = cogid
-# wl_filtered.add_entries('auto2cogid', C, lambda : x)
-bcubes(wl_filtered, "auto2cogid", "cogid")
+        wl_filtered[idx, "network2cogid"] = cogid
+
+bcubes(wl_filtered, "network2cogid", "cogid")
+
+# strict v.s. Ratliff 
+print("[Title] Strict v.s. Ratliff cognate")
+bcubes(wl_filtered, "strict_cogid", "cogid")
+
+# loose v.s. Ratliff 
+print("[Title] loose v.s. Ratliff cognate")
+bcubes(wl_filtered, "loose_cogid", "cogid")
 
 wl_filtered.output(
     "tsv",
@@ -61,16 +67,16 @@ text = ""
 for concept in wl_filtered.rows:
     idxs = wl_filtered.get_list(row=concept, flat=True)
     cog_ratliff = [wl_filtered[idx, "cogid"] for idx in idxs]
-    cog_auto = [wl_filtered[idx, "autocogid"] for idx in idxs]
+    cog_network = [wl_filtered[idx, "network_cogid"] for idx in idxs]
     form_ratliff = [wl_filtered[idx, "ratliff_tokens"] for idx in idxs]
-    form_auto = [wl_filtered[idx, "tokens"] for idx in idxs]
+    form_network = [wl_filtered[idx, "tokens"] for idx in idxs]
     langs = [wl_filtered[idx, "doculect"] for idx in idxs]
 
     cog_RATLIFF = renumber(cog_ratliff)
-    cog_AUTO = renumber(cog_auto)
+    cog_NETWORk = renumber(cog_network)
 
-    r = _get_bcubed_score(cog_RATLIFF, cog_AUTO)
-    p = _get_bcubed_score(cog_AUTO, cog_RATLIFF)
+    r = _get_bcubed_score(cog_RATLIFF, cog_NETWORk)
+    p = _get_bcubed_score(cog_NETWORk, cog_RATLIFF)
     f = 2 * ((r * p) / (p + r))
 
     if p < 1 or r < 1:
@@ -82,7 +88,7 @@ for concept in wl_filtered.rows:
         text += "ID | Language | Word | Word (Ratl.) | Cogn. | Cogn.  (Ratl.)\n"
         text += "--- | --- | --- | --- | --- | --- \n"
         for line in sorted(
-            zip(idxs, langs, form_auto, form_ratliff, cog_AUTO, cog_RATLIFF),
+            zip(idxs, langs, form_network, form_ratliff, cog_NETWORk, cog_RATLIFF),
             key=lambda x: (x[5], x[4], x[1]),
         ):
             text += " | ".join([str(x) for x in line]) + "\n"
