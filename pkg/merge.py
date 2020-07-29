@@ -98,6 +98,8 @@ for idx, doculect, token in chen.iter_rows('doculect','tokens'):
     tc, tv = [], []
     for t, s in zip(token, soundclass(token,'cv')):
         if s == 'T':
+            if '/' in t:
+                t = t.replace('/','')
             tc.append(tones[doculect].get(t, '?'))
             tv.append(t)
     chen[idx, 'tone_class'] = ' '.join(tc)
