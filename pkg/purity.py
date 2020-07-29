@@ -67,8 +67,10 @@ for i in alm.msa["cogids"]:
 # calculate the purity.
 print("COGIDS | Purity score | Tone patters| Analzed tone patterns |Doculects")
 
+average_purity = []
 for key, value in tone_dict.items():
     purity_dict, purity = P_degree(value["tone_categories"], split_merger=True)
+    average_purity.append(purity)
     print(
         key,
         "|",
@@ -80,3 +82,9 @@ for key, value in tone_dict.items():
         "|",
         value["doculect"],
     )
+
+# for beautiful output
+text = "The average score is " + str(sum(average_purity) / len(average_purity))
+horizontal = "".join(["+"] + ["-" * len(text)] + ["+"])
+beautiful_output = horizontal + "\n" "|" + text + "|" "\n" + horizontal
+print(beautiful_output)
