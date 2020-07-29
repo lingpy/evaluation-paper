@@ -38,7 +38,10 @@ def P_degree(in_array, split_merger):
         for k, v in counter_array.items():
             t = (v / len(in_array)) ** 2
             tmp.append(t)
-    return math.sqrt(sum(tmp))
+    if tmp_dict:
+        return tmp_dict, math.sqrt(sum(tmp))
+    else:
+        return math.sqrt(sum(tmp))
 
 
 alm = Alignments(
@@ -62,16 +65,18 @@ for i in alm.msa["cogids"]:
     tone_dict[i]["tone_categories"] = categories
 
 # calculate the purity.
-print("COGIDS | Purity score | Tone patters| Doculects")
+print("COGIDS | Purity score | Tone patters| Analzed tone patterns |Doculects")
 
 for key, value in tone_dict.items():
-    purity = P_degree(value["tone_categories"], split_merger=True)
+    purity_dict, purity = P_degree(value["tone_categories"], split_merger=True)
     print(
         key,
         "|",
         purity,
         "|",
-        value["doculect"],
-        "|",
         collections.Counter(value["tone_categories"]),
+        "|",
+        purity_dict,
+        "|",
+        value["doculect"],
     )
