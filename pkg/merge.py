@@ -98,7 +98,7 @@ for idx, doculect, token in chen.iter_rows('doculect','tokens'):
     tc, tv = [], []
     for t, s in zip(token, soundclass(token,'cv')):
         if s == 'T':
-            tc.append(tones[doculect].get(t, '?'))
+            tc.append(tones[doculect].get(t.replace('/',''), '?'))
             tv.append(t)
     chen[idx, 'tone_class'] = ' '.join(tc)
     chen[idx, 'tone_value'] = ' '.join(tv)
@@ -106,7 +106,7 @@ for idx, doculect, token in whitehmong.iter_rows('doculect','tokens'):
     tc, tv = [], []
     for t, s in zip(token, soundclass(token,'cv')):
         if s == 'T':
-            tc.append(tones[doculect].get(t, '?'))
+            tc.append(tones[doculect].get(t.replace('/',''), '?'))
             tv.append(t)
     whitehmong[idx,'tone_class'] = ' '.join(tc)
     whitehmong[idx,'tone_value'] = ' '.join(tv)

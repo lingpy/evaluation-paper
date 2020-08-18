@@ -59,12 +59,21 @@ for i in alm.msa["cogids"]:
         tone_position = alm[idx, "cogids"].index(i)
         entire_tone_class = alm[idx, "tone_class"].split(" ")
         tone_class = entire_tone_class[tone_position]
-        doc.append(alm[idx, "doculect"])
-        categories.append(tone_class)
+        if '轻声' in tone_class:
+            doc.append(alm[idx, "doculect"])
+            categories.append('阴平.阳平.阴上.阳上.阴去.阳去.阴入.阳入')
+        elif '0' in tone_class:
+            pass
+        elif '?' in tone_class:
+            print(alm[idx, "doculect"])
+            print(tone_class)
+        else:
+            doc.append(alm[idx, "doculect"])
+            categories.append(tone_class)
     tone_dict[i]["doculect"] = doc
     tone_dict[i]["tone_categories"] = categories
 
-# calculate the purity.
+# # calculate the purity.
 print("COGIDS | Purity score | Tone patters| Analzed tone patterns |Doculects")
 
 average_purity = []
