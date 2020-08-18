@@ -56,6 +56,10 @@ bcubes(wl_filtered, "strict_cogid", "cogid")
 print("[Title] loose v.s. Ratliff cognate")
 bcubes(wl_filtered, "loose_cogid", "cogid")
 
+# splitter v.s. Ratliff
+print("[Title] Splitter v.s. Ratliff cognate")
+bcubes(wl_filtered, "splitid", "cogid")
+
 wl_filtered.output(
     "tsv",
     filename=base_path.joinpath("hmong-mien-evaluation-output").as_posix(),

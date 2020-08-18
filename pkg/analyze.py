@@ -160,6 +160,13 @@ template_alignment(
 # convert to networkcogid
 cogids2cogid(alms, ref="crossids", cognates="Network_cogid")
 
+# splitter
+alms.add_entries('splitid', {idx: idx for idx in alms}, lambda x: x)
+
+# lumper 
+alms.renumber('concept', 'lumpid')
+
+
 alms.output(
     "tsv",
     filename=base_path.joinpath("hmong-mien-alignments").as_posix(),
