@@ -117,20 +117,20 @@ for idx, doculect, token in whitehmong.iter_rows('doculect','tokens'):
 selected_concepts = set([c for c in ratliff.rows if c in chen.rows])
 
 # create a new dataset
-C = {0: [x[1] for x in namespace] + ["ratliff_language", "ratliff_tokens", "ratliff_index"]}
+C = {0: [x[1] for x in namespace] + ["ratliff_language", "ratliff_tokens", "ratliff_index", "ratliff_cogid"]}
 idx = 1
 for wl in [whitehmong, chen]:
     for i, c, l in wl.iter_rows("concept", "doculect"):
         if c in selected_concepts:
-            tmp = [wl[i, x] for x in C[0][:-3]] + [languages[l][0], "", ""]
+            tmp = [wl[i, x] for x in C[0][:-4]] + [languages[l][0], "", "",""]
             C[idx] = tmp
             idx += 1
 wl = Wordlist(C)
 print('[i] created wordlist')
 
-#Combine_wl.add_entries("ratliff_form", "classification", lambda x: "")
 used_cogid = set()
 for language in wl.cols:
+    print(language)
     rows = wl.get_dict(col=language, flat=True)
     ratliff_tmp = ratliff.get_dict(col=languages[language][0])
     for concept, idxs in rows.items():
@@ -149,6 +149,7 @@ for language in wl.cols:
                 wl[best_match, 'ratliff_tokens'] = ratliff_tks
                 wl[best_match, 'ratliff_index'] = best_idx
                 wl[best_match, 'cogid'] = ratliff[ratliff_tmp[concept][0], 'cogid']
+                wl[best_match, 'ratliff_cogid']=ratliff_tmp[concept][0]
 
 print('[i] added best matches')
 
