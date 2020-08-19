@@ -26,37 +26,9 @@ def get_structure(sequence):
                 seallable(
                     m,
                     medials={
-                        "j",
-                        "w",
-                        "jw",
-                        "wj",
-                        "i̯",
-                        "u̯",
-                        "i̯u̯",
-                        "u̯i̯",
-                        "iu",
-                        "ui",
-                        "y",
-                        "ɥ",
-                        "l",
-                        "lj",
-                        "lʲ",
-                        "r",
-                        "rj",
-                        "rʲ",
-                        "ʐ",
-                        "ʑ",
-                        "ʂ",
-                        "ʂ",
-                        "rʷ",
-                        "lʷ",
-                        "u/w",
-                        "i/j",
-                        "ɹ",
-                        "z",
-                        "ʁ",
-                        "m",
-                        "wj/ɥ",
+                        "j","w","jw","wj","i̯","u̯","i̯u̯","u̯i̯","iu","ui","y","ɥ","l",
+                        "lj","lʲ","r","rj","rʲ","ʐ","ʑ","ʂ","ʂ","rʷ","lʷ","u/w","i/j",
+                        "ɹ","z","ʁ","m","wj/ɥ",
                     },
                 )
             )
@@ -109,8 +81,8 @@ finally:
     part.partial_cluster(
         method="lexstat", threshold=0.50, ref="cogids", cluster_method="infomap",
     )
-    part.add_cognate_ids("cogids", "Strict_cogid", idtype="strict")
-    part.add_cognate_ids("cogids", "Loose_cogid", idtype="loose")
+    part.add_cognate_ids("cogids", "strictcogid", idtype="strict")
+    part.add_cognate_ids("cogids", "loosecogid", idtype="loose")
 
 part.output(
     "tsv",
@@ -158,14 +130,13 @@ template_alignment(
     segments="tokens",
 )
 # convert to networkcogid
-cogids2cogid(alms, ref="crossids", cognates="Network_cogid")
+cogids2cogid(alms, ref="crossids", cognates="autocogid")
 
 # splitter
 alms.add_entries('splitid', {idx: idx for idx in alms}, lambda x: x)
 
 # lumper 
 alms.renumber('concept', 'lumpid')
-
 
 alms.output(
     "tsv",
