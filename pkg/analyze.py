@@ -81,8 +81,8 @@ finally:
     part.partial_cluster(
         method="lexstat", threshold=0.50, ref="cogids", cluster_method="infomap",
     )
-    part.add_cognate_ids("cogids", "strictcogid", idtype="strict")
-    part.add_cognate_ids("cogids", "loosecogid", idtype="loose")
+    part.add_cognate_ids("cogids", "strictid", idtype="strict")
+    part.add_cognate_ids("cogids", "looseid", idtype="loose")
 
 part.output(
     "tsv",
@@ -133,10 +133,10 @@ template_alignment(
 cogids2cogid(alms, ref="crossids", cognates="autocogid")
 
 # splitter
-alms.add_entries('splitid', {idx: idx for idx in alms}, lambda x: x)
+alms.add_entries("splitid", {idx: idx for idx in alms}, lambda x: x)
 
-# lumper 
-alms.renumber('concept', 'lumpid')
+# lumper
+alms.renumber("concept", "lumpid")
 
 alms.output(
     "tsv",
