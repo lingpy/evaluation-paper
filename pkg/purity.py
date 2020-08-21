@@ -48,36 +48,6 @@ alm = Alignments(
     base_path.joinpath("hmong-mien-evaluation-output.tsv").as_posix(), ref="cogids"
 )
 
-# get the part which indicated by Ratliff index
-# if '--lumper':
-#     test_target = 'lumpid'
-# else:
-#     test_target = 'cogids'
-
-# tone_dict = {}
-# for i in alm.msa[test_target]:
-#     if i not in tone_dict.keys():
-#         tone_dict[i] = {"doculect": [], "tone_categories": []}
-#         doc = []
-#         categories = []
-#     for idx in alm.msa[test_target][i]["ID"]:
-#         tone_position = alm[idx, test_target].index(i)
-#         entire_tone_class = alm[idx, "tone_class"].split(" ")
-#         tone_class = entire_tone_class[tone_position]
-#         if '轻声' in tone_class:
-#             doc.append(alm[idx, "doculect"])
-#             categories.append('阴平.阳平.阴上.阳上.阴去.阳去.阴入.阳入')
-#         elif '0' in tone_class:
-#             pass
-#         elif '?' in tone_class:
-#             print(alm[idx, "doculect"])
-#             print(tone_class)
-#         else:
-#             doc.append(alm[idx, "doculect"])
-#             categories.append(tone_class)
-#     tone_dict[i]["doculect"] = doc
-#     tone_dict[i]["tone_categories"] = categories
-
 tone_dict = {}
 for i in alm.msa["cogids"]:
     if i not in tone_dict.keys():
@@ -91,16 +61,11 @@ for i in alm.msa["cogids"]:
         if "轻声" in tone_class:
             doc.append(alm[idx, "doculect"])
             categories.append("阴平.阳平.阴上.阳上.阴去.阳去.阴入.阳入")
-        elif "0" in tone_class:
-            pass
-        elif "?" in tone_class:
-            print(alm[idx, "doculect"])
-            print(tone_class)
-        else:
+        elif "0" not in tone_class or "?" not in tone_class:
             doc.append(alm[idx, "doculect"])
             categories.append(tone_class)
-    tone_dict[i]["doculect"] = doc
-    tone_dict[i]["tone_categories"] = categories
+        tone_dict[i]["doculect"] = doc
+        tone_dict[i]["tone_categories"] = categories
 
 # # calculate the purity.
 print("COGIDS | Purity score | Tone patters| Analzed tone patterns |Doculects")

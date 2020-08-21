@@ -36,7 +36,7 @@ for idx in wl:
 wl_filtered = Wordlist(D)
 # print("[Title] Normal cogid v.s. Ratliff congate")
 autocogid_precision, autocogid_recall, autocogid_fscores = bcubes(
-    wl_filtered, "autocogid", "cogid", pprint=False
+    wl_filtered, "cogid", "autocogid", pprint=False
 )
 
 # salient v.s. Ratliff
@@ -49,27 +49,27 @@ for idx in wl_filtered:
         wl_filtered[idx, "salientid"] = cogid
 
 salientid_precision, salientid_recall, salientid_fscores = bcubes(
-    wl_filtered, "salientid", "cogid", pprint=False
+    wl_filtered, "cogid", "salientid", pprint=False
 )
 
 # strict v.s. Ratliff
 strictid_precision, strictid_recall, strictid_fscores = bcubes(
-    wl_filtered, "strictid", "cogid", pprint=False
+    wl_filtered, "cogid", "strictid", pprint=False
 )
 
 # loose v.s. Ratliff
 looseid_precision, looseid_recall, looseid_fscores = bcubes(
-    wl_filtered, "looseid", "cogid", pprint=False
+    wl_filtered, "cogid", "looseid", pprint=False
 )
 
 # splitter v.s. Ratliff
 splitid_precision, splitid_recall, splitid_fscores = bcubes(
-    wl_filtered, "splitid", "cogid", pprint=False
+    wl_filtered, "cogid", "splitid", pprint=False
 )
 
 # lumper v.s. Ratliff
 lumpid_precision, lumpid_recall, lumpid_fscores = bcubes(
-    wl_filtered, "lumpid", "cogid", pprint=False
+    wl_filtered, "cogid", "lumpid", pprint=False
 )
 
 # print to screen:

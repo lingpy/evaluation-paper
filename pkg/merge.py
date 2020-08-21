@@ -140,7 +140,6 @@ print("[i] created wordlist")
 
 used_cogid = set()
 for language in wl.cols:
-    print(language)
     rows = wl.get_dict(col=language, flat=True)
     ratliff_tmp = ratliff.get_dict(col=languages[language][0])
     for concept, idxs in rows.items():
@@ -162,9 +161,26 @@ for language in wl.cols:
 
 print("[i] added best matches")
 
-wl.output(
+# further filter : no ratliff_tokens
+output_dict = {
+    0: [x[1] for x in namespace]
+    + ["ratliff_language", "ratliff_tokens", "ratliff_index", "ratliff_cogid"]
+}
+for idx in wl:
+    if wl[idx, 'ratliff_tokens']:
+        output_dict[idx]=wl[idx]
+
+
+out_wl = Wordlist(output_dict)
+out_wl.output(
     "tsv",
     filename=base_path.joinpath("hmong-mien-wordlist").as_posix(),
     ignore="all",
     prettify=False,
 )
+# wl.output(
+#     "tsv",
+#     filename=base_path.joinpath("hmong-mien-wordlist").as_posix(),
+#     ignore="all",
+#     prettify=False,
+# )
