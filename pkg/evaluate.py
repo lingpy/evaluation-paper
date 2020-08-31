@@ -5,6 +5,7 @@ from lingpy import *
 from lingpy.evaluate.acd import bcubes
 from lingpy.evaluate.acd import diff, _get_bcubed_score
 from util import base_path
+from tabulate import tabulate
 
 
 def renumber(liste):
@@ -33,29 +34,78 @@ for idx in wl:
         didx += 1
 
 wl_filtered = Wordlist(D)
-print("[Title] Normal cogid v.s. Ratliff congate")
-bcubes(wl_filtered, "network_cogid", "cogid")
+# print("[Title] Normal cogid v.s. Ratliff congate")
+autocogid_precision, autocogid_recall, autocogid_fscores = bcubes(
+    wl_filtered, "cogid", "autocogid", pprint=False
+)
 
-# check with ratliff index
-print("[Title] Salien part v.s. Ratliff cognate")
-wl_filtered.add_entries("network2cogid", "network_cogid", lambda x: x)
+# salient v.s. Ratliff
+wl_filtered.add_entries("salientid", "autocogid", lambda x: x)
 for idx in wl_filtered:
     ratliff_index = wl_filtered[idx, "ratliff_index"]
     if ratliff_index:
         ratliff_index = int(ratliff_index)
         cogid = wl_filtered[idx, "cogids"][ratliff_index]
-        wl_filtered[idx, "network2cogid"] = cogid
+        wl_filtered[idx, "salientid"] = cogid
 
-bcubes(wl_filtered, "network2cogid", "cogid")
+salientid_precision, salientid_recall, salientid_fscores = bcubes(
+    wl_filtered, "cogid", "salientid", pprint=False
+)
 
-# strict v.s. Ratliff 
-print("[Title] Strict v.s. Ratliff cognate")
-bcubes(wl_filtered, "strict_cogid", "cogid")
+# strict v.s. Ratliff
+strictid_precision, strictid_recall, strictid_fscores = bcubes(
+    wl_filtered, "cogid", "strictid", pprint=False
+)
 
-# loose v.s. Ratliff 
-print("[Title] loose v.s. Ratliff cognate")
-bcubes(wl_filtered, "loose_cogid", "cogid")
+# loose v.s. Ratliff
+looseid_precision, looseid_recall, looseid_fscores = bcubes(
+    wl_filtered, "cogid", "looseid", pprint=False
+)
 
+# splitter v.s. Ratliff
+splitid_precision, splitid_recall, splitid_fscores = bcubes(
+    wl_filtered, "cogid", "splitid", pprint=False
+)
+
+# lumper v.s. Ratliff
+lumpid_precision, lumpid_recall, lumpid_fscores = bcubes(
+    wl_filtered, "cogid", "lumpid", pprint=False
+)
+
+# print to screen:
+header = ["RESULT", "NORMAL", "SALIENT", "STRICT", "LOOSE", "SPLIT", "LUMP"]
+table = [
+    [
+        "PRECISION",
+        autocogid_precision,
+        salientid_precision,
+        strictid_precision,
+        looseid_precision,
+        splitid_precision,
+        lumpid_precision,
+    ],
+    [
+        "RECALL",
+        autocogid_recall,
+        salientid_recall,
+        strictid_recall,
+        looseid_recall,
+        splitid_recall,
+        lumpid_recall,
+    ],
+    [
+        "F-SCORES",
+        autocogid_fscores,
+        salientid_fscores,
+        strictid_fscores,
+        looseid_fscores,
+        splitid_fscores,
+        lumpid_fscores,
+    ],
+]
+print(tabulate(table, header, tablefmt="github"))
+
+# file output
 wl_filtered.output(
     "tsv",
     filename=base_path.joinpath("hmong-mien-evaluation-output").as_posix(),
@@ -63,11 +113,13 @@ wl_filtered.output(
     prettify=False,
 )
 
+
+# print to file: evaluation output per concept per language.
 text = ""
 for concept in wl_filtered.rows:
     idxs = wl_filtered.get_list(row=concept, flat=True)
     cog_ratliff = [wl_filtered[idx, "cogid"] for idx in idxs]
-    cog_network = [wl_filtered[idx, "network_cogid"] for idx in idxs]
+    cog_network = [wl_filtered[idx, "autocogid"] for idx in idxs]
     form_ratliff = [wl_filtered[idx, "ratliff_tokens"] for idx in idxs]
     form_network = [wl_filtered[idx, "tokens"] for idx in idxs]
     langs = [wl_filtered[idx, "doculect"] for idx in idxs]

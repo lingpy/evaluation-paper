@@ -48,7 +48,6 @@ alm = Alignments(
     base_path.joinpath("hmong-mien-evaluation-output.tsv").as_posix(), ref="cogids"
 )
 
-# get the part which indicated by Ratliff index
 tone_dict = {}
 for i in alm.msa["cogids"]:
     if i not in tone_dict.keys():
@@ -59,12 +58,16 @@ for i in alm.msa["cogids"]:
         tone_position = alm[idx, "cogids"].index(i)
         entire_tone_class = alm[idx, "tone_class"].split(" ")
         tone_class = entire_tone_class[tone_position]
-        doc.append(alm[idx, "doculect"])
-        categories.append(tone_class)
-    tone_dict[i]["doculect"] = doc
-    tone_dict[i]["tone_categories"] = categories
+        if "轻声" in tone_class:
+            doc.append(alm[idx, "doculect"])
+            categories.append("阴平.阳平.阴上.阳上.阴去.阳去.阴入.阳入")
+        elif "0" not in tone_class or "?" not in tone_class:
+            doc.append(alm[idx, "doculect"])
+            categories.append(tone_class)
+        tone_dict[i]["doculect"] = doc
+        tone_dict[i]["tone_categories"] = categories
 
-# calculate the purity.
+# # calculate the purity.
 print("COGIDS | Purity score | Tone patters| Analzed tone patterns |Doculects")
 
 average_purity = []
