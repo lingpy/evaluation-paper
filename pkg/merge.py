@@ -138,7 +138,7 @@ for wl in [whitehmong, chen]:
 wl = Wordlist(C)
 print("[i] created wordlist")
 
-used_cogid = set()
+
 for language in wl.cols:
     rows = wl.get_dict(col=language, flat=True)
     ratliff_tmp = ratliff.get_dict(col=languages[language][0])
@@ -157,7 +157,11 @@ for language in wl.cols:
                 wl[best_match, "ratliff_tokens"] = ratliff_tks
                 wl[best_match, "ratliff_index"] = best_idx
                 wl[best_match, "cogid"] = ratliff[ratliff_tmp[concept][0], "cogid"]
-                wl[best_match, "ratliff_cogid"] = ratliff_tmp[concept][0]
+                wl[best_match, "ratliff_cogid"] = ratliff[ratliff_tmp[concept][0], 'cogid']
+            for idx in idxs:
+                if idx != best_match:
+                    wl[idx, 'cogid'] = 0
+                    wl[idx, 'ratliff_cogid'] = 0
 
 print("[i] added best matches")
 
@@ -167,9 +171,8 @@ output_dict = {
     + ["ratliff_language", "ratliff_tokens", "ratliff_index", "ratliff_cogid"]
 }
 for idx in wl:
-    if wl[idx, 'ratliff_tokens']:
-        output_dict[idx]=wl[idx]
-
+    if wl[idx, 'ratliff_tokens'] or wl[idx, 'cogid'] == 0:
+        output_dict[idx] = wl[idx]
 
 out_wl = Wordlist(output_dict)
 out_wl.output(
@@ -178,9 +181,4 @@ out_wl.output(
     ignore="all",
     prettify=False,
 )
-# wl.output(
-#     "tsv",
-#     filename=base_path.joinpath("hmong-mien-wordlist").as_posix(),
-#     ignore="all",
-#     prettify=False,
-# )
+

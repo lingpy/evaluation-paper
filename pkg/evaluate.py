@@ -24,14 +24,27 @@ def renumber(liste):
 
 wl = Wordlist(base_path.joinpath("hmong-mien-alignments.tsv").as_posix())
 
+selected = set()
+for concept in wl.rows:
+    idxs = wl.get_list(row=concept, flat=True)
+    concepts = set()
+    for idx in idxs:
+        if wl[idx, 'cogid'] != 0:
+            concepts.add(wl[idx, 'doculect'])
+    if len(concepts) >= 6:
+        selected.add(concept)
+
+
 D = {0: wl.columns}
-didx = 1
+new_cogid = max([wl[idx, 'cogid'] for idx in wl])+1
 for idx in wl:
-    if wl[idx, "cogid"] != 0:
-        D[didx] = []
-        for lab in D[0]:
-            D[didx].append(wl[idx, lab])
-        didx += 1
+    if wl[idx, "cogid"] != 0 and wl[idx, 'concept'] in selected:
+        D[idx] = wl[idx]
+    elif wl[idx, 'concept'] in selected:
+        wl[idx, 'cogid'] = new_cogid
+        new_cogid += 1
+        D[idx] = wl[idx]
+
 
 wl_filtered = Wordlist(D)
 # print("[Title] Normal cogid v.s. Ratliff congate")
