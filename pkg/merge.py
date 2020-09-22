@@ -138,7 +138,21 @@ for wl in [whitehmong, chen]:
 wl = Wordlist(C)
 print("[i] created wordlist")
 
-
+# load manual list
+manual_wl = Wordlist(base_path.joinpath("hmeval.tsv").as_posix())
+manual_cogid_dict = {}
+for idx in manual_wl:
+    if manual_wl[idx, 'note'] != '!remove!':
+        value_tokens = manual_wl[idx,'tokens']
+        value_cogid = manual_wl[idx,'cogid']
+        value_morpheme = manual_wl[idx, 'morphemes']
+        value_note = manual_wl[idx, 'note']
+        manual_cogid_dict[idx] = {'data_tokens':' '.join(value_tokens), 
+                                  'manual_cogid':value_cogid,
+                                  'manual_morphemes': value_morpheme,
+                                  'manual_note': value_note
+                                  }
+## 
 for language in wl.cols:
     rows = wl.get_dict(col=language, flat=True)
     ratliff_tmp = ratliff.get_dict(col=languages[language][0])
@@ -165,20 +179,36 @@ for language in wl.cols:
 
 print("[i] added best matches")
 
+wl.add_entries('manual_morphemes', 'tokens', lambda x:x)
 # further filter : no ratliff_tokens
-output_dict = {
-    0: [x[1] for x in namespace]
-    + ["ratliff_language", "ratliff_tokens", "ratliff_index", "ratliff_cogid"]
-}
+Duplicate_row = []
 for idx in wl:
-    if wl[idx, 'ratliff_tokens'] or wl[idx, 'cogid'] == 0:
-        output_dict[idx] = wl[idx]
+    if idx in manual_cogid_dict.keys():
+        if ' '.join(wl[idx, 'tokens']) == manual_cogid_dict[idx]['data_tokens']:
+            wl[idx, 'cogid'] = manual_cogid_dict[idx]['manual_cogid']
+            wl[idx, 'manual_morphemes'] = manual_cogid_dict[idx]['manual_morphemes']
+        else:
+            print("This is not a match")
+            print(wl[idx, 'tokens'], manual_wl[idx,'tokens'])
+    else:
+        Duplicate_row.append(idx)
+# filter : remove the ones annotated as !remove! in the manual,  and the ones without cogid.
+output_header = [x[1] for x in namespace]+ ["ratliff_language", "ratliff_tokens", "ratliff_index", "ratliff_cogid", 'manual_morphemes', 'note']
+output_dict = {
+    0: output_header
+}
+
+for idx in wl:
+    if idx not in Duplicate_row and wl[idx, 'cogid'] !=0:
+        output_entry=[]
+        for h in output_header:
+            output_entry.append(wl[idx,h])
+        output_dict[idx] = output_entry
 
 out_wl = Wordlist(output_dict)
 out_wl.output(
     "tsv",
-    filename=base_path.joinpath("hmong-mien-wordlist").as_posix(),
+    filename=base_path.joinpath("hmong-mien-wordlist-modified").as_posix(),
     ignore="all",
-    prettify=False,
-)
+    prettify=False)
 

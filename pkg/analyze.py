@@ -68,7 +68,7 @@ try:
     part = Partial(base_path.joinpath("hmong-mien-partial.bin.tsv").as_posix())
 except:
     part = Partial(
-        base_path.joinpath("hmong-mien-wordlist.tsv").as_posix(), segments="tokens"
+        base_path.joinpath("hmong-mien-wordlist-modified.tsv").as_posix(), segments="tokens"
     )
     part.get_partial_scorer(runs=10000)
     part.output(
