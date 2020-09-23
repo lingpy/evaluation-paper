@@ -138,7 +138,7 @@ for wl in [whitehmong, chen]:
 wl = Wordlist(C)
 print("[i] created wordlist")
 
-
+## add ratliff's info.
 for language in wl.cols:
     rows = wl.get_dict(col=language, flat=True)
     ratliff_tmp = ratliff.get_dict(col=languages[language][0])
@@ -165,20 +165,9 @@ for language in wl.cols:
 
 print("[i] added best matches")
 
-# further filter : no ratliff_tokens
-output_dict = {
-    0: [x[1] for x in namespace]
-    + ["ratliff_language", "ratliff_tokens", "ratliff_index", "ratliff_cogid"]
-}
-for idx in wl:
-    if wl[idx, 'ratliff_tokens'] or wl[idx, 'cogid'] == 0:
-        output_dict[idx] = wl[idx]
-
-out_wl = Wordlist(output_dict)
-out_wl.output(
+wl.output(
     "tsv",
     filename=base_path.joinpath("hmong-mien-wordlist").as_posix(),
     ignore="all",
-    prettify=False,
-)
+    prettify=False)
 
