@@ -113,5 +113,9 @@ part.renumber("concept", "lumpid")
 #    prettify=False,
 #)
 
+part.output('tsv', 
+            filename=base_path.joinpath('hmong-mein-analysis').as_posix(),
+            prettify=False)
+
 bcubes(part, 'cogid', 'lumpid', pprint=True)
 bcubes(part, 'cogid', 'splitid', pprint=True)
