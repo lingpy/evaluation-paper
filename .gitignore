@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# mac
+.DS_STOREX
+
+
 # Distribution / packaging
 .Python
 build/
