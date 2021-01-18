@@ -94,7 +94,7 @@ load data and recompute.
 to do : uncomment or delete the semiid part.
 """
 # part = Partial("liusinitic.tsv")
-part = Partial("liusinitic_semi.tsv")
+part = Partial("liusinitic.tsv")
 # part.add_entries("semiid", "cogids", lambda x: 0)
 part.add_cognate_ids("cogids", "strictid", idtype="strict")
 part.add_cognate_ids("cogids", "looseid", idtype="loose")
