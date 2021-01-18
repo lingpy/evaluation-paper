@@ -105,7 +105,7 @@ cogids2cogid(part, ref="cogids", cognates="autoid", morphemes="morphemes_auto")
 main task.
 """
 Distances = {}
-for cognate in ["autoid", "looseid", "strictid", "semiid"]:
+for cognate in ["autoid", "looseid", "strictid",]:
     key = cognate + "_dist"
     value = lexical_distances(part, cognate)
     Distances[key] = value
@@ -115,7 +115,7 @@ for cognate in ["autoid", "looseid", "strictid", "semiid"]:
 output
 """
 doculect_number = part.width
-for output_column in ["autoid", "strictid", "looseid", "semiid"]:
+for output_column in ["autoid", "strictid", "looseid"]:
     with open("lexi_{0}.dst".format(output_column), "w") as f:
         f.write("\t" + str(doculect_number) + "\n")
         m = Distances[output_column + "_dist"]
