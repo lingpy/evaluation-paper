@@ -1,2 +1,2 @@
-# evaluation-paper
-Evaluating the performance of computattional methods for language comparison in SEA languages
+# annotation-paper
+morpheme annotation scheme and a case study: evaluating the performance of computational methods for language comparison in SEA languages. 
