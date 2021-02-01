@@ -1,3 +1,11 @@
+"""
+Calculate the agreements between two types of 
+cognate coversion methods via Bcube scores.
+
+The Result:
+A screen output.
+"""
+
 from lingpy.evaluate.acd import _get_bcubed_score as bcs
 from lingpy import Wordlist
 
