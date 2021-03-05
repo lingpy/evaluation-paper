@@ -1,21 +1,20 @@
 """
-stage 1:
 lexicostatistical distances between language pairs.
 The result is a pairwise-distance matrix
 """
 from lingpy import Wordlist
 from lingpy.compare.partial import Partial
-import pickle
 from lingpy import basictypes
 from clldutils.text import strip_brackets, split_text
 from collections import defaultdict
 from itertools import combinations
+from sys import argv
 
 
 def cogids2cogid(wordlist, ref="cogids", cognates="autoid", morphemes="morphemes_auto"):
     """
-    function: auto cogid
-    convert cogid from cogids
+    Function: convert cogids to cogid via shared morpheme.
+    The selected morpheme will be shown as bold font in Edictor.
     """
     C, M = {}, {}
     current = 1
@@ -44,8 +43,8 @@ def cogids2cogid(wordlist, ref="cogids", cognates="autoid", morphemes="morphemes
 
 def cogid_from_morphemes(wl, ref="cogids", cognates="newcogid", morphemes="morphemes"):
     """
-    function: semi cogid
-    convert cogid from cogids according to manually highlighted morpheme column
+    function: salient cogid
+    convert cogid from cogids according to manually highlighted morpheme column (salient)
     """
     lookup, D = {}, {}  # store the data here
     for idx, cogids, morphemes in wl.iter_rows("cogids", "morphemes"):
@@ -90,22 +89,31 @@ def lexical_distances(wl, ref="cogid"):
 
 
 """
-load data and recompute.
-to do : uncomment or delete the semiid part.
+load data and conversion
 """
-# part = Partial("liusinitic.tsv")
+
 part = Partial("liusinitic.tsv")
-# part.add_entries("semiid", "cogids", lambda x: 0)
-part.add_cognate_ids("cogids", "strictid", idtype="strict")
-part.add_cognate_ids("cogids", "looseid", idtype="loose")
-cogids2cogid(part, ref="cogids", cognates="autoid", morphemes="morphemes_auto")
-# cogid_from_morphemes(part, ref="cogids", cognates="semiid", morphemes="morphemes")
+
+if "--add_salient" in argv:
+    cogid_from_morphemes(
+        part, ref="cogids", cognates="salientid", morphemes="morphemes"
+    )
+    # in case people want to calculate the salient cognate sets (computer-assisted approach)
+else:
+    part.add_cognate_ids("cogids", "strictid", idtype="strict")
+    part.add_cognate_ids("cogids", "looseid", idtype="loose")
+    cogids2cogid(part, ref="cogids", cognates="autoid", morphemes="morphemes_auto")
+
+# make a array with all the converted cognate sets.
+cognate_set_array = [
+    x for x in part.columns if x not in ["cogids", "langid"] and "id" in x
+]
 
 """
 main task.
 """
 Distances = {}
-for cognate in ["autoid", "looseid", "strictid",]:
+for cognate in cognate_set_array:
     key = cognate + "_dist"
     value = lexical_distances(part, cognate)
     Distances[key] = value
@@ -115,10 +123,12 @@ for cognate in ["autoid", "looseid", "strictid",]:
 output
 """
 doculect_number = part.width
-for output_column in ["autoid", "strictid", "looseid"]:
+for output_column in cognate_set_array:
     with open("lexi_{0}.dst".format(output_column), "w") as f:
         f.write("\t" + str(doculect_number) + "\n")
         m = Distances[output_column + "_dist"]
         for i, doc in enumerate(part.cols):
             tmp = "\t".join([str(x) for x in m[i]])
             f.write("{0}\t{1}\n".format(doc, tmp))
+
+part.output('tsv', filename='liusinitic.word_cognate', prettify=False)
