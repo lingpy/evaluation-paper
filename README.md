@@ -61,6 +61,45 @@ In addition to the distance matrices, the script produces a new Wordlist file `l
 
 ## Evaluation stage.
 
+To test the harmony (agreement) between different word cognate conversion methods.  
+
+**State some reasons to point out why we want to measure the agreement between different conversion methods**
+
+```python
+python3 concept_bcube.py
+```
+
+**The output is as below**
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Text     | Text     | Text     |
+
+
+
+The script `colexifications.py` evaluates the colexification scores of concepts. For example, the morpheme *water* is frequently seen in compound words in Southeast Asian languages, such as *saliva (mouth water)*, *tear (eye water)* and *environment (water earth, lit. 水土). Since the *water* has such a good compounding ability, the concepts whichever contain *water* should receive a higher colexification scores.  
+
 ```python
 python3 colexifications.py
+```
+
+Bearing the above working principle in mind, we design the script to list out the concepts with low colexification scores to heigh colexification scores.  
+
+It is a standard output which directly print on the screen:
+
+| Concepts | Scores   | Flag     |
+| -------- | -------- | -------- |
+| back     | 0        |          |
+| bad      | 0        |          |
+| ...      | ...      |          |
+| nose     | 3.45455  | !derivation! |
+| rope     | 3.625    | !derivation! |
+| seed     | 3.71053  | !derivation! |
+| head     | 3.90909  |          |
+| belly    | 3.95     | !derivation! |
+
+The following commandline redirects the standard output to a plan text file.
+
+```python
+python3 colexifications.py > colexification_scores.txt
 ```
