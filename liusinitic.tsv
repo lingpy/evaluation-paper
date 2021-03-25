@@ -579,7 +579,7 @@ ID	DOCULECT	CONCEPT	VALUE	IPA	TOKENS	SEGMENTS	MORPHEMES	COGIDS	AUTOID	STRICTID	L
 578	Changsha	sand	sa³³ po¹³ tsɿ⁰	sa³³+po¹³+tsɿ⁰	s a ³³ + p o ¹³ + ts ɿ ⁰	s a ³³ + p o ¹³ + ts ɿ ⁰	sand/沙 woman/婆 _-child:SUF/子	138 28 19	743	651	346	沙婆子	沙 婆 子		沙子	i n t + i n t + i n t	
 579	Loudi	sand	sɔ⁴⁴ tsɿ⁰	sɔ⁴⁴+tsɿ⁰	s ɔ ⁴⁴ + ts ɿ ⁰	s ɔ ⁴⁴ + ts ɿ ⁰	sand/沙 _-child:SUF/子	138 19	743	649	346	沙子	沙 子		沙子	i n t + i n t	
 580	Nanchang	sand	sa⁴² tsɿ⁰	sa⁴²+tsɿ⁰	s a ⁴² + ts ɿ ⁰	s a ⁴² + ts ɿ ⁰	sand/沙 _-child:SUF/子	138 19	743	649	346	沙子	沙 子		沙子	i n t + i n t	
-581	Meixian	sand	sa³³⁻³⁵ ve⁰	sa³³+ve⁰	s a ³³ + v e ⁰	s a ³⁵/³³ + v e ⁰	sand/沙 _sand	138 0	743	652	346	沙儿	沙		沙子	i n t + i n t	
+581	Meixian	sand	sa³³⁻³⁵ ve⁰	sa³³+ve⁰	s a ³³ + v e ⁰	s a ³⁵/³³ + v e ⁰	sand/沙 _sand	138 827	743	652	346	沙儿	沙		沙子	i n t + i n t	
 582	Guilin	sand	sɑ⁴² tse²³⁻³³	sɑ⁴²+tse²³	s ɑ ⁴² + ts e ²³	s ɑ ⁴² + ts e ³³/²³	sand/沙 _-child:SUF/子	138 19	743	649	346	沙子	沙 子		沙子	i n t + i n t	
 583	Guangzhou	sand	sa⁵³	sa⁵³	s a ⁵³	s a ⁵³	sand/沙	138	743	648	346	沙	沙		沙子	i n t	
 584	Fuzhou	sand	sai⁵⁵	sai⁵⁵	s ai ⁵⁵	s a i ⁵⁵	sand/沙	138	743	648	346	沙	沙		沙子	i n N t	
@@ -4305,9 +4305,9 @@ ID	DOCULECT	CONCEPT	VALUE	IPA	TOKENS	SEGMENTS	MORPHEMES	COGIDS	AUTOID	STRICTID	L
 #@sampa=IPA|TOKENS|SEGMENTS|TRANSCRIPTION
 #@pinyin=CHINESE
 #@css=menu:show|database:hide
-#@basics=AUTOID|CHARACTERS|COGIDS|CONCEPT|DOCULECT|MORPHEMES|NOTE|STRICTID|TOKENS
+#@basics=DOCULECT|CONCEPT|TOKENS|MORPHEMES|COGIDS|AUTOID|STRICTID|CHARACTERS|NOTE
 #@_selected_doculects=Beijing|Ha_erbin|Jinan|Rongcheng|Taiyuan|Xi_an|Chengdu|Nanjing|Jixi|Suzhou|Wenzhou|Changsha|Loudi|Nanchang|Meixian|Guilin|Guangzhou|Fuzhou|Xiamen
-#@_selected_concepts=wife
+#@_selected_concepts=vomit|fear|skin|float|smooth|wife|all|hot|person|throw|white|back|nose|ice|neck|thin|not|rub|grass|long|flesh|if|breasts|three|woods|kill|sand|mountain|burn|few|tongue|snake|rope|louse|wet|what|stone|hand|tree|bark|count [noun]|count [verb]|who|water|fruit|sleep|suck|say|split|die|four|he|they|sun|lie|day|sky|hear|head|hair|earth|spit|push|leg|dig|play|night|tail|smell|I|we|five|fog|knee|wash|think|small|laugh|heart|heart [compound]|new|star|snow|blood|squeeze|tooth|smoke|salt|eye|bite|leaf|one|because|swim|rightside|fish|feather|rain|round|far|moon|cloud|in|dirty|how|narrow|stand|husband|this|here|know|grease|straight|swell|seed|heavy|scratch|claw|turn|walk|mouth|leftside|sit|guts|sing|dust|eat|wing|worm|blow|stab|hit|fight|hunt|big|dull|fall|animal|belly|short|correct|many|ear|two|fly|wind|sew|rotten|father|dry|liver|give|root|dog|bone|stick|child|sea|good|drink|and|river|river_2|black|red|thick|breathe|lake|flower|bad|yellow|ash|live(alive)|fire|egg|sharp|horn|foot|freeze|near|cut|see|wide|tie|pull|come|old|cold|flow|path|green|full|name|mather|hold-take|where|that|there|man|you|year|bird|woman
 #@sorted_taxa=Beijing|Ha_erbin|Jinan|Rongcheng|Taiyuan|Xi_an|Chengdu|Nanjing|Jixi|Suzhou|Wenzhou|Changsha|Loudi|Nanchang|Meixian|Guilin|Guangzhou|Fuzhou|Xiamen
 #@sorted_concepts=vomit|fear|skin|float|smooth|wife|all|hot|person|throw|white|back|nose|ice|neck|thin|not|rub|grass|long|flesh|if|breasts|three|woods|kill|sand|mountain|burn|few|tongue|snake|rope|louse|wet|what|stone|hand|tree|bark|count [noun]|count [verb]|who|water|fruit|sleep|suck|say|split|die|four|he|they|sun|lie|day|sky|hear|head|hair|earth|spit|push|leg|dig|play|night|tail|smell|I|we|five|fog|knee|wash|think|small|laugh|heart|heart [compound]|new|star|snow|blood|squeeze|tooth|smoke|salt|eye|bite|leaf|one|because|swim|rightside|fish|feather|rain|round|far|moon|cloud|in|dirty|how|narrow|stand|husband|this|here|know|grease|straight|swell|seed|heavy|scratch|claw|turn|walk|mouth|leftside|sit|guts|sing|dust|eat|wing|worm|blow|stab|hit|fight|hunt|big|dull|fall|animal|belly|short|correct|many|ear|two|fly|wind|sew|rotten|father|dry|liver|give|root|dog|bone|stick|child|sea|good|drink|and|river|river_2|black|red|thick|breathe|lake|flower|bad|yellow|ash|live(alive)|fire|egg|sharp|horn|foot|freeze|near|cut|see|wide|tie|pull|come|old|cold|flow|path|green|full|name|mather|hold-take|where|that|there|man|you|year|bird|woman
 #@display=filedisplay

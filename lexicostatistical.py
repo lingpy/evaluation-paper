@@ -1,6 +1,6 @@
 """
-lexicostatistical distances between language pairs.
-The result is a pairwise-distance matrix
+Step 3: lexicostatistical distances between language pairs.
+The result is pairwise-distance matrices
 """
 from lingpy import Wordlist
 from lingpy.compare.partial import Partial
@@ -66,7 +66,7 @@ def cogid_from_morphemes(wl, ref="cogids", cognates="newcogid", morphemes="morph
     wl.add_entries(cognates, D, lambda x: x)
 
 
-def lexical_distances(wl, ref="cogid"):
+def lexical_distances(wl, subset, ref="cogid"):
     """
     function: lexicostatistics
     This function ignore synonyms.
@@ -77,7 +77,7 @@ def lexical_distances(wl, ref="cogid"):
         lookupA, lookupB = wl.get_dict(col=langA, entry=ref), wl.get_dict(
             col=langB, entry=ref
         )
-        for concept in lookupA:
+        for concept in lookupA and subset:
             cogsA, cogsB = lookupA.get(concept, []), lookupB.get(concept, [])
             if [x for x in cogsA if x in cogsB]:
                 common += 1
@@ -95,27 +95,31 @@ load data and conversion
 part = Partial("liusinitic.tsv")
 
 if "--add_salient" in argv:
+    # calculate salient cognate sets (computer-assisted approach) if "add_salient" exists.  
     cogid_from_morphemes(
         part, ref="cogids", cognates="salientid", morphemes="morphemes"
     )
-    # in case people want to calculate the salient cognate sets (computer-assisted approach)
-else:
-    part.add_cognate_ids("cogids", "strictid", idtype="strict")
-    part.add_cognate_ids("cogids", "looseid", idtype="loose")
-    cogids2cogid(part, ref="cogids", cognates="autoid", morphemes="morphemes_auto")
+    
+elif 'greedid' not in part.columns:
+    cogids2cogid(part, ref="cogids", cognates="greedid", morphemes="morphemes_auto")
 
-# make a array with all the converted cognate sets.
+# an array with all the converted cognate sets.
 cognate_set_array = [
-    x for x in part.columns if x not in ["cogids", "langid"] and "id" in x
+    x for x in part.columns if x not in ["cogids", "langid", 'autoid'] and "id" in x
 ]
 
+# take 100 concepts 
+target_concepts = []
+with open('bcube_concepts.tsv', 'r') as csvf:
+    target_concepts = [x.strip().split('\t')[0] for i, x in enumerate(csvf.readlines()) if i <=100]
+    
 """
 main task.
 """
 Distances = {}
 for cognate in cognate_set_array:
     key = cognate + "_dist"
-    value = lexical_distances(part, cognate)
+    value = lexical_distances(part, target_concepts, cognate)
     Distances[key] = value
 
 

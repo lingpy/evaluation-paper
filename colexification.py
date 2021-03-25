@@ -1,8 +1,8 @@
 """
-colexification ranking.
+Step 2 : colexification ranking.
 
 The result:
-A standard output. The results will be printed on the screen.
+A standard output.
 """
 
 from lingpy import *
@@ -13,10 +13,11 @@ from tabulate import tabulate
 
 def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
     """
-    This function takes the input data in a wordlist format.
-    The input data must have a partial cognate column and a concept column.
-    The annotation column is an option al column, the default is None.
-    It is to check if the concept contains lexical entires which have suffix.
+    This function takes a wordlist file as an input
+    Mandatory columns: 
+        cogids and concept
+    Optional column:
+        annotation (check derivation)
     """
 
     etd = wordlist.get_etymdict(
@@ -51,7 +52,15 @@ def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
 
 # load data
 wl = Wordlist("liusinitic.tsv")
+
 # calculate
 scores = colidx(wl, ref="cogids", concept="concept", annotation="morphemes")
-# output
+
+# standard output
 print(tabulate(scores))
+
+# save to file
+with open('colexification_concepts.tsv', 'w') as csvf:
+     csvf.write('\t'.join(['Concept', 'colexification', 'derivation\n']))
+     for c, colex, d in scores:
+         csvf.write('\t'.join([c, str(round(colex, 2)), d+'\n']))
