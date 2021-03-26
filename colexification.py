@@ -15,7 +15,7 @@ from tabulate import tabulate
 def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
     """
     This function takes a wordlist file as an input and calculate the concept colexification.
-    Mandatory columns: 
+    Mandatory columns:
         cogids and concept
     Optional column:
         annotation (check derivation)
@@ -50,8 +50,9 @@ def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
             all_scores += [[cnc, statistics.mean(scores), ""]]
     return sorted(all_scores, key=lambda x: (x[1], x[0]))
 
+
 # load data
-wl = Wordlist("liusinitic.tsv") 
+wl = Wordlist("liusinitic.tsv")
 
 # calculate
 scores = colidx(wl, ref="cogids", concept="concept", annotation="morphemes")
@@ -68,11 +69,13 @@ for idx, concept, character in wl.iter_rows("concept", "characters"):
     else:
         chinese[concept] = [character]
 
-with open('colexification_concepts.tsv', 'w') as csvf:
-     csvf.write('\t'.join(['Concept', 'Chinese', 'colexification', 'derivation\n']))
-     for c, colex, d in scores:
-         character = ",".join(chinese[c]) 
-         csvf.write('\t'.join([c, character, str(round(colex, 2)), d+'\n'])) # save to file
-         print("{0:20}| {1:.2f}| {2:15}| {3:15}".format(
-                c, colex, d,  character
-            )) # standard output
+with open("colexification_concepts.tsv", "w") as csvf:
+    csvf.write("\t".join(["Concept", "Chinese", "colexification", "derivation\n"]))
+    for c, colex, d in scores:
+        character = ",".join(chinese[c])
+        csvf.write(
+            "\t".join([c, character, str(round(colex, 2)), d + "\n"])
+        )  # save to file
+        print(
+            "{0:20}| {1:.2f}| {2:15}| {3:15}".format(c, colex, d, character)
+        )  # standard output

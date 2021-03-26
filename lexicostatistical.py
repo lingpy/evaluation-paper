@@ -94,25 +94,31 @@ load data and conversion
 
 part = Partial("liusinitic.tsv")
 
+# check if all the essential columns are in the input file
 if "--add_salient" in argv:
-    # calculate salient cognate sets (computer-assisted approach) if "add_salient" exists.  
+    # calculate salient cognate sets (computer-assisted approach) if "add_salient" exists.
     cogid_from_morphemes(
         part, ref="cogids", cognates="salientid", morphemes="morphemes"
     )
-    
-elif 'greedid' not in part.columns:
+elif "greedid" not in part.columns:
     cogids2cogid(part, ref="cogids", cognates="greedid", morphemes="morphemes_auto")
+elif "strictid" not in part.columns:
+    part.add_cognate_ids("cogids", "strictid", idtype="strict")
+elif "looseid" not in part.columns:
+    part.add_cognate_ids("cogids", "looseid", idtype="loose")
 
 # an array with all the converted cognate sets.
 cognate_set_array = [
-    x for x in part.columns if x not in ["cogids", "langid", 'autoid'] and "id" in x
+    x for x in part.columns if x not in ["cogids", "langid", "autoid"] and "id" in x
 ]
 
-# take 100 concepts 
+# take 100 concepts
 target_concepts = []
-with open('bcube_concepts.tsv', 'r') as csvf:
-    target_concepts = [x.strip().split('\t')[0] for i, x in enumerate(csvf.readlines()) if i <=100]
-    
+with open("bcube_concepts.tsv", "r") as csvf:
+    target_concepts = [
+        x.strip().split("\t")[0] for i, x in enumerate(csvf.readlines()) if i <= 100
+    ]
+
 """
 main task.
 """
@@ -135,4 +141,4 @@ for output_column in cognate_set_array:
             tmp = "\t".join([str(x) for x in m[i]])
             f.write("{0}\t{1}\n".format(doc, tmp))
 
-part.output('tsv', filename='liusinitic.word_cognate', prettify=False)
+part.output("tsv", filename="liusinitic.word_cognate", prettify=False)
