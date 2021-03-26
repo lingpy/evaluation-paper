@@ -1,5 +1,5 @@
 """
-Stage 3:
+Stage 4:
 heatmap and dendrogram
 """
 
@@ -104,7 +104,7 @@ plt.clf()
 print(tabulate(table, floatfmt=".4f"))
 
 """
-UPGMA
+Neighbor-join
 """
 for a, p in matrix_dict.items():
     label = beauty(matrix_doculect[a])
