@@ -2,7 +2,8 @@
 Step 2 : colexification ranking.
 
 The result:
-A standard output.
+1. A standard output.
+2. A file output.
 """
 
 from lingpy import *
@@ -13,7 +14,7 @@ from tabulate import tabulate
 
 def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
     """
-    This function takes a wordlist file as an input
+    This function takes a wordlist file as an input and calculate the concept colexification.
     Mandatory columns: 
         cogids and concept
     Optional column:
@@ -49,18 +50,29 @@ def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
             all_scores += [[cnc, statistics.mean(scores), ""]]
     return sorted(all_scores, key=lambda x: (x[1], x[0]))
 
-
 # load data
-wl = Wordlist("liusinitic.tsv")
+wl = Wordlist("liusinitic.tsv") 
 
 # calculate
 scores = colidx(wl, ref="cogids", concept="concept", annotation="morphemes")
 
-# standard output
-print(tabulate(scores))
+# a dict object for concepts v.s. Chinese characters.
+chinese = {}
+for idx, concept, character in wl.iter_rows("concept", "characters"):
+    character = character.replace(" ", "")
+    if concept in chinese.keys():
+        if character not in chinese.get(concept):
+            if len(chinese.get(concept)) <= 2:
+                # we take only maximum three Chinese compound words as example
+                chinese[concept].append(character)
+    else:
+        chinese[concept] = [character]
 
-# save to file
 with open('colexification_concepts.tsv', 'w') as csvf:
-     csvf.write('\t'.join(['Concept', 'colexification', 'derivation\n']))
+     csvf.write('\t'.join(['Concept', 'Chinese', 'colexification', 'derivation\n']))
      for c, colex, d in scores:
-         csvf.write('\t'.join([c, str(round(colex, 2)), d+'\n']))
+         character = ",".join(chinese[c]) 
+         csvf.write('\t'.join([c, character, str(round(colex, 2)), d+'\n'])) # save to file
+         print("{0:20}| {1:.2f}| {2:15}| {3:15}".format(
+                c, colex, d,  character
+            )) # standard output

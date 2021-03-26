@@ -22,7 +22,7 @@ elif "looseid" not in part.columns:
 
 wordlist = Wordlist(part)
 
-# a dict object for concepts v.s. Chinese characters.
+# a dict object for concepts v.s. Chinese characters. Also sort the salient morpheme.
 chinese = {}
 for idx, concept, character in wordlist.iter_rows("concept", "characters"):
     character = character.replace(" ", "")
@@ -51,8 +51,8 @@ with open("bcube_concepts.tsv", "w") as file:
     )  # file header
     for concept, character, p, r, f in sorted(ranks, key=lambda x: x[-1]):
         print(
-            "{0:20}| {1:10}| {2:.2f} | {3:.2f} | {4:.2f}".format(
-                concept, character, p, r, f
+            "{0:20}| {1:.2f} | {2:.2f} | {3:.2f} | {4:10}".format(
+                concept, p, r, f, character
             )
         )  # standard output
         file.write(

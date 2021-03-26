@@ -1,6 +1,9 @@
 """
 Stage 4:
 Correlation, Mantel test, and neighbor-join tree
+
+The results of correlation and mantel test are standard outputs. 
+The outputs of neighbor-join trees are 
 """
 import csv
 import numpy as np
