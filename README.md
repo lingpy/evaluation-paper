@@ -43,19 +43,8 @@ Once all the tasks are completed, press the *Save* icon and then press the *Down
 
 ![](https://pad.gwdg.de/uploads/upload_e5771ea2b475fae38a3514e43e03f588.png)
 
-## From partial cognate sets to word cognate sets
+## From partial cognate sets to full cognate sets
 
-Execute the `lexicostatistical.py`, the script will convert the partial cognate sets to three types of automatic word cognate sets, namely, strict, loose and shared morpheme cognate sets. The script also reports the distance matrices which derive from the three types of word cognate sets. 
-
-```python
-python3 lexicostatistical.py 
-```
-
-Execute the `lexicostatistical.py` with `add_salient` argument will generate four different word cognate sets, namely, strict, loose, shared morpheme and salient cognate sets.  
-
-```python
-python3 lexicostatistical.py add_salient
-```
 
 In addition to the distance matrices, the script produces a new Wordlist file `liusinitic.word_cognate.tsv` which stores all the word cognate sets.
 
@@ -63,19 +52,18 @@ In addition to the distance matrices, the script produces a new Wordlist file `l
 
 To test the harmony (agreement) between different word cognate conversion methods.  
 
-**State some reasons to point out why we want to measure the agreement between different conversion methods**
-
 ```python
 python3 concept_bcube.py
 ```
 
 **The output is as below**
 
-| Column 1 | Column 2 | Column 3 |
-| -------- | -------- | -------- |
-| Text     | Text     | Text     |
-
-
+| Concept  | Precision | Recall   | F-score | Chinese       | 
+| -------- | --------- | -------- |-------- |-------------  |
+|  knee    |    1.00   |  0.08    |  0.15   |膝,膝蓋,簸棱盖  |
+|  child   |    1.00   |  0.15    |  0.26   |孩,小孩,小嘎    | 
+|  neck    |    1.00   |  0.18    |  0.31   |脖子,脖颈子,頸項| 
+|   ...    |    ...    |   ...    |  ...    |        ...    |
 
 The script `colexifications.py` evaluates the colexification scores of concepts. For example, the morpheme *water* is frequently seen in compound words in Southeast Asian languages, such as *saliva (mouth water)*, *tear (eye water)* and *environment (water earth, lit. 水土). Since the *water* has such a good compounding ability, the concepts whichever contain *water* should receive a higher colexification scores.  
 
@@ -87,19 +75,37 @@ Bearing the above working principle in mind, we design the script to list out th
 
 It is a standard output which directly print on the screen:
 
-| Concepts | Scores   | Flag     |
-| -------- | -------- | -------- |
-| back     | 0        |          |
-| bad      | 0        |          |
-| ...      | ...      |          |
-| nose     | 3.45455  | !derivation! |
-| rope     | 3.625    | !derivation! |
-| seed     | 3.71053  | !derivation! |
-| head     | 3.90909  |          |
-| belly    | 3.95     | !derivation! |
+| Concept  | Scores   | Flag     | Chinese character| 
+| -------- | -------- | -------- | ---------------- |
+| back     | 0        |          | 背,脊背,背骶身    |
+| bad      | 0        |          | 壞,恘,毛         |
+| ...      | ...      | ...      |  ...             |
+| nose     | 3.45455  | !derivation! | 鼻子,鼻,鼻孔  |
+| rope     | 3.625    | !derivation! | 繩,繩子,繩索   |
+| seed     | 3.71053  | !derivation! | 种子,种籽,种   |
+| head     | 3.90909  |          |    頭,得腦        |
+| belly    | 3.95     | !derivation! |  肚子,肚皮,肚  |
 
-The following commandline redirects the standard output to a plan text file.
+# Derive distance matrices from the full cognate sets
+
+The script `lexicostatistical.py` reports the distance matrices which derive from the three types of word cognate sets, namely, loose, strict and greedy cognate sets. Please note that this script only takes into account the top 100 concepts with lowest F-scores.
 
 ```python
-python3 colexifications.py > colexification_scores.txt
+python3 lexicostatistical.py 
+```
+
+Execute the `lexicostatistical.py` with `add_salient` argument will generate four different distance matrices, including, loose, strict, greedy and salient cognate sets. 
+
+```python
+python3 lexicostatistical.py add_salient
+```
+# Basic statistics
+
+The script `concept_statistics.py` calculate three different statistics:
+- The correlation between colexification rankings and the F-scores.
+- The Mantel tests
+- The Neighbor-join trees
+
+```python
+python3 concept_statistics.py 
 ```

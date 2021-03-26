@@ -1,204 +1,204 @@
-Concept	colexification	derivation
-back	0	
-bad	0	
-because	0	
-bite	0	
-blood	0	
-blow	0	
-burn	0	
-cloud	0	
-count [verb]	0	
-die	0	
-dig	0	
-dry	0	
-dull	0	
-egg	0	
-eye	0	
-fall	0	
-far	0	
-fear	0	
-few	0	
-fire	0	
-fish	0	
-fly	0	
-grass	0	
-green	0	
-heavy	0	
-hot	0	
-lake	0	
-laugh	0	
-liver	0	
-long	0	
-many	0	
-name	0	
-narrow	0	
-near	0	!derivation!
-new	0	
-one	0	
-push	0	
-rain	0	
-red	0	
-river_2	0	
-round	0	
-rub	0	
-say	0	
-sea	0	
-sew	0	
-sharp	0	
-short	0	
-sing	0	
-sit	0	
-smooth	0	
-snow	0	
-stab	0	
-straight	0	
-thick	0	
-thin	0	
-think	0	
-three	0	
-throw	0	
-turn	0	
-two	0	
-wide	0	
-wind	0	
-worm	0	
-moon	0.01	!derivation!
-tie	0.02	!derivation!
-all	0.02	
-squeeze	0.02	
-rotten	0.02	!derivation!
-full	0.02	
-dog	0.03	
-stand	0.03	
-come	0.03	
-correct	0.03	
-wet	0.03	
-dirty	0.04	
-cold	0.04	
-good	0.05	
-horn	0.05	!derivation!
-in	0.05	
-white	0.05	
-and	0.05	
-count [noun]	0.05	
-five	0.05	
-four	0.05	
-mountain	0.05	
-river	0.05	
-salt	0.05	!derivation!
-walk	0.05	
-yellow	0.05	
-split	0.06	
-float	0.07	
-swell	0.07	
-scratch	0.08	
-cut	0.1	
-flow	0.1	
-kill	0.1	
-path	0.1	
-you	0.1	!derivation!
-tooth	0.11	!derivation!
-breathe	0.11	
-know	0.11	
-year	0.11	
-animal	0.11	
-feather	0.12	
-snake	0.13	!derivation!
-hold-take	0.14	
-not	0.14	
-pull	0.14	
-smell	0.15	
-big	0.16	
-black	0.16	
-flesh	0.16	
-wash	0.16	
-give	0.17	
-suck	0.18	
-play	0.19	
-mouth	0.2	!derivation!
-grease	0.21	!derivation!
-flower	0.23	!derivation!
-drink	0.23	
-how	0.23	
-live(alive)	0.24	
-ear	0.24	!derivation!
-eat	0.26	
-bird	0.27	!derivation!
-small	0.29	
-sleep	0.3	
-smoke	0.33	!derivation!
-earth	0.35	
-lie	0.39	!derivation!
-if	0.41	
-see	0.43	
-father	0.44	!derivation!
-hear	0.45	
-freeze	0.48	
-tail	0.48	!derivation!
-rightside	0.5	
-heart [compound]	0.53	
-where	0.54	
-ash	0.55	
-swim	0.56	!derivation!
-vomit	0.56	
-hand	0.57	!derivation!
-leftside	0.58	!derivation!
-mather	0.58	!derivation!
-night	0.61	!derivation!
-that	0.62	
-fog	0.63	!derivation!
-spit	0.63	
-root	0.64	!derivation!
-sky	0.67	!derivation!
-dust	0.67	!derivation!
-foot	0.68	!derivation!
-woods	0.79	!derivation!
-leg	0.82	!derivation!
-I	0.84	
-sun	0.85	
-star	0.85	!derivation!
-who	0.94	!derivation!
-day	0.95	
-hunt	0.95	
-this	0.97	
-wing	0.97	!derivation!
-here	0.98	
-fight	0.99	!derivation!
-there	0.99	
-heart	1	
-knee	1.02	!derivation!
-skin	1.02	!derivation!
-he	1.07	!derivation!
-ice	1.1	!derivation!
-we	1.14	!derivation!
-what	1.29	!derivation!
-woman	1.32	!derivation!
-bark	1.34	
-water	1.37	
-they	1.38	!derivation!
-fruit	1.39	!derivation!
-man	1.4	!derivation!
-husband	1.43	!derivation!
-tree	1.5	!derivation!
-breasts	1.77	!derivation!
-old	1.85	
-hit	1.95	
-bone	1.95	
-wife	1.97	!derivation!
-louse	2.22	!derivation!
-stone	2.29	!derivation!
-child	2.31	!derivation!
-hair	2.39	
-tongue	2.4	!derivation!
-stick	2.43	!derivation!
-person	2.63	
-leaf	2.75	!derivation!
-claw	2.78	!derivation!
-neck	2.98	!derivation!
-sand	3.11	!derivation!
-guts	3.45	!derivation!
-nose	3.45	!derivation!
-rope	3.62	!derivation!
-seed	3.71	!derivation!
-head	3.91	
-belly	3.95	!derivation!
+Concept	Chinese	colexification	derivation
+back	背,脊背,背骶身	0	
+bad	壞,恘,毛	0	
+because	因为,庸乎	0	
+bite	咬,𪘬,嚙	0	
+blood	血	0	
+blow	吹,囗,㖹	0	
+burn	烧	0	
+cloud	云,云彩	0	
+count [verb]	數,點	0	
+die	死,瓜,彈四郎	0	
+dig	挖,刨,啄	0	
+dry	干,操,焦	0	
+dull	呆,笨,彪	0	
+egg	雞蛋,雞子,雞卵	0	
+eye	眼睛,眼,眼窝	0	
+fall	掉,跌,落	0	
+far	远	0	
+fear	怕,诧,唬	0	
+few	少,寡	0	
+fire	火	0	
+fish	鱼,囗囗囗	0	
+fly	飛	0	
+grass	草	0	
+green	綠	0	
+heavy	重	0	
+hot	熱	0	
+lake	湖	0	
+laugh	笑,樂	0	
+liver	肝	0	
+long	長	0	
+many	多	0	
+name	名字	0	
+narrow	窄,窄狭,狭	0	
+near	進,進兜	0	!derivation!
+new	新	0	
+one	一,蜀	0	
+push	推,掀,逃	0	
+rain	雨	0	
+red	紅	0	
+river_2	江	0	
+round	圆,团,圆圈	0	
+rub	擦,汧,揩	0	
+say	說,掰,唠	0	
+sea	海	0	
+sew	縫,繗,连	0	
+sharp	尖	0	
+short	短	0	
+sing	唱	0	
+sit	坐,跪	0	
+smooth	平	0	
+snow	雪	0	
+stab	刺,楠,居	0	
+straight	直	0	
+thick	厚,厚實,賁	0	
+thin	薄	0	
+think	想	0	
+three	三	0	
+throw	仍,撂,甩	0	
+turn	转,擺𠲥	0	
+two	二,兩	0	
+wide	寬,闊	0	
+wind	風	0	
+worm	蟲,蟲蟻	0	
+moon	月亮,月明,月光	0.01	!derivation!
+tie	捆,綁,扎	0.02	!derivation!
+all	全部,個郎下	0.02	
+squeeze	壓,挤,榨	0.02	
+rotten	腐爛,爛了,爛	0.02	!derivation!
+full	滿,爆,個郎	0.02	
+dog	狗,犬,犬囝	0.03	
+stand	站,立着,乃豈	0.03	
+come	來,走來	0.03	
+correct	對,無綻	0.03	
+wet	湿,潮,透流	0.03	
+dirty	脏,埋汰,邋遢	0.04	
+cold	冷,寒,凍	0.04	
+good	好,帶勁,不賴	0.05	
+horn	角,角角	0.05	!derivation!
+in	在,宿,着	0.05	
+white	白	0.05	
+and	和,搭,伉	0.05	
+count [noun]	數	0.05	
+five	五	0.05	
+four	四	0.05	
+mountain	山	0.05	
+river	河	0.05	
+salt	盐,咸盐,盐巴	0.05	!derivation!
+walk	走,行,跑	0.05	
+yellow	黃	0.05	
+split	撕裂,撕,撕烂	0.06	
+float	漂浮,漂,浮	0.07	
+swell	肿,⽧臺,浮	0.07	
+scratch	抓,叨,巴	0.08	
+cut	砍,宰,斫	0.1	
+flow	流,淌	0.1	
+kill	杀,宰,刣	0.1	
+path	路,道,墿	0.1	
+you	你,倷,囗	0.1	!derivation!
+tooth	牙齒,牙,牙子	0.11	!derivation!
+breathe	呼吸,喘氣,出氣	0.11	
+know	知道,懂了,晓得	0.11	
+year	年,年份,歲	0.11	
+animal	動物,眾牲,四骹爬	0.11	
+feather	羽毛,毛,毛毛	0.12	
+snake	蛇,长虫,梭老?	0.13	!derivation!
+hold-take	拿,逮,擔	0.14	
+not	不,勿,否	0.14	
+pull	拉,扯,挑	0.14	
+smell	聞,碰,嗅	0.15	
+big	大	0.16	
+black	黑,烏	0.16	
+flesh	肉	0.16	
+wash	洗	0.16	
+give	給,囗,撥	0.17	
+suck	吸,裹,吮	0.18	
+play	玩,耍,嬉	0.19	
+mouth	嘴,嘴巴,牙巴	0.2	!derivation!
+grease	脂肪,油,壯肉	0.21	!derivation!
+flower	花,花?,花仔	0.23	!derivation!
+drink	喝,喫,呷	0.23	
+how	怎么,怎,怎的	0.23	
+live(alive)	活着,活絡,活葛	0.24	
+ear	耳,耳朵,耳公	0.24	!derivation!
+eat	吃,歹,喫	0.26	
+bird	鳥,雀,雀雀	0.27	!derivation!
+small	小,細,嫩	0.29	
+sleep	睡,睏	0.3	
+smoke	煙,煙煙,煙子	0.33	!derivation!
+earth	土地,地,地皮	0.35	
+lie	躺,睡,睡倒	0.39	!derivation!
+if	如果,打比说,假使	0.41	
+see	看見,瞅見,看倒	0.43	
+father	爸爸,父,爸	0.44	!derivation!
+hear	聽見,聽到,聽着	0.45	
+freeze	結冰,凍冰,下凜	0.48	
+tail	尾,尾巴,尾子	0.48	!derivation!
+rightside	右边,右边拉,右边边	0.5	
+heart [compound]	心臟,心,完心	0.53	
+where	哪里,哪,哪疙	0.54	
+ash	灰,灰灰	0.55	
+swim	游水,游泳,洗澡	0.56	!derivation!
+vomit	吐,嘔吐,嘔嘞	0.56	
+hand	手,手把子	0.57	!derivation!
+leftside	左边,左边拉,左面	0.58	!derivation!
+mather	母親,媽,娘	0.58	!derivation!
+night	晚上,下黑,下晚黑	0.61	!derivation!
+that	那,乜,𠰻	0.62	
+fog	霧,迷露,幔	0.63	!derivation!
+spit	吐,啡	0.63	
+root	根,𩪘,兜子	0.64	!derivation!
+sky	天空,天,天上	0.67	!derivation!
+dust	塵土,土垃,灰	0.67	!derivation!
+foot	腳,腳丫子,腳板	0.68	!derivation!
+woods	森林,树林子,林子	0.79	!derivation!
+leg	腿,膀,腳腳	0.82	!derivation!
+I	我,吾,佳	0.84	
+sun	太陽,日頭,日頭爺	0.85	
+star	星星,星宿,星	0.85	!derivation!
+who	誰,哪個,啥人	0.94	!derivation!
+day	天,日	0.95	
+hunt	打獵,關山,拍獵	0.95	
+this	这,𠹼,尔	0.97	
+wing	翅膀,翅子,翅	0.97	!derivation!
+here	这里,这疙,这	0.98	
+fight	打架,打仗,干仗	0.99	!derivation!
+there	那,乜,那個地方	0.99	
+heart	心	1	
+knee	膝,膝蓋,簸棱盖	1.02	!derivation!
+skin	皮膚,肉皮,皮	1.02	!derivation!
+he	他,渠,俚	1.07	!derivation!
+ice	冰,凌冰,構棱子	1.1	!derivation!
+we	我們,俺,我人	1.14	!derivation!
+what	什麼,啥,甚仂	1.29	!derivation!
+woman	女人,娘們,女的	1.32	!derivation!
+bark	树皮	1.34	
+water	水	1.37	
+they	他們,他的,渠人	1.38	!derivation!
+fruit	水果,果們,果子	1.39	!derivation!
+man	男人,大老爺們,老爺們	1.4	!derivation!
+husband	爱人,老公,丈夫	1.43	!derivation!
+tree	树	1.5	!derivation!
+breasts	乳房,奶子,匝	1.77	!derivation!
+old	老	1.85	
+hit	打,拍	1.95	
+bone	骨,骨頭,骨都	1.95	
+wife	妻子,老婆,媳婦	1.97	!derivation!
+louse	虱,虱子,跳虱	2.22	!derivation!
+stone	石頭,石頭子?,石頭塊	2.29	!derivation!
+child	孩,小孩,小嘎	2.31	!derivation!
+hair	頭髮,頭毛,頭那髮	2.39	
+tongue	舌,舌頭,舌头	2.4	!derivation!
+stick	棍,棍子,棍棍	2.43	!derivation!
+person	人	2.63	
+leaf	叶,叶子,树子叶叶	2.75	!derivation!
+claw	爪,爪子,爪爪	2.78	!derivation!
+neck	脖子,脖颈子,頸項	2.98	!derivation!
+sand	沙,沙子,沙沙	3.11	!derivation!
+guts	腸子,腸,肚腸	3.45	!derivation!
+nose	鼻子,鼻,鼻孔	3.45	!derivation!
+rope	繩,繩子,繩索	3.62	!derivation!
+seed	种子,种籽,种	3.71	!derivation!
+head	頭,得腦,?	3.91	
+belly	肚子,肚皮,肚	3.95	!derivation!
