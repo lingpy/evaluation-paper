@@ -13,6 +13,8 @@ from skbio import DistanceMatrix
 from skbio.stats.distance import mantel
 from tabulate import tabulate
 from skbio.tree import nj
+from itertools import combinations
+from lingpy import *
 
 # Correlation
 Concepts = {}
@@ -89,10 +91,6 @@ print(
     )
 )
 
-# trees: standard output and save to files
-for tkey, tvalue in tree_dict.items():
-    print(tkey)
-    print(tvalue.ascii_art())
-    with open(tkey + ".nex", "w") as nexf:
-        nexf.write(str(tvalue))
-    nexf.close()
+for tA, tB in combinations(list(tree_dict), r=2):
+    treeA, treeB = Tree(str(tree_dict[tA])), Tree(str(tree_dict[tB]))
+    print(tA, tB, treeA.get_distance(treeB))

@@ -115,9 +115,13 @@ cognate_set_array = [
 # take 100 concepts
 target_concepts = []
 with open("bcube_concepts.tsv", "r") as csvf:
-    target_concepts = [
-        x.strip().split("\t")[0] for i, x in enumerate(csvf.readlines()) if i <= 100
-    ]
+    data = []
+    for line in csvf:
+        data += [[x.strip() for x in line.split('\t')]]
+    for row in data[1:]:
+        if float(row[-1]) <= 0.8:
+            target_concepts += [row[0]]
+print(len(target_concepts))
 
 """
 main task.
