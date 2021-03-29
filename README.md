@@ -8,6 +8,19 @@ $ git clone https://github.com/lingpy/evaluation-paper.git
 $ cd evaluation-paper
 ```
 
+We also need to install the `tqDist` software to calculate the quartet distance. The installation is as follows: 
+
+```{.bash}
+$ wget https://users-cs.au.dk/cstorm/software/tqdist/files/tqDist-1.0.2.tar.gz
+$ tar -xvf tqDist-1.0.2.tar.gz
+$ cd tqDist-1.0.2/
+$ sudo apt install cmake
+$ cmake .
+$ make
+$ make test
+$ sudo make install
+```
+
 ## Morpheme annotation
 The [tutorial](https://pad.gwdg.de/ouxXcKnXTnaY7aAspf8E4w?view) which accompanies Wu et al. (2020) covers the essential functions of the Edictor web applications. In this tutorial, we show how one can use Edictor web application to edit the morpheme annotation. The example dataset `liusinitic.tsv` can be found in the [github repository](https://github.com/lingpy/evaluation-paper).
 
@@ -101,4 +114,10 @@ The script `concept_statistics.py` calculate three different statistics:
 
 ```python
 python3 concept_statistics.py 
+```
+
+Additionally, adding the argument `--General_quartet_dist` calculates the general quartet distance (GQD). 
+
+```python
+python3 concept_statistics.py --General_quartet_dist
 ```
