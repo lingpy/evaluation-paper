@@ -12,7 +12,6 @@ from scipy import stats
 from skbio import DistanceMatrix
 from skbio.stats.distance import mantel
 from tabulate import tabulate
-from skbio.tree import nj
 from itertools import combinations
 from lingpy import *
 
@@ -40,7 +39,7 @@ for key, value in Concepts.items():
     Colexification.append(value["Colexification"])
 
 tau, p_value = stats.kendalltau(Fscore, Colexification)
-print("F-score v.s. Colexification: {0} (p-value: {1})".format(tau, p_value))
+print("\nF-score v.s. Colexification: {0} (p-value: {1})\n".format(tau, p_value))
 
 # Mantel
 files = [
@@ -81,16 +80,28 @@ for a, b in itertools.combinations(matrix_dict.keys(), 2):
         table += [[a, b, coeff, p_value]]
     # make tree
     if a not in tree_dict.keys():
-        tree_dict[a] = nj(dm_a)
+        tree_dict[a] = neighbor(matrix_dict[a], label_a)
     elif b not in tree_dict.keys():
-        tree_dict[b] = nj(dm_b)
+        tree_dict[b] = neighbor(matrix_dict[b], label_b)
 
+print("Mantel test:")
 print(
     tabulate(
         table, floatfmt=".4f", headers=["cogid_A", "cogid_B", "mantel coeff", "p-value"]
     )
 )
 
+# tree splits. Calculate the similarity between two trees
+print("\nsimilarity between two trees:")
+split_similarity = []
 for tA, tB in combinations(list(tree_dict), r=2):
     treeA, treeB = Tree(str(tree_dict[tA])), Tree(str(tree_dict[tB]))
-    print(tA, tB, treeA.get_distance(treeB))
+    split_similarity.append([tA, tB, treeA.get_distance(treeB)])
+    # print(tA, tB, treeA.get_distance(treeB))
+print(
+    tabulate(
+        split_similarity,
+        floatfmt=".4f",
+        headers=["cogid_A", "cogid_B", "Tree similarity"],
+    )
+)
