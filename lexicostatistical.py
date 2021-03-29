@@ -112,7 +112,7 @@ cognate_set_array = [
     x for x in part.columns if x not in ["cogids", "langid", "autoid"] and "id" in x
 ]
 
-# take 100 concepts
+# take threadshold 0.8
 target_concepts = []
 with open("bcube_concepts.tsv", "r") as csvf:
     data = []
