@@ -14,6 +14,7 @@ from skbio.stats.distance import mantel
 from tabulate import tabulate
 from itertools import combinations
 from lingpy import *
+import sys, subprocess, glob
 
 # Correlation
 Concepts = {}
@@ -91,17 +92,46 @@ print(
     )
 )
 
-# tree splits. Calculate the similarity between two trees
-print("\nsimilarity between two trees:")
-split_similarity = []
+# Calculate the similarity between two trees via generalized Robinson-Foulds Distance
+print("\nsimilarity between two trees (generalized Robinson-Foulds Distance, GRF):")
+rgf_similarity = []
 for tA, tB in combinations(list(tree_dict), r=2):
     treeA, treeB = Tree(str(tree_dict[tA])), Tree(str(tree_dict[tB]))
-    split_similarity.append([tA, tB, treeA.get_distance(treeB)])
-    # print(tA, tB, treeA.get_distance(treeB))
+    rgf_similarity.append([tA, tB, treeA.get_distance(treeB)])
+
 print(
     tabulate(
-        split_similarity,
+        rgf_similarity,
         floatfmt=".4f",
-        headers=["cogid_A", "cogid_B", "Tree similarity"],
+        headers=["cogid_A", "cogid_B", "GRF distance"],
     )
 )
+
+"""
+ Calculate the similarity between two trees via Quartet distance. 
+ The QDist is now replaced by tqDist, users need to install tqDist. 
+ More detail about general quartet distance: 
+    Taraka Rama and Johann-Mattis List An automated framework for fast cognate detection and Bayesian phylogenetic inference in computational historical linguistics ACL 2019
+
+This section is inspired by gqd.py in AutoCogPhylo (https://github.com/PhyloStar/AutoCogPhylo/blob/master/gqd.py)
+"""
+if "--General_quartet_dist":
+    print("\nsimilarity between two trees (General Quartet Distance, GQD)")
+    gqd_similarity = []
+    for tA, tB in combinations(list(tree_dict), r=2):
+        qd = subprocess.check_output(
+            ["quartet_dist", "-v", tA + ".nex", tB + ".nex"]
+        )  # execute tqDist tool
+        qd_array = (
+            str(qd).replace("\\n", "").replace("b'", "").split("\\t")
+        )  # bite-like object to string and then to array
+        gqd = float(qd_array[4]) / float(qd_array[2])  # general quartet distance
+        gqd_similarity.append([tA, tB, gqd])
+    # output
+    print(
+        tabulate(
+            gqd_similarity,
+            floatfmt=".4f",
+            headers=["cogid_A", "cogid_B", "GQD distance"],
+        )
+    )
