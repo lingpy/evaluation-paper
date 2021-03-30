@@ -21,6 +21,9 @@ $ make test
 $ sudo make install
 ```
 
+For more detail about the quartet distance, please see the link: https://users-cs.au.dk/cstorm/software/tqdist/
+
+
 ## Morpheme annotation
 The [tutorial](https://pad.gwdg.de/ouxXcKnXTnaY7aAspf8E4w?view) which accompanies Wu et al. (2020) covers the essential functions of the Edictor web applications. In this tutorial, we show how one can use Edictor web application to edit the morpheme annotation. The example dataset `liusinitic.tsv` can be found in the [github repository](https://github.com/lingpy/evaluation-paper).
 
@@ -107,16 +110,17 @@ python3 lexicostatistical.py add_salient
 ```
 # Basic statistics
 
-The script `concept_statistics.py` calculate three different statistics:
+The script `concept_statistics.py` calculates four different statistics:
 - The correlation between colexification rankings and the F-scores.
 - The Mantel tests
 - The Neighbor-join trees
+- The generalized Robinson-Foulds Distance (GRF), and an optional calculation `general quartet distance (GQD)`
 
 ```python
 python3 concept_statistics.py 
 ```
 
-Additionally, adding the argument `--General_quartet_dist` calculates the general quartet distance (GQD). 
+Additionally, adding the argument `--General_quartet_dist` calculates the general quartet distance (GQD).
 
 ```python
 python3 concept_statistics.py --General_quartet_dist

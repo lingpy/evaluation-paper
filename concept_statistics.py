@@ -111,7 +111,7 @@ print(
  Calculate the similarity between two trees via Quartet distance. 
  The QDist is now replaced by tqDist, users need to install tqDist. 
  More detail about general quartet distance: 
-    Taraka Rama and Johann-Mattis List An automated framework for fast cognate detection and Bayesian phylogenetic inference in computational historical linguistics ACL 2019
+    Taraka Rama and Johann-Mattis List (2019). An automated framework for fast cognate detection and Bayesian phylogenetic inference in computational historical linguistics. ACL 
 
 This section is inspired by gqd.py in AutoCogPhylo (https://github.com/PhyloStar/AutoCogPhylo/blob/master/gqd.py)
 """
