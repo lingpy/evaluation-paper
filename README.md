@@ -27,14 +27,15 @@ For more detail about the quartet distance, please see the link: https://users-c
 ## The entire process in a shell script
 
 ```{.bash}
+% morpheme annotation on the Edictor web application
 $ cldfbench download liusinitic/lexibank_liusinitic.py
 $ python3 concept_bcube.py
 $ python3 colexification.py
-% inspect the morpheme annotation on the Edictor web application
+% Inspect the morpheme annotation on the Edictor web application (optional). 
+% If users did change the annotation. please execute the cldfbench donwload commandline again.
 $ python3 lexicostatistical.py --add_salient
 $ python3 concept_statistics.py --general_quartet_distance
 ```
-
 
 ## Morpheme annotation
 The [tutorial](https://pad.gwdg.de/ouxXcKnXTnaY7aAspf8E4w?view) which accompanies Wu et al. (2020) covers the essential functions of the Edictor web applications. In this tutorial, we show how one can use Edictor web application to edit the morpheme annotation. The example dataset `liusinitic.tsv` can be found in the [github repository](https://github.com/lingpy/evaluation-paper).
@@ -70,6 +71,13 @@ The figure below shows how it looks like once all the entries are annotated and 
 Once all the tasks are completed, press the *Save* icon and then press the *Download* icon.
 
 ![](https://pad.gwdg.de/uploads/upload_e5771ea2b475fae38a3514e43e03f588.png)
+
+And alternative approach is to press the *Save* icon and then execute the following command in the terminal:
+
+```python
+cldfbench download lexibank_liusinitic.py
+```
+
 
 ## Evaluation stage.
 
