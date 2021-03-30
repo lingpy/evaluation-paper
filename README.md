@@ -15,30 +15,19 @@ $ git clone https://github.com/lexibank/liusinitic.git
 $ pip install -e liusinitic
 ```
 
-`tqDist` is a stand alone software to compute quartet distances from two given phylogenies, and our package make use of the output to compute the *general quartet distance*. , please see the link: https://users-cs.au.dk/cstorm/software/tqdist/ . The installation is as follows:
-
-```{.bash}
-$ wget https://users-cs.au.dk/cstorm/software/tqdist/files/tqDist-1.0.2.tar.gz
-$ tar -xvf tqDist-1.0.2.tar.gz
-$ cd tqDist-1.0.2/
-$ sudo apt install cmake
-$ cmake .
-$ make
-$ make test
-$ sudo make install
-```
+`tqDist` is a stand alone software to compute quartet distances from two given phylogenies, and our package make use of the output from the software to compute the *generalized quartet distance*. The [`tqDist` website](https://users-cs.au.dk/cstorm/software/tqdist/) gives an instruction on installation.
 
 ## The entire process in a shell script
 
 ```{.bash}
 % morpheme annotation on the Edictor web application
 $ cldfbench download liusinitic/lexibank_liusinitic.py
-$ python3 concept_bcube.py
-$ python3 colexification.py
+$ python3 cognate-set-comparison.py
+$ python3 cross-semantic-cognate-statistics.py
 % Inspect the morpheme annotation on the Edictor web application (optional). 
 % If users did change the annotation. please execute the cldfbench donwload commandline again.
-$ python3 lexicostatistical.py --add_salient
-$ python3 concept_statistics.py --gqd
+$ python3 lexical-distances.py --salient
+$ python3 downstream-statistics.py --gqd
 ```
 
 The following sections introduce the detail of each step.
@@ -90,7 +79,7 @@ cldfbench download lexibank_liusinitic.py
 The **loose** and **strict** cognate sets are generated with LingPy `add_cognate_ids` function. And we test the harmony (agreement) between the two cognate sets, so that users are aware of the "problematic" concepts.  
 
 ```python
-python3 concept_bcube.py
+python3 cognate-set-comparison.py
 ```
 
 **The output is as below**
@@ -102,10 +91,10 @@ python3 concept_bcube.py
 |  neck    |    1.00   |  0.18    |  0.31   |脖子,脖颈子,頸項| 
 |   ...    |    ...    |   ...    |  ...    |        ...    |
 
-The script `colexifications.py` evaluates the colexification scores of concepts. For example, the morpheme *water* is frequently seen in compound words in Southeast Asian languages, such as *saliva (mouth water)*, *tear (eye water)* and *environment (water earth, lit. 水土). Since the *water* has such a good compounding ability, the concepts whichever contain *water* should receive higher colexification scores.  
+The script `cross-semantic-cognate-statistics.py` evaluates the colexification scores of concepts. For example, the morpheme *water* is frequently seen in compound words in Southeast Asian languages, such as *saliva (mouth water)*, *tear (eye water)* and *environment (water earth, lit. 水土). Since the *water* has such a good compounding ability, the concepts whichever contain *water* should receive higher colexification scores.  
 
 ```python
-python3 colexifications.py
+python3 cross-semantic-cognate-statistics.py
 ```
 
 Bearing the above working principle in mind, we design the script to list out the concepts from low colexification scores to heigh colexification scores.  The screen output is shown as: 
@@ -123,31 +112,31 @@ Bearing the above working principle in mind, we design the script to list out th
 
 # Derive distance matrices from the full cognate sets
 
-The script `lexicostatistical.py` reports the distance matrices which derive from the three types of word cognate sets, namely, loose, strict and greedy cognate sets. Please note that this script only takes into account the top 100 concepts with lowest F-scores.
+The script `lexical-distances.py` reports the distance matrices which derive from the three types of word cognate sets, namely, loose, strict and greedy cognate sets. Please note that this script only takes into account concepts with F-scores lower than 0.8.
 
 ```python
-python3 lexicostatistical.py 
+python3 lexical-distances.py 
 ```
 
-Execute the `lexicostatistical.py` with `--add_salient` argument will generate four different distance matrices, including, loose, strict, greedy and salient cognate sets. 
+Execute the `lexical-distances.py` with `--salient` argument will generate four different distance matrices, including, loose, strict, greedy and salient cognate sets. 
 
 ```python
-python3 lexicostatistical.py --add_salient
+python3 lexical-distances.py --salient
 ```
 # Basic statistics
 
-The script `concept_statistics.py` calculates four different statistics:
+The script `downstream-statistics.py` calculates four different statistics:
 - The correlation between colexification rankings and the F-scores.
 - The Mantel tests
 - The Neighbor-join trees
-- The generalized Robinson-Foulds Distance (GRF), and an optional calculation `Generalized Quartet Distance (GQD)`
+- The Generalized Robinson-Foulds Distance (GRF), and an optional calculation `Generalized Quartet Distance (GQD)`
 
 ```python
-python3 concept_statistics.py 
+python3 downstream-statistics.py 
 ```
 
 Additionally, adding the argument `--gqd` calculates the GQD distance.
 
 ```python
-python3 concept_statistics.py --gqd
+python3 downstream-statistics.py --gqd
 ```
