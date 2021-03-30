@@ -111,15 +111,15 @@ print(
 )
 
 """
- Calculate the similarity between two trees via Quartet distance. 
+ Calculate the similarity between two trees via Generalized Quartet Distance. 
  The QDist is now replaced by tqDist, users need to install tqDist. 
- More detail about general quartet distance: 
-    Taraka Rama and Johann-Mattis List (2019). An automated framework for fast cognate detection and Bayesian phylogenetic inference in computational historical linguistics. ACL 
+ More detail about Generalized Quartet Distance: 
+    Taraka Rama and Johann-Mattis List (2019). An automated framework for fast cognate detection and Bayesian phylogenetic inference in computational historical linguistics. Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 6225–6235. 
 
 This section is inspired by gqd.py in AutoCogPhylo (https://github.com/PhyloStar/AutoCogPhylo/blob/master/gqd.py)
 """
-if "--general_quartet_dist" in argv:
-    print("\nsimilarity between two trees (General Quartet Distance, GQD)")
+if "--gqd" in argv:
+    print("\nsimilarity between two trees (Generalized Quartet Distance, GQD)")
     gqd_similarity = []
     for tA, tB in combinations(list(tree_dict), r=2):
         qd = subprocess.check_output(

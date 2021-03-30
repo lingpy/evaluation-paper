@@ -1,5 +1,3 @@
--e git+https://github.com/lingpy/lingpy.git@v2.6.6#egg=lingpy
-git+https://github.com/lingpy/lingrex.git@v0.1.3
--e git+https://github.com/lexibank/liusinitic.git
-python-igraph
+lingpy
 tabulate
+git+https://github.com/lingpy/lingrex.git@v0.1.3

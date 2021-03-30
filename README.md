@@ -9,7 +9,13 @@ $ cd evaluation-paper
 $ pip install -r requirements.txt
 ```
 
-We also need to install the `tqDist` software to calculate the quartet distance. The installation is as follows: 
+Once the code and the essential dependecies are installed, we download the data with `git`.
+```{.bash}
+$ git clone https://github.com/lexibank/liusinitic.git
+$ pip install -e liusinitic
+```
+
+`tqDist` is a stand alone software to compute quartet distances from two given phylogenies, and our package make use of the output to compute the *general quartet distance*. , please see the link: https://users-cs.au.dk/cstorm/software/tqdist/ . The installation is as follows:
 
 ```{.bash}
 $ wget https://users-cs.au.dk/cstorm/software/tqdist/files/tqDist-1.0.2.tar.gz
@@ -22,8 +28,6 @@ $ make test
 $ sudo make install
 ```
 
-For more detail about the quartet distance, please see the link: https://users-cs.au.dk/cstorm/software/tqdist/
-
 ## The entire process in a shell script
 
 ```{.bash}
@@ -34,8 +38,10 @@ $ python3 colexification.py
 % Inspect the morpheme annotation on the Edictor web application (optional). 
 % If users did change the annotation. please execute the cldfbench donwload commandline again.
 $ python3 lexicostatistical.py --add_salient
-$ python3 concept_statistics.py --general_quartet_distance
+$ python3 concept_statistics.py --gqd
 ```
+
+The following sections introduce the detail of each step.
 
 ## Morpheme annotation
 The [tutorial](https://pad.gwdg.de/ouxXcKnXTnaY7aAspf8E4w?view) which accompanies Wu et al. (2020) covers the essential functions of the Edictor web applications. In this tutorial, we show how one can use Edictor web application to edit the morpheme annotation. The example dataset `liusinitic.tsv` can be found in the [github repository](https://github.com/lingpy/evaluation-paper).
@@ -134,14 +140,14 @@ The script `concept_statistics.py` calculates four different statistics:
 - The correlation between colexification rankings and the F-scores.
 - The Mantel tests
 - The Neighbor-join trees
-- The generalized Robinson-Foulds Distance (GRF), and an optional calculation `general quartet distance (GQD)`
+- The generalized Robinson-Foulds Distance (GRF), and an optional calculation `Generalized Quartet Distance (GQD)`
 
 ```python
 python3 concept_statistics.py 
 ```
 
-Additionally, adding the argument `--general_quartet_dist` calculates the general quartet distance (GQD).
+Additionally, adding the argument `--gqd` calculates the GQD distance.
 
 ```python
-python3 concept_statistics.py --general_quartet_dist
+python3 concept_statistics.py --gqd
 ```
