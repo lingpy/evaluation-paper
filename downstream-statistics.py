@@ -24,7 +24,6 @@ with open("results/cognate-set-comparison.tsv", "r") as file:
             "Recall": a["Recall"],
             "F-Score": a["F-score"],
         }
-file.close()
 
 with open("results/cross-semantic-cognate-statistics.tsv", "r") as file:
     for b in csv.DictReader(file, delimiter="\t"):

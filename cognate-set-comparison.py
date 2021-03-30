@@ -66,4 +66,3 @@ with open("results/cognate-set-comparison.tsv", "w") as file:
                 ]
             )
         )  # file output to results/
-file.close()
