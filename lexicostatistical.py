@@ -112,7 +112,7 @@ cognate_set_array = [
     x for x in part.columns if x not in ["cogids", "langid", "autoid"] and "id" in x
 ]
 
-# take threadshold 0.8
+# take cut-off threshold 0.8
 target_concepts = []
 with open("bcube_concepts.tsv", "r") as csvf:
     data = []
@@ -121,7 +121,7 @@ with open("bcube_concepts.tsv", "r") as csvf:
     for row in data[1:]:
         if float(row[-1]) <= 0.8:
             target_concepts += [row[0]]
-print(len(target_concepts))
+print('{0:d} concepts are selected for computing distance matrices (the cut-off threshold is 0.8).'.format(len(target_concepts)))
 
 """
 main task.

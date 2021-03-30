@@ -15,6 +15,7 @@ from tabulate import tabulate
 from itertools import combinations
 from lingpy import *
 import sys, subprocess, glob
+from sys import argv
 
 # Correlation
 Concepts = {}
@@ -115,7 +116,7 @@ print(
 
 This section is inspired by gqd.py in AutoCogPhylo (https://github.com/PhyloStar/AutoCogPhylo/blob/master/gqd.py)
 """
-if "--General_quartet_dist":
+if "--general_quartet_dist" in argv:
     print("\nsimilarity between two trees (General Quartet Distance, GQD)")
     gqd_similarity = []
     for tA, tB in combinations(list(tree_dict), r=2):

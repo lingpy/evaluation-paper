@@ -6,6 +6,7 @@ We start by installing the dependencies from the command-line. To do so, we firs
 ```{.bash}
 $ git clone https://github.com/lingpy/evaluation-paper.git
 $ cd evaluation-paper
+$ pip install -r requirements.txt
 ```
 
 We also need to install the `tqDist` software to calculate the quartet distance. The installation is as follows: 
@@ -22,6 +23,17 @@ $ sudo make install
 ```
 
 For more detail about the quartet distance, please see the link: https://users-cs.au.dk/cstorm/software/tqdist/
+
+## The entire process in a shell script
+
+```{.bash}
+$ cldfbench download liusinitic/lexibank_liusinitic.py
+$ python3 concept_bcube.py
+$ python3 colexification.py
+% inspect the morpheme annotation on the Edictor web application
+$ python3 lexicostatistical.py --add_salient
+$ python3 concept_statistics.py --general_quartet_distance
+```
 
 
 ## Morpheme annotation
@@ -103,10 +115,10 @@ The script `lexicostatistical.py` reports the distance matrices which derive fro
 python3 lexicostatistical.py 
 ```
 
-Execute the `lexicostatistical.py` with `add_salient` argument will generate four different distance matrices, including, loose, strict, greedy and salient cognate sets. 
+Execute the `lexicostatistical.py` with `--add_salient` argument will generate four different distance matrices, including, loose, strict, greedy and salient cognate sets. 
 
 ```python
-python3 lexicostatistical.py add_salient
+python3 lexicostatistical.py --add_salient
 ```
 # Basic statistics
 
@@ -120,8 +132,8 @@ The script `concept_statistics.py` calculates four different statistics:
 python3 concept_statistics.py 
 ```
 
-Additionally, adding the argument `--General_quartet_dist` calculates the general quartet distance (GQD).
+Additionally, adding the argument `--general_quartet_dist` calculates the general quartet distance (GQD).
 
 ```python
-python3 concept_statistics.py --General_quartet_dist
+python3 concept_statistics.py --general_quartet_dist
 ```
