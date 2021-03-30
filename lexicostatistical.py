@@ -145,4 +145,4 @@ for output_column in cognate_set_array:
             tmp = "\t".join([str(x) for x in m[i]])
             f.write("{0}\t{1}\n".format(doc, tmp))
 
-part.output("tsv", filename="liusinitic.word_cognate", prettify=False)
+part.output("tsv", filename="liusinitic.word_cognate", prettify=False) # as backup.

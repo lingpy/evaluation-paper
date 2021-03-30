@@ -83,8 +83,10 @@ for a, b in itertools.combinations(matrix_dict.keys(), 2):
     # make tree
     if a not in tree_dict.keys():
         tree_dict[a] = neighbor(matrix_dict[a], label_a)
+        print(tree_dict[a], file=open(a+'.nex', 'w')) # print to file
     elif b not in tree_dict.keys():
         tree_dict[b] = neighbor(matrix_dict[b], label_b)
+        print(tree_dict[b], file=open(b+'.nex','w')) # print to file
 
 print("Mantel test:")
 print(
