@@ -1,4 +1,4 @@
-Concept	character	Precision	Recall	F-score
+Concept	Character	Precision	Recall	F-Score
 knee	膝,膝蓋,簸棱盖	1.0	0.08	0.15
 child	孩,小孩,小嘎	1.0	0.15	0.26
 neck	脖子,脖颈子,頸項	1.0	0.18	0.31
