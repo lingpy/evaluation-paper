@@ -1,5 +1,6 @@
 """
-Step 2: Cross semantic cognate statistics.
+Step 2 
+Cross-semantic cognate statistics.
 
 The results:
 1. A standard output.
@@ -70,11 +71,11 @@ for idx, concept, character in wl.iter_rows("concept", "characters"):
     else:
         chinese[concept] = [character]
 
-with open("results/cross-semantic-cognate-statistics.tsv", "w") as csvf:
-    csvf.write("\t".join(["Concept", "Chinese", "Score", "Derivation\n"]))
+with open("results/cross-semantic-cognate-statistics.tsv", "w") as f:
+    f.write("\t".join(["Concept", "Chinese", "Score", "Derivation\n"]))
     for c, colex, d in scores:
         character = ",".join(chinese[c])
-        csvf.write(
+        f.write(
             "\t".join([c, character, str(round(colex, 2)), d + "\n"])
         )  # Save to file
         print(

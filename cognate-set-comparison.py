@@ -1,5 +1,6 @@
 """
-Step 1: Calculate the agreements between two types of 
+Step 1 
+Calculate the agreements between two types of 
 cognate coversion methods via B-Cube scores.
 
 The results:
@@ -48,24 +49,25 @@ for concept in wordlist.rows:
     ranks += [[concept, ",".join(character), p, r, f]]
 
 # Output
-with open("results/cognate-set-comparison.tsv", "w") as file:
-    file.write(
+with open("results/cognate-set-comparison.tsv", "w") as f:
+    f.write(
         "\t".join(["Concept", "Character", "Precision", "Recall", "F-Score\n"])
-    )  # file header
-    for concept, character, p, r, f in sorted(ranks, key=lambda x: x[-1]):
+    )  # File header
+    for concept, character, p, r, fs in sorted(ranks, key=lambda x: x[-1]):
         print(
             "{0:20}| {1:.2f} | {2:.2f} | {3:.2f} | {4:10}".format(
-                concept, p, r, f, character
+                concept, p, r, fs, character
             )
-        )  # standard output
-        file.write(
+        )  # Standard output
+        f.write(
             "\t".join(
                 [
                     concept,
                     character,
                     str(round(p, 2)),
                     str(round(r, 2)),
-                    str(round(f, 2)) + "\n",
+                    str(round(fs, 2)) + "\n",
                 ]
             )
-        )  # file output to results/
+        )  # File output to results/
+

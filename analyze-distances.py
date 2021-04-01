@@ -1,10 +1,17 @@
 """
-Step 4: Five different statistical analysis.
+Step 4
+Five different statistical analysis.
+
+The five different statistical analysis are: 
  - Kendall tau correlation
  - Mantel test
  - Neighbor-joining tree
  - Generalized Robinson-Foulds Distance
  - Normalized Quartet Distance (optional)
+
+ The results: 
+ 1. Four NEXUS files
+ 2. A screen output
 """
 from csvw.dsv import UnicodeDictReader
 import numpy as np
@@ -22,22 +29,29 @@ from sys import argv
 # Correlation
 concepts = {}
 with UnicodeDictReader("results/cognate-set-comparison.tsv", delimiter="\t") as reader:
-    concepts = {row['Concept']: row for row in reader}
+    concepts = {row["Concept"]: row for row in reader}
 
-with UnicodeDictReader("results/cross-semantic-cognate-statistics.tsv", delimiter="\t") as reader:
+with UnicodeDictReader(
+    "results/cross-semantic-cognate-statistics.tsv", delimiter="\t"
+) as reader:
     for row in reader:
-        concepts[row['Concept']].update({'Cognates': row['Score']})
+        concepts[row["Concept"]].update({"Cognates": row["Score"]})
 
-# correlation between F-Score and cross-semantic score
+# Correlation between cognate set comaprison and cross-semantic score
 fscores, precisions, recalls, cognates = [], [], [], []
 for row, d in concepts.items():
-    for lst, key in [(fscores, "F-Score"), (precisions, "Precision"), (recalls, "Recall"), (cognates, "Cognates")]:
+    for lst, key in [
+        (fscores, "F-Score"),
+        (precisions, "Precision"),
+        (recalls, "Recall"),
+        (cognates, "Cognates"),
+    ]:
         lst += [d[key]]
 
 tau, p_value = stats.kendalltau(fscores, cognates)
 print("\nF-score v.s. : {0} (P-value: {1})\n".format(tau, p_value))
 
-# Mantel
+# Mantel test
 files = [
     "lexi_greedid.dst",
     "lexi_looseid.dst",
@@ -45,9 +59,11 @@ files = [
     "lexi_salientid.dst",
 ]
 files_variable = ["greedid", "looseid", "strictid", "salientid"]
-matrix_doculect, matrix = {}, {} 
+matrix_doculect, matrix = {}, {}
 for f, v in zip(files, files_variable):
-    matrix_doculect[v], matrix[v] = read_dst('results/'+f) # Function from lingpy.read.phylip
+    matrix_doculect[v], matrix[v] = read_dst(
+        "results/" + f
+    )  # Function from lingpy.read.phylip
 
 table = []
 tree_dict = {}
@@ -103,7 +119,7 @@ if "--nqd" in argv:
     The QDist is now replaced by tqDist, please install tqDist before using this function.
 
     This section is inspired by gqd.py in AutoCogPhylo (https://github.com/PhyloStar/AutoCogPhylo/blob/master/gqd.py)
-    Becuase we are comparing two binary trees, we do not need Normalized Quartet Distance as indicated in AutoCogPhylo.
+    Becuase we are comparing two binary trees, we do not need Generalized Quartet Distance as written in the AutoCogPhylo.
     """
 
     print("\nSimilarity between two binary trees (Normalized Quartet Distance, NQD)")
@@ -116,7 +132,7 @@ if "--nqd" in argv:
         )  # Execute tqDist tool
         qd_array = (
             str(qd).replace("\\n", "").replace("b'", "").split("\\t")
-        )  # Bite-like object to string, and then to array
+        )  # Bite-like object to a string, and then to an array.
         nqd = float(qd_array[3])  # Normalized Quartet Distance
         nqd_similarity.append([tA, tB, nqd])
 

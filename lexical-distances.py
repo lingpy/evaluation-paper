@@ -1,5 +1,6 @@
 """
-Step 3: This stap calculates lexicostatistical distances between language pairs.
+Step 3
+This stap calculates lexicostatistical distances between language pairs.
 
 The results:
 Four pairwise distance matrices in the PHYLIP formats
@@ -15,7 +16,7 @@ from itertools import combinations
 def cogids2cogid(wordlist, ref="cogids", cognates="autoid", morphemes="morphemes_auto"):
     """
     Convert partial cognates to full cognates via shared morpheme.
-    The selected morpheme will be shown as bold font in Edictor.
+    The selected morpheme will be shown as bold font in the EDICTOR interface
     """
 
     C, M = {}, {}
@@ -70,7 +71,7 @@ def cogid_from_morphemes(wl, ref="cogids", cognates="newcogid", morphemes="morph
 
 def lexical_distances(wl, subset, ref="cogid"):
     """
-    Compute lexicostatistical distance. The synonyms are ignored.
+    Compute lexicostatistical distance. The synonyms are ignored during the calculation.
     This function returns a matrix
     """
 
@@ -85,7 +86,7 @@ def lexical_distances(wl, subset, ref="cogid"):
             if [x for x in cogsA if x in cogsB]:
                 common += 1
                 total += 1
-            elif cogsA and cogsB:  # this determines missing conepts now!
+            elif cogsA and cogsB:  # This determines missing conepts now!
                 total += 1
         matrix[i][j] = matrix[j][i] = 1 - (common / total)
     return matrix
@@ -112,9 +113,9 @@ cognate_set_array = [
 
 # Take cut-off threshold 0.8
 target_concepts = []
-with open("results/cognate-set-comparison.tsv", "r") as csvf:
+with open("results/cognate-set-comparison.tsv", "r") as f:
     data = []
-    for line in csvf:
+    for line in f:
         data += [[x.strip() for x in line.split("\t")]]
     for row in data[1:]:
         if float(row[-1]) <= 0.8:
@@ -137,7 +138,9 @@ for cognate in cognate_set_array:
 doculect_number = part.width
 for output_column in cognate_set_array:
     m = Distances[output_column + "_dist"]
-    matrix2dst(m, taxa=part.cols, filename="results/lexi_{0}".format(output_column), taxlen=10)
+    matrix2dst(
+        m, taxa=part.cols, filename="results/lexi_{0}".format(output_column), taxlen=10
+    )
 
 part.output(
     "tsv", filename="results/liusinitic.word_cognate", prettify=False
