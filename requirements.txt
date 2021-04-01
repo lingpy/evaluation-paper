@@ -3,6 +3,5 @@ lingpy==2.6.7
 numpy==1.19.5
 tabulate==0.8.9
 scipy==1.5.4
--e git+https://github.com/biocore/scikit-bio.git#egg=scikit-bio
 # uncomment the following requirement before submitting the article.
 # -e git+https://github.com/lexibank/liusinitic.git@v1.0#egg=lexibank_liusinitic

@@ -2,11 +2,12 @@
 
 This tutorial supplements the study “Evaluating the Performance of Computational Methods for Language Comparison in SEALanguages”. In this tutorial, we explain in detail how our workflow can be tested and applied.
 
-We start by installing the dependencies from the command-line. To do so, we first download the code and the data from the website.
+We start by installing the dependencies from the command-line. To do so, we first download the code and the data from the website and execute the following command-lines. 
 
 ```{.bash}
 $ cd evaluation-paper
 $ pip install -r requirements.txt
+$ pip install scikit-bio
 ```
 
 The stand-alone software `tqDist` was applied to compute the *normalized quartet distance (NQD)* from two given phylogenies. The [`tqDist` website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on the installation and usages.
