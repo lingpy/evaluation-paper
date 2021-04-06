@@ -130,11 +130,11 @@ smoke	煙,煙煙,煙子	0.33	!derivation!
 earth	土地,地,地皮	0.35	
 lie	躺,睡,睡倒	0.39	!derivation!
 if	如果,打比说,假使	0.41	
+tail	尾,尾巴,尾子	0.43	!derivation!
 see	看見,瞅見,看倒	0.43	
 father	爸爸,父,爸	0.44	!derivation!
 hear	聽見,聽到,聽着	0.45	
 freeze	結冰,凍冰,下凜	0.48	
-tail	尾,尾巴,尾子	0.48	!derivation!
 rightside	右边,右边拉,右边边	0.5	
 heart [compound]	心臟,心,完心	0.53	
 where	哪里,哪,哪疙	0.54	
@@ -186,11 +186,11 @@ hit	打,拍	1.95
 bone	骨,骨頭,骨都	1.95	
 wife	妻子,老婆,媳婦	1.97	!derivation!
 louse	虱,虱子,跳虱	2.22	!derivation!
-stone	石頭,石頭子?,石頭塊	2.29	!derivation!
-child	孩,小孩,小嘎	2.31	!derivation!
+stone	石頭,石頭子?,石頭塊	2.25	!derivation!
+child	孩,小孩,小嘎	2.27	!derivation!
+stick	棍,棍子,棍棍	2.38	!derivation!
 hair	頭髮,頭毛,頭那髮	2.39	
 tongue	舌,舌頭,舌头	2.4	!derivation!
-stick	棍,棍子,棍棍	2.43	!derivation!
 person	人	2.63	
 leaf	叶,叶子,树子叶叶	2.75	!derivation!
 claw	爪,爪子,爪爪	2.78	!derivation!
