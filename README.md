@@ -28,7 +28,7 @@ $ python analyze-distances.py --nqd
 The following sections introduce each step in detail.
 
 ## Morpheme annotation
-The [tutorial](https://pad.gwdg.de/ouxXcKnXTnaY7aAspf8E4w?view) which accompanies Wu et al. (2020) covers the essential functions of the EDICTOR interface. In this tutorial, we show how one can use the EDICTOR interface to edit the morpheme annotation. The example dataset `liusinitic.tsv` is given in this repository. 
+The [tutorial](https://pad.gwdg.de/ouxXcKnXTnaY7aAspf8E4w?view) which accompanies Wu et al. (2020) covers the essential functions of the EDICTOR interface. In this tutorial, we show how one can use the EDICTOR interface to edit the morpheme annotation. Follow our previous pipeline to prepare the data in a `Wordlist` format.
 
 **Show the morpheme annotation column**
 
