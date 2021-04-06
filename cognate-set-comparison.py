@@ -10,10 +10,10 @@ The results:
 from lingpy.evaluate.acd import _get_bcubed_score as bcs
 from lingpy import Wordlist
 from lingpy.compare.partial import Partial
-
+from lexibank_liusinitic import Dataset as LS
 
 # Load data
-part = Partial("liusinitic.tsv")
+part = Partial(LS().raw_dir.joinpath('liusinitic.tsv').as_posix())
 
 # Check if strictid and looseid are in the data.
 if "strictid" not in part.columns:

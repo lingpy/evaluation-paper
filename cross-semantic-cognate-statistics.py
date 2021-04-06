@@ -11,6 +11,7 @@ from lingpy import *
 from collections import defaultdict
 import statistics
 from tabulate import tabulate
+from lexibank_liusinitic import Dataset as LS
 
 
 def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
@@ -54,7 +55,7 @@ def colidx(wordlist, ref="cogids", concept="concept", annotation=None):
 
 
 # Load data
-wl = Wordlist("liusinitic.tsv")
+wl = Wordlist(LS().raw_dir.joinpath('liusinitic.tsv').as_posix())
 
 # Calculate the score of cross semantic cognate statistics
 scores = colidx(wl, ref="cogids", concept="concept", annotation="morphemes")

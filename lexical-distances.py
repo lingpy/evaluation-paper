@@ -11,7 +11,7 @@ from lingpy.convert.strings import matrix2dst
 from clldutils.text import strip_brackets, split_text
 from collections import defaultdict
 from itertools import combinations
-
+from lexibank_liusinitic import Dataset as LS
 
 def cogids2cogid(wordlist, ref="cogids", cognates="autoid", morphemes="morphemes_auto"):
     """
@@ -93,7 +93,7 @@ def lexical_distances(wl, subset, ref="cogid"):
 
 
 # Load data
-part = Partial("liusinitic.tsv")
+part = Partial(LS().raw_dir.joinpath('liusinitic.tsv').as_posix())
 
 # Add salient cognates.
 cogid_from_morphemes(part, ref="cogids", cognates="salientid", morphemes="morphemes")
@@ -108,7 +108,7 @@ elif "looseid" not in part.columns:
 
 # An array with all the name of all the full cognate sets.
 cognate_set_array = [
-    x for x in part.columns if x not in ["cogids", "langid", "autoid"] and "id" in x
+    x for x in part.columns if x not in ["cogids", "langid", "autoid", "concepticon_id", "doculect_id"] and "id" in x
 ]
 
 # Take cut-off threshold 0.8
