@@ -1,8 +1,8 @@
 """
 Step 4
-Five different statistical analysis.
+Five different statistical analyses.
 
-The five different statistical analysis are: 
+The five different statistical analyses are: 
  - Kendall tau correlation
  - Mantel test
  - Neighbor-joining tree
@@ -10,7 +10,7 @@ The five different statistical analysis are:
  - Normalized Quartet Distance (optional)
 
  The results: 
- 1. Four NEXUS files
+ 1. Four Newick files
  2. A screen output
 """
 from csvw.dsv import UnicodeDictReader

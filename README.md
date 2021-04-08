@@ -15,8 +15,6 @@ The stand-alone software `tqDist` was applied to compute the *normalized quartet
 ## The entire process in a shell script
 
 ```{.bash}
-$ % Annotate morphemes on the EDICTOR interface.
-$ cldfbench download liusinitic/lexibank_liusinitic.py
 $ python cognate-set-comparison.py
 $ python cross-semantic-cognate-statistics.py
 % Inspect the morpheme annotation on the EDICTOR interface (optional). 
