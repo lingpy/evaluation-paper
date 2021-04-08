@@ -1,21 +1,24 @@
 """
-Step 3: lexicostatistical distances between language pairs.
-The result is pairwise-distance matrices
+Step 3
+This stap calculates lexicostatistical distances between language pairs.
+
+The results:
+Four pairwise distance matrices in the PHYLIP formats
 """
-from lingpy import Wordlist
+from lingpy import Wordlist, basictypes
 from lingpy.compare.partial import Partial
-from lingpy import basictypes
+from lingpy.convert.strings import matrix2dst
 from clldutils.text import strip_brackets, split_text
 from collections import defaultdict
 from itertools import combinations
-from sys import argv
-
+from lexibank_liusinitic import Dataset as LS
 
 def cogids2cogid(wordlist, ref="cogids", cognates="autoid", morphemes="morphemes_auto"):
     """
-    Function: convert cogids to cogid via shared morpheme.
-    The selected morpheme will be shown as bold font in Edictor.
+    Convert partial cognates to full cognates via shared morpheme.
+    The selected morpheme will be shown as bold font in the EDICTOR interface
     """
+
     C, M = {}, {}
     current = 1
     for concept in wordlist.rows:
@@ -43,13 +46,13 @@ def cogids2cogid(wordlist, ref="cogids", cognates="autoid", morphemes="morphemes
 
 def cogid_from_morphemes(wl, ref="cogids", cognates="newcogid", morphemes="morphemes"):
     """
-    function: salient cogid
-    convert cogid from cogids according to manually highlighted morpheme column (salient)
+    Convert partial cognates to salient cognates according to manually highlighted morpheme column (salient)
     """
-    lookup, D = {}, {}  # store the data here
+
+    lookup, D = {}, {}  # Store the data here
     for idx, cogids, morphemes in wl.iter_rows("cogids", "morphemes"):
         selected_cogids = []
-        for cogid, morpheme in zip(cogids, morphemes):  # make sure morphemes is a list!
+        for cogid, morpheme in zip(cogids, morphemes):  # Make sure morphemes is a list!
             if not morpheme.startswith("_"):
                 selected_cogids += [cogid]
         salient = tuple(selected_cogids)
@@ -68,9 +71,10 @@ def cogid_from_morphemes(wl, ref="cogids", cognates="newcogid", morphemes="morph
 
 def lexical_distances(wl, subset, ref="cogid"):
     """
-    function: lexicostatistics
-    This function ignore synonyms.
+    Compute lexicostatistical distance. The synonyms are ignored during the calculation.
+    This function returns a matrix
     """
+
     matrix = [[0 for cell in range(wl.width)] for row in range(wl.width)]
     for (i, langA), (j, langB) in combinations(enumerate(wl.cols), r=2):
         common, total = 0, 0
@@ -82,50 +86,47 @@ def lexical_distances(wl, subset, ref="cogid"):
             if [x for x in cogsA if x in cogsB]:
                 common += 1
                 total += 1
-            elif cogsA and cogsB:  # this determines missing conepts now!
+            elif cogsA and cogsB:  # This determines missing conepts now!
                 total += 1
         matrix[i][j] = matrix[j][i] = 1 - (common / total)
     return matrix
 
 
-"""
-load data and conversion
-"""
+# Load data
+part = Partial(LS().raw_dir.joinpath('liusinitic.tsv').as_posix())
 
-part = Partial("liusinitic.tsv")
+# Add salient cognates.
+cogid_from_morphemes(part, ref="cogids", cognates="salientid", morphemes="morphemes")
 
-# check if all the essential columns are in the input file
-if "--add_salient" in argv:
-    # calculate salient cognate sets (computer-assisted approach) if "add_salient" exists.
-    cogid_from_morphemes(
-        part, ref="cogids", cognates="salientid", morphemes="morphemes"
-    )
-elif "greedid" not in part.columns:
+# Check if all the essential columns are in the input file.
+if "greedid" not in part.columns:
     cogids2cogid(part, ref="cogids", cognates="greedid", morphemes="morphemes_auto")
 elif "strictid" not in part.columns:
     part.add_cognate_ids("cogids", "strictid", idtype="strict")
 elif "looseid" not in part.columns:
     part.add_cognate_ids("cogids", "looseid", idtype="loose")
 
-# an array with all the converted cognate sets.
+# An array with all the name of all the full cognate sets.
 cognate_set_array = [
-    x for x in part.columns if x not in ["cogids", "langid", "autoid"] and "id" in x
+    x for x in part.columns if x not in ["cogids", "langid", "autoid", "concepticon_id", "doculect_id"] and "id" in x
 ]
 
-# take 100 concepts
+# Take cut-off threshold 0.8
 target_concepts = []
-with open("bcube_concepts.tsv", "r") as csvf:
+with open("results/cognate-set-comparison.tsv", "r") as f:
     data = []
-    for line in csvf:
-        data += [[x.strip() for x in line.split('\t')]]
+    for line in f:
+        data += [[x.strip() for x in line.split("\t")]]
     for row in data[1:]:
         if float(row[-1]) <= 0.8:
             target_concepts += [row[0]]
-print(len(target_concepts))
+print(
+    "{0:d} concepts are selected for computing distance matrices (the cut-off threshold is 0.8).".format(
+        len(target_concepts)
+    )
+)
 
-"""
-main task.
-"""
+# Compute the distance matrices
 Distances = {}
 for cognate in cognate_set_array:
     key = cognate + "_dist"
@@ -133,16 +134,14 @@ for cognate in cognate_set_array:
     Distances[key] = value
 
 
-"""
-output
-"""
+# Output
 doculect_number = part.width
 for output_column in cognate_set_array:
-    with open("lexi_{0}.dst".format(output_column), "w") as f:
-        f.write("\t" + str(doculect_number) + "\n")
-        m = Distances[output_column + "_dist"]
-        for i, doc in enumerate(part.cols):
-            tmp = "\t".join([str(x) for x in m[i]])
-            f.write("{0}\t{1}\n".format(doc, tmp))
+    m = Distances[output_column + "_dist"]
+    matrix2dst(
+        m, taxa=part.cols, filename="results/lexi_{0}".format(output_column), taxlen=10
+    )
 
-part.output("tsv", filename="liusinitic.word_cognate", prettify=False)
+part.output(
+    "tsv", filename="results/liusinitic.word_cognate", prettify=False
+)  # As backup.
