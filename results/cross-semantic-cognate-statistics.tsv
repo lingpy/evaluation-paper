@@ -129,10 +129,10 @@ sleep	睡,睏	0.3
 smoke	煙,煙煙,煙子	0.33	!derivation!
 earth	土地,地,地皮	0.35	
 lie	躺,睡,睡倒	0.39	!derivation!
+father	爸爸,父,爸	0.41	!derivation!
 if	如果,打比说,假使	0.41	
 tail	尾,尾巴,尾子	0.43	!derivation!
 see	看見,瞅見,看倒	0.43	
-father	爸爸,父,爸	0.44	!derivation!
 hear	聽見,聽到,聽着	0.45	
 freeze	結冰,凍冰,下凜	0.48	
 rightside	右边,右边拉,右边边	0.5	
@@ -160,7 +160,7 @@ star	星星,星宿,星	0.85	!derivation!
 who	誰,哪個,啥人	0.94	!derivation!
 day	天,日	0.95	
 hunt	打獵,關山,拍獵	0.95	
-this	这,𠹼,尔	0.97	
+this	这,𠹼,尔	0.95	
 wing	翅膀,翅子,翅	0.97	!derivation!
 here	这里,这疙,这	0.98	
 fight	打架,打仗,干仗	0.99	!derivation!
@@ -170,14 +170,14 @@ knee	膝,膝蓋,簸棱盖	1.02	!derivation!
 skin	皮膚,肉皮,皮	1.02	!derivation!
 he	他,渠,俚	1.07	!derivation!
 ice	冰,凌冰,構棱子	1.1	!derivation!
-we	我們,俺,我人	1.14	!derivation!
+we	我們,俺,我人	1.12	!derivation!
 what	什麼,啥,甚仂	1.29	!derivation!
 woman	女人,娘們,女的	1.32	!derivation!
 bark	树皮	1.34	
 water	水	1.37	
 they	他們,他的,渠人	1.38	!derivation!
 fruit	水果,果們,果子	1.39	!derivation!
-man	男人,大老爺們,老爺們	1.4	!derivation!
+man	男人,大老爺們,老爺們	1.42	!derivation!
 husband	爱人,老公,丈夫	1.43	!derivation!
 tree	树	1.5	!derivation!
 breasts	乳房,奶子,匝	1.77	!derivation!
@@ -187,8 +187,8 @@ bone	骨,骨頭,骨都	1.95
 wife	妻子,老婆,媳婦	1.97	!derivation!
 louse	虱,虱子,跳虱	2.22	!derivation!
 stone	石頭,石頭子?,石頭塊	2.25	!derivation!
-child	孩,小孩,小嘎	2.27	!derivation!
-stick	棍,棍子,棍棍	2.38	!derivation!
+child	孩,小孩,小嘎	2.26	!derivation!
+stick	棍,棍子,棍棍	2.36	!derivation!
 hair	頭髮,頭毛,頭那髮	2.39	
 tongue	舌,舌頭,舌头	2.4	!derivation!
 person	人	2.63	
