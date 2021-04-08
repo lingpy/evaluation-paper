@@ -83,12 +83,12 @@ for a, b in itertools.combinations(matrix.keys(), 2):
     if a not in tree_dict.keys():
         tree_dict[a] = neighbor(matrix[a], label_a)
         print(
-            tree_dict[a], file=open("".join(["results/", a, ".nex"]), "w")
+            tree_dict[a], file=open("".join(["results/", a, ".nwk"]), "w")
         )  # Print to file
     elif b not in tree_dict.keys():
         tree_dict[b] = neighbor(matrix[b], label_b)
         print(
-            tree_dict[b], file=open("".join(["results/", b, ".nex"]), "w")
+            tree_dict[b], file=open("".join(["results/", b, ".nwk"]), "w")
         )  # Print to file
 
 print("Mantel test:")
