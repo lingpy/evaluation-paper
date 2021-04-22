@@ -1,7 +1,7 @@
 """
 Step 1 
 Calculate the agreements between two types of 
-cognate coversion methods via B-Cube scores.
+cognate coversion methods via B-Cubed scores.
 
 The results:
 1. A standard output. The rankings are sorted according to the F-score.

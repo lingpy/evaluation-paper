@@ -1,8 +1,8 @@
 """
 Step 4
-Five different statistical analysis.
+Five different statistical analyses.
 
-The five different statistical analysis are: 
+The five different statistical analyses are: 
  - Kendall tau correlation
  - Mantel test
  - Neighbor-joining tree
@@ -10,7 +10,7 @@ The five different statistical analysis are:
  - Normalized Quartet Distance (optional)
 
  The results: 
- 1. Four NEXUS files
+ 1. Four Newick files
  2. A screen output
 """
 from csvw.dsv import UnicodeDictReader
@@ -49,7 +49,7 @@ for row, d in concepts.items():
         lst += [d[key]]
 
 tau, p_value = stats.kendalltau(fscores, cognates)
-print("\nF-score v.s. : {0} (P-value: {1})\n".format(tau, p_value))
+print("\nF-score v.s. Scores: {0} (P-value: {1})\n".format(tau, p_value))
 
 # Mantel test
 files = [
@@ -125,8 +125,8 @@ if "--nqd" in argv:
     print("\nSimilarity between two binary trees (Normalized Quartet Distance, NQD)")
     nqd_similarity = []
     for tA, tB in combinations(list(tree_dict), r=2):
-        tA_file = "".join(["results/", tA, ".nex"])
-        tB_file = "".join(["results/", tB, ".nex"])
+        tA_file = "".join(["results/", tA, ".nwk"])
+        tB_file = "".join(["results/", tB, ".nwk"])
         qd = subprocess.check_output(
             ["quartet_dist", "-v", tA_file, tB_file]
         )  # Execute tqDist tool
