@@ -47,17 +47,17 @@ def create_plot(ndarray, label, fname):
     ax.invert_yaxis()
     sns.set(font_scale=2)
     plt.tight_layout()
-    ax.figure.savefig(fname + ".png")
+    ax.figure.savefig(fname + ".pdf")
 
 
 # Load data
 files = [
-    "lexi_greedid.dst",
+    "lexi_commonid.dst",
     "lexi_looseid.dst",
     "lexi_strictid.dst",
     "lexi_salientid.dst",
 ]
-files_variable = ["greedid", "looseid", "strictid", "salientid"]
+files_variable = ["commonid", "looseid", "strictid", "salientid"]
 matrix_doculect, matrix = {}, {}
 for f, v in zip(files, files_variable):
     matrix_doculect[v], matrix[v] = read_dst(
@@ -73,7 +73,8 @@ The detail of the groupings please see the article:
 
 Except the above reference, we also consult expert's suggestion and Glottolog about the arrangment of Jin, Pinghua and Hui language varieties
 """
-Taxa_list = [
+# taxa_list = Tree(tree='parsimony.tre') #getting a list from the tree
+taxa_list = [
     "Taiyuan",
     "Beijing",
     "Ha_erbin",
@@ -89,8 +90,8 @@ Taxa_list = [
     "Loudi",
     "Nanchang",
     "Meixian",
-    "Guangzhou",
     "Guilin",
+    "Guangzhou",
     "Fuzhou",
     "Xiamen",
 ]
@@ -105,15 +106,15 @@ for a, b in combinations(matrix.keys(), r=2):
     filename = a + "_" + b
     filename_opposite = b + "_" + a
     # Re-order
-    matrix_A = np.vstack(reorder(matrix[a], matrix_doculect[a], Taxa_list))
-    matrix_B = np.vstack(reorder(matrix[b], matrix_doculect[b], Taxa_list))
+    matrix_A = np.vstack(reorder(matrix[a], matrix_doculect[a], taxa_list))
+    matrix_B = np.vstack(reorder(matrix[b], matrix_doculect[b], taxa_list))
     intersect = matrix_A - matrix_B
     intersect_opposite = matrix_B - matrix_A
     # Plot
-    create_plot(intersect, Taxa_list, "results/" + filename)
+    create_plot(intersect, taxa_list, "plot/" + "heatmap_" + filename)
     plt.clf()
-    create_plot(intersect_opposite, Taxa_list, "results/" + filename_opposite)
+    create_plot(intersect_opposite, taxa_list, "plot/" + "heatmap_" + filename_opposite)
     plt.clf()
-    create_plot(matrix_A, Taxa_list, "results/" + "heatmap" + a)
+    create_plot(matrix_A, taxa_list, "plot/" + "heatmap_" + a)
     plt.clf()
-    create_plot(matrix_B, Taxa_list, "results/" + "heatmap" + b)
+    create_plot(matrix_B, taxa_list, "plot/" + "heatmap_" + b)

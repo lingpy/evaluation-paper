@@ -99,8 +99,8 @@ part = Partial(LS().raw_dir.joinpath('liusinitic.tsv').as_posix())
 cogid_from_morphemes(part, ref="cogids", cognates="salientid", morphemes="morphemes")
 
 # Check if all the essential columns are in the input file.
-if "greedid" not in part.columns:
-    cogids2cogid(part, ref="cogids", cognates="greedid", morphemes="morphemes_auto")
+if "commonid" not in part.columns:
+    cogids2cogid(part, ref="cogids", cognates="commonid", morphemes="morphemes_auto")
 elif "strictid" not in part.columns:
     part.add_cognate_ids("cogids", "strictid", idtype="strict")
 elif "looseid" not in part.columns:
@@ -118,6 +118,7 @@ with open("results/cognate-set-comparison.tsv", "r") as f:
     for line in f:
         data += [[x.strip() for x in line.split("\t")]]
     for row in data[1:]:
+        #target_concepts +=[row[0]]
         if float(row[-1]) <= 0.8:
             target_concepts += [row[0]]
 print(

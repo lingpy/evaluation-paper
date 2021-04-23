@@ -53,12 +53,12 @@ print("\nF-score v.s. Scores: {0} (P-value: {1})\n".format(tau, p_value))
 
 # Mantel test
 files = [
-    "lexi_greedid.dst",
+    "lexi_commonid.dst",
     "lexi_looseid.dst",
     "lexi_strictid.dst",
     "lexi_salientid.dst",
 ]
-files_variable = ["greedid", "looseid", "strictid", "salientid"]
+files_variable = ["commonid", "looseid", "strictid", "salientid"]
 matrix_doculect, matrix = {}, {}
 for f, v in zip(files, files_variable):
     matrix_doculect[v], matrix[v] = read_dst(
