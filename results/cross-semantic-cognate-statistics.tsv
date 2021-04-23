@@ -160,7 +160,7 @@ star	星星,星宿,星	0.85	!derivation!
 who	誰,哪個,啥人	0.94	!derivation!
 day	天,日	0.95	
 hunt	打獵,關山,拍獵	0.95	
-this	这,𠹼,尔	0.95	
+this	这,𠹼,尔	0.97	
 wing	翅膀,翅子,翅	0.97	!derivation!
 here	这里,这疙,这	0.98	
 fight	打架,打仗,干仗	0.99	!derivation!
@@ -170,7 +170,7 @@ knee	膝,膝蓋,簸棱盖	1.02	!derivation!
 skin	皮膚,肉皮,皮	1.02	!derivation!
 he	他,渠,俚	1.07	!derivation!
 ice	冰,凌冰,構棱子	1.1	!derivation!
-we	我們,俺,我人	1.12	!derivation!
+we	我們,俺,我人	1.14	!derivation!
 what	什麼,啥,甚仂	1.29	!derivation!
 woman	女人,娘們,女的	1.32	!derivation!
 bark	树皮	1.34	
