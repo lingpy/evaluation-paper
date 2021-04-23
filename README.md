@@ -98,7 +98,7 @@ Bearing the above working principle in mind, we design the script to list out th
 
 # Derive distance matrices from the full cognate sets
 
-The script `lexical-distances.py` reports the distance matrices which derive from the four types of full cognate sets, namely, "loose", "strict", "greedy", and "salient" cognate sets. Please note that this script only takes into account concepts with F-scores lower than 0.8.
+The script `lexical-distances.py` reports the distance matrices which derive from the four types of full cognate sets, namely, "loose" (`looseid`), "strict" (`strictid`), "common morpheme" (`commonid`), and "salient morpheme" (`salientid`) cognate sets. Please note that this script only takes into account concepts with F-scores lower than 0.8.
 
 ```python
 python lexical-distances.py 
