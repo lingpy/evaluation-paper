@@ -49,8 +49,8 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
     matrixD[i][j] = matrixD[j][i] = sum(loose) / len(loose) - sum(strict) / len(strict)
 
 
-plot_heatmap(part, tree=tree, matrix=matrixS, filename="plot/strict", cmap=plt.cm.RdBu)
-plot_heatmap(part, tree=tree, matrix=matrixL, filename="plot/loose", cmap=plt.cm.RdBu)
+plot_heatmap(part, tree=tree, matrix=matrixS, filename="plot/strict", cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5))
+plot_heatmap(part, tree=tree, matrix=matrixL, filename="plot/loose", cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5))
 plot_heatmap(
-    part, tree=tree, matrix=matrixD, filename="plot/difference", vmax=0.3, cmap=plt.cm.RdBu
+    part, tree=tree, matrix=matrixD, filename="plot/difference", vmax=0.3, cmap=plt.cm.RdBu, left=0.09, textsize=6.5, colorbar_label="Delta Values",figsize=(8.4,4.5)
 )
