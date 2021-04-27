@@ -122,3 +122,17 @@ Additionally, adding the argument `--nqd` calculates the NQD distance.
 ```python
 python analyze-distances.py --nqd
 ```
+
+# Visualization
+
+The `plot_heatmaps.py` generates the heatmaps for visualizing language pairs' shared cognates, including **"loose"** and **"strict"** cognate sets. The Python script also generates a heatmap to show the differences between **"loose"** and **"strict"** cognate sets.  
+
+```python
+python plot_heatmaps.py
+```
+
+The R ape library has a `comparePhylo` function to compare the common splits of two unrooted Neighbor-joining trees. Also, we used *Minimal Ancestor Deviation* (MAD) to root the Neighbor-joining trees and then compare the presence and the absence of clades between two rooted Neighbor-joining trees with the same function.  The following command executes the R script. 
+
+```r
+Rscript compare_phylogenies.R
+```
