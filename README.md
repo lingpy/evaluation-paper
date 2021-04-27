@@ -98,7 +98,7 @@ Bearing the above working principle in mind, we design the script to list out th
 
 # Derive distance matrices from the full cognate sets
 
-The script `lexical-distances.py` reports the distance matrices which derive from the four types of full cognate sets, namely, "loose", "strict", "greedy", and "salient" cognate sets. Please note that this script only takes into account concepts with F-scores lower than 0.8.
+The script `lexical-distances.py` reports the distance matrices which derive from the four types of full cognate sets, namely, "loose" (`looseid`), "strict" (`strictid`), "common morpheme" (`commonid`), and "salient morpheme" (`salientid`) cognate sets. Please note that this script only takes into account concepts with F-scores lower than 0.8.
 
 ```python
 python lexical-distances.py 
@@ -121,4 +121,18 @@ Additionally, adding the argument `--nqd` calculates the NQD distance.
 
 ```python
 python analyze-distances.py --nqd
+```
+
+# Visualization
+
+The `plot_heatmaps.py` generates the heatmaps for visualizing language pairs' shared cognates, including **"loose"** and **"strict"** cognate sets. The Python script also generates a heatmap to show the differences between **"loose"** and **"strict"** cognate sets.  
+
+```python
+python plot_heatmaps.py
+```
+
+The R ape library has a `comparePhylo` function to compare the common splits of two unrooted Neighbor-joining trees. Also, we used *Minimal Ancestor Deviation* (MAD) to root the Neighbor-joining trees and then compare the presence and the absence of clades between two rooted Neighbor-joining trees with the same function.  The following command executes the R script. 
+
+```r
+Rscript compare_phylogenies.R
 ```
