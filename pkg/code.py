@@ -163,3 +163,10 @@ def get_ordered_taxa():
     taxa = nwk2tree_matrix(tree)[1]
     return tree, taxa
 
+
+def get_revised_taxon_names():
+    
+    languages = {}
+    for language in Dataset().languages:
+        languages[language['Name']] = language['ID']+'_'+language['DialectGroup'][:3]
+    return languages

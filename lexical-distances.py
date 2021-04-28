@@ -16,10 +16,13 @@ from pkg.code import (
         common_morpheme_cognates,
         salient_cognates,
         compare_cognate_sets,
-        lexical_distances
+        lexical_distances,
+        get_revised_taxon_names
         )
 
 part = get_liusinitic(Partial) 
+languages = get_revised_taxon_names()
+taxa = [languages[t] for t in part.cols]
 
 # add new cognate sets
 common_morpheme_cognates(part, ref="cogids", cognates="commonid",
@@ -42,17 +45,17 @@ for cognate in cognate_sets:
     key = cognate + "_dist"
     matrixP = lexical_distances(part, target_concepts, ref=cognate+"id")
     matrixF = lexical_distances(part, part.rows, ref=cognate+"id")
-    treeP = neighbor(matrixP, part.taxa, distances=True)
-    treeF = neighbor(matrixF, part.taxa, distances=True)
+    treeP = neighbor(matrixP, taxa, distances=True)
+    treeF = neighbor(matrixF, taxa, distances=True)
     matrix2dst(
             matrixP,
-            taxa=part.cols, filename=Path("results",
+            taxa=taxa, filename=Path("results",
                 "part_{0}".format(cognate)).as_posix(),
             taxlen=10
             )
     matrix2dst(
             matrixF,
-            taxa=part.cols, filename=Path("results",
+            taxa=taxa, filename=Path("results",
                 "full_{0}".format(cognate)).as_posix(),
             taxlen=10
             )

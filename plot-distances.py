@@ -7,11 +7,12 @@ from lingpy.compare.partial import Partial
 from itertools import combinations, product
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
-from pkg.code import get_liusinitic, get_ordered_taxa
+from pkg.code import get_liusinitic, get_ordered_taxa, get_revised_taxon_names
 
 
 part = get_liusinitic()
 tree, taxa = get_ordered_taxa()
+labels = get_revised_taxon_names()
 
 # cognate conversion methods
 matrixS, matrixL = [[1 for t in taxa] for t in taxa], [[1 for t in taxa] for t in taxa]
@@ -24,7 +25,6 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
         match_l, match_s = [], []
         if concept in cogsA and concept in cogsB:
             for cogA, cogB in product(cogsA[concept], cogsB[concept]):
-                print(concept, tA, tB, cogA, cogB)
                 if set(cogA).intersection(set(cogB)):
                     match_l += [1]
                 if cogA == cogB:
@@ -42,8 +42,13 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
     matrixD[i][j] = matrixD[j][i] = sum(loose) / len(loose) - sum(strict) / len(strict)
 
 
-plot_heatmap(part, tree=tree, matrix=matrixS, filename="plot/strict", cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5))
-plot_heatmap(part, tree=tree, matrix=matrixL, filename="plot/loose", cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5))
+plot_heatmap(part, tree=tree, matrix=matrixS, filename="plot/strict",
+        cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5),
+        labels=labels, width=0.85)
+plot_heatmap(part, tree=tree, matrix=matrixL, filename="plot/loose",
+        cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5),
+        labels=labels, width=0.85)
 plot_heatmap(
-    part, tree=tree, matrix=matrixD, filename="plot/difference", vmax=0.3, cmap=plt.cm.RdBu, left=0.09, textsize=6.5, colorbar_label="Delta Values",figsize=(8.4,4.5)
+    part, tree=tree, matrix=matrixD, filename="plot/difference", vmax=0.3,
+    cmap=plt.cm.RdBu, left=0.09, textsize=6.5, width=0.85, colorbar_label="Delta Values",figsize=(8.4,4.5), labels=labels
 )

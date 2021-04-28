@@ -1,74 +1,67 @@
-# Evaluating the Performance of Computational Methods for Language Comparison in SEALanguages.
+# Evaluating the Performance of Computational Methods for Language Comparison in South-East-Asian Languages
 
-This tutorial supplements the study “Evaluating the Performance of Computational Methods for Language Comparison in SEALanguages”. In this tutorial, we explain in detail how our workflow can be tested and applied.
+This tutorial supplements the study "Evaluating the Performance of
+Computational Methods for Language Comparison in SEALanguages". In this
+tutorial, we explain in detail how our workflow can be tested and applied.
 
-We start by installing the dependencies from the command-line. To do so, we first download the code and the data from the website and execute the following command-lines. 
+We start by installing the dependencies from the command-line. To do so, we
+first download the code and the data from the website and execute the following
+command-lines. 
 
 ```{.bash}
 $ cd evaluation-paper
 $ pip install -r requirements.txt
-$ pip install scikit-bio
 ```
 
-The stand-alone software `tqDist` was applied to compute the *normalized quartet distance (NQD)* from two given phylogenies. The [`tqDist` website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on the installation and usages.
+You also need to install the data package `liusinitic`:
 
-## The entire process in a shell script
+```
+$ pip install -r liusinitic
+```
+
+The stand-alone software `tqDist` was applied to compute the *normalized
+quartet distance (NQD)* from two given phylogenies. The [`tqDist`
+website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on
+the installation and usages.
+
+## Summary of all Scripts
+
+The following summary shows all scripts that you can run at once to replicate the studies discussed in the paper.
 
 ```{.bash}
 $ python cognate-set-comparison.py
 $ python cross-semantic-cognate-statistics.py
-% Inspect the morpheme annotation on the EDICTOR interface (optional). 
-% If users did change the annotation, please download the `TSV` file again.
 $ python lexical-distances.py
 $ python analyze-distances.py --nqd
 ```
 
-The following sections introduce each step in detail.
+## Morpheme Annotation with the Help of the EDICTOR
 
-## Morpheme annotation
-The [tutorial](https://pad.gwdg.de/ouxXcKnXTnaY7aAspf8E4w?view) which accompanies Wu et al. (2020) covers the essential functions of the EDICTOR interface. In this tutorial, we show how one can use the EDICTOR interface to edit the morpheme annotation. Follow our previous pipeline to prepare the data in a `Wordlist` format.
+Assuming that you are familiar with the basic features of the EDICTOR, you can
+annotate morpheme glosses in your data for saliency by first making sure
+morpheme glosses have been added to your data (see our file at
+`liusinitic/raw/liusinitic.tsv` for an example). When you load your data in
+the EDICTOR interface, you can then toggle the individual morpheme glosses for
+each word by right-clicking the morpheme gloss with the mouse. Check again our
+sample file to see how we have done this for the current dataset on Chinese
+dialects.
 
-**Show the morpheme annotation column**
 
-Click *Select Columns > MORPHEMES* to open the morpheme annotation column. The default setting of the morphemes is the non-bold text. The tag is the same as the gloss, and the amount of the morpheme tags is equal to the morphemes in the *TOKENS* column.
+## Comparing Cognate Sets
 
-![](https://pad.gwdg.de/uploads/upload_512eb3d88d1346dddc8db9a19d9f56b2.png)
+We first convert the partial cognates to full cognates with **"loose"** and
+**"strict"** conversion methods via LingPy's `add_cognate_ids` function. And
+then we test the difference between  **"loose"** and **"strict"**
+cognate sets which are derived from **"loose"** and **"strict"** conversion
+methods respectively. This evaluation aims to detect the extreme cases in
+which the conversion of partial to full cognates causes trouble. The output is written to a TSV file and also shown on the terminal. 
 
-**Edit the morpheme annotation**
-
-Left click the mouse at the target entry to enable the edit mode. 
-
-![](https://pad.gwdg.de/uploads/upload_ce943f096a8abc668b7658dcc8848281.png)
-
-As shown in the figure below, we use concise tags to annotate the morphemes.
-
-![](https://pad.gwdg.de/uploads/upload_fcd38c54486891da0eaff1bed5fb35da.png)
-
-**Highlight the salient morphemes**
-
-Right click the mouse at the target entry to turn the salient morpheme into bold font.
-
-![](https://pad.gwdg.de/uploads/upload_bdbaed5cbaf3ce7bfdc6fa69db255d61.png)
-
-The figure below shows how it looks like once all the entries are annotated, and the salient morphemes are highlighted. It does not have to be one morpheme per lexical entry. As shown in the figure, there are lexical entries with both or all morphemes are highlighted.
-
-![](https://pad.gwdg.de/uploads/upload_114e7ff9dc1ec8b68b28641f163e0a4a.png)
-
-**Save and download**
-
-Once all the tasks are completed, press the *Save* icon and then press the *Download* icon.
-
-![](https://pad.gwdg.de/uploads/upload_e5771ea2b475fae38a3514e43e03f588.png)
-
-## Evaluation stage.
-
-We first convert the partial cognates to full cognates with **"loose"** and **"strict"** conversion methods via LingPy's `add_cognate_ids` function. And then we test the harmony (agreement) between  **"loose"** and **"strict"** cognate sets which are derived from **"loose"** and **"strict"** conversion methods correspondingly. This evaluation aims to detect the extreme cases in which the conversion of partial to full cognates causes trouble. The outputs includes a screen output and a `TSV` file.
+To run this study, simply type:
 
 ```python
 python cognate-set-comparison.py
 ```
-
-**The screen output is shown as below**
+This will yield the following output on screen.
 
 | Concept  | Precision | Recall   | F-Score | Chinese       | 
 | -------- | --------- | -------- |-------- |-------------  |
@@ -77,13 +70,23 @@ python cognate-set-comparison.py
 |  neck    |    1.00   |  0.18    |  0.31   |脖子,脖颈子,頸項| 
 |   ...    |    ...    |   ...    |  ...    |        ...    |
 
-The script `cross-semantic-cognate-statistics.py` evaluates the concepts' score via the cross-semantic cognate statistics. For example, the morpheme *water* is frequently seen in compound words in Southeast Asian languages, such as *saliva (mouth water)*, *tear (eye water)* and *environment (water earth, lit. 水土). Since the *water* has such a good compounding ability, the concepts whichever contain *water* should receive higher scores of cross-semantic cognate statistics.
+Our second analysis looks at cross-semantic cognates and checks how often
+individual cognate sets recur across different meaning slots.
+For example, the morpheme *water* is
+frequently seen in compound words in Southeast Asian languages, such as *saliva
+(mouth water)*, *tear (eye water)* and *environment* (water earth, lit. 水土).
+Since *water* has such a good compounding ability, the concepts whichever
+contain *water* should receive higher scores in our analysis of cross-semantically recurring cognates.
+
+To run this code, simply type:
 
 ```python
 python cross-semantic-cognate-statistics.py
 ```
 
-Bearing the above working principle in mind, we design the script to list out the concepts from low scores to heigh scores. The screen output is shown as: 
+High scores indicate high variation with respect to cross-semantic partial cognate sets.
+
+The output is given in part in the following table.
 
 | Concept  | Scores   | Flag     | Chinese character| 
 | -------- | -------- | -------- | ---------------- |
@@ -96,9 +99,12 @@ Bearing the above working principle in mind, we design the script to list out th
 | head     | 3.90909  |          |    頭,得腦        |
 | belly    | 3.95     | !derivation! |  肚子,肚皮,肚  |
 
-# Derive distance matrices from the full cognate sets
+# Deriving Distance Matrices from Cognate Sets
 
-The script `lexical-distances.py` reports the distance matrices which derive from the four types of full cognate sets, namely, "loose" (`looseid`), "strict" (`strictid`), "common morpheme" (`commonid`), and "salient morpheme" (`salientid`) cognate sets. Please note that this script only takes into account concepts with F-scores lower than 0.8.
+The script `lexical-distances.py` reports the distance matrices which derive
+from the four types of full cognate sets, namely, "loose", "strict", "greedy",
+and "salient" cognate sets. Please note that this script only takes into
+account concepts with F-scores lower than 0.8.
 
 ```python
 python lexical-distances.py 
@@ -121,18 +127,4 @@ Additionally, adding the argument `--nqd` calculates the NQD distance.
 
 ```python
 python analyze-distances.py --nqd
-```
-
-# Visualization
-
-The `plot_heatmaps.py` generates the heatmaps for visualizing language pairs' shared cognates, including **"loose"** and **"strict"** cognate sets. The Python script also generates a heatmap to show the differences between **"loose"** and **"strict"** cognate sets.  
-
-```python
-python plot_heatmaps.py
-```
-
-The R ape library has a `comparePhylo` function to compare the common splits of two unrooted Neighbor-joining trees. Also, we used *Minimal Ancestor Deviation* (MAD) to root the Neighbor-joining trees and then compare the presence and the absence of clades between two rooted Neighbor-joining trees with the same function.  The following command executes the R script. 
-
-```r
-Rscript compare_phylogenies.R
 ```
