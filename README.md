@@ -28,11 +28,12 @@ the installation and usages.
 
 The following summary shows all scripts that you can run at once to replicate the studies discussed in the paper.
 
-```{.bash}
+```
 $ python cognate-set-comparison.py
 $ python cross-semantic-cognate-statistics.py
 $ python lexical-distances.py
 $ python analyze-distances.py --nqd
+$ python plot-distances.py
 ```
 
 ## Morpheme Annotation with the Help of the EDICTOR
@@ -58,8 +59,8 @@ which the conversion of partial to full cognates causes trouble. The output is w
 
 To run this study, simply type:
 
-```python
-python cognate-set-comparison.py
+```
+$ python cognate-set-comparison.py
 ```
 This will yield the following output on screen.
 
@@ -80,8 +81,8 @@ contain *water* should receive higher scores in our analysis of cross-semantical
 
 To run this code, simply type:
 
-```python
-python cross-semantic-cognate-statistics.py
+```
+$ python cross-semantic-cognate-statistics.py
 ```
 
 High scores indicate high variation with respect to cross-semantic partial cognate sets.
@@ -106,25 +107,34 @@ from the four types of full cognate sets, namely, "loose", "strict", "greedy",
 and "salient" cognate sets. Please note that this script only takes into
 account concepts with F-scores lower than 0.8.
 
-```python
-python lexical-distances.py 
+```
+$ python lexical-distances.py 
 ```
 
-# Basic statistics
+# Statistics and Tree Comparison
 
 The script `analyze-distances.py` calculates four different statistics:
-- The correlation between the cross sematnic cognate statistics and the cognate set comparison.
-- The Mantel test
-- The Neighbor-joining trees
-- The Generalized Robinson-Foulds Distance (GRF)
-- The Normalized Quartet Distance (NQD)
+* the correlation between the cross semantic cognate statistics and the cognate set comparison
+* the Mantel test
+* the Generalized Robinson-Foulds Distance (GRF)
+* the Normalized Quartet Distance (NQD)
 
-```python
-python analyze-distances.py 
+```
+$ python analyze-distances.py 
 ```
 
 Additionally, adding the argument `--nqd` calculates the NQD distance.
 
-```python
-python analyze-distances.py --nqd
 ```
+$ python analyze-distances.py --nqd
+```
+
+# Visualizing the Distance Matrices
+
+To visualize the distance matrices, simply use the following command:
+
+```
+$ python plot-distances.py
+```
+
+Results are written to the folder `plots`.

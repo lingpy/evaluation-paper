@@ -81,7 +81,7 @@ print(
 # Calculate the similarity between two trees via generalized Robinson-Foulds Distance
 print("\n# Tree Similarity (Generalized Robinson-Foulds Distance)\n")
 rgf_similarity = []
-for tA, tB in combinations(list(tree_dict), r=2):
+for tA, tB in combinations(tree_dict, r=2):
     treeA, treeB = Tree(str(tree_dict[tA])), Tree(str(tree_dict[tB]))
     rgf_similarity.append([tA, tB, treeA.get_distance(treeB)])
 
