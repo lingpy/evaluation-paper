@@ -9,14 +9,9 @@ import matplotlib.colors as colors
 import matplotlib.pyplot as plt
 from pkg.code import get_liusinitic, get_ordered_taxa
 
-tree = (
-    Dataset()
-    .etc_dir.read_csv("trees.tsv", delimiter="\t")[1][1]
-    .replace("XiAn", "Xi_an")
-    .replace("Haerbin", "Ha_erbin")
-)
+
 part = get_liusinitic()
-taxa = get_ordered_taxa()
+tree, taxa = get_ordered_taxa()
 
 # cognate conversion methods
 matrixS, matrixL = [[1 for t in taxa] for t in taxa], [[1 for t in taxa] for t in taxa]
