@@ -11,6 +11,7 @@ command-lines.
 ```{.bash}
 $ cd evaluation-paper
 $ pip install -r requirements.txt
+$ pip install scikit-bio
 ```
 
 You also need to install the data package `liusinitic`:
