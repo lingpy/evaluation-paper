@@ -16,10 +16,10 @@ from sys import argv
 from pathlib import Path
 
 from pkg.code import (
-        compare_cognate_sets,
-        get_liusinitic,
-        cross_semantic_cognate_statistics,
-        )
+    compare_cognate_sets,
+    get_liusinitic,
+    cross_semantic_cognate_statistics,
+)
 
 
 # Correlation
@@ -53,9 +53,9 @@ cognate_sets = ["common", "loose", "strict", "salient"]
 matrix_doculect, matrix, tree_dict = {}, {}, {}
 for c in cognate_sets:
     matrix_doculect[c], matrix[c] = read_dst(
-        Path("results", "part_"+c+".dst").as_posix()
+        Path("results", "part_" + c + ".dst").as_posix()
     )
-    tree_dict[c] = open(Path("results", "part_"+c+".tre").as_posix()).read().strip()
+    tree_dict[c] = open(Path("results", "part_" + c + ".tre").as_posix()).read().strip()
 
 table = []
 for a, b in itertools.combinations(matrix, 2):
@@ -105,8 +105,8 @@ if "--nqd" in argv:
     print("\n# Similarity between Trees (Normalized Quartet Distance)\n")
     nqd_similarity = []
     for tA, tB in combinations(list(tree_dict), r=2):
-        tA_file = "/".join(["results", "part_"+tA+".tre"])
-        tB_file = "/".join(["results", "part_"+tB+".tre"])
+        tA_file = "/".join(["results", "part_" + tA + ".tre"])
+        tB_file = "/".join(["results", "part_" + tB + ".tre"])
         qd = subprocess.check_output(
             ["quartet_dist", "-v", tA_file, tB_file]
         )  # Execute tqDist tool
