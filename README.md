@@ -111,6 +111,23 @@ account concepts with F-scores lower than 0.8.
 $ python lexical-distances.py 
 ```
 
+# Rooting the Neighbor-Joining Trees
+
+For some visualizations, we use rooted trees, for this, we use the MAD tool
+(Kümmel Tria et al. 2017), which we downloaded from
+https://www.mikrobio.uni-kiel.de/de/ag-dagan/ressourcen. The tool is available
+as a commandline tool to root trees in Newick format for R and Python. Since it
+is freely distributed, we add it to this repository (see folder `dependencies`)
+and explicitly quote the original study in our paper. Rooted trees are provided
+with the suffix `.rooted` in the folder `results`. 
+
+On the commandline, you can root a tree with the Python version as follows:
+
+```
+$ python dependencies/mad.py results/common.tre
+```
+
+
 # Statistics and Tree Comparison
 
 The script `analyze-distances.py` calculates four different statistics:
