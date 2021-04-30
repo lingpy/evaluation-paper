@@ -45,6 +45,7 @@ print(
 )
 
 # compute the distance matrices
+all_trees = open(Path("results", "all_trees.tre"), "w")
 for cognate in cognate_sets:
     key = cognate + "_dist"
     matrixP = lexical_distances(part, target_concepts, ref=cognate + "id")
@@ -65,8 +66,12 @@ for cognate in cognate_sets:
     )
     with open(Path("results", "part_" + cognate + ".tre"), "w") as f:
         f.write(str(treeP))
-    with open(Path("results", "part_" + cognate + ".tre"), "w") as f:
+    with open(Path("results", "full_" + cognate + ".tre"), "w") as f:
         f.write(str(treeF))
+    all_trees.write("{0}\n{1}\n".format(
+        str(treeP),
+        str(treeF)))
+all_trees.close()
 
 part.output(
     "tsv", filename="results/liusinitic.word_cognate", prettify=False, ignore="all"
