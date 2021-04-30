@@ -1,17 +1,5 @@
 """
-Step 4
-Five different statistical analyses.
-
-The five different statistical analyses are: 
- - Kendall tau correlation
- - Mantel test
- - Neighbor-joining tree
- - Generalized Robinson-Foulds Distance
- - Normalized Quartet Distance (optional)
-
- The results: 
- 1. Four Newick files
- 2. A screen output
+Analyze the distance measures.
 """
 from csvw.dsv import UnicodeDictReader
 import numpy as np
@@ -25,6 +13,14 @@ from lingpy import *
 from lingpy.read.phylip import *
 import sys, subprocess, glob
 from sys import argv
+from pathlib import Path
+
+from pkg.code import (
+    compare_cognate_sets,
+    get_liusinitic,
+    cross_semantic_cognate_statistics,
+)
+
 
 # Correlation
 concepts = {}
@@ -49,49 +45,33 @@ for row, d in concepts.items():
         lst += [d[key]]
 
 tau, p_value = stats.kendalltau(fscores, cognates)
-print("\nF-score v.s. Scores: {0} (P-value: {1})\n".format(tau, p_value))
+print("# Cognate Set Comparisons vs. Cross-Semantic Cognates\n")
+print("{0:4f} (P-value: {1:4f})".format(tau, p_value))
+print("")
 
-# Mantel test
-files = [
-    "lexi_commonid.dst",
-    "lexi_looseid.dst",
-    "lexi_strictid.dst",
-    "lexi_salientid.dst",
-]
-files_variable = ["commonid", "looseid", "strictid", "salientid"]
-matrix_doculect, matrix = {}, {}
-for f, v in zip(files, files_variable):
-    matrix_doculect[v], matrix[v] = read_dst(
-        "results/" + f
-    )  # Function from lingpy.read.phylip
+cognate_sets = ["common", "loose", "strict", "salient"]
+matrix_doculect, matrix, tree_dict = {}, {}, {}
+for c in cognate_sets:
+    matrix_doculect[c], matrix[c] = read_dst(
+        Path("results", "part_" + c + ".dst").as_posix()
+    )
+    tree_dict[c] = open(Path("results", "part_" + c + ".tre").as_posix()).read().strip()
 
 table = []
-tree_dict = {}
-for a, b in itertools.combinations(matrix.keys(), 2):
+for a, b in itertools.combinations(matrix, 2):
     label_a = matrix_doculect[a]
     label_b = matrix_doculect[b]
     dm_a = DistanceMatrix(matrix[a], label_a)
     dm_b = DistanceMatrix(matrix[b], label_b)
-    # Check if label a and label b are in the same order and quantity
+
     checking = [x for idx, x in enumerate(label_a) if x != label_b[idx]]
     if checking != []:
         break
     else:
         coeff, p_value, n = mantel(dm_a, dm_b, method="pearson", permutations=999)
         table += [[a, b, coeff, p_value]]
-    # Build a Neighbor-joining tree
-    if a not in tree_dict.keys():
-        tree_dict[a] = neighbor(matrix[a], label_a)
-        print(
-            tree_dict[a], file=open("".join(["results/", a, ".nwk"]), "w")
-        )  # Print to file
-    elif b not in tree_dict.keys():
-        tree_dict[b] = neighbor(matrix[b], label_b)
-        print(
-            tree_dict[b], file=open("".join(["results/", b, ".nwk"]), "w")
-        )  # Print to file
 
-print("Mantel test:")
+print("# Mantel Tests\n")
 print(
     tabulate(
         table, floatfmt=".4f", headers=["Cogid A", "Cogid B", "Mantel coeff", "P-value"]
@@ -99,9 +79,9 @@ print(
 )
 
 # Calculate the similarity between two trees via generalized Robinson-Foulds Distance
-print("\nSimilarity between two trees (Generalized Robinson-Foulds Distance, GRF):")
+print("\n# Tree Similarity (Generalized Robinson-Foulds Distance)\n")
 rgf_similarity = []
-for tA, tB in combinations(list(tree_dict), r=2):
+for tA, tB in combinations(tree_dict, r=2):
     treeA, treeB = Tree(str(tree_dict[tA])), Tree(str(tree_dict[tB]))
     rgf_similarity.append([tA, tB, treeA.get_distance(treeB)])
 
@@ -122,11 +102,11 @@ if "--nqd" in argv:
     Becuase we are comparing two binary trees, we do not need Generalized Quartet Distance as written in the AutoCogPhylo.
     """
 
-    print("\nSimilarity between two binary trees (Normalized Quartet Distance, NQD)")
+    print("\n# Similarity between Trees (Normalized Quartet Distance)\n")
     nqd_similarity = []
     for tA, tB in combinations(list(tree_dict), r=2):
-        tA_file = "".join(["results/", tA, ".nwk"])
-        tB_file = "".join(["results/", tB, ".nwk"])
+        tA_file = "/".join(["results", "part_" + tA + ".tre"])
+        tB_file = "/".join(["results", "part_" + tB + ".tre"])
         qd = subprocess.check_output(
             ["quartet_dist", "-v", tA_file, tB_file]
         )  # Execute tqDist tool

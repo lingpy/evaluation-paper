@@ -1,26 +1,21 @@
 """
-Step 5
-heatmaps
+Compute heatmaps from the lexical distances.
 """
 from lingpy import *
+from pathlib import Path
 from lingpy.convert.plot import plot_heatmap
 from lingpy.compare.partial import Partial
-from lingpy.convert.tree import nwk2tree_matrix
-from lexibank_liusinitic import Dataset
 from itertools import combinations, product
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
+from pkg.code import get_liusinitic, get_ordered_taxa, get_revised_taxon_names
 
-tree = (
-    Dataset()
-    .etc_dir.read_csv("trees.tsv", delimiter="\t")[1][1]
-    .replace("XiAn", "Xi_an")
-    .replace("Haerbin", "Ha_erbin")
-)
-part = Partial(Dataset().raw_dir.joinpath("liusinitic.tsv").as_posix())
-taxa = nwk2tree_matrix(tree)[1]
 
-# strict cognate conversion
+part = get_liusinitic()
+tree, taxa = get_ordered_taxa()
+labels = get_revised_taxon_names()
+
+# cognate conversion methods
 matrixS, matrixL = [[1 for t in taxa] for t in taxa], [[1 for t in taxa] for t in taxa]
 matrixD = [[0 for t in taxa] for t in taxa]
 for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
@@ -31,7 +26,6 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
         match_l, match_s = [], []
         if concept in cogsA and concept in cogsB:
             for cogA, cogB in product(cogsA[concept], cogsB[concept]):
-                print(concept, tA, tB, cogA, cogB)
                 if set(cogA).intersection(set(cogB)):
                     match_l += [1]
                 if cogA == cogB:
@@ -49,8 +43,41 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
     matrixD[i][j] = matrixD[j][i] = sum(loose) / len(loose) - sum(strict) / len(strict)
 
 
-plot_heatmap(part, tree=tree, matrix=matrixS, filename="plot/strict", cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5))
-plot_heatmap(part, tree=tree, matrix=matrixL, filename="plot/loose", cmap=plt.cm.RdBu, left=0.09, textsize=6.5, figsize=(8.4,4.5))
 plot_heatmap(
-    part, tree=tree, matrix=matrixD, filename="plot/difference", vmax=0.3, cmap=plt.cm.RdBu, left=0.09, textsize=6.5, colorbar_label="Delta Values",figsize=(8.4,4.5)
+    part,
+    tree=tree,
+    matrix=matrixS,
+    filename=Path("plots", "strict").as_posix(),
+    cmap=plt.cm.RdBu,
+    left=0.09,
+    textsize=6.5,
+    figsize=(8.4, 4.5),
+    labels=labels,
+    width=0.85,
+)
+plot_heatmap(
+    part,
+    tree=tree,
+    matrix=matrixL,
+    filename=Path("plots", "loose").as_posix(),
+    cmap=plt.cm.RdBu,
+    left=0.09,
+    textsize=6.5,
+    figsize=(8.4, 4.5),
+    labels=labels,
+    width=0.85,
+)
+plot_heatmap(
+    part,
+    tree=tree,
+    matrix=matrixD,
+    filename=Path("plots", "difference").as_posix(),
+    vmax=0.3,
+    cmap=plt.cm.RdBu,
+    left=0.09,
+    textsize=6.5,
+    width=0.85,
+    colorbar_label="Delta Values",
+    figsize=(8.4, 4.5),
+    labels=labels,
 )
