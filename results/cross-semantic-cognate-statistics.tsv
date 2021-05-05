@@ -1,25 +1,28 @@
 Concept	Chinese	Score	Derivation
-back	背/脊背	0	
-bad	壞/痞	0	
+back	背/背脊	0	
+bad	壞/鄙	0	
 because	因为/庸乎	0	
+bird	鳥/雀	0	
 bite	咬/嚙	0	
 blood	血	0	
 blow	吹/㖹	0	
 burn	烧	0	
 cloud	云/云彩	0	
 count [verb]	數/點	0	
-die	死/瓜	0	
-dig	挖/𫦉	0	
+die	死/彈四郎	0	
+dig	挖/刨	0	
 dry	干/焦	0	
 dull	呆/笨	0	
+ear	耳朵/耳	0	
 egg	雞蛋/雞卵	0	
-eye	眼睛/眼珠	0	
+eye	眼睛/眼	0	
 fall	掉/落	0	
 far	远	0	
 fear	怕/驚	0	
 few	少/寡	0	
 fire	火	0	
 fish	鱼/囗囗囗	0	
+flower	花/花?	0	
 fly	飛	0	
 grass	草	0	
 green	綠	0	
@@ -30,54 +33,73 @@ laugh	笑/樂	0
 liver	肝	0	
 long	長	0	
 many	多	0	
+moon	月亮/月光	0	
 name	名字	0	
 narrow	窄/狭	0	
-near	進/進兜	0	!derivation!
+near	進/進兜	0	
 new	新	0	
 one	一/蜀	0	
-push	推/掀	0	
+push	推/𢱤	0	
 rain	雨	0	
 red	紅	0	
 river_2	江	0	
+rotten	腐爛/爛	0	
 round	圆/团	0	
 rub	擦/揩	0	
+salt	盐/盐巴	0	
 say	說/講	0	
 sea	海	0	
+seed	种子/种	0	
 sew	縫/连	0	
 sharp	尖	0	
 short	短	0	
 sing	唱	0	
 sit	坐/跪	0	
+smoke	煙/煙子	0	
 smooth	平	0	
 snow	雪	0	
 stab	刺/戳	0	
+star	星星/星	0	
+stick	棍/棍子	0	
 straight	直	0	
+sun	太陽/日頭	0	
+tail	尾巴/尾	0	
 thick	厚/厚實	0	
 thin	薄	0	
 think	想	0	
 three	三	0	
 throw	仍/丟	0	
+tie	捆/扎	0	
+tongue	舌頭/舌	0	
 turn	转/擺𠲥	0	
 two	二/兩	0	
 wide	寬/闊	0	
 wind	風	0	
+wing	翅膀/翅	0	
 worm	蟲/蟲蟻	0	
-moon	月亮/月光	0.01	!derivation!
-tie	捆/扎	0.02	!derivation!
+year	年/歲	0	
+you	你/如	0	
+claw	爪子/爪	0.02	
 all	全部/個郎下	0.02	
-squeeze	壓/榨	0.02	
-rotten	腐爛/爛	0.02	!derivation!
-full	滿/個郎	0.02	
-dog	狗/犬囝	0.03	
+squeeze	壓/挤	0.02	
+rope	繩子/繩	0.02	
+full	滿/爆	0.02	
+dog	狗/犬	0.03	
 stand	站/徛	0.03	
 come	來/走來	0.03	
 correct	對/無綻	0.03	
+fog	霧/罩子	0.03	
 wet	湿/潮	0.03	
+leaf	叶子/叶	0.03	
 dirty	脏/邋遢	0.04	
 cold	冷/寒	0.04	
-good	好/帶勁	0.05	
-horn	角/角角	0.05	!derivation!
+grease	脂肪/油	0.04	
+sand	沙子/沙	0.05	
+good	好/不糙	0.05	
+guts	腸子/腸	0.05	
+horn	角/角角	0.05	
 in	在/宿	0.05	
+swell	肿/瓜肿	0.05	
 white	白	0.05	
 and	和/跟	0.05	
 count [noun]	數	0.05	
@@ -85,120 +107,98 @@ five	五	0.05
 four	四	0.05	
 mountain	山	0.05	
 river	河	0.05	
-salt	盐/盐巴	0.05	!derivation!
+stone	石頭/石頭子?	0.05	
+tooth	牙齒/喙齒	0.05	
 walk	走/行	0.05	
 yellow	黃	0.05	
 split	撕裂/撕	0.06	
+louse	虱/虱子	0.07	
 float	漂浮/浮	0.07	
-swell	肿/⽧臺	0.07	
 scratch	抓/捉	0.08	
+mouth	嘴/嘴巴	0.09	
 cut	砍/斫	0.1	
+root	根/𩪘	0.1	
 flow	流/淌	0.1	
 kill	杀/刣	0.1	
 path	路/道	0.1	
-you	你/如	0.1	!derivation!
-tooth	牙齒/牙	0.11	!derivation!
-breathe	呼吸/𢻕氣	0.11	
+breathe	呼吸/喘氣	0.11	
 know	知道/晓得	0.11	
-year	年/年份	0.11	
+breasts	奶子/乳房	0.11	
 animal	動物/眾牲	0.11	
 feather	羽毛/毛	0.12	
-snake	蛇/长虫	0.13	!derivation!
-hold-take	拿/摕	0.14	
-not	不/伓	0.14	
-pull	拉/㧍	0.14	
+hold-take	拿/逮	0.14	
+not	不/無	0.14	
+pull	拉/挑	0.14	
+snake	蛇/长虫	0.14	
+what	什麼/啥	0.14	
 smell	聞/鼻	0.15	
 big	大	0.16	
 black	黑/烏	0.16	
 flesh	肉	0.16	
 wash	洗	0.16	
-give	給/囗	0.17	
+give	給/把	0.17	
+nose	鼻子/鼻	0.18	
 suck	嗍/吸	0.18	
 play	玩/耍	0.19	
-mouth	嘴/嘴巴	0.2	!derivation!
-grease	脂肪/油	0.21	!derivation!
-flower	花/花?	0.23	!derivation!
+hand	手/手把子	0.2	
+neck	脖子/頸	0.2	
 drink	喝/喫	0.23	
 how	怎么/怎样	0.23	
 live(alive)	活着/活的	0.24	
-ear	耳朵/耳	0.24	!derivation!
 eat	吃/食	0.26	
-bird	鳥/雀	0.27	!derivation!
+leg	腿/腿把子	0.28	
+night	晚上/夜下	0.28	
+knee	膝蓋/膝	0.28	
 small	小/細	0.29	
 sleep	睡/睏	0.3	
-smoke	煙/煙煙	0.33	!derivation!
+father	父/父親	0.32	
 earth	土地/地	0.35	
-lie	躺/睡	0.39	!derivation!
-father	父/父親	0.41	!derivation!
+mather	母親/媽媽	0.36	
+bone	骨頭/骨	0.36	
+belly	肚子/肚	0.38	
+lie	躺/睡	0.38	
+woods	森林/树林	0.39	
 if	如果/若是	0.41	
-tail	尾巴/尾	0.43	!derivation!
-see	看見/看着	0.43	
+see	看見/瞅見	0.43	
+dust	灰塵/塵土	0.44	
 hear	聽見/聽着	0.45	
-freeze	結冰/下凜	0.48	
+freeze	結冰/凍冰	0.48	
+foot	腳/骹	0.5	
 rightside	右边/右面	0.5	
+child	孩子/孩	0.52	
 heart [compound]	心臟/心	0.53	
-where	哪里/哪塊	0.54	
+where	哪里/哪	0.54	
 ash	灰/灰灰	0.55	
-swim	游水/游泳	0.56	!derivation!
 vomit	吐/嘔吐	0.56	
-hand	手/手把子	0.57	!derivation!
-leftside	左边/左手边	0.58	!derivation!
-mather	母親/娘	0.58	!derivation!
-night	晚上/夜下	0.61	!derivation!
+swim	游水/游泳	0.57	
+leftside	左边/左面	0.58	
 that	那/許	0.62	
-fog	霧/蒙纱	0.63	!derivation!
 spit	吐/啡	0.63	
-root	根/兜子	0.64	!derivation!
-sky	天空/天上	0.67	!derivation!
-dust	灰塵/塵土	0.67	!derivation!
-foot	腳/骹	0.68	!derivation!
-woods	森林/树林	0.79	!derivation!
-leg	腿/膀	0.82	!derivation!
-I	我/佳	0.84	
-sun	太陽/日頭	0.85	
-star	星星/星	0.85	!derivation!
-who	誰/哪個	0.94	!derivation!
+sky	天空/天上	0.69	
+skin	皮膚/皮	0.71	
+hair	頭髮/頭毛	0.72	
+who	誰/哪個	0.84	
+I	我/吾	0.84	
+ice	冰/構棱子	0.9	
+wife	老婆/妻子	0.94	
 day	天/日	0.95	
 hunt	打獵/拍獵	0.95	
-this	这/囗个	0.95	
-wing	翅膀/翅	0.97	!derivation!
+this	这/呢	0.95	
 here	这里/这	0.98	
-fight	打架/打仗	0.99	!derivation!
 there	那/那里	0.99	
+he	他/渠	1	
 heart	心	1	
-knee	膝/膝蓋	1.02	!derivation!
-skin	皮膚/皮	1.02	!derivation!
-he	他/渠	1.07	!derivation!
-ice	冰/構棱子	1.1	!derivation!
-we	我們/俺	1.12	!derivation!
-what	什麼/啥	1.29	!derivation!
-woman	女人/女的	1.32	!derivation!
+fight	打架/相拍	1.01	
+head	頭/頭壳	1.09	
+fruit	水果/果子	1.11	
+we	我們/俺	1.14	
+husband	老公/丈夫	1.15	
+they	他們/渠俫	1.23	
+man	男人/男人家	1.33	
+woman	女人/女的	1.34	
 bark	树皮	1.34	
 water	水	1.37	
-they	他們/他㑲	1.38	!derivation!
-fruit	水果/果子	1.39	!derivation!
-man	男人/男人家	1.42	!derivation!
-husband	老公/丈夫	1.43	!derivation!
-tree	树	1.5	!derivation!
-breasts	奶子/乳房	1.77	!derivation!
+tree	树	1.53	
 old	老	1.85	
 hit	打/拍	1.95	
-bone	骨頭/骨	1.95	
-wife	老婆/妻子	1.97	!derivation!
-louse	虱/虱子	2.22	!derivation!
-stone	石頭/石頭塊	2.25	!derivation!
-child	孩子/孩	2.26	!derivation!
-stick	棍子/棍	2.36	!derivation!
-hair	頭髮/頭毛	2.39	
-tongue	舌頭/舌	2.4	!derivation!
-person	人	2.63	
-leaf	叶子/叶	2.75	!derivation!
-claw	爪子/爪	2.78	!derivation!
-neck	脖子/頸	2.98	!derivation!
-sand	沙子/沙	3.11	!derivation!
-guts	腸子/腸	3.45	!derivation!
-nose	鼻子/鼻	3.45	!derivation!
-rope	繩子/繩	3.62	!derivation!
-seed	种子/种	3.71	!derivation!
-head	頭/頭那	3.91	
-belly	肚子/肚	3.95	!derivation!
+person	人	2.58	

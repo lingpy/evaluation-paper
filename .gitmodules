@@ -1,0 +1,3 @@
+[submodule "liusinitic"]
+	path = liusinitic
+	url = https://github.com/lexibank/liusinitic.git

@@ -42,12 +42,26 @@ def get_chinese_map():
 
 
 def cross_semantic_cognate_statistics(
-        wordlist, ref="cogids", concept="concept", annotation=None):
+        wordlist, ref="cogids", concept="concept", annotation=None, 
+        suffixes=["suf", "suffix", "SUF", "SUFFIX"]):
     """
     This function takes a wordlist file as an input and calculate the concept colexification.
     """
+    
+    if annotation:
+        D = {}
+        for idx, cogids, morphemes in wordlist.iter_rows(ref, annotation):
+            new_cogids = []
+            for cogid, morpheme in zip(cogids, morphemes):
+                if not sum([1 if s in morpheme else 0 for s in suffixes]):
+                    new_cogids += [cogid]
+            D[idx] = lingpy.basictypes.ints(new_cogids)
+        wordlist.add_entries(ref+"_derived", D, lambda x: x)
+        new_ref = ref+"_derived"
+    else:
+        new_ref = ref
 
-    etd = wordlist.get_etymdict(ref=ref)
+    etd = wordlist.get_etymdict(ref=new_ref)
     indices = {ln: {} for ln in wordlist.cols}
     for i, ln in enumerate(wordlist.cols):
         for cogid, reflexes in etd.items():
@@ -62,18 +76,10 @@ def cross_semantic_cognate_statistics(
             row=cnc, flat=True
         )  # The lexical entries of the concept.
         scores = []
-        derivation = 0
-        if annotation:
-            for idx in reflexes:
-                ln, cogids = wordlist[idx, "doculect"], wordlist[idx, ref]
-                scores += [statistics.mean([indices[ln][cogid] for cogid in cogids])]
-                for m in wordlist[idx, annotation]:
-                    if "SUF" in m or "suffix" in m:
-                        derivation += 1
-        if derivation > 0:
-            all_scores += [[cnc, statistics.mean(scores), "!derivation!"]]
-        else:
-            all_scores += [[cnc, statistics.mean(scores), ""]]
+        for idx in reflexes:
+            doculect, cogids = wordlist[idx, "doculect"], wordlist[idx, new_ref]
+            scores += [statistics.mean([indices[doculect][cogid] for cogid in cogids])]
+        all_scores += [[cnc, statistics.mean(scores), ""]]
     return sorted(all_scores, key=lambda x: (x[1], x[0]))
 
 
