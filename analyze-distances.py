@@ -19,6 +19,8 @@ from pkg.code import (
     compare_cognate_sets,
     get_liusinitic,
     cross_semantic_cognate_statistics,
+    get_ordered_taxa,
+    get_revised_taxon_names
 )
 
 
@@ -92,6 +94,16 @@ print(
         headers=["Cogid A", "Cogid B", "GRF distance"],
     )
 )
+
+
+print(
+    tabulate(
+        reference_similarity,
+        floatfmt=".4f",
+        headers=["Cognates", "GRF distance"],
+    )
+)
+
 
 if "--nqd" in argv:
     """
