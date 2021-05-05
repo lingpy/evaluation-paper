@@ -2,10 +2,7 @@ library("groundhog")
 groundhog.day = "2021-03-03"
 groundhog.library(c('ape','ggplot2', 'reshape2'), groundhog.day)
 
-#library("ape", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
-##library("reshape", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
-#library("ggplot2", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
-#library("reshape2", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
+
 
 # Load the newick trees and change the tip labels
 loose = read.tree(file='results/part_loose.tre')
