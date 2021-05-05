@@ -1,6 +1,11 @@
 library("groundhog")
-groundhog.day="2021-04-21"
+groundhog.day = "2021-03-03"
 groundhog.library(c('ape','ggplot2', 'reshape2'), groundhog.day)
+
+#library("ape", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
+##library("reshape", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
+#library("ggplot2", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
+#library("reshape2", lib.loc="/home/mattis/R/x86_64-pc-linux-gnu-library/4.0")
 
 # Load the newick trees and change the tip labels
 loose = read.tree(file='results/part_loose.tre')
@@ -15,13 +20,49 @@ comparePhylo(Loose, Strict, force.rooted=F, plot=T) #first figure
 dev.off()
 
 # MAD root
-Loose_mad = read.tree(file='results/part_loose.tre.rooted')
-Strict_mad = read.tree(file='results/part_strict.tre.rooted')
+Loose_Coding = read.tree(file='results/part_loose.tre.rooted')
+Strict_Coding = read.tree(file='results/part_strict.tre.rooted')
+Loose = read.tree(file='results/full_loose.tre.rooted')
+Strict = read.tree(file='results/full_strict.tre.rooted')
+Sagart = read.tree(file='sagart2005.tre')
+Salient = read.tree(file='results/full_salient.tre.rooted')
+Common = read.tree(file='results/full_common.tre.rooted')
+
 
 # Compare MADrooted trees
 pdf(file="plots/loose-strict-root.pdf",width = 20, height = 15)
-comparePhylo(Loose_mad, Strict_mad, force.rooted=F, plot=T) # second figure
+comparePhylo(Loose_Coding, Strict_Coding, force.rooted=F, plot=T) # second figure
 dev.off()
+
+# Compare MADrooted trees
+pdf(file="plots/sagart-salient.pdf", width=20, height=15)
+comparePhylo(Sagart, Salient, force.rooted=F, plot=T) # second figure
+dev.off()
+
+# Compare MADrooted trees
+pdf(file="plots/sagart-loose.pdf", width=20, height=15)
+comparePhylo(Sagart, Loose, force.rooted=F, plot=T) # second figure
+dev.off()
+
+# Compare MADrooted trees
+pdf(file="plots/salient-strict.pdf", width=20, height=15)
+comparePhylo(Salient, Strict, force.rooted=F, plot=T) # second figure
+dev.off()
+
+# Compare MADrooted trees
+pdf(file="plots/salient-loose.pdf", width=20, height=15)
+comparePhylo(Salient, Loose, force.rooted=F, plot=T) # second figure
+dev.off()
+
+# Compare MADrooted trees
+pdf(file="plots/salient-common.pdf", width=20, height=15)
+comparePhylo(Salient, Common, force.rooted=F, plot=T) # second figure
+dev.off()
+
+
+
+
+
 
 # networks: read delta scores
 df = read.csv('results/NN_delta.csv', sep=';')
