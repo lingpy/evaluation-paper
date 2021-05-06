@@ -76,3 +76,10 @@ all_trees.close()
 part.output(
     "tsv", filename="results/liusinitic.word_cognate", prettify=False, ignore="all"
 )
+
+for ref in ['strictid', 'looseid', 'commonid', 'salientid']:
+    part.output('paps.nex', filename=Path("results", ref).as_posix(),
+            missing="-", ref=ref)
+
+
+
