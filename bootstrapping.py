@@ -1,5 +1,4 @@
 """
-Step Appendix
 This script is designed only for the bootstrapping purpose.
 """
 
@@ -9,6 +8,9 @@ from collections import defaultdict
 from lingpy.algorithm.clustering import neighbor
 from pathlib import Path
 import random
+from pkg.bootstrap import bootstrap, hamming_distances, splits_from_tree
+from pylotree import Tree
+
 
 from pkg.code import (
     get_liusinitic,
@@ -29,29 +31,19 @@ salient_cognates(
 part.add_cognate_ids("cogids", "strictid", idtype="strict", override=True)
 part.add_cognate_ids("cogids", "looseid", idtype="loose", override=True)
 
-# An array with all the name of all the full cognate sets.
 cognate_sets = ["strict", "loose", "common", "salient"]
 
-ranks = compare_cognate_sets(part, "strictid", "looseid")
-target_concepts = [row[0] for row in ranks]
-
-# print(
-#     "{0} concepts are selected for computing distance matrices (threshold is 0.8).".format(
-#         len(target_concepts)
-#     )
-# )
-
-# compute the from the random sample
+# make the matrix
 for cognate in cognate_sets:
-    with open(
-        Path("results", "full_random_trees_" + cognate + ".tre"), "w"
-    ) as random_trees:
-        for i in range(0, 1000):
-            random_concepts = random.sample(
-                target_concepts, int(len(target_concepts) * 0.7)
-            )
-            key = cognate + "_dist"
-            matrixP = lexical_distances(part, random_concepts, ref=cognate + "id")
-            treeP = neighbor(matrixP, taxa, distances=True)
-            random_trees.write("{0}\n".format(str(treeP)))
-    random_trees.close()
+    paps = [v for k, v in sorted(part.get_paps(ref=cognate+"id").items(), key=lambda
+        x: x[0])]
+    matrix = hamming_distances(paps)
+    tree = Tree(neighbor(matrix, part.cols))
+    splits, trees = bootstrap(paps, part.cols, tree, iterations=1000)
+    active_splits = splits_from_tree(tree)
+    scores = []
+    for (nodeA, nodeB), split in active_splits.items():
+        scores += [len(splits[split])/1000]
+        #print(nodeA, nodeB, len(splits[split]) / 100)
+    print('{0:10} | {1:.2f}'.format(cognate, sum(scores)/len(scores)))
+
