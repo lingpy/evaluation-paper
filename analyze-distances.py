@@ -98,7 +98,7 @@ print(
 
 print(
     tabulate(
-        reference_similarity,
+        rgf_similarity,
         floatfmt=".4f",
         headers=["Cognates", "GRF distance"],
     )

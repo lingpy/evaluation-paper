@@ -2,6 +2,6 @@ GitPython==3.1.12
 lingpy==2.6.7
 numpy==1.19.5
 tabulate==0.8.9
+pylotree==0.2.0
 scipy==1.5.4
-# uncomment the following requirement before submitting the article.
-# -e git+https://github.com/lexibank/liusinitic.git@v1.0#egg=lexibank_liusinitic
+scikit-bio==0.5.6

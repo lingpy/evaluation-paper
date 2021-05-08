@@ -44,6 +44,9 @@ for cognate in cognate_sets:
     scores = []
     for (nodeA, nodeB), split in active_splits.items():
         scores += [len(splits[split])/1000]
-        #print(nodeA, nodeB, len(splits[split]) / 100)
     print('{0:10} | {1:.2f}'.format(cognate, sum(scores)/len(scores)))
+    with open(Path("results", cognate+".trees"), "w") as f:
+        for t in trees:
+            f.write(t+'\n')
+
 
