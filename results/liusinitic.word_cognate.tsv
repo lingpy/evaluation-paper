@@ -4301,4 +4301,4 @@ ID	AUTOID	CHARACTERS	CHARACTERS_IS	CLASSES	COGIDS	CONCEPT	CONCEPTICON_ID	CONCEPT
 4234	1162	如	如	NY3	789	you	1215	你	Fuzhou	18	0	ny³²	4	541	thou/如	4.N.C 4.Y.V 4.3.T	75	AXT	(1) ny32	n y ³²	4 7 8	994	i n t	i n t	n y ³²	ny³²	1.6 3.0 1.0				1190	YOU	744
 4235	1162	如 儂	如儂	NY3_NUN3	789 193	you	1215	你	Fuzhou	18	0	ny³²+nøyŋ⁵³	4	541	thou/如 _:SUF/儂	4.N.C 4.Y.V 4.3.T 4._._ 4.N.C 4.U.V 4.N.c 4.3.T	75	AXT_AXLT	(2) ny32-21 n2yN53	n y ²¹/³² + n ø y ŋ ⁵³	4 7 8 9 4 7 4 8	995	i n t + i n c t	i n t + i n c t	n y ³² + n øy ŋ ⁵³	ny³²⁻²¹ nøyŋ⁵³	1.6 3.0 1.0 0.0 1.6 3.0 1.1 1.0				1190	YOU _you	744
 4236	1162	如	如	LI3	789	you	1215	你	Xiamen	19	0	li⁵³	19	541	thou/如	19.L.C 19.I.V 19.3.T	75	AXT	li53	l i ⁵³	5 7 8	994	i n t	i n t	l i ⁵³	li⁵³	1.6 3.0 1.0				1190	YOU	744
-# Created using the LexStat class of LingPy-2.6.7
+# Created using the LexStat class of LingPy-2.6.8.dev0
