@@ -46,48 +46,15 @@ print(
     )
 )
 
-# compute the distance matrices
-all_trees = open(Path("results", "all_trees.tre"), "w")
-for cognate in cognate_sets:
-    key = cognate + "_dist"
-    matrixP = lexical_distances(part, target_concepts, ref=cognate + "id")
-    matrixF = lexical_distances(part, part.rows, ref=cognate + "id")
-    treeP = neighbor(matrixP, taxa, distances=True)
-    treeF = neighbor(matrixF, taxa, distances=True)
-    matrix2dst(
-        matrixP,
-        taxa=taxa,
-        filename=Path("results", "part_{0}".format(cognate)).as_posix(),
-        taxlen=10,
-    )
-    matrix2dst(
-        matrixF,
-        taxa=taxa,
-        filename=Path("results", "full_{0}".format(cognate)).as_posix(),
-        taxlen=10,
-    )
-    with open(Path("results", "part_" + cognate + ".tre"), "w") as f:
-        f.write(str(treeP))
-    with open(Path("results", "full_" + cognate + ".tre"), "w") as f:
-        f.write(str(treeF))
-    all_trees.write("{0}\n{1}\n".format(
-        str(treeP),
-        str(treeF)))
-all_trees.close()
-
-part.output(
-    "tsv", filename="results/liusinitic.word_cognate", prettify=False, ignore="all"
-)
-
 D = {0: part.columns}
 for idx in part:
     D[idx] = part[idx]
     D[idx][part.columns.index("doculect")] = languages[part[idx, "doculect"]]
 wl = Wordlist(D)
 for ref in ['strictid', 'looseid', 'commonid', 'salientid']:
-    wl.output('paps.nex', filename=Path("results", ref).as_posix(),
+    wl.output('paps.nex', filename=Path("nexus", ref).as_posix(),
             missing="-", ref=ref)
-    write_nexus(wl, ref=ref, filename=Path("mrbayes", ref).as_posix(),
+    write_nexus(wl, ref=ref, filename=Path("nexus", ref).as_posix(),
             commands=[
                     "set autoclose=yes nowarn=yes;",
                     "lset coding=noabsencesites rates=gamma;",
