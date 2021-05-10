@@ -79,25 +79,6 @@ part.output(
     "tsv", filename="results/liusinitic.word_cognate", prettify=False, ignore="all"
 )
 
-D = {0: part.columns}
-for idx in part:
-    D[idx] = part[idx]
-    D[idx][part.columns.index("doculect")] = languages[part[idx, "doculect"]]
-wl = Wordlist(D)
-for ref in ['strictid', 'looseid', 'commonid', 'salientid']:
-    wl.output('paps.nex', filename=Path("results", ref).as_posix(),
-            missing="-", ref=ref)
-    write_nexus(wl, ref=ref, filename=Path("mrbayes", ref).as_posix(),
-            commands=[
-                    "set autoclose=yes nowarn=yes;",
-                    "lset coding=noabsencesites rates=gamma;",
-                    "constraint root = 1-.;",
-                    "prset clockratepr=exponential(3e5);",
-                    "prset sampleprob=0.2 samplestrat=random speciationpr=exp(1);",
-                    "prset extinctionpr=beta(1,1) nodeagepr=calibrated;", 
-                    "prset brlenspr=clock:fossilization clockvarpr=igr;",
-                    "mcmcp ngen=20000000 printfreq=100000 samplefreq=10000 nruns=2 nchains=4 savebrlens=yes filename={0}-out;".format(ref)
-                ])
 
 
 
