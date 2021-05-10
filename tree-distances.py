@@ -48,7 +48,6 @@ languages = get_revised_taxon_names()
 taxa = [languages[x] for x in wl.cols]
 print("")
 stree = PTree(get_ordered_taxa()[0])
-for cognate in cognates:
 patterns = []
 tree = PTree(open(Path("results", "full_"+cognate+".tre.rooted")).read().strip())
 for concept in wl.rows:
@@ -61,18 +60,18 @@ for concept in wl.rows:
         else:
             pattern += [[str(e) for e in entry]]
     patterns += [pattern]
-scores = rscf(stree, wl.cols, patterns, iterate=100)
-all_scores = []
-for node in stree.preorder[1:]:
-    if node.descendants:
-        if [n for n in node.descendants if n.descendants]:
-            all_scores += [scores[node.name]["alld"]]
-print('{0:20} | {1:.4f} | {2}'.format(
-    cognate,
-    sum(all_scores)/len(all_scores),
-    len(patterns)
-    ))
-
+    scores = rscf(stree, wl.cols, patterns, iterate=100)
+    all_scores = []
+    for node in stree.preorder[1:]:
+        if node.descendants:
+            if [n for n in node.descendants if n.descendants]:
+                all_scores += [scores[node.name]["alld"]]
+    print('{0:20} | {1:.4f} | {2}'.format(
+        cognate,
+        sum(all_scores)/len(all_scores),
+        len(patterns)
+        ))
+    
 print("")
 
 for cognate in cognates:
