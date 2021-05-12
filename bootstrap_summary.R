@@ -4,7 +4,6 @@ groundhog.library(c('ape','phangorn', 'ggtree', 'phytools', 'phylotools'), groun
 
 library('phangorn')
 library('phytools')
-library('ggtree')
 # define function
 
 myfun = function(mynexus){
@@ -38,56 +37,46 @@ myfun = function(mynexus){
   return(treeboot)
 }
 
+## files are to be saved as svg, and later, we use other software to convert to pdf. 
 
 # strict
 strict_tree = myfun('nexus/strictid.paps.nex')
-pdf(file='plots/full_strict_branch_support.pdf',width = 24, height = 10)
-plotBranchbyTrait(strict_tree, strict_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
+svg(file='plots/full_strict_branch_support.svg',width = 15, height = 10)
+plotBranchbyTrait(strict_tree, strict_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
+dev.off()
+
+pdf(file='plots/full_strict_branch_support.pdf',width = 15, height = 10)
+plotBranchbyTrait(strict_tree, strict_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
 dev.off()
 
 # loose
 loose_tree = myfun('nexus/looseid.paps.nex')
-pdf(file='plots/full_loose_branch_support.pdf',width = 24, height = 10)
-plotBranchbyTrait(loose_tree,loose_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
+svg(file='plots/full_loose_branch_support.svg',width =15, height = 10)
+plotBranchbyTrait(loose_tree,loose_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
+dev.off()
+
+pdf(file='plots/full_loose_branch_support.pdf',width =15, height = 10)
+plotBranchbyTrait(loose_tree,loose_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
 dev.off()
 
 # common
 common_tree = myfun('nexus/commonid.paps.nex')
-pdf(file='plots/full_common_branch_support.pdf',width = 24, height = 10)
-plotBranchbyTrait(common_tree,common_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
+svg(file='plots/full_common_branch_support.svg',width = 15, height = 10)
+plotBranchbyTrait(common_tree,common_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
+dev.off()
+
+pdf(file='plots/full_common_branch_support.pdf',width = 15, height = 10)
+plotBranchbyTrait(common_tree,common_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
 dev.off()
 
 # salient
 salient_tree = myfun('nexus/salientid.paps.nex')
-pdf(file='plots/full_salient_branch_support.pdf',width = 24, height = 10)
-plotBranchbyTrait(salient_tree,salient_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
+svg(file='plots/full_salient_branch_support.svg',width = 15, height = 10)
+plotBranchbyTrait(salient_tree,salient_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
 dev.off()
 
-## save as svg
-
-
-# strict
-strict_tree = myfun('nexus/strictid.paps.nex')
-svg(file='plots/full_strict_branch_support.svg',width = 24, height = 10)
-plotBranchbyTrait(strict_tree, strict_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
-add.scale.bar()
+pdf(file='plots/full_salient_branch_support.pdf',width = 15, height = 10)
+plotBranchbyTrait(salient_tree,salient_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#0f3d5e','#edfcae','#f50202')),edge.width=7,xlims=c(0,100))
 dev.off()
 
-# loose
-loose_tree = myfun('nexus/looseid.paps.nex')
-svg(file='plots/full_loose_branch_support.svg',width = 24, height = 10)
-plotBranchbyTrait(loose_tree,loose_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
-dev.off()
-
-# common
-common_tree = myfun('nexus/commonid.paps.nex')
-svg(file='plots/full_common_branch_support.svg',width = 24, height = 10)
-plotBranchbyTrait(common_tree,common_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
-dev.off()
-
-# salient
-salient_tree = myfun('nexus/salientid.paps.nex')
-svg(file='plots/full_salient_branch_support.svg',width = 24, height = 10)
-plotBranchbyTrait(salient_tree,salient_tree$rate, mode='edges', type='u', palette = colorRampPalette(c('#8ec6ed', '#0f3d5e')))
-dev.off()
 
