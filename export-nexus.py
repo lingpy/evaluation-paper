@@ -1,9 +1,6 @@
 """
-Step 3
-This stap calculates lexicostatistical distances between language pairs.
-
-The results:
-Four pairwise distance matrices in the PHYLIP formats
+Step 6
+This stap output the pap files for the bootstrapping analysis.
 """
 from lingpy.compare.partial import Partial
 from lingpy import Wordlist
