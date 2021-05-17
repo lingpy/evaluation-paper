@@ -4301,4 +4301,4 @@ ID	DOCULECT	SUBGROUP	CONCEPT	VALUE	IPA	TOKENS	COGIDS	MORPHEMES	STRUCTURE	NOTE	CH
 4234	Fuzhou		you	ny³²	ny³²	n y ³²	789	thou/如	i n t		如		4 7 8	AXT	NY3	4	4.N.C 4.Y.V 4.3.T	1.6 3.0 1.0	0	1187	YOU	769	990	541
 4235	Fuzhou		you	ny³²⁻²¹ nøyŋ⁵³	ny³²+nøyŋ⁵³	n y ³² + n øy ŋ ⁵³	789 193	thou/如 _:SUF/儂	i n t + i n c t		如 儂		4 7 8 9 4 7 4 8	AXT_AXLT	NY3_NUN3	4	4.N.C 4.Y.V 4.3.T 4._._ 4.N.C 4.U.V 4.N.c 4.3.T	1.6 3.0 1.0 0.0 1.6 3.0 1.1 1.0	0	1187	YOU _you	769	991	541
 4236	Xiamen		you	li⁵³	li⁵³	l i ⁵³	789	thou/如	i n t		如		5 7 8	AXT	LI3	19	19.L.C 19.I.V 19.3.T	1.6 3.0 1.0	0	1187	YOU	769	990	541
-# Created using the LexStat class of LingPy-2.6.8.dev0
+# Created using the LexStat class of LingPy-2.6.7
