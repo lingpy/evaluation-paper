@@ -34,6 +34,8 @@ $ python cross-semantic-cognate-statistics.py
 $ python lexical-distances.py
 $ python analyze-distances.py --nqd
 $ python plot-distances.py
+$ python export-nexus.py
+$ python bootstrap.py
 ```
 
 ## Morpheme Annotation with the Help of the EDICTOR
@@ -66,9 +68,9 @@ This will yield the following output on screen.
 
 | Concept  | Precision | Recall   | F-Score | Chinese       | 
 | -------- | --------- | -------- |-------- |-------------  |
-|  knee    |    1.00   |  0.08    |  0.15   |膝,膝蓋,簸棱盖  |
-|  child   |    1.00   |  0.15    |  0.26   |孩,小孩,小嘎    | 
-|  neck    |    1.00   |  0.18    |  0.31   |脖子,脖颈子,頸項| 
+|  knee    |    1.00   |  0.09    |  0.17   |膝/膝蓋        |
+|  child   |    1.00   |  0.11    |  0.21   |孩子/孩        | 
+|  neck    |    1.00   |  0.18    |  0.31   |脖子/頸        | 
 |   ...    |    ...    |   ...    |  ...    |        ...    |
 
 Our second analysis looks at cross-semantic cognates and checks how often
@@ -91,14 +93,13 @@ The output is given in part in the following table.
 
 | Concept  | Scores   | Flag     | Chinese character| 
 | -------- | -------- | -------- | ---------------- |
-| back     | 0        |          | 背,脊背,背骶身    |
-| bad      | 0        |          | 壞,恘,毛         |
+| back     | 0        |          | 背/胛脊           |
+| bad      | 0        |          | 壞/呆             |
 | ...      | ...      | ...      |  ...             |
-| nose     | 3.45455  | !derivation! | 鼻子,鼻,鼻孔  |
-| rope     | 3.625    | !derivation! | 繩,繩子,繩索   |
-| seed     | 3.71053  | !derivation! | 种子,种籽,种   |
-| head     | 3.90909  |          |    頭,得腦        |
-| belly    | 3.95     | !derivation! |  肚子,肚皮,肚  |
+| tree     |  1.53    |          |  树              |
+| old      | 1.85     |          | 老               |
+| hit      | 1.95     |          | 打/拍            |
+| person   | 2.58     |          | 人               |
 
 # Deriving Distance Matrices from Cognate Sets
 
@@ -155,3 +156,13 @@ $ python plot-distances.py
 ```
 
 Results are written to the folder `plots`.
+
+# Bootstrapping Statistics
+
+To compute bootstrapping statistics, we use the following command:
+
+```
+$ python export-nexus.py
+$ python bootstrap.py
+```
+The nexus files are written to the folder `nexus`. And the results of bootstrapping statistics are written to the folder `plots`.
