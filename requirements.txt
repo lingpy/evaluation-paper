@@ -5,3 +5,6 @@ tabulate==0.8.9
 pylotree==0.2.0
 scipy==1.5.4
 scikit-bio==0.5.6
+ete3==3.1.2
+pyqt5==5.13.1
+pylocluster==0.1.0
