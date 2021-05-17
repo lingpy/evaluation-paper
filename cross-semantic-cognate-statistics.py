@@ -14,7 +14,7 @@ scores = cross_semantic_cognate_statistics(
 
 
 with open("results/cross-semantic-cognate-statistics.tsv", "w") as f:
-    f.write("\t".join(["Concept", "Chinese", "Score", "Derivation\n"]))
+    f.write("\t".join(["Concept", "Score", "Derivation", "Chinese\n"]))
     for c, colex, d in scores:
         character = chinese[c]
         f.write("\t".join([c, character, str(round(colex, 2)), d + "\n"]))
