@@ -1,5 +1,4 @@
 """
-Step 5
 Compute heatmaps from the lexical distances.
 """
 from lingpy import *

@@ -1,5 +1,4 @@
 """
-Step 3
 This stap calculates lexicostatistical distances between language pairs.
 
 The results:

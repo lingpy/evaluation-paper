@@ -1,5 +1,4 @@
 """
-Step 7
 This script is designed only for the bootstrapping purpose.
 """
 

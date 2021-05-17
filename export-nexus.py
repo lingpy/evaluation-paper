@@ -1,5 +1,4 @@
 """
-Step 6
 This stap output the pap files for the bootstrapping analysis.
 """
 from lingpy.compare.partial import Partial
