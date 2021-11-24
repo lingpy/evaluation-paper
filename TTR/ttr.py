@@ -1,13 +1,36 @@
-from lingpy.compare.partial import Partial
+from lingpy import *
+from pyedictor.util import *
+from pyedictor import fetch
 from collections import Counter
+from tabulate import tabulate
+
+
+wl = fetch(
+    "liusinitic",
+    columns=[
+        "DOCULECT",
+        "CONCEPT",
+        "TOKENS",
+        "MORPHEMES",
+        "COMPOUNDS",
+        "COGIDS",
+        "AUTOID",
+        "STRICTID",
+        "LOOSEID",
+        "CHARACTERS_IS",
+        "CHARACTERS",
+        "LEXEME_NOTE",
+        "CONCEPT_CHINESE",
+        "STRUCTURE",
+        "NOTE",
+    ],
+    to_lingpy=True,
+)
 
 morpheme_dict = {}
 compound_dict = {}
 character_dict = {}
-part = Partial("liusinitic.tsv")
-total_morpheme = []
-total_compound = []
-for idx, morphemes, compounds, characters in part.iter_rows(
+for idx, morphemes, compounds, characters in wl.iter_rows(
     "morphemes", "compounds", "characters"
 ):
     for m in morphemes:
@@ -30,13 +53,19 @@ for idx, morphemes, compounds, characters in part.iter_rows(
             else:
                 character_dict[chr_each] = 1
 
+# Part of speech summary
+output_array = []
+for k, v in compound_dict.items():
+    output_array.append([k, v])
+
+print(tabulate(output_array, headers=["Part of speech", "Times"]))
 
 # Type-Token Ratio: morpheme
-ttr_morpheme = len(morpheme_dict.keys()) / sum(morpheme_dict.values())
-print("ttr_morpheme:{0}".format(ttr_morpheme))
+# ttr_morpheme = len(morpheme_dict.keys()) / sum(morpheme_dict.values())
+# print("ttr_morpheme:{0}".format(ttr_morpheme))
 # Type-Token Ratio: morphosyntax
-ttr_morphosyntax = len(compound_dict.keys()) / sum(compound_dict.values())
-print("ttr_morphosyntax:{0}".format(ttr_morphosyntax))
+# ttr_morphosyntax = len(compound_dict.keys()) / sum(compound_dict.values())
+# print("ttr_morphosyntax:{0}".format(ttr_morphosyntax))
 # Type-Token Ratio: charaters
-ttr_characters = len(character_dict.keys()) / sum(character_dict.values())
-print("ttr_characters:{0}".format(ttr_characters))
+# ttr_characters = len(character_dict.keys()) / sum(character_dict.values())
+# print("ttr_characters:{0}".format(ttr_characters))
