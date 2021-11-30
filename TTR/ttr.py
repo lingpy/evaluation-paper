@@ -78,9 +78,10 @@ for k, v in compound_type_dict.items():
     )
 
 with open("compound_type_summary.tsv", "w") as f:
-    f.write("|{0}|{1}|{2}|\n".format("Compound type", "Concepts", "Chinese"))
+    f.write("|{0}|{1}|\n".format("Compound type", "Chinese"))
+    f.write("|{0}|{1}|\n".format("------", "------"))
     for each in compound_array:
-        f.write("|{0}|{1}|{2}|\n".format(each[0], each[1], each[2]))
+        f.write("|{0}|{1}|\n".format(each[0], each[2]))
 f.close()
 
 print(tabulate(compound_array, headers=["Compound type", "Concepts", "Chinese"]))
