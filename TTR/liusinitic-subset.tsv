@@ -1,0 +1,255 @@
+ID	DOCULECT	CONCEPT	TOKENS	MORPHEMES	COMPOUNDS	COGIDS	AUTOID	STRICTID	LOOSEID	CHARACTERS_IS	CHARACTERS	LEXEME_NOTE	CONCEPT_CHINESE	STRUCTURE	NOTE
+250	Beijing	back	p ei ⁵¹	back:N/背	N	72	20	17	13	背	背		背	i n t	
+251	Ha_erbin	back	p ei ⁵³	back:N/背	N	72	20	17	13	背	背		背	i n t	
+252	Jinan	back	p ei ³¹	back:N/背	N	72	20	17	13	背	背		背	i n t	
+253	Rongcheng	back	p ei ⁵²	back:N/背	N	72	20	17	13	背	背		背	i n t	
+254	Taiyuan	back	p ei ⁴⁵	back:N/背	N	72	20	17	13	背	背		背	i n t	
+255	Xi_an	back	tɕ i ²¹ + p ei ²⁴	_spine:N/脊 back:N/背	N N	73 72	20	18	13	脊背	脊 背		背	i n t + i n t	
+256	Xi_an	back	p ei ²⁴	back:N/背	N	72	20	17	13	背	背		背	i n t	
+257	Chengdu	back	p ei ²¹³	back:N/背	N	72	20	17	13	背	背		背	i n t	
+258	Nanjing	back	p ei ⁴⁴	back:N/背	N	72	20	17	13	背	背		背	i n t	
+259	Jixi	back	p a ³⁵	back:N/背	N	72	20	17	13	背	背		背	i n t	
+260	Suzhou	back	p e̞ ⁴¹²	back:N/背	N	72	20	17	13	背	背		背	i n t	
+261	Wenzhou	back	p ai ⁴² + dʑ i ²⁴ + s a ŋ ⁴⁴	back:N/背 _sacrum/骶 _body/身	N N N	72 74 75	20	19	13	背骶身	背 骶 身		背	i n t + i n t + i n c t	骶 is the last bone of the spine
+262	Changsha	back	p ei ⁵⁵	back:N/背	N	72	20	17	13	背	背		背	i n t	
+263	Loudi	back	p e ³⁵	back:N/背	N	72	20	17	13	背	背		背	i n t	
+264	Nanchang	back	p ei ⁴⁵ + tɕ j a ʔ ⁰	back:N/背 _spine:N/脊	N N	72 73	20	20	13	背脊	背 脊		背	i n t + i m n c t	
+265	Meixian	back	p oi ⁵³	back:N/背	N	72	20	17	13	背	背		背	i n t	
+266	Guilin	back	p ei ²⁵	back:N/背	N	72	20	17	13	背	背		背	i n t	
+267	Guangzhou	back	p w i ³³	back:N/背	N	72	20	17	13	背	背		背	i m n t	
+268	Fuzhou	back	pʰ j a ŋ ⁵⁵	back:N/背	N	72	20	17	13	背	背		背	i m n c t	irregular nasalization. Charaters is 𩩍. Rib
+269	Xiamen	back	k a ⁵⁵ + ts j a ʔ ³²	shoulder.blade/胛 spine:N/脊	N N	76 73	21	21	13	胛脊	胛 脊		背	i n t + i m n c t	changed.
+1267	Beijing	earth	tʰ u ²¹³ + t i ⁵¹	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1268	Ha_erbin	earth	tʰ u ²¹³ + t i ⁵³	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1269	Jinan	earth	tʰ u ⁴⁵ + t i ³¹	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1270	Rongcheng	earth	tʰ u ²¹³ + t i ³³⁴	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1271	Taiyuan	earth	tʰ u ⁵³ + t i ⁴⁵	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1272	Taiyuan	earth	t i ⁴⁵	ground/地	N	265	192	178	110	地	地		土地	i n t	
+1273	Xi_an	earth	tʰ ou ⁵³ + t i ⁴⁴	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1274	Xi_an	earth	t i ⁴⁴	ground/地	N	265	192	178	110	地	地		土地	i n t	
+1275	Chengdu	earth	tʰ u ⁵³ + t i ²¹³	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1276	Chengdu	earth	t i ²¹³	ground/地	N	265	193	179	110	土	地		土地	i n t	
+1277	Nanjing	earth	t i ⁴⁴	ground/地	N	265	192	178	110	地	地		土地	i n t	
+1278	Nanjing	earth	tʰ u ¹¹ + t i ⁴⁴	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1279	Jixi	earth	tsʰ ɿ ³¹	ground/地	N	265	192	178	110	地	地		土地	i n t	
+1280	Jixi	earth	tʰ u ²¹³ + tsʰ ɿ ³¹	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1281	Suzhou	earth	d i ²³¹ + b i ¹³	ground/地 skin/皮	N N	265 16	192	180	110	地皮	地 皮		土地	i n t + i n t	
+1282	Suzhou	earth	tʰ əu ⁵² + d i ²³¹	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1283	Wenzhou	earth	tʰ øy ²⁴² + d ei ²²	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1284	Changsha	earth	tʰ əu ⁴¹ + t i ¹¹	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1285	Loudi	earth	tʰ ɤu ⁴² + d i ¹¹	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1286	Loudi	earth	d i ¹¹	ground/地	N	265	192	178	110	地	地		土地	i n t	
+1287	Nanchang	earth	tʰ u ²¹³ + tʰ i ⁴²	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1288	Meixian	earth	tʰ u ³¹ + tʰ i ⁵³	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1289	Guilin	earth	tʰ u ²³ + t i ²¹	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1290	Guangzhou	earth	tʰ ou ³⁵ + t ei ²²	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i n t	
+1291	Fuzhou	earth	tʰ u ⁵³ + l ɛi ²⁴²	mud ground/地	N N	266 265	192	181	110	涂地(泥土地)	涂 地	泥土地	土地	i n t + i n t	
+1292	Xiamen	earth	tʰ ɔ ⁵³ + t w e ²²	soil/土 ground/地	N N	264 265	192	177	110	土地	土 地		土地	i n t + i m n t	
+68	Beijing	float	pʰ j ɑu ⁵⁵ + f u ³⁵	float/漂 float/浮	V V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	copulative synonyme
+69	Ha_erbin	float	pʰ j au ⁴⁴ + f u ²⁴	float/漂 float/浮	V V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	copulative  synonyme
+70	Jinan	float	pʰ j ɔ ²¹⁴ + f u ⁵³	float/漂 float/浮	V V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	copulative  synonyme
+71	Rongcheng	float	pʰ j au ⁵² + f u ³⁵	float/漂 float/浮	V V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	
+72	Taiyuan	float	pʰ j ɑu ²¹	float/漂	V	20	265	248	146	漂	漂		漂浮	i m n t	
+73	Xi_an	float	pʰ j au ²¹	float/漂	V	20	265	248	146	漂	漂		漂浮	i m n t	
+74	Xi_an	float	f u ²⁴	float/浮	V	21	264	249	146	浮	浮		漂浮	i n t	
+75	Chengdu	float	pʰ j au ⁴⁵	float/漂	V	20	265	248	146	漂	漂		漂浮	i m n t	
+76	Nanjing	float	pʰ j ɔ ³¹ + f u ¹³	float/漂 float/浮	V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	
+77	Nanjing	float	f u ¹³	float/浮	V	21	264	249	146	浮	浮		漂浮	i n t	
+78	Nanjing	float	p j ɔ ³¹	float/漂	V	20	265	248	146	漂	漂		漂浮	i m n t	
+79	Jixi	float	f u ⁴⁴	float/浮	V	21	264	249	146	浮	浮		漂浮	i n t	
+80	Jixi	float	pʰ j e ⁵⁵ + f u ⁴⁴	float/漂 float/浮	V V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	
+81	Suzhou	float	tʰ ə n ⁵²	float/氽	V	22	267	250	147	氽	氽		漂浮	i n c t	
+82	Wenzhou	float	v ə ³⁴¹	float/浮	V	21	264	249	146	浮	浮		漂浮	i n t	
+83	Wenzhou	float	t a ŋ ⁵¹	float/氽	V	22	267	250	147	氽	氽		漂浮	i n c t	
+84	Changsha	float	pʰ j au ³³ + f u ⁰	float/漂 float/浮	V V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	copulative  synonyme
+85	Loudi	float	b ɤ ¹³	float/漂	V	20	265	248	146	漂	漂		漂浮	i n t	
+86	Nanchang	float	pʰ j ɛu ⁴²	float/漂	V	20	265	248	146	漂	漂		漂浮	i m n t	
+87	Nanchang	float	f əu ⁴⁵	float/浮	V	21	264	249	146	浮	浮		漂浮	i n t	
+88	Nanchang	float	pʰ j ɛu ⁴² + f ɛu ⁴⁵	float/漂 float/浮	V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	
+89	Meixian	float	f eu ¹¹	float/浮	V	21	264	249	146	浮	浮		漂浮	i n t	
+90	Guilin	float	f u ²² + t ɑu ²³	float/浮 _fall.down/倒	V A	21 23	264	251	146	浮倒	浮 倒		漂浮	i n t + i n t	
+91	Guangzhou	float	pʰ j u ⁵³ + f ɐu ²¹	float/漂 float/浮	V V	20 21	264	247	146	漂浮	漂 浮		漂浮	i m n t + i n t	copulative  synonyme
+92	Fuzhou	float	pʰ j eu ⁵⁵ + l ɛ ³²	float/漂 _float/𡅏	V P	20 24	265	252	146	漂口+禮	漂 𡅏		漂浮	i m n t + i n t	漂在
+93	Fuzhou	float	pʰ u ⁵³ + l ɛ ³²	float/浮 _float/𡅏	V P	21 24	264	253	146	浮口+禮	浮 𡅏		漂浮	i n t + i n t	浮在
+94	Xiamen	float	pʰ u ²⁴	float/浮	V	21	264	249	146	浮	浮		漂浮	i n t	
+2240	Beijing	husband	ai ⁵¹ + ʐ ə n ³⁵	love _person/人	V N	462 38	437	383	228	爱人	爱 人		丈夫	n t + i n c t	
+2241	Beijing	husband	l ɑu ²¹³ + k u ŋ ⁵⁵	old/老 noble.man/公	N N	27 80	436	384	229	老公	老 公		丈夫	i n t + i n c t	multisyllabic word
+2242	Ha_erbin	husband	ʈʂ a ŋ ⁵³ + f u ⁰	husband/丈 man/夫	N N	463 464	438	385	228	丈夫	丈 夫		丈夫	i n c t + i n t	
+2243	Ha_erbin	husband	ʈʂ a ŋ ²¹³ + k w ei ⁵³ + t ɤ ⁰	掌 櫃 _:GEN/的	V N G	465 466 40	443	386	228	掌木+巨的	掌 櫃 的		丈夫	i n c t + i m n t + i n t	
+2244	Ha_erbin	husband	l au ²¹³ + j ɛ ²⁴ + m ə ⁰	old/老 _father/爺 _husband	N N S	27 242 32	436	387	229	老爷们	老 爷 们		丈夫	i n t + i n t + i n t	
+2245	Jinan	husband	ʈʂ ɑ ŋ ³¹ + f u ⁰	husband/丈 man/夫	N N	463 464	438	385	228	丈夫	丈 夫		丈夫	i n c t + i n t	
+2246	Rongcheng	husband	x ɐ n ³³⁴ + ts i ⁰	han/汉 _?/字	N S	468 790	442	388	229	汉字	汉 字		丈夫	i n c t + i n t	!!! 子
+2247	Taiyuan	husband	ts ɒ̃ ⁴⁵ + f u ⁰	husband/丈 man/夫	N N	463 464	438	385	228	丈夫	丈 夫		丈夫	i n t + i n t	
+2248	Taiyuan	husband	x æ̃ ⁴⁵ + ts ə ʔ ⁰	han/汉 _?/字	N S	468 790	442	388	229	汉字	汉 字		丈夫	i n t + i n c t	!!!
+2249	Taiyuan	husband	l au ⁵³ + x æ̃ ⁴⁵	old/老 _husband	N N	27 468	436	389	229	老汉<中青年多说>	老 汉	中青年多说	丈夫	i n t + i n t	
+2250	Xi_an	husband	w ɑ ⁴⁴ + tʰ ɑ ²¹ + p ɑ ⁴⁴	child/娃 other/他 father/爸	N Pron N	33 226 470	448	390	231	娃他爸<有孩子年纪不很打的>	娃 他 爸	有孩子年纪不很打的	丈夫	i n t + i n t + i n t	
+2251	Xi_an	husband	n æ̃ ²⁴ + ʐ ẽ ⁰	male/男 _person/人	A N	471 38	437	391	228	男人	男 人		丈夫	i n t + i n t	
+2252	Xi_an	husband	n y ⁵³ + ɕ i ⁰	female/女 son-in-law/婿	N N	39 472	444	392	230	女婿<多指年轻的>	女 婿	多指年轻的	丈夫	i n t + i n t	
+2253	Xi_an	husband	w ɛ ⁴⁴ + tʰ ou ⁰ + ʐ ẽ ⁰	out/外 _SUF:head/頭 _person/人	N S N	473 79 38	437	393	228	外头人<与屋里人相对>	外 头 人	与屋里人相对	丈夫	i n t + i n t + i n t	
+2254	Chengdu	husband	n a n ²¹ + ɲ i ⁵⁵	male/男 _:GEN/的	A G	471 40	441	394	228	男的	男 的		丈夫	i n c t + i n t	
+2255	Nanjing	husband	ts ɑ̃ ⁴⁴ + f u ⁰	husband/丈 man/夫	N N	463 464	438	385	228	丈夫	丈 夫		丈夫	i n t + i n t	
+2256	Jixi	husband	n ɤ ²¹³ + k w ɔ ⁵⁵	female/女 government.official/官	N N	39 474	444	395	230	女官	女 官		丈夫	i n t + i m n t	
+2257	Jixi	husband	n ɔ ⁴⁴ + j ɑ̃ ⁴⁴	male/男 _person/人	A N	471 38	437	391	228	男人	男 人		丈夫	i n t + i n t	
+2258	Suzhou	husband	n ø ¹³ + ɲ i n ¹³	male/男 _person/人	A N	471 38	437	391	228	男人	男 人		丈夫	i n t + i n c t	
+2259	Wenzhou	husband	l ə ²⁴ + k o ŋ ⁴⁴	old/老 noble.man/公	N N	27 80	436	384	229	老公	老 公		丈夫	i n t + i n c t	multisyllabic word
+2260	Changsha	husband	ts a n ¹¹ + f u	husband/丈 man/夫	N N	463 464	438	385	228	丈夫	丈 夫		丈夫	i n c t + i n	
+2261	Changsha	husband	l au ⁴¹ + k õ ³³ + ts ɿ ⁰	old/老 servant/倌 _-child:SUF/子	A N S	27 475 19	436	396	229	老倌子	老 倌 子		丈夫	i n t + i n t + i n t	
+2262	Loudi	husband	n ã ¹³ + n i n ¹³	male/男 _person/人	A N	471 38	437	391	228	男人	男 人		丈夫	i n t + i n c t	
+2263	Nanchang	husband	l au ²¹³ + k u ŋ ⁰	old/老 noble.man/公	N N	27 80	436	384	229	老公	老 公		丈夫	i n t + i n c t	multisyllabic word
+2264	Nanchang	husband	l a n ⁴⁵ + kʰ a ʔ ⁵	male/男 guest/客	A N	471 46	441	397	228	男客	男 客		丈夫	i n c t + i n c t	
+2265	Meixian	husband	l au ³¹ + k u ŋ ³³	old/老 noble.man/公	N N	27 80	436	384	229	老公	老 公		丈夫	i n t + i n c t	multisyllabic word
+2266	Guilin	husband	l ɑu ²³ + k ɤ n ⁴²	old/老 noble.man/公	N N	27 80	436	384	229	老公	老 公		丈夫	i n t + i n c t	multisyllabic word
+2267	Guangzhou	husband	ou ²³ + k o ŋ ⁵³	old/老 noble.man/公	N N	27 80	436	384	229	老公	老 公		丈夫	n t + i n c t	multisyllabic word
+2268	Guangzhou	husband	s i n ⁵⁵ + s a ŋ ⁵³	first/先 born/生	A N	476 477	453	398	232	先生	先 生		丈夫	i n c t + i n c t	!!
+2269	Fuzhou	husband	l a ²⁴² + u ŋ ⁵⁵	old/老 noble.man/公	N N	27 80	436	384	229	老公	老 公		丈夫	i n t + n c t	multisyllabic word
+2270	Fuzhou	husband	t ou ŋ ⁵³ + m w o ⁵⁵	husband/丈 man/夫	N N	463 464	438	385	228	丈夫	丈 夫		丈夫	i n c t + i m n t	
+2271	Xiamen	husband	t a ²² + p ɔ ⁵⁵ + l a ŋ ²⁴	husband/丈 man/夫 _person/人	N N N	463 464 38	437	399	228	丈夫人	丈 夫 人		丈夫	i n t + i n t + i n c t	
+4193	Beijing	man	n a n ³⁵ + ʐ ə n ³⁵	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
+4194	Ha_erbin	man	t a ⁵³ + l au ²¹³ + ɛ ²⁴ + m ə ⁰	big/大 old/老 father/爺 :PL/們	A A N S	34 27 242 195	584	497	272	大老爺們兒	大 老 爺 們		男人	i n t + i n t + n t + i n t	
+4195	Ha_erbin	man	l au ²¹³ + j ɛ ²⁴ + m ə ⁰	old/老 father/爺 _:PL/們	A N S	27 242 195	584	498	272	老爺們兒	老 爺 們		男人	i n t + m n t + i n t	
+4196	Jinan	man	n æ̃ ⁵³ + ʐ ẽ ⁰	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n t + i n t	
+4197	Rongcheng	man	n ɐ n ³⁵ + i n ⁰	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n c t + n c t	
+4198	Taiyuan	man	n æ̃ ²¹ + z ə ŋ ²¹	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
+4199	Xi_an	man	n æ̃ ²⁴ + ʐ ẽ ⁰	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n t + i n t	
+4200	Chengdu	man	n a n ²¹ + z ə n ²¹	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
+4201	Chengdu	man	n a n ²¹ + n i ⁵⁵	male/男 _:GEN/的	A G	471 40	580	394	271	男的	男 的		男人	i n c t + i n t	
+4202	Nanjing	man	l ɑ̃ ¹³ + ʐ ə n ¹³	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
+4203	Jixi	man	n ɔ ⁴⁴ + n ɤ ⁰	male/男 _person/仂	A N	471 170	580	499	271	男仂	男 仂		男人	i n t + i n t	
+4204	Suzhou	man	n ø ¹³ + ɲ i n ¹³	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
+4205	Wenzhou	man	n ø ³⁴¹ + ts ɿ ²⁴² + kʰ a ⁴¹	male/男 _-child:SUF/子 guest/客	A S N	471 19 46	580	500	271	男子客	男 子 客		男人	i n t + i n t + i n t	
+4206	Changsha	man	l a n ¹³ + ʐ ə n ¹³	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
+4207	Changsha	man	l a n ¹³ + t i ⁰	male/男 _:GEN/的	A G	471 40	580	394	271	男的	男 的		男人	i n c t + i n t	
+4208	Changsha	man	l a n ¹³ + ʐ ə n ⁰ + k a ⁰	male/男 _person/人 _family/家	A N N	471 38 42	580	501	271	男人家	男 人 家		男人	i n c t + i n c t + i n t	
+4209	Loudi	man	n ã ¹³ + n i n ¹³ + k a ⁴⁴	male/男 _person/人 _family/家	A N N	471 38 42	580	501	271	男人家	男 人 家		男人	i n t + i n c t + i n t	
+4210	Nanchang	man	l a n ⁴⁵ + l ɨ n ⁰	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
+4211	Meixian	man	n a m ¹¹ + m e ³³ + ŋ i n ¹¹	male/男 _:SUF/? _person/人	A S N	471 38 820	580	502	271	男兒人	男 ? 人		男人	i n c t + i n t + i n c t	
+4212	Guilin	man	l ã ²² + l i ŋ ²²	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
+4213	Guangzhou	man	n a m ²¹ + l j ɐ n ²¹	male/男 _person/人	A N	471 38	580	391	271	男人	男 人		男人	i n c t + i m n c t	nam²¹ iɐn²¹⁻³⁵
+4214	Fuzhou	man	t ou ŋ ²¹² + m w o ³² + n øy ŋ ⁵³	husband/丈 man/夫 _person/人	N N N	463 464 38	582	503	271	丈夫儂	丈 夫 儂		男人	i n c t + i m n t + i n c t	
+4215	Fuzhou	man	n a ŋ ⁵³ + ŋ ai ²¹²	male/男 _man	A N	471 738	580	504	271	男界	男 界		男人	i n c t + i n t	
+4216	Xiamen	man	t a ²² + p ɔ ⁵⁵ + l a ŋ ²⁴	husband/丈 man/夫 _person/人	N N N	463 464 38	581	399	271	丈夫人	丈 夫 人		男人	i n t + i n t + i n c t	
+2092	Beijing	moon	ɥ ɛ ⁵¹ + l j ɑ ŋ ⁰	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n t + i m n c t	
+2093	Ha_erbin	moon	ɥ ɛ ⁵³ + l j a ŋ ⁰	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n t + i m n c t	
+2094	Jinan	moon	ɥ ɤ ²¹ + l j ɑ ŋ ³¹	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n t + i m n c t	
+2095	Rongcheng	moon	ɥ ɛ ³⁴ + l j a ŋ ³³⁴	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n t + i m n c t	
+2096	Taiyuan	moon	ɥ ə ʔ ² + l j ɒ̃ ⁴⁵	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n c t + i m n t	
+2097	Taiyuan	moon	ɥ ə ʔ + m i ⁰	moon/月 shine/明	N A	410 412	611	521	278	月明～	月 明		月亮	i n c + i n t	
+2098	Xi_an	moon	ɥ ɛ ²¹ + l j ɑ ŋ ⁰	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n t + i m n c t	
+2099	Chengdu	moon	ɥ e ²¹ + l j a ŋ ⁰	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n t + i m n c t	
+2100	Nanjing	moon	ɥ e ʔ ⁵ + l j ɑ̃ ⁰	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n c t + i m n t	
+2101	Jixi	moon	ɥ a ʔ ³² + ɲ j ɑ̃ ³¹	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n c t + i m n t	
+2102	Suzhou	moon	ŋ ə ʔ ²³ + l j ã ²³¹	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n c t + i m n t	
+2103	Wenzhou	moon	ɲ y ²¹ + k w ɔ ⁴⁴	moon/月 ray/光	N N	410 413	611	522	278	月光	月 光		月亮	i n t + i m n t	
+2104	Changsha	moon	ɥ e ²⁴ + l j a n ¹¹	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i n t + i m n c t	
+2105	Changsha	moon	ɥ e ²⁴ + l j a n ¹¹ + p a ³³ + p a ⁰	moon/月 shine/亮 _-:suffix/巴 _-ba:RED/巴	N A S S	410 411 309 778	611	523	278	月亮巴巴	月 亮 巴 巴		月亮	i n t + i m n c t + i n t + i n t	
+2106	Loudi	moon	w e ³⁵ + k ɔ ŋ ⁴⁴	moon/月 ray/光	N N	410 413	611	522	278	月光	月 光		月亮	i n t + i n c t	
+2107	Nanchang	moon	ɲ ɥ o t ⁵ + l j ɔ ŋ ⁰	moon/月 shine/亮	N A	410 411	611	522	278	月光	月 光		月亮	i m n c t + i m n c t	
+2108	Meixian	moon	ŋ j a t ⁵ + k w o ŋ ³³	moon/月 ray/光	N N	410 413	611	522	278	月光	月 光		月亮	i m n c t + i m n c t	
+2109	Guilin	moon	l ɥ e ⁵⁵ + l j ɑ ŋ ²¹	moon/月 shine/亮	N A	410 411	611	520	278	月亮	月 亮		月亮	i m n t + i m n c t	
+2110	Guangzhou	moon	y t ² + k w ɔ ŋ ⁵⁵	moon/月 ray/光	N N	410 413	611	522	278	月光	月 光		月亮	n c t + i m n c t	
+2111	Fuzhou	moon	ŋ w o ʔ ⁵	moon/月	N	410	611	524	278	月	月		月亮	i m n c t	
+2112	Xiamen	moon	g e ʔ ⁵ + n j ũ ²⁴	moon/月 female/娘	N N	410 31	611	525	278	月娘	月 娘		月亮	i n c t + i m n t	
+1945	Beijing	swim	j ou ³⁵ + ʂ w ei ²¹³	wander/游 _water/水	V N	387 194	881	775	430	游水	游 水		游泳	i n t + i m n t	
+1946	Ha_erbin	swim	j ou ²⁴ + y ŋ ²¹³	wander/游 _swim	V N	387 388	881	776	430	游泳	游 泳		游泳	i n t + n c t	
+1947	Jinan	swim	j ou ⁵³ + y ŋ ⁴⁵	wander/游 _swim	V N	387 388	881	776	430	游泳	游 泳		游泳	i n t + n c t	
+1948	Rongcheng	swim	s i ²¹⁴ + ts au ²¹⁴	wash/洗 _wash/澡	V V	346 389	885	777	430	洗澡	洗 澡		游泳	i n t + i n t	
+1949	Taiyuan	swim	j əu ²¹ + y ŋ ⁵³	wander/游 _swim	V V	387 388	881	776	430	游泳	游 泳		游泳	i n t + n c t	
+1950	Xi_an	swim	j ou ²⁴ + f ei ⁵³	wander/游 _water/水	V N	387 194	881	775	430	游水	游 水		游泳	i n t + i n t	
+1951	Xi_an	swim	f u ²⁴ + f ei ⁵³	float/浮 _water/水	V N	21 194	882	778	430	浮水	浮 水		游泳	i n t + i n t	
+1952	Xi_an	swim	j ou ²⁴	wander/游	V	387	881	779	430	游	游		游泳	i n t	
+1953	Chengdu	swim	j əu ²¹ + y n ²¹³	wander/游 _swim	V V	387 388	881	776	430	游泳	游 泳		游泳	i n t + n c t	
+1954	Chengdu	swim	ɕ i ⁵³ + ts au ⁵³	wash/洗 _wash/澡	V N	346 389	885	777	430	洗澡	洗 澡		游泳	i n t + i n t	
+1955	Nanjing	swim	j əɯ ¹³ + j o ŋ ¹¹	wander/游 _swim	V N	387 388	881	776	430	游泳	游 泳		游泳	i n t + i n c t	
+1956	Jixi	swim	v o ⁵⁵ + ɕ y ²¹³	swim/? _water/水	V N	761 194	882	780	430	囗水	囗 水		游泳	i n t + i n t	
+1957	Suzhou	swim	h o ʔ ⁴ + l ã ²³ + ɦ j o ʔ ²³	swim/淴 _cold/冷 _bath/浴	V A N	390 391 392	890	781	431	淴冷浴	淴 冷 浴		游泳	i n c t + i n t + i m n c t	
+1958	Wenzhou	swim	j j eu ³⁴¹ + v u ³⁴¹ + ŋ̍ ⁰	swim/泅 _river/河 _SUF/儿	V N S	393 394 805	884	782	430	泅河儿	泅 河 儿		游泳	i m n t + i n t + n t	
+1959	Changsha	swim	j əu ¹³ + ɕ ɥ ei ⁴¹	wander/游 _water/水	V N	387 194	881	775	430	游水	游 水		游泳	i n t + i m n t	
+1960	Changsha	swim	w a n ¹³ + ɕ ɥ ei ⁴¹	play/玩 _water/水	V N	285 194	882	783	430	玩水	玩 水		游泳	i n c t + i m n t	
+1961	Loudi	swim	j o ¹³ + ɕ y ⁴²	wander/游 _water/水	V N	387 194	881	775	430	游水	游 水		游泳	i n t + i n t	
+1962	Loudi	swim	j o ¹³ + u n ¹¹	wander/游 _swim	V N	387 388	881	776	430	游泳	游 泳		游泳	i n t + n c t	
+1963	Nanchang	swim	j u ⁴⁵ + s w i ²¹³	wander/游 _water/水	V N	387 194	881	775	430	游水	游 水		游泳	i n t + i m n t	
+1964	Nanchang	swim	j u ⁴⁵ + j u ŋ ²¹³	wander/游 _swim	V N	387 388	881	776	430	游泳	游 泳		游泳	i n t + i n c t	
+1965	Meixian	swim	s e ³¹ + s ə n ³³ + n e ⁰	wash/洗 _body/身 _:SUF/儿	V N S	346 75 804	885	784	430	洗身儿	洗 身 儿		游泳	i n t + i n c t + i n t	! I add 儿
+1966	Guilin	swim	j ou ²² + s w ei ²³	wander/游 _water/水	V N	387 194	881	775	430	游水	游 水		游泳	i n t + i m n t	
+1967	Guangzhou	swim	j ɐu ²¹ + s øy ³⁵	wander/游 _water/水	V N	387 194	881	775	430	游水	游 水		游泳	i n t + i n t	
+1968	Fuzhou	swim	s j eu ⁵³ + ts w oi ³²	swim/泅 _water/水	V N	393 194	882	785	430	泅水	泅 水		游泳	i m n t + i m n t	
+1969	Xiamen	swim	s j u ²⁴ + ts w i ⁵³	swim/泅 _water/水	V N	393 194	882	785	430	泅水	泅 水		游泳	i m n t + i m n t	
+1480	Beijing	we	w o ²¹³ + m ə n ³⁵	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n c t	
+1481	Ha_erbin	we	w o ²¹³ + m ə n ⁰	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n c t	
+1482	Jinan	we	v ɔ ⁴⁵ + m ẽ ⁰	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n t	
+1483	Rongcheng	we	w ɔ ²¹⁴ + m ə n ³⁵	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n c t	
+1484	Taiyuan	we	ɣ ɤ ⁵³ + m ɤ ⁰	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n t	
+1485	Xi_an	we	ŋ ɛ ²¹	I:1ST/俺	Pron	316	1020	882	496	俺	俺		我們	i n t	
+1486	Chengdu	we	ŋ o ⁵³ + m Ø/ə m̩/n ⁵⁵	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n c t	
+1487	Nanjing	we	o ¹¹ + m ə n ¹³	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	n t + i n c t	
+1488	Jixi	we	ɔ ²¹³ + j ɑ̃ ⁰	I:1ST/我 person/人	Pron N	313 38	1014	883	496	我人	我 人		我們	n t + m n t	
+1489	Suzhou	we	ŋ əu ²³¹ + ɲ i ⁰	I:ST/吾 :SUF/伲	Pron S	314 317	1025	884	498	吾伲	吾 伲		我們	i n t + i n t	
+1490	Wenzhou	we	ŋ̍/ŋ Ø/ə Ø/ŋ ²⁴ + l j ɛ ³⁴¹	I:1ST/我 :SUF/俫	Pron S	313 233	1014	885	496	我人+來	我 倈		我們	i n c t + i m n t	
+1491	Changsha	we	ŋ o ⁴¹ + m ə n ⁰	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n c t	
+1492	Loudi	we	ŋ̍/ŋ Ø/ə Ø/ŋ ⁴² + ŋ a ⁴⁴	I:1ST/我 :1ST/俺	Pron Pron	313 316	1014	886	496	我人+奄	我 俺		我們	i n c t + i n t	
+1493	Nanchang	we	ŋ o ²¹³ + m ɨ n ⁰	I:1ST/我 :PL/們	Pron S	313 195	1014	881	496	我們	我 們		我們	i n t + i n c t	
+1494	Nanchang	we	ŋ o ²¹³ + k o ⁰ + l i ⁰	I:ST/我 :SUF/竹固 :SUF/哩	Pron S S	313 160 232	1014	887	496	我竹-固哩	我 竹固 哩		我們	i n t + i n t + i n t	! I am not sure the last morpheme is you or just a suffix
+1495	Meixian	we	ŋ ai ¹¹ + t e n ³³ + ŋ i n ¹¹	I:1ST/𠊎 :PL/丁 person/人	Pron S N	315 235 38	1019	888	496	𠊎丁人	𠊎 丁 人		我們	i n t + i n c t + i n c t	
+1496	Guilin	we	w o ²³ + t e ²³ + l ei ⁴² + k ɤ ²¹	I:1ST/我 :suffix/te :suffix/lei -piece:CLS/個	Pron S N CLS	313 511 8 56	1014	889	496	我囗囗囗	我 囗 囗 囗		我們	i n t + i n t + i n t + i n t	
+1497	Guangzhou	we	ŋ ɔ ²³ + t ei ²²	I:1ST/我 :PL/哋	Pron S	313 236	1014	890	496	我口+地	我 哋		我們	i n t + i n t	
+1498	Fuzhou	we	n a ŋ ⁵³ + ŋ a ⁵⁵	we/侬 family/家	Pron N	321 42	1016	891	497	侬家	侬 家		我們	i n c t + i n t	
+1499	Fuzhou	we	n a ŋ ⁵³ + ŋ a ⁵⁵ + k o ʔ ²⁴ + n øy ŋ ⁵³	we/侬 family/家 :PL/各 _:SUF/儂	Pron N C Pron	321 42 237 193	1016	892	497	侬家各侬	侬 家 各 侬		我們	i n c t + i n t + i n c t + i n c t	detail we and you
+1500	Fuzhou	we	n u ⁵³ + k o ʔ ²⁴ + n øy ŋ ⁵³	we/奴 :PL/各 _:SUF/儂	Pron C Pron	322 237 193	1016	893	497	奴各侬(多用於女性，少用)	奴 各 侬	多用於女性，少用	我們	i n t + i n c t + i n c t	detail you and us
+1501	Xiamen	we	l a n ⁵³	we/㑑	Pron	323	1028	894	499	人+自	㑑		我們	i n c t	
+114	Beijing	wife	tɕʰ i ⁵⁵ + ts ɿ ⁰	wife/妻 _-child:SUF/子	N S	26 19	1093	937	521	妻子	妻 子		妻子	i n t + i n t	
+115	Ha_erbin	wife	l au ²¹³ + pʰ ɤ ⁰	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	multisyllabic word
+116	Ha_erbin	wife	ɕ i ²¹³ + f u ⁰	wife/媳 wife/婦	N N	29 30	1099	939	523	媳婦兒	媳 婦		妻子	i n t + i n t	original meaning was 新婦
+117	Ha_erbin	wife	l au ²¹³ + n j a ŋ ²⁴ + m ə ⁰	old/老 female/娘 :PL/們	N N S	27 31 195	1091	940	521	老娘们儿	老 娘 們		妻子	i n t + i m n c t + i n t	
+118	Jinan	wife	tɕʰ i ²¹³ + ts ɿ ⁰	wife/妻 _-child:SUF/子	N S	26 19	1093	937	521	妻子	妻 子		妻子	i n t + i n t	
+119	Rongcheng	wife	l au ²¹³ + pʰ ə ⁰	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	
+120	Taiyuan	wife	l au ⁵³ + pʰ ɤ ²¹	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	multisyllabic word
+121	Xi_an	wife	ɕ i ²¹ + f u ⁰	wife/媳 wife/婦	N N	29 30	1099	939	523	媳婦兒(年輕時稱)	媳 婦	年輕時稱	妻子	i n t + i n t	
+122	Xi_an	wife	pʰ o ²⁴ + n j ɑ ŋ ⁰	woman/婆 female/娘	N N	28 31	1092	941	521	婆娘(中老年時稱)	婆 娘	中老年時稱	妻子	i n t + i m n c t	
+123	Xi_an	wife	w ɑ ⁴⁴ + tʰ ɑ ²⁴ + m ɑ ²¹	child/娃 _big/大 _mother/媽	N A N	33 34 50	1113	942	526	娃大妈(有了小孩時稱)	娃 大 妈	有了小孩時稱	妻子	m n t + i n t + i n t	
+124	Xi_an	wife	u ²¹ + n i ⁰ + ʐ ẽ ²⁴	_house/屋 inside/里 _person/人	N N N	36 52 38	1102	943	525	屋裡人(與外人相對)	屋 裡 人	與外人相對	妻子	n t + i n t + i n t	
+125	Chengdu	wife	l au ⁵³ + pʰ o ²¹	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	multisyllabic word
+126	Chengdu	wife	l au ⁵³ + ɲ j ə ²¹	old/老 female/娘	N N	27 31	1091	944	521	老娘兒(多用與BC)	老 娘	多用與BC	妻子	i n t + i m n t	multisyllabic word
+127	Chengdu	wife	ɲ y ⁵³ + l i ⁵⁵	female/女 _:GEN/的	A G	39 40	1101	945	525	女的(婚後	女 的	婚後	妻子	i n t + i n t	
+128	Nanjing	wife	l ɔ ¹¹ + pʰ o ¹³	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	multisyllabic word
+129	Jixi	wife	n ɤ ²¹³ + y ³¹	old/老 woman/妪	N N	27 41	1091	946	521	老妪	老 妪		妻子	i n t + n t	multisyllabic word. If the phrase is wife, the two parts cannot be separated. But if the meaning is old lady, then the second morpheme is enough.
+130	Jixi	wife	ɲ y ²¹³ + j ɑ̃ ⁴⁴	female/女 _person/人	A N	39 38	1101	947	525	女人(尊稱對方的妻子)	女 人	尊稱對方的妻子	妻子	i n t + i n t	
+131	Suzhou	wife	k ɑ ⁴⁴ + ts ʯ ⁵² + b u ¹³	family/家 lord/主 woman/婆	N A N	42 43 28	1092	948	521	家主婆	家 主 婆		妻子	i n t + i n t + i n t	
+132	Wenzhou	wife	l ə ²⁴ + y ⁴⁴	old/老 wife	N N	27 44	1091	949	521	老安	老 安		妻子	i n t + n t	multisyllabic word
+133	Changsha	wife	tɕʰ i ³³ + ts ɿ ⁰	wife/妻 _-child:SUF/子	N S	26 19	1093	937	521	妻子	妻 子		妻子	i n t + i n t	
+134	Changsha	wife	t a n ¹³ + kʰ ə ⁰	relative:N/堂 guest/客	N N	45 46	1096	950	522	堂客(BC)	堂 客	BC	妻子	i n c t + i n t	
+135	Changsha	wife	l ei ¹¹ + t a n ³³ + tɕ j a ³³	inside/內 act/當 family/家	N V N	47 48 42	1098	951	521	內當家	內 當 家		妻子	i n t + i n c t + i m n t	
+136	Changsha	wife	p o ¹³ + p o ⁰ + ts ɿ ⁰	woman/婆 woman/婆 _-child:SUF/子	N N2 S	28 772 19	1092	952	521	婆婆子(SC)	婆 婆 子	SC	妻子	i n t + i n t + i n t	
+137	Loudi	wife	tʰ ɔ ŋ ¹³ + k e ¹³	relative:N/堂 guest/客	N N	45 46	1096	950	522	堂客	堂 客		妻子	i n c t + i n t	
+138	Nanchang	wife	tɕʰ i ⁴² + ts ɿ ⁰	wife/妻 _-child:SUF/子	N S	26 19	1093	937	521	妻子	妻 子		妻子	i n t + i n t	
+139	Nanchang	wife	l au ²¹³ + pʰ o ⁰	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	multisyllabic word
+140	Meixian	wife	l au ³¹ + pʰ o ¹¹	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	multisyllabic word
+141	Guilin	wife	l ɑu ²³ + p w o ²²	old/老 woman/婆	N N	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i m n t	multisyllabic word
+142	Guangzhou	wife	tsʰ ɐi ⁵³ + ts i ³⁵	wife/妻 _-child:SUF/子	N S	26 19	1093	937	521	妻子	妻 子		妻子	i n t + i n t	
+143	Fuzhou	wife	l o ³² + l/s j eu ³²	old/老 small/小	N N	27 49	1091	953	521	老小	老 小		妻子	i n t + i m n t	multisyllabic word
+144	Fuzhou	wife	l au ²⁴² + m a ³²	old/老 mother/媽	N N	27 50	1091	954	521	老媽	老 媽		妻子	i n t + i n t	multisyllabic word
+145	Fuzhou	wife	l au ²⁴² + pʰ o ⁵³	old/老 woman/婆	N N	27 28	1091	938	521	老婆(谑称)	老 婆	谑称	妻子	i n t + i n t	multisyllabic word
+146	Fuzhou	wife	tsʰ w o ²¹² + l j e ³²	place:V/厝 inside/里	N N	51 52	1116	955	527	厝里(對人稱呼己妻子)	厝 里	對人稱呼己妻子	妻子	i m n t + i m n t	
+147	Xiamen	wife	b ɔ ⁵³	wife/某	N	53	1107	956	524	某～	某		妻子	i n t	
+4281	Beijing	woman	n y ²¹⁴ + ʐ ɛ n ³⁵	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4282	Ha_erbin	woman	n j a ŋ ²⁴ + m ə ⁰	female/娘 _:PL/們	N S	31 195	1135	970	531	娘們兒	娘 們		女人	i m n c t + i n t	
+4283	Jinan	woman	ɲ y ⁴⁵ + ʐ ẽ ⁵³	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n t	
+4284	Rongcheng	woman	n y ²¹³ + i n ⁵²	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + n c t	
+4285	Taiyuan	woman	n y ⁵³ + z ə ŋ ²¹	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4286	Xi_an	woman	n y ⁵³ + ʐ ẽ ⁰	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n t	
+4287	Chengdu	woman	ɲ y ⁵³ + z ə n ²¹	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4288	Chengdu	woman	ɲ y ⁵³ + l i ⁵⁵	female/女 _:GEN/的	A G	39 40	1132	945	530	女的	女 的		女人	i n t + i n t	
+4289	Nanjing	woman	l i ³¹ + ʐ ə n ¹³	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4290	Jixi	woman	ɲ y ²¹³ + n ɤ ⁰	female/女 _person/仂	A N	39 170	1132	971	530	女仂	女 仂		女人	i n t + i n t	
+4291	Suzhou	woman	ɲ y ²³¹ + ɲ i n ¹³	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4292	Wenzhou	woman	l ə ²⁴ + ɲ j a ŋ ³⁴¹ + kʰ a ⁴¹	old/老 female/娘 _guest/客	A N N	27 31 46	1133	972	530	老人客	老 娘 客		女人	i n t + i m n c t + i n t	
+4293	Changsha	woman	ɲ y ⁴¹ + ʐ ə n ⁰	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4294	Changsha	woman	ɲ y ⁴¹ + t i ⁰	female/女 _:GEN/的	A G	39 40	1132	945	530	女的	女 的		女人	i n t + i n t	
+4295	Loudi	woman	n y ⁴² + n i n ¹³ + k a ⁰	female/女 _person/人 _family/家	A N N	39 38 42	1132	973	530	女人家	女 人 家		女人	i n t + i n c t + i n t	
+4296	Nanchang	woman	ɲ y ²¹³ + kʰ a ʔ ⁵	female/女 _guest/客	A N	39 46	1132	974	530	女客	女 客		女人	i n t + i n c t	
+4297	Meixian	woman	m oi ⁵³ + j e ⁰ + ŋ i n ¹¹	woman/妹 :SUF/? _person/人	N S N	748 826 38	1133	975	530	妹兒人	妹 ? 人		女人	i n t + i n t + i n c t	
+4298	Guilin	woman	l y ²³ + l i ŋ ²³	female/女 _person/人	N N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4299	Guangzhou	woman	n øy ²³ + j ɐ n ²¹	female/女 _person/人	A N	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4300	Fuzhou	woman	i ⁵⁵ + ts j a ³²	woman/伊 sister/姐	N N	824 715	1134	976	531	儂～姐	伊 姐		女人	n t + i m n t	multisyllabic word
+4301	Fuzhou	woman	n y ³² + ɛ ²¹²	female/女 _world/界	A N	39 825	1132	977	530	女界	女 界		女人	i n t + n t	
+4302	Fuzhou	woman	ts y ⁵⁵ + n øy ŋ ⁵³ + n øy ŋ ⁵³	woman/諸 female/娘 _person/人	N N S	749 31 38	1134	978	531	諸娘儂	諸 娘 儂		女人	i n t + i n c t + i n c t	
+4303	Xiamen	woman	ts a ⁵⁵ + b ɔ ⁵³ + l a ŋ ²⁴	woman/查 wife/某 _person/人	Pref N N	750 53 38	1133	979	530	查～某～人	查 某 人		女人	i n t + i n t + i n c t	
