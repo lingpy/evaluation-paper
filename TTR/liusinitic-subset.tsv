@@ -83,7 +83,7 @@ ID	DOCULECT	CONCEPT	TOKENS	MORPHEMES	COMPOUNDS	TYPE	COGIDS	AUTOID	STRICTID	LOOSE
 2248	Taiyuan	husband	x æ̃ ⁴⁵ + ts ə ʔ ⁰	han/汉 _?/字	N S	head suffix	468 790	442	388	229	汉字	汉 字		丈夫	i n t + i n c t	!!!
 2249	Taiyuan	husband	l au ⁵³ + x æ̃ ⁴⁵	old/老 _husband/汉	N N	prefix head	27 468	436	389	229	老汉<中青年多说>	老 汉	中青年多说	丈夫	i n t + i n t	
 2250	Xi_an	husband	w ɑ ⁴⁴ + tʰ ɑ ²¹ + p ɑ ⁴⁴	child/娃 other/他 father/爸	N Pron N	copulative_1 copulative_2 copulative_3	33 226 470	448	390	231	娃他爸<有孩子年纪不很打的>	娃 他 爸	有孩子年纪不很打的	丈夫	i n t + i n t + i n t	
-2251	Xi_an	husband	n æ̃ ²⁴ + ʐ ẽ ⁰	male/男 _person/人	A N	head modifier	471 38	437	391	228	男人	男 人		丈夫	i n t + i n t	
+2251	Xi_an	husband	n æ̃ ²⁴ + ʐ ẽ ⁰	male/男 _person/人	A N	modifier head	471 38	437	391	228	男人	男 人		丈夫	i n t + i n t	
 2252	Xi_an	husband	n y ⁵³ + ɕ i ⁰	female/女 son-in-law/婿	N N	modifier head	39 472	444	392	230	女婿<多指年轻的>	女 婿	多指年轻的	丈夫	i n t + i n t	
 2253	Xi_an	husband	w ɛ ⁴⁴ + tʰ ou ⁰ + ʐ ẽ ⁰	out/外 _SUF:head/頭 _person/人	N S N	copulative_1 copulative_2 copulative_3	473 79 38	437	393	228	外头人<与屋里人相对>	外 头 人	与屋里人相对	丈夫	i n t + i n t + i n t	
 2254	Chengdu	husband	n a n ²¹ + ɲ i ⁵⁵	male/男 _:GEN/的	A G	head genitive	471 40	441	394	228	男的	男 的		丈夫	i n c t + i n t	
@@ -104,25 +104,25 @@ ID	DOCULECT	CONCEPT	TOKENS	MORPHEMES	COMPOUNDS	TYPE	COGIDS	AUTOID	STRICTID	LOOSE
 2269	Fuzhou	husband	l a ²⁴² + u ŋ ⁵⁵	old/老 noble.man/公	N N	prefix head	27 80	436	384	229	老公	老 公		丈夫	i n t + n c t	multisyllabic word
 2270	Fuzhou	husband	t ou ŋ ⁵³ + m w o ⁵⁵	husband/丈 man/夫	N N	copulative_1 copulative_2	463 464	438	385	228	丈夫	丈 夫		丈夫	i n c t + i m n t	
 2271	Xiamen	husband	t a ²² + p ɔ ⁵⁵ + l a ŋ ²⁴	husband/丈 man/夫 _person/人	N N N	copulative_1 copulative_2 modifier	463 464 38	437	399	228	丈夫人	丈 夫 人		丈夫	i n t + i n t + i n c t	
-4193	Beijing	man	n a n ³⁵ + ʐ ə n ³⁵	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
+4193	Beijing	man	n a n ³⁵ + ʐ ə n ³⁵	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
 4194	Ha_erbin	man	t a ⁵³ + l au ²¹³ + ɛ ²⁴ + m ə ⁰	big/大 old/老 father/爺 :PL/們	A A N S	modifier prefix head modifier	34 27 242 195	584	497	272	大老爺們兒	大 老 爺 們		男人	i n t + i n t + n t + i n t	
 4195	Ha_erbin	man	l au ²¹³ + j ɛ ²⁴ + m ə ⁰	old/老 father/爺 _:PL/們	A N S	prefix head modifier	27 242 195	584	498	272	老爺們兒	老 爺 們		男人	i n t + m n t + i n t	
-4196	Jinan	man	n æ̃ ⁵³ + ʐ ẽ ⁰	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n t + i n t	
-4197	Rongcheng	man	n ɐ n ³⁵ + i n ⁰	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n c t + n c t	
-4198	Taiyuan	man	n æ̃ ²¹ + z ə ŋ ²¹	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
-4199	Xi_an	man	n æ̃ ²⁴ + ʐ ẽ ⁰	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n t + i n t	
-4200	Chengdu	man	n a n ²¹ + z ə n ²¹	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
+4196	Jinan	man	n æ̃ ⁵³ + ʐ ẽ ⁰	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n t + i n t	
+4197	Rongcheng	man	n ɐ n ³⁵ + i n ⁰	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n c t + n c t	
+4198	Taiyuan	man	n æ̃ ²¹ + z ə ŋ ²¹	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
+4199	Xi_an	man	n æ̃ ²⁴ + ʐ ẽ ⁰	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n t + i n t	
+4200	Chengdu	man	n a n ²¹ + z ə n ²¹	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
 4201	Chengdu	man	n a n ²¹ + n i ⁵⁵	male/男 _:GEN/的	A G	head modifier	471 40	580	394	271	男的	男 的		男人	i n c t + i n t	
-4202	Nanjing	man	l ɑ̃ ¹³ + ʐ ə n ¹³	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
-4203	Jixi	man	n ɔ ⁴⁴ + n ɤ ⁰	male/男 _person/仂	A N	head modifier	471 170	580	499	271	男仂	男 仂		男人	i n t + i n t	
-4204	Suzhou	man	n ø ¹³ + ɲ i n ¹³	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
+4202	Nanjing	man	l ɑ̃ ¹³ + ʐ ə n ¹³	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
+4203	Jixi	man	n ɔ ⁴⁴ + n ɤ ⁰	male/男 _person/仂	A N	modifier head	471 170	580	499	271	男仂	男 仂		男人	i n t + i n t	
+4204	Suzhou	man	n ø ¹³ + ɲ i n ¹³	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
 4205	Wenzhou	man	n ø ³⁴¹ + ts ɿ ²⁴² + kʰ a ⁴¹	male/男 _-child:SUF/子 guest/客	A S N	head suffix modifier	471 19 46	580	500	271	男子客	男 子 客		男人	i n t + i n t + i n t	
-4206	Changsha	man	l a n ¹³ + ʐ ə n ¹³	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
+4206	Changsha	man	l a n ¹³ + ʐ ə n ¹³	male/男 _person/人	A N	modifier head	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
 4207	Changsha	man	l a n ¹³ + t i ⁰	male/男 _:GEN/的	A G	head modifier	471 40	580	394	271	男的	男 的		男人	i n c t + i n t	
-4208	Changsha	man	l a n ¹³ + ʐ ə n ⁰ + k a ⁰	male/男 _person/人 _family/家	A N N	head modifier modifier	471 38 42	580	501	271	男人家	男 人 家		男人	i n c t + i n c t + i n t	
-4209	Loudi	man	n ã ¹³ + n i n ¹³ + k a ⁴⁴	male/男 _person/人 _family/家	A N N	head modifier modifier	471 38 42	580	501	271	男人家	男 人 家		男人	i n t + i n c t + i n t	
+4208	Changsha	man	l a n ¹³ + ʐ ə n ⁰ + k a ⁰	male/男 _person/人 _family/家	A N N	modifier copulative_1 copulative_2	471 38 42	580	501	271	男人家	男 人 家		男人	i n c t + i n c t + i n t	
+4209	Loudi	man	n ã ¹³ + n i n ¹³ + k a ⁴⁴	male/男 _person/人 _family/家	A N N	modifier copulative_1 copulative_2	471 38 42	580	501	271	男人家	男 人 家		男人	i n t + i n c t + i n t	
 4210	Nanchang	man	l a n ⁴⁵ + l ɨ n ⁰	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n c t + i n c t	
-4211	Meixian	man	n a m ¹¹ + m e ³³ + ŋ i n ¹¹	male/男 _:SUF/? _person/人	A S N	head modifier modifier	471 38 820	580	502	271	男兒人	男 ? 人		男人	i n c t + i n t + i n c t	
+4211	Meixian	man	n a m ¹¹ + m e ³³ + ŋ i n ¹¹	male/男 _:SUF/? _person/人	A S N	modifier suffix head	471 38 820	580	502	271	男兒人	男 ? 人		男人	i n c t + i n t + i n c t	
 4212	Guilin	man	l ã ²² + l i ŋ ²²	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n t + i n c t	
 4213	Guangzhou	man	n a m ²¹ + l j ɐ n ²¹	male/男 _person/人	A N	head modifier	471 38	580	391	271	男人	男 人		男人	i n c t + i m n c t	nam²¹ iɐn²¹⁻³⁵
 4214	Fuzhou	man	t ou ŋ ²¹² + m w o ³² + n øy ŋ ⁵³	husband/丈 man/夫 _person/人	N N N	copulative_1 copulative_2 modifier	463 464 38	582	503	271	丈夫儂	丈 夫 儂		男人	i n c t + i m n t + i n c t	
@@ -212,7 +212,7 @@ ID	DOCULECT	CONCEPT	TOKENS	MORPHEMES	COMPOUNDS	TYPE	COGIDS	AUTOID	STRICTID	LOOSE
 127	Chengdu	wife	ɲ y ⁵³ + l i ⁵⁵	female/女 _:GEN/的	A G	head modifier	39 40	1101	945	525	女的(婚後	女 的	婚後	妻子	i n t + i n t	
 128	Nanjing	wife	l ɔ ¹¹ + pʰ o ¹³	old/老 woman/婆	N N	prefix head	27 28	1091	938	521	老婆	老 婆		妻子	i n t + i n t	multisyllabic word
 129	Jixi	wife	n ɤ ²¹³ + y ³¹	old/老 woman/妪	N N	prefix head	27 41	1091	946	521	老妪	老 妪		妻子	i n t + n t	multisyllabic word. If the phrase is wife, the two parts cannot be separated. But if the meaning is old lady, then the second morpheme is enough.
-130	Jixi	wife	ɲ y ²¹³ + j ɑ̃ ⁴⁴	female/女 _person/人	A N	head modifier	39 38	1101	947	525	女人(尊稱對方的妻子)	女 人	尊稱對方的妻子	妻子	i n t + i n t	
+130	Jixi	wife	ɲ y ²¹³ + j ɑ̃ ⁴⁴	female/女 _person/人	A N	modifier head	39 38	1101	947	525	女人(尊稱對方的妻子)	女 人	尊稱對方的妻子	妻子	i n t + i n t	
 131	Suzhou	wife	k ɑ ⁴⁴ + ts ʯ ⁵² + b u ¹³	family/家 lord/主 woman/婆	N A N	copulative_1 copulative_2 copulative_3	42 43 28	1092	948	521	家主婆	家 主 婆		妻子	i n t + i n t + i n t	
 132	Wenzhou	wife	l ə ²⁴ + y ⁴⁴	old/老 wife/安	N N	prefix head	27 44	1091	949	521	老安	老 安		妻子	i n t + n t	multisyllabic word
 133	Changsha	wife	tɕʰ i ³³ + ts ɿ ⁰	wife/妻 _-child:SUF/子	N S	head suffix	26 19	1093	937	521	妻子	妻 子		妻子	i n t + i n t	
@@ -230,25 +230,25 @@ ID	DOCULECT	CONCEPT	TOKENS	MORPHEMES	COMPOUNDS	TYPE	COGIDS	AUTOID	STRICTID	LOOSE
 145	Fuzhou	wife	l au ²⁴² + pʰ o ⁵³	old/老 woman/婆	N N	prefix head	27 28	1091	938	521	老婆(谑称)	老 婆	谑称	妻子	i n t + i n t	multisyllabic word
 146	Fuzhou	wife	tsʰ w o ²¹² + l j e ³²	place:V/厝 inside/里	N N	copulative_1 copulative_2	51 52	1116	955	527	厝里(對人稱呼己妻子)	厝 里	對人稱呼己妻子	妻子	i m n t + i m n t	
 147	Xiamen	wife	b ɔ ⁵³	wife/某	N	monosyllabic	53	1107	956	524	某～	某		妻子	i n t	
-4281	Beijing	woman	n y ²¹⁴ + ʐ ɛ n ³⁵	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4281	Beijing	woman	n y ²¹⁴ + ʐ ɛ n ³⁵	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
 4282	Ha_erbin	woman	n j a ŋ ²⁴ + m ə ⁰	female/娘 _:PL/們	N S	head inflection	31 195	1135	970	531	娘們兒	娘 們		女人	i m n c t + i n t	
-4283	Jinan	woman	ɲ y ⁴⁵ + ʐ ẽ ⁵³	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n t	
-4284	Rongcheng	woman	n y ²¹³ + i n ⁵²	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + n c t	
-4285	Taiyuan	woman	n y ⁵³ + z ə ŋ ²¹	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
-4286	Xi_an	woman	n y ⁵³ + ʐ ẽ ⁰	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n t	
-4287	Chengdu	woman	ɲ y ⁵³ + z ə n ²¹	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4283	Jinan	woman	ɲ y ⁴⁵ + ʐ ẽ ⁵³	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n t	
+4284	Rongcheng	woman	n y ²¹³ + i n ⁵²	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + n c t	
+4285	Taiyuan	woman	n y ⁵³ + z ə ŋ ²¹	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4286	Xi_an	woman	n y ⁵³ + ʐ ẽ ⁰	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n t	
+4287	Chengdu	woman	ɲ y ⁵³ + z ə n ²¹	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
 4288	Chengdu	woman	ɲ y ⁵³ + l i ⁵⁵	female/女 _:GEN/的	A G	head modifier	39 40	1132	945	530	女的	女 的		女人	i n t + i n t	
-4289	Nanjing	woman	l i ³¹ + ʐ ə n ¹³	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4289	Nanjing	woman	l i ³¹ + ʐ ə n ¹³	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
 4290	Jixi	woman	ɲ y ²¹³ + n ɤ ⁰	female/女 _person/仂	A N	head modifier	39 170	1132	971	530	女仂	女 仂		女人	i n t + i n t	
-4291	Suzhou	woman	ɲ y ²³¹ + ɲ i n ¹³	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4291	Suzhou	woman	ɲ y ²³¹ + ɲ i n ¹³	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
 4292	Wenzhou	woman	l ə ²⁴ + ɲ j a ŋ ³⁴¹ + kʰ a ⁴¹	old/老 female/娘 _guest/客	A N N	prefix head modifier	27 31 46	1133	972	530	老人客	老 娘 客		女人	i n t + i m n c t + i n t	
-4293	Changsha	woman	ɲ y ⁴¹ + ʐ ə n ⁰	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4293	Changsha	woman	ɲ y ⁴¹ + ʐ ə n ⁰	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
 4294	Changsha	woman	ɲ y ⁴¹ + t i ⁰	female/女 _:GEN/的	A G	head modifier	39 40	1132	945	530	女的	女 的		女人	i n t + i n t	
-4295	Loudi	woman	n y ⁴² + n i n ¹³ + k a ⁰	female/女 _person/人 _family/家	A N N	head modifier modifier	39 38 42	1132	973	530	女人家	女 人 家		女人	i n t + i n c t + i n t	
+4295	Loudi	woman	n y ⁴² + n i n ¹³ + k a ⁰	female/女 _person/人 _family/家	A N N	modifier copulative_1 copulative_2	39 38 42	1132	973	530	女人家	女 人 家		女人	i n t + i n c t + i n t	
 4296	Nanchang	woman	ɲ y ²¹³ + kʰ a ʔ ⁵	female/女 _guest/客	A N	head modifier	39 46	1132	974	530	女客	女 客		女人	i n t + i n c t	
 4297	Meixian	woman	m oi ⁵³ + j e ⁰ + ŋ i n ¹¹	woman/妹 :SUF/? _person/人	N S N	head suffix modifier	748 826 38	1133	975	530	妹兒人	妹 ? 人		女人	i n t + i n t + i n c t	
-4298	Guilin	woman	l y ²³ + l i ŋ ²³	female/女 _person/人	N N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
-4299	Guangzhou	woman	n øy ²³ + j ɐ n ²¹	female/女 _person/人	A N	head modifier	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4298	Guilin	woman	l y ²³ + l i ŋ ²³	female/女 _person/人	N N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
+4299	Guangzhou	woman	n øy ²³ + j ɐ n ²¹	female/女 _person/人	A N	modifier head	39 38	1132	947	530	女人	女 人		女人	i n t + i n c t	
 4300	Fuzhou	woman	i ⁵⁵ + ts j a ³²	woman/伊 sister/姐	N N	prefix head	824 715	1134	976	531	儂～姐	伊 姐		女人	n t + i m n t	multisyllabic word
 4301	Fuzhou	woman	n y ³² + ɛ ²¹²	female/女 _world/界	A N	head modifier	39 825	1132	977	530	女界	女 界		女人	i n t + n t	
 4302	Fuzhou	woman	ts y ⁵⁵ + n øy ŋ ⁵³ + n øy ŋ ⁵³	woman/諸 female/娘 _person/人	N N S	modifier head modifier	749 31 38	1134	978	531	諸娘儂	諸 娘 儂		女人	i n t + i n c t + i n c t	
