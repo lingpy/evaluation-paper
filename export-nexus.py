@@ -14,7 +14,7 @@ from pathlib import Path
 from lingpy.convert.strings import write_nexus
 
 from pkg.code import (
-    get_liusinitic,
+    #get_liusinitic,
     common_morpheme_cognates,
     salient_cognates,
     compare_cognate_sets,
@@ -22,7 +22,8 @@ from pkg.code import (
     get_revised_taxon_names,
 )
 
-part = get_liusinitic(Partial)
+#part = get_liusinitic(Partial)
+part = Partial("liusinitic_20211230.tsv")
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 
@@ -46,19 +47,21 @@ print(
     )
 )
 
+# get target concepts and remove "ignore" and "borrowing"
 D = {0: part.columns}
 for idx in part:
     if part[idx, "concepts"] in target_concepts:
-        D[idx] = part[idx]
-        D[idx][part.columns.index("doculect")] = languages[part[idx, "doculect"]]
+        if all(i not in part[idx, "note"] for i in ["!b", "!i"]):
+            D[idx] = part[idx]
+            D[idx][part.columns.index("doculect")] = languages[part[idx, "doculect"]]
 
 wl = Wordlist(D)
 for ref in ["strictid", "looseid", "commonid", "salientid"]:
-    wl.output("paps.nex", filename=Path("nexus", ref).as_posix(), missing="-", ref=ref)
+    wl.output("paps.nex", filename=Path("nexus-20211230", ref).as_posix(), missing="-", ref=ref)
     write_nexus(
         wl,
         ref=ref,
-        filename=Path("nexus", ref).as_posix(),
+        filename=Path("nexus-20211230", ".".join([ref, "bayes.nex"])).as_posix(),
         commands=[
             "set autoclose=yes nowarn=yes;",
             "lset coding=noabsencesites rates=gamma;",
