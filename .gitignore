@@ -134,3 +134,7 @@ dmypy.json
 .pyre/
 .Rproj.user
 .Rhistory
+
+# R
+.RData
+.RDataTmp

@@ -1,5 +1,5 @@
 """
-Various functions used in our study.
+Helper functions used in our study.
 """
 from lexibank_liusinitic import Dataset
 import lingpy
@@ -27,6 +27,9 @@ def compare_cognate_sets(wordlist, refA, refB):
 
 
 def get_liusinitic(cls=lingpy.Wordlist):
+    """
+    fetch data from the lexibank dataset. 
+    """
     return cls(Dataset().raw_dir.joinpath('liusinitic.tsv').as_posix())
 
 

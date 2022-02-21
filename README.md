@@ -24,17 +24,27 @@ quartet distance (NQD)* from two given phylogenies. The [`tqDist`
 website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on
 the installation and usages.
 
+The stand-alone softare `MrBayes` was used to compute the Bayesian phylogenies. The installation instruction can be found on [MrBayes website](https://nbisweden.github.io/MrBayes/download.html).
+
 ## Summary of all Scripts
 
 The following summary shows all scripts that you can run at once to replicate the studies discussed in the paper.
 
 ```
-$ python cognate-set-comparison.py
-$ python cross-semantic-cognate-statistics.py
-$ python lexical-distances.py
-$ python analyze-distances.py --nqd
-$ python plot-distances.py
+$ python step1-fetch.py
+$ python step2-cognate-set-comparison.py
+$ python step3-cross-semantic-cognate-statistics.py
+$ python step4-lexical-distances.py
+$ python step5-plot-distances.py
+$ python step6-bootstrap.py
+$ python step7-analyze-distances.py --nqd
+$ python step8-export-nexus.py
 ```
+To run step 9
+
+```
+Rscript step9-maximum-likelihood-tree.R
+``` 
 
 ## Morpheme Annotation with the Help of the EDICTOR
 
@@ -46,6 +56,12 @@ the EDICTOR interface, you can then toggle the individual morpheme glosses for
 each word by right-clicking the morpheme gloss with the mouse. Check again our
 sample file to see how we have done this for the current dataset on Chinese
 dialects.
+
+To download the file, use the commandline
+
+```
+python step1-fetch.py
+```
 
 
 ## Comparing Cognate Sets
@@ -60,7 +76,7 @@ which the conversion of partial to full cognates causes trouble. The output is w
 To run this study, simply type:
 
 ```
-$ python cognate-set-comparison.py
+$ python step2-cognate-set-comparison.py
 ```
 This will yield the following output on screen.
 
@@ -82,7 +98,7 @@ contain *water* should receive higher scores in our analysis of cross-semantical
 To run this code, simply type:
 
 ```
-$ python cross-semantic-cognate-statistics.py
+$ python step3-cross-semantic-cognate-statistics.py
 ```
 
 High scores indicate high variation with respect to cross-semantic partial cognate sets.
@@ -102,56 +118,52 @@ The output is given in part in the following table.
 
 # Deriving Distance Matrices from Cognate Sets
 
-The script `lexical-distances.py` reports the distance matrices which derive
+The script `step4-lexical-distances.py` reports the distance matrices which derive
 from the four types of full cognate sets, namely, "loose", "strict", "greedy",
 and "salient" cognate sets. Please note that this script only takes into
 account concepts with F-scores lower than 0.8.
 
 ```
-$ python lexical-distances.py 
+$ python step4-lexical-distances.py 
 ```
 
-# Rooting the Neighbor-Joining Trees
+# Visualizing the Distance Matrices
 
-For some visualizations, we use rooted trees, for this, we use the MAD tool
-(Kümmel Tria et al. 2017), which we downloaded from
-https://www.mikrobio.uni-kiel.de/de/ag-dagan/ressourcen. The tool is available
-as a commandline tool to root trees in Newick format for R and Python. Since it
-is freely distributed, we add it to this repository (see folder `dependencies`)
-and explicitly quote the original study in our paper. Rooted trees are provided
-with the suffix `.rooted` in the folder `results`. 
-
-On the commandline, you can root a tree with the Python version as follows:
+The script `step5-plot-distances.py` plots the heatmaps of *loose* cognate set, *strict* cognate set, and the difference between the two matrices. 
 
 ```
-$ python dependencies/mad.py results/common.tre
+$ python step5-plot-distances.py 
 ```
+The results are written in the `plots/`
+# Neighbor-join trees
+The script `step6-bootstrap.py` reconstruct Neighbor-joining trees from the given matrices. The probability of the branches are computed from bootstrapping.
 
+```
+$ python step6-bootstrap.py 
+```
 
 # Statistics and Tree Comparison
 
-The script `analyze-distances.py` calculates four different statistics:
+The script `step7-analyze-distances.py` calculates four different statistics:
 * the correlation between the cross semantic cognate statistics and the cognate set comparison
 * the Mantel test
 * the Generalized Robinson-Foulds Distance (GRF)
 * the Normalized Quartet Distance (NQD)
 
 ```
-$ python analyze-distances.py 
+$ python step7-analyze-distances.py 
 ```
 
 Additionally, adding the argument `--nqd` calculates the NQD distance.
 
 ```
-$ python analyze-distances.py --nqd
+$ python step7-analyze-distances.py --nqd
 ```
 
-# Visualizing the Distance Matrices
+# Generate nex files
 
-To visualize the distance matrices, simply use the following command:
+The script `step8-export-nexus.py` outputs the nexus files for Bayesian phylogenetic analyses and computing maximum likelihood trees as well as networks. 
 
 ```
-$ python plot-distances.py
+$ python step8-export-nexus.py
 ```
-
-Results are written to the folder `plots`.
