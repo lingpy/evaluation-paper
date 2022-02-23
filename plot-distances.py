@@ -1,12 +1,8 @@
 """
 Step 5: Compute heatmaps from the lexical distances.
 
-Input (2 ways):
-1. Directly fetch data from lexibank_liusinitic.
-2. Use the one from step 2. Eg. liusinitic_20211230_ignored_IB.tsv
-
-To fetch from lexibank_liusinitic, one should replace line 26 with the following commandline:
-part = get_liusinitic()
+Input:
+Directly fetch data from lexibank_liusinitic.
 
 Output:
 File output: 
@@ -22,11 +18,17 @@ from lingpy.compare.partial import Partial
 from itertools import combinations, product
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
-from pkg.code import  compare_cognate_sets, get_liusinitic, get_ordered_taxa, get_revised_taxon_names
+from pkg.code import (
+    compare_cognate_sets,
+    get_liusinitic,
+    get_clean_liusinitic,
+    get_ordered_taxa,
+    get_revised_taxon_names,
+)
 
 
-part = Partial("liusinitic_20211230_ignored_IB.tsv")
-# Get the reference tree 
+part = get_clean_liusinitic()
+# Get the reference tree
 tree, taxa = get_ordered_taxa()
 # Beautiful labels
 labels = get_revised_taxon_names()
@@ -73,7 +75,7 @@ plot_heatmap(
     textsize=6.5,
     figsize=(8.4, 4.5),
     labels=labels,
-    width=0.85,    
+    width=0.85,
 )
 plot_heatmap(
     part,

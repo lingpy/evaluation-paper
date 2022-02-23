@@ -32,13 +32,13 @@ The following summary shows all scripts that you can run at once to replicate th
 
 ```
 $ python step1-fetch.py
-$ python step2-cognate-set-comparison.py
-$ python step3-cross-semantic-cognate-statistics.py
-$ python step4-lexical-distances.py
-$ python step5-plot-distances.py
-$ python step6-bootstrap.py
-$ python step7-analyze-distances.py --nqd
-$ python step8-export-nexus.py
+$ python cognate-set-comparison.py
+$ python cross-semantic-cognate-statistics.py
+$ python lexical-distances.py
+$ python plot-distances.py
+$ python bootstrap.py
+$ python analyze-distances.py --nqd
+$ python export-nexus.py
 ```
 To run step 9
 
@@ -76,7 +76,7 @@ which the conversion of partial to full cognates causes trouble. The output is w
 To run this study, simply type:
 
 ```
-$ python step2-cognate-set-comparison.py
+$ python cognate-set-comparison.py
 ```
 This will yield the following output on screen.
 
@@ -98,7 +98,7 @@ contain *water* should receive higher scores in our analysis of cross-semantical
 To run this code, simply type:
 
 ```
-$ python step3-cross-semantic-cognate-statistics.py
+$ python cross-semantic-cognate-statistics.py
 ```
 
 High scores indicate high variation with respect to cross-semantic partial cognate sets.
@@ -118,52 +118,52 @@ The output is given in part in the following table.
 
 # Deriving Distance Matrices from Cognate Sets
 
-The script `step4-lexical-distances.py` reports the distance matrices which derive
+The script `lexical-distances.py` reports the distance matrices which derive
 from the four types of full cognate sets, namely, "loose", "strict", "greedy",
 and "salient" cognate sets. Please note that this script only takes into
 account concepts with F-scores lower than 0.8.
 
 ```
-$ python step4-lexical-distances.py 
+$ python lexical-distances.py 
 ```
 
 # Visualizing the Distance Matrices
 
-The script `step5-plot-distances.py` plots the heatmaps of *loose* cognate set, *strict* cognate set, and the difference between the two matrices. 
+The script `plot-distances.py` plots the heatmaps of *loose* cognate set, *strict* cognate set, and the difference between the two matrices. 
 
 ```
 $ python step5-plot-distances.py 
 ```
 The results are written in the `plots/`
 # Neighbor-join trees
-The script `step6-bootstrap.py` reconstruct Neighbor-joining trees from the given matrices. The probability of the branches are computed from bootstrapping.
+The script `bootstrap.py` reconstruct Neighbor-joining trees from the given matrices. The probability of the branches are computed from bootstrapping.
 
 ```
-$ python step6-bootstrap.py 
+$ python bootstrap.py 
 ```
 
 # Statistics and Tree Comparison
 
-The script `step7-analyze-distances.py` calculates four different statistics:
+The script `analyze-distances.py` calculates four different statistics:
 * the correlation between the cross semantic cognate statistics and the cognate set comparison
 * the Mantel test
 * the Generalized Robinson-Foulds Distance (GRF)
 * the Normalized Quartet Distance (NQD)
 
 ```
-$ python step7-analyze-distances.py 
+$ python analyze-distances.py 
 ```
 
 Additionally, adding the argument `--nqd` calculates the NQD distance.
 
 ```
-$ python step7-analyze-distances.py --nqd
+$ python analyze-distances.py --nqd
 ```
 
 # Generate nex files
 
-The script `step8-export-nexus.py` outputs the nexus files for Bayesian phylogenetic analyses and computing maximum likelihood trees as well as networks. 
+The script `export-nexus.py` outputs the nexus files for Bayesian phylogenetic analyses and computing maximum likelihood trees as well as networks. 
 
 ```
-$ python step8-export-nexus.py
+$ python export-nexus.py
 ```

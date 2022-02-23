@@ -33,6 +33,12 @@ def get_liusinitic(cls=lingpy.Wordlist):
     return cls(Dataset().raw_dir.joinpath('liusinitic.tsv').as_posix())
 
 
+def get_clean_liusinitic(cls=lingpy.Wordlist):
+    """
+    fetch data from the lexibank dataset. 
+    """
+    return cls(Dataset().raw_dir.joinpath('liusinitic_ignored_IB.tsv').as_posix())
+
 def get_chinese_map():
     wordlist = get_liusinitic()
     chinese = defaultdict(list)

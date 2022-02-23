@@ -2,8 +2,7 @@
 Step 4: This stap calculates lexicostatistical distances between language pairs.
 
 Input (2 ways):
-1. Directly fetch data from lexibank_liusinitic.
-2. Use the one from step 2. Eg. liusinitic_20211230_ignored_IB.tsv
+Directly fetch data from lexibank_liusinitic.
 
 To fetch from lexibank_liusinitic, one should replace line 37 with the following commandline:
 part = get_liusinitic(Partial)
@@ -12,9 +11,9 @@ part = get_liusinitic(Partial)
 Output:
 File output: 
     result/part_*.tre (trees from the subset of data. The subset is drawn by the ranks from step 2. )
-    result/full_*.tre (trees from the liusinitic_20211230_ignored_IB.tsv)
+    result/full_*.tre (trees from the post processed full dataset. The one downloaded from step 1.)
     result/part_*.dst (pairwise distance matrices from the subset of data. The output is in the PHYLIP formats)
-    result/full_*.dst (pairwise distance matrices from liusinitic_20211230_ignored_IB.tsv. The output is in the PHYLIP formats)
+    result/full_*.dst (pairwise distance matrices from post processed full dataset. The one downloaded from step 1. The output is in the PHYLIP formats)
     result/results/liusinitic.word_cognate (wordlist format)
 """
 from lingpy.compare.partial import Partial
@@ -27,6 +26,7 @@ from lingpy.convert.strings import write_nexus
 
 from pkg.code import (
     get_liusinitic,
+    get_clean_liusinitic,
     common_morpheme_cognates,
     salient_cognates,
     compare_cognate_sets,
@@ -34,7 +34,7 @@ from pkg.code import (
     get_revised_taxon_names,
 )
 
-part = Partial("liusinitic_20211230_ignored_IB.tsv")
+part = get_clean_liusinitic(Partial)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 

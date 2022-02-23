@@ -1,12 +1,8 @@
 """
 Step 6: Neighbor-join tree with 1000 iterations (bootstrapping score) 
 
-Input (2 ways):
-1. Directly fetch data from lexibank_liusinitic.
-2. Use the one from step 2. Eg. liusinitic_20211230_ignored_IB.tsv
-
-To fetch from lexibank_liusinitic, one should replace line 40 with the following commandline:
-part = get_liusinitic(Partial)
+Input:
+Directly fetch data from lexibank_liusinitic.
 
 Output:
 File output: 
@@ -34,6 +30,7 @@ from pylocluster import neighbor
 
 from pkg.code import (
     get_liusinitic,
+    get_clean_liusinitic,
     common_morpheme_cognates,
     salient_cognates,
     compare_cognate_sets,
@@ -41,7 +38,7 @@ from pkg.code import (
     get_revised_taxon_names,
 )
 
-part = Partial("liusinitic_20211230_ignored_IB.tsv")
+part = get_clean_liusinitic(Partial)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)

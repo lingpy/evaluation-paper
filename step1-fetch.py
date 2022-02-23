@@ -14,6 +14,7 @@ from pyedictor.util import *
 from pyedictor import fetch
 from collections import Counter
 from tabulate import tabulate
+from pathlib import Path
 
 
 wl = fetch(
@@ -37,8 +38,8 @@ wl = fetch(
     ],
     to_lingpy=True,
 )
-
-wl.output("tsv", filename="liusinitic_20211230", prettify=False)
+output_path = Path('liusinitic/raw/liusinitic')
+wl.output("tsv", filename=output_path.as_posix(), prettify=False)
 morpheme_dict = {}
 compound_type_dict = {}
 compound_dict = {}

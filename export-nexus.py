@@ -1,13 +1,8 @@
 """
 Step 8: Select the data with target concepts (ranks <0.8) and output the data in pep.nex and MrBayes nex file 
 
-Input (2 ways):
-1. Directly fetch data from lexibank_liusinitic.
-2. Use the one from step 2. Eg. liusinitic_20211230_ignored_IB.tsv
-
-To fetch from lexibank_liusinitic, one should replace line 43 with the following commandline:
-part = get_liusinitic(Partial)
-
+Input:
+Directly fetch data from lexibank_liusinitic.
 
 Output:
 File output: 
@@ -23,7 +18,8 @@ from pathlib import Path
 from lingpy.convert.strings import write_nexus
 
 from pkg.code import (
-    #get_liusinitic,
+    get_liusinitic,
+    get_clean_liusinitic,
     common_morpheme_cognates,
     salient_cognates,
     compare_cognate_sets,
@@ -31,7 +27,7 @@ from pkg.code import (
     get_revised_taxon_names,
 )
 
-part = Partial("liusinitic_20211230_ignored_IB.tsv")
+part = get_clean_liusinitic(Partial)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 
@@ -67,11 +63,11 @@ wl = Wordlist(D)
 
 # pay attention to the calibration point, we set the treeagepr for the tree height, and the calibration time of the Min languages. 
 for ref in ["strictid", "looseid", "commonid", "salientid"]:
-    wl.output("paps.nex", filename=Path("nexus-20211230", ref).as_posix(), missing="-", ref=ref)
+    wl.output("paps.nex", filename=Path("nexus", ref).as_posix(), missing="-", ref=ref)
     write_nexus(
         wl,
         ref=ref,
-        filename=Path("nexus-20211230", ".".join([ref, "bayes.nex"])).as_posix(),
+        filename=Path("nexus", ".".join([ref, "bayes.nex"])).as_posix(),
         commands=[
             "set autoclose=yes nowarn=yes;",
             "lset coding=noabsencesites rates=gamma;",

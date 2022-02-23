@@ -1,23 +1,18 @@
 """
 Step 2: Compare the differences between strict and loose cognate sets per concept. This step is very important because the rest of the studies relies on the concepts' ranks (F-score) from this step.  
 
-Input (2 ways):
-1. Directly fetch data from lexibank_liusinitic.
-2. Use the one fetch from EDICTOR (see step 1). Eg. liusinitic_20211230.tsv
-
-To fetch from lexibank_liusinitic, one should replace line 20 with the following commandline:
-part = get_liusinitic(Partial)
-
+Input:
+Directly fetch data from lexibank_liusinitic.
 
 Output:
-1. File output: `result/cognate-set-comparison.tsv` and `liusinitic_20211230_ignored_IB.tsv`  
+1. File output: `result/cognate-set-comparison.tsv` and `liusinitic/raw/liusinitic_ignored_IB.tsv`  
 2. Standard output: concepts, Chinese character, Precision, Recall and F-score.  
 
 """
 from lingpy.compare.partial import Partial
 from pkg.code import compare_cognate_sets, get_liusinitic, get_chinese_map
 
-part = Partial("liusinitic_20211230.tsv")
+part = get_liusinitic(Partial)
 # remove !i (lexical entries that should be ignored) and !b (loanwords) 
 D = {0: part.columns}
 for idx in part:
@@ -53,4 +48,4 @@ with open("results/cognate-set-comparison.tsv", "w") as f:
             )
         )
 
-part.output("tsv", filename="liusinitic_20211230_ignored_IB.tsv")
+part.output("tsv", filename="liusinitic/raw/liusinitic_ignored_IB", prettify=False)

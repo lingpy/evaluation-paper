@@ -1,13 +1,8 @@
 """
 Step 3: Computing Cross-Semantic Cognate Statistics. 
 
-Input (2 ways):
-1. Directly fetch data from lexibank_liusinitic.
-2. Use the one fetch from EDICTOR (see step 1). Eg. liusinitic_20211230.tsv
-
-To fetch from lexibank_liusinitic, one should replace line 20 with the following commandline:
-wl = get_liusinitic()
-
+Input:
+Directly fetch data from lexibank_liusinitic.
 
 Output:
 1. File output: result/cross-semantic-cognate-statistics.tsv
@@ -17,7 +12,7 @@ Output:
 from lingpy import Wordlist
 from pkg.code import cross_semantic_cognate_statistics, get_liusinitic, get_chinese_map
 
-wl = Wordlist("liusinitic_20211230.tsv")
+wl = get_liusinitic()
 
 # remove ignore and loanwords.
 D = {0: wl.columns}
