@@ -27,7 +27,23 @@ def compare_cognate_sets(wordlist, refA, refB):
 
 
 def get_liusinitic(cls=lingpy.Wordlist):
-    return cls(Dataset().raw_dir.joinpath('liusinitic.tsv').as_posix())
+    wl = lingpy.Wordlist(str(Dataset().raw_dir.joinpath('liusinitic.tsv')))
+    D = {0: [c for c in wl.columns]}
+    mcogid = max(wl.get_etymdict(ref="cogids"))+1
+    for idx in wl:
+        if "!i" in wl[idx, "note"]:
+            pass
+        elif "!b" in wl[idx, "note"]:
+            cogids = wl[idx, "cogids"]
+            new_cogids = []
+            for c in cogids:
+                new_cogids += [mcogid]
+                mcogid += 1
+            wl[idx, "cogids"] = new_cogids
+            D[idx] = [wl[idx, c] for c in D[0]]
+        else:
+            D[idx] = [wl[idx, c] for c in D[0]]
+    return cls(D)
 
 
 def get_chinese_map():
