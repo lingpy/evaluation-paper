@@ -122,7 +122,6 @@ if "--nqd" in argv:
 
     print("\n# Similarity between Trees (Normalized Quartet Distance)\n")
     nqd_similarity = []
-    #for tA, tB in combinations(["common", "loose", "salient", "strict"], r=2):
     for tA, tB in combinations(list(tree_dict), r=2):
         tA_file = "/".join(["results", "part_" + tA + ".tre"])
         #tA_file = "/".join(["nexus-20211230", tA + ".tree.tre"])
