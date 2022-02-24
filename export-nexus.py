@@ -6,8 +6,8 @@ Fetch data from lexibank_liusinitic.
 
 Output:
 File output: 
-    nexus-20211230/*.bayes.nex (for MrBayes)
-    nexus-20211230/*.paps.nex (for maximum likelihood tree/networks)
+    nexus/*.bayes.nex (for MrBayes)
+    nexus/*.paps.nex (for maximum likelihood tree/networks)
 """
 
 from lingpy.compare.partial import Partial
