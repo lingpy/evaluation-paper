@@ -1,5 +1,5 @@
 """
-Step 3: This stap calculates lexicostatistical distances between language pairs.
+Step 3: This step calculates lexicostatistical distances between language pairs.
 
 Input:
 Fetch data from lexibank_liusinitic.
