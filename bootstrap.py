@@ -1,7 +1,20 @@
 """
-This script is designed only for the bootstrapping purpose.
-"""
+Step 5: Neighbor-join tree with 1000 iterations (bootstrapping score) 
 
+Input:
+Fetch data from lexibank_liusinitic.
+
+Output:
+File output: 
+    plots/ete-loose.pdf
+    plots/ete-loose.png
+    plots/ete-strict.pdf
+    plots/ete-strict.png
+    plots/ete-common.pdf
+    plots/ete-common.png
+    plots/ete-salient.pdf
+    plots/ete-salient.png
+"""
 from lingpy.compare.partial import Partial
 from lingpy.convert.strings import matrix2dst
 from collections import defaultdict
@@ -25,6 +38,8 @@ from pkg.code import (
 part = get_liusinitic(Partial)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
+
+# generate cognate sets in case of missing cognate sets. 
 common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
     part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
@@ -43,17 +58,18 @@ def layout(node):
 
 # style options for ete3
 colors = {
-        "Man": "lightgreen",
-        "Yue": "salmon",
-        "Xia": "lightyellow",
-        "Hui": "lightgrey",
-        "Jin": "darkgray",
-        "Hak": "lightblue",
-        "Wu": "cornflowerblue",
-        "Gan": "brown",
-        "Min": "darkorange",
-        "Pin": "goldenrod"
+        "Man": "#F2CC8F",
+        "Yue": "#81B29A",
+        "Xia": "#9DA0BE",
+        "Hui": "#ECAEAE",
+        "Jin": "#E58E76",
+        "Hak": "#F4F1DE",
+        "Wu": "#B8B8BA",
+        "Gan": "#CED4DA",
+        "Min": "#FF8C00",
+        "Pin": "#DAA520"
         }
+
 
 taxa = [languages[t] for t in part.cols]
 style = NodeStyle(
@@ -80,6 +96,7 @@ ts = TreeStyle()
 for k, v in tsparams.items():
     setattr(ts, k, v)
 
+# Generate Neighbor-joining trees and bootstrapping.
 for cognate in cognate_sets:
     paps = [v for k, v in sorted(part.get_paps(ref=cognate+"id").items(), key=lambda
         x: x[0])]

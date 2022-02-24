@@ -1,5 +1,11 @@
 """
-Analyze the distance measures.
+Step 6: Analyze the correlation between step 2 and step 3, the correlation of distance matrices, and the tree distances.  
+
+Input:
+The plain text and the distance matrices in results/
+
+Output:
+Standard output
 """
 from csvw.dsv import UnicodeDictReader
 import numpy as np
@@ -24,7 +30,7 @@ from pkg.code import (
 )
 
 
-# Correlation
+# Generate dictionary. Key = concepts, Values = nested dictionary {Cognates: scores}
 concepts = {}
 with UnicodeDictReader("results/cognate-set-comparison.tsv", delimiter="\t") as reader:
     concepts = {row["Concept"]: row for row in reader}
@@ -116,9 +122,12 @@ if "--nqd" in argv:
 
     print("\n# Similarity between Trees (Normalized Quartet Distance)\n")
     nqd_similarity = []
+    #for tA, tB in combinations(["common", "loose", "salient", "strict"], r=2):
     for tA, tB in combinations(list(tree_dict), r=2):
         tA_file = "/".join(["results", "part_" + tA + ".tre"])
+        #tA_file = "/".join(["nexus-20211230", tA + ".tree.tre"])
         tB_file = "/".join(["results", "part_" + tB + ".tre"])
+        #tB_file = "/".join(["nexus-20211230", tB + ".tree.tre"])
         qd = subprocess.check_output(
             ["quartet_dist", "-v", tA_file, tB_file]
         )  # Execute tqDist tool
@@ -128,7 +137,7 @@ if "--nqd" in argv:
         nqd = float(qd_array[3])  # Normalized Quartet Distance
         nqd_similarity.append([tA, tB, nqd])
 
-    # Output
+    # Standard output
     print(
         tabulate(
             nqd_similarity,
