@@ -1,22 +1,23 @@
 # Evaluating the Performance of Computational Methods for Language Comparison in South-East-Asian Languages
 
 This tutorial supplements the study "Evaluating the Performance of
-Computational Methods for Language Comparison in SEALanguages". In this
+Computational Methods for Language Comparison in South-East Asian Languages". In this
 tutorial, we explain in detail how our workflow can be tested and applied.
 
 We start by installing the dependencies from the command-line. To do so, we
 first download the code and the data from the website and execute the following
-command-lines. 
+command-lines. Note that you need to install `numpy` first directly, since `scikit-bio` requires the package as a dependency in order to be installed, which caused an error when trying to install all packages in one run.
 
 ```{.bash}
 $ cd evaluation-paper
 $ pip install -r requirements.txt
+$ git pull https://github.com/lexibank/liusinitic.git
 ```
 
 You also need to install the data package `liusinitic`:
 
 ```
-$ pip install -r liusinitic
+$ pip install -e liusinitic
 ```
 
 The stand-alone software `tqDist` was applied to compute the *normalized
@@ -36,6 +37,7 @@ $ python cross-semantic-cognate-statistics.py
 $ python lexical-distances.py
 $ python analyze-distances.py --nqd
 $ python plot-distances.py
+$ python bootstrap.py
 $ Rscript step9-maximum-likelihood-tree.R
 ```
 

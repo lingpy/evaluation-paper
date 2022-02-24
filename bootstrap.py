@@ -29,6 +29,7 @@ from pylocluster import neighbor
 from pkg.code import (
     get_liusinitic,
     common_morpheme_cognates,
+    compare_cognate_sets,
     salient_cognates,
     compare_cognate_sets,
     lexical_distances,
@@ -39,13 +40,19 @@ part = get_liusinitic(Partial)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 
-# generate cognate sets in case of missing cognate sets. 
+# create common morpheme and salient morphemes
 common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
     part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
 )
-part.add_cognate_ids("cogids", "strictid", idtype="strict", override=True)
-part.add_cognate_ids("cogids", "looseid", idtype="loose", override=True)
+ranks = compare_cognate_sets(part, "strictid", "looseid")
+target_concepts = [row[0] for row in ranks if row[-1] <= 0.8]
+D = {0: [c for c in part.columns]}
+for idx in part:
+    if part[idx, "concept"] in target_concepts:
+        D[idx] = [part[idx, h] for h in D[0]]
+part = Partial(D)
+
 
 cognate_sets = ["strict", "loose", "common", "salient"]
 
