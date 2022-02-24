@@ -1,5 +1,5 @@
 """
-Step 5: Neighbor-join tree with 1000 iterations (bootstrapping score) 
+Step 5: Neighbor-joining tree with 1000 iterations (bootstrapping score) 
 
 Input:
 Fetch data from lexibank_liusinitic.
