@@ -25,7 +25,7 @@ quartet distance (NQD)* from two given phylogenies. The [`tqDist`
 website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on
 the installation and usages.
 
-The stand-alone softare `MrBayes` was used to compute the Bayesian phylogenies. The installation instruction can be found on [MrBayes website](https://nbisweden.github.io/MrBayes/download.html).
+The stand-alone software `MrBayes` was used to compute the Bayesian phylogenies. The installation instruction can be found on [MrBayes website](https://nbisweden.github.io/MrBayes/download.html).
 
 ## Summary of all Scripts
 
