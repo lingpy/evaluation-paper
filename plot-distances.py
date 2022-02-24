@@ -42,7 +42,6 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
     matrixL[i][j] = matrixL[j][i] = sum(loose) / len(loose)
     matrixD[i][j] = matrixD[j][i] = sum(loose) / len(loose) - sum(strict) / len(strict)
 
-
 plot_heatmap(
     part,
     tree=tree,
