@@ -39,7 +39,8 @@ from pkg.code import (
 part = get_liusinitic(Partial)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
-
+part.add_cognate_ids("cogids", "strictid", idtype="strict", override=True)
+part.add_cognate_ids("cogids", "looseid", idtype="loose", override=True)
 # create common morpheme and salient morphemes
 common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
