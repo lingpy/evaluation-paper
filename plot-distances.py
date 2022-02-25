@@ -1,6 +1,16 @@
 """
-Compute heatmaps from the lexical distances.
+Step 4: Compute heatmaps from the lexical distances.
+
+Input:
+Fetch data from lexibank_liusinitic.
+
+Output:
+File output: 
+    plots/loose.pdf
+    plots/strict.pdf
+    plots/difference.pdf
 """
+
 from lingpy import *
 from pathlib import Path
 from lingpy.convert.plot import plot_heatmap
@@ -15,7 +25,7 @@ part = get_liusinitic()
 tree, taxa = get_ordered_taxa()
 labels = get_revised_taxon_names()
 
-# cognate conversion methods
+# Generate matrices derive from loose and strict cognate sets as well as the delta between loose and strict  
 matrixS, matrixL = [[1 for t in taxa] for t in taxa], [[1 for t in taxa] for t in taxa]
 matrixD = [[0 for t in taxa] for t in taxa]
 for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
@@ -42,6 +52,7 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
     matrixL[i][j] = matrixL[j][i] = sum(loose) / len(loose)
     matrixD[i][j] = matrixD[j][i] = sum(loose) / len(loose) - sum(strict) / len(strict)
 
+# Plot
 plot_heatmap(
     part,
     tree=tree,

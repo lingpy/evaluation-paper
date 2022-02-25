@@ -1,6 +1,14 @@
 """
-Cognate Set Comparison
+Step 1: Compare the differences between strict and loose cognate sets per concept. This step is very important because the rest of the studies relies on the concepts' ranks (F-score) from this step.  
+
+Input:
+Fetch data from lexibank_liusinitic.
+
+Output:
+1. File output: `result/cognate-set-comparison.tsv` and `liusinitic/raw/liusinitic_ignored_IB.tsv`  
+2. Standard output: concepts, Chinese character, Precision, Recall and F-score.  
 """
+
 from lingpy.compare.partial import Partial
 from pkg.code import compare_cognate_sets, get_liusinitic, get_chinese_map
 
@@ -8,11 +16,15 @@ from pkg.code import compare_cognate_sets, get_liusinitic, get_chinese_map
 part = get_liusinitic(Partial)
 chinese = get_chinese_map()
 
+# Add strict and loose cognate sets
 for conversion in ["strict", "loose"]:
     part.add_cognate_ids("cogids", conversion + "id", idtype=conversion, override=True)
 
+# Get ranks
 ranks = compare_cognate_sets(part, "strictid", "looseid")
 
+
+# Output
 with open("results/cognate-set-comparison.tsv", "w") as f:
     f.write("\t".join(["Concept", "Character", "Precision", "Recall", "F-Score\n"]))
     for concept, p, r, fs in sorted(ranks, key=lambda x: x[-1]):

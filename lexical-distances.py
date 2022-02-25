@@ -1,9 +1,16 @@
 """
-Step 3
-This stap calculates lexicostatistical distances between language pairs.
+Step 3: This step calculates lexicostatistical distances between language pairs.
 
-The results:
-Four pairwise distance matrices in the PHYLIP formats
+Input:
+Fetch data from lexibank_liusinitic.
+
+Output:
+File output: 
+    result/part_*.tre (trees from the subset of data. The subset is drawn by the ranks from step 2. )
+    result/full_*.tre (trees from the post processed full dataset. The one downloaded from step 1.)
+    result/part_*.dst (pairwise distance matrices from the subset of data. The output is in the PHYLIP formats)
+    result/full_*.dst (pairwise distance matrices from post processed full dataset. The one downloaded from step 1. The output is in the PHYLIP formats)
+    result/results/liusinitic.word_cognate (wordlist format)
 """
 from lingpy.compare.partial import Partial
 from lingpy import Wordlist
@@ -23,10 +30,12 @@ from pkg.code import (
 )
 
 part = get_liusinitic(Partial)
+
+# Rename taxon
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 
-# add new cognate sets
+# Add new cognate sets: common, salient, loose, strict
 common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
     part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
@@ -37,16 +46,18 @@ part.add_cognate_ids("cogids", "looseid", idtype="loose", override=True)
 # An array with all the name of all the full cognate sets.
 cognate_sets = ["strict", "loose", "common", "salient"]
 
+# Get ranks of concepts
 ranks = compare_cognate_sets(part, "strictid", "looseid")
 target_concepts = [row[0] for row in ranks if row[-1] <= 0.8]
 
+# Standard output as report
 print(
     "{0} concepts are selected for computing distance matrices (threshold is 0.8).".format(
         len(target_concepts)
     )
 )
 
-# compute the distance matrices
+# Compute the distance matrices
 all_trees = open(Path("results", "all_trees.tre"), "w")
 for cognate in cognate_sets:
     key = cognate + "_dist"
