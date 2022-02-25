@@ -10,7 +10,6 @@ from lingpy import Wordlist
 from lingpy.convert.strings import matrix2dst
 from collections import defaultdict
 from lingpy.algorithm.clustering import neighbor
-from pathlib import Path
 from lingpy.convert.strings import write_nexus
 
 from pkg.code import (
@@ -20,9 +19,10 @@ from pkg.code import (
     compare_cognate_sets,
     lexical_distances,
     get_revised_taxon_names,
+    results_path
 )
 
-part = get_liusinitic(Partial)
+part = get_liusinitic(Partial, add_cognateset_ids=True)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 
@@ -31,8 +31,6 @@ common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
     part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
 )
-part.add_cognate_ids("cogids", "strictid", idtype="strict", override=True)
-part.add_cognate_ids("cogids", "looseid", idtype="loose", override=True)
 
 # An array with all the name of all the full cognate sets.
 cognate_sets = ["strict", "loose", "common", "salient"]
@@ -47,8 +45,9 @@ print(
 )
 
 # compute the distance matrices
-all_trees = open(Path("results", "all_trees.tre"), "w")
+all_trees = open(results_path("all_trees.tre"), "w")
 for cognate in cognate_sets:
+    print("[i] computing phylogenetic trees for "+cognate)
     key = cognate + "_dist"
     matrixP = lexical_distances(part, target_concepts, ref=cognate + "id")
     matrixF = lexical_distances(part, part.rows, ref=cognate + "id")
@@ -57,18 +56,18 @@ for cognate in cognate_sets:
     matrix2dst(
         matrixP,
         taxa=taxa,
-        filename=Path("results", "part_{0}".format(cognate)).as_posix(),
+        filename=results_path("part_{0}".format(cognate)).as_posix(),
         taxlen=10,
     )
     matrix2dst(
         matrixF,
         taxa=taxa,
-        filename=Path("results", "full_{0}".format(cognate)).as_posix(),
+        filename=results_path("full_{0}".format(cognate)).as_posix(),
         taxlen=10,
     )
-    with open(Path("results", "part_" + cognate + ".tre"), "w") as f:
+    with open(results_path("part_"+cognate+".tre"), "w") as f:
         f.write(str(treeP))
-    with open(Path("results", "full_" + cognate + ".tre"), "w") as f:
+    with open(results_path("full_"+cognate+".tre"), "w") as f:
         f.write(str(treeF))
     all_trees.write("{0}\n{1}\n".format(
         str(treeP),
@@ -76,7 +75,7 @@ for cognate in cognate_sets:
 all_trees.close()
 
 part.output(
-    "tsv", filename="results/liusinitic.word_cognate", prettify=False, ignore="all"
+    "tsv", filename=results_path("liusinitic.word_cognate").as_posix(), prettify=False, ignore="all"
 )
 
 

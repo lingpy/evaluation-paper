@@ -3,17 +3,14 @@ Cognate Set Comparison
 """
 from lingpy.compare.partial import Partial
 from pkg.code import compare_cognate_sets, get_liusinitic, get_chinese_map
+from pkg.code import results_path
 
-
-part = get_liusinitic(Partial)
+part = get_liusinitic(Partial, add_cognateset_ids=True)
 chinese = get_chinese_map()
-
-for conversion in ["strict", "loose"]:
-    part.add_cognate_ids("cogids", conversion + "id", idtype=conversion, override=True)
 
 ranks = compare_cognate_sets(part, "strictid", "looseid")
 
-with open("results/cognate-set-comparison.tsv", "w") as f:
+with open(results_path("cognate-set-comparison.tsv"), "w") as f:
     f.write("\t".join(["Concept", "Character", "Precision", "Recall", "F-Score\n"]))
     for concept, p, r, fs in sorted(ranks, key=lambda x: x[-1]):
         print(

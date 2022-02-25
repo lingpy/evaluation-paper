@@ -5,9 +5,9 @@ This script is designed only for the bootstrapping purpose.
 from lingpy.compare.partial import Partial
 from lingpy.convert.strings import matrix2dst
 from collections import defaultdict
-from pathlib import Path
 import random
 from pkg.bootstrap import bootstrap, hamming_distances, splits_from_tree
+from pkg.code import results_path
 from pylotree import Tree as PTree
 from ete3 import Tree, TreeStyle, AttrFace, faces, NodeStyle
 from pylocluster import neighbor
@@ -20,19 +20,20 @@ from pkg.code import (
     salient_cognates,
     compare_cognate_sets,
     lexical_distances,
+    results_path,
+    plots_path,
     get_revised_taxon_names,
 )
 
-part = get_liusinitic(Partial)
+part = get_liusinitic(Partial, add_cognateset_ids=True)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
-part.add_cognate_ids("cogids", "strictid", idtype="strict", override=True)
-part.add_cognate_ids("cogids", "looseid", idtype="loose", override=True)
 
 common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
     part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
 )
+
 ranks = compare_cognate_sets(part, "strictid", "looseid")
 target_concepts = [row[0] for row in ranks if row[-1] <= 0.8]
 D = {0: [c for c in part.columns]}
@@ -40,9 +41,6 @@ for idx in part:
     if part[idx, "concept"] in target_concepts:
         D[idx] = [part[idx, h] for h in D[0]]
 part = Partial(D)
-
-
-
 
 cognate_sets = ["strict", "loose", "common", "salient"]
 
@@ -55,16 +53,16 @@ def layout(node):
 
 # style options for ete3
 colors = {
-        "Man": "lightgreen",
-        "Yue": "salmon",
-        "Xia": "lightyellow",
-        "Hui": "lightgrey",
-        "Jin": "darkgray",
-        "Hak": "lightblue",
-        "Wu": "cornflowerblue",
-        "Gan": "brown",
-        "Min": "darkorange",
-        "Pin": "goldenrod"
+        "Man": "#F2CC8F",
+        "Yue": "#81B29A",
+        "Xia": "#9DA0BE",
+        "Hui": "#ECAEAE",
+        "Jin": "#E58E76",
+        "Hak": "#F4F1DE",
+        "Wu": "#B8B8BA",
+        "Gan": "#CED4DA",
+        "Min": "#FF8C00",
+        "Pin": "#DAA520"
         }
 
 taxa = [languages[t] for t in part.cols]
@@ -111,7 +109,7 @@ for cognate in cognate_sets:
             etedict[nodeA].support = len(splits[split])/I
             scores += [len(splits[split])/I]
     print('{0:10} | {1:.2f}'.format(cognate, sum(scores)/len(scores)))
-    with open(Path("results", cognate+".trees"), "w") as f:
+    with open(results_path(cognate+".trees"), "w") as f:
         for t in trees:
             f.write(t+'\n')
     for node in etetree.iter_descendants(strategy="postorder"):
@@ -130,7 +128,7 @@ for cognate in cognate_sets:
                 new_style = {k: v for k, v in style.items()}
                 new_style["bgcolor"] = color
                 etetree.get_leaves_by_name(t)[0].img_style = NodeStyle(**new_style)
-    etetree.render(Path("plots", "ete-"+cognate+".pdf").as_posix(), tree_style=ts)
+    etetree.render(plots_path("ete-"+cognate+".pdf").as_posix(), tree_style=ts)
 
 
 

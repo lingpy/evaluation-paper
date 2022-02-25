@@ -9,6 +9,20 @@ import statistics
 from clldutils.text import strip_brackets, split_text
 from itertools import combinations
 from lingpy.convert.tree import nwk2tree_matrix
+from pathlib import Path
+from lingpy.compare.partial import Partial
+
+
+def results_path(*comps):
+    return Path(__file__).parent.parent.joinpath("results", *comps)
+
+
+def plots_path(*comps):
+    return Path(__file__).parent.parent.joinpath("plots", *comps)
+
+
+def nexus_path(*comps):
+    return Path(__file__).parent.parent.joinpath("nexus", *comps)
 
 
 
@@ -26,7 +40,7 @@ def compare_cognate_sets(wordlist, refA, refB):
     return ranks
 
 
-def get_liusinitic(cls=lingpy.Wordlist):
+def get_liusinitic(cls=lingpy.Wordlist, add_cognateset_ids=False):
     wl = lingpy.Wordlist(str(Dataset().raw_dir.joinpath('liusinitic.tsv')))
     D = {0: [c for c in wl.columns]}
     mcogid = max(wl.get_etymdict(ref="cogids"))+1
@@ -43,7 +57,14 @@ def get_liusinitic(cls=lingpy.Wordlist):
             D[idx] = [wl[idx, c] for c in D[0]]
         else:
             D[idx] = [wl[idx, c] for c in D[0]]
-    return cls(D)
+    wordlist = cls(D)
+    if add_cognateset_ids:
+        for conversion in ["strict", "loose"]:
+            wordlist.add_cognate_ids(
+                    "cogids", conversion+"id", idtype=conversion,
+                    override=True)
+    return wordlist
+
 
 
 def get_chinese_map():

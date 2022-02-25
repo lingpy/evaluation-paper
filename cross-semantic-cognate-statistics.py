@@ -3,6 +3,7 @@ Computing Cross-Semantic Cognate Statistics (Workflow 2)
 """
 
 from pkg.code import cross_semantic_cognate_statistics, get_liusinitic, get_chinese_map
+from pkg.code import results_path
 
 wl = get_liusinitic()
 chinese = get_chinese_map()
@@ -13,7 +14,7 @@ scores = cross_semantic_cognate_statistics(
 )
 
 
-with open("results/cross-semantic-cognate-statistics.tsv", "w") as f:
+with open(results_path("cross-semantic-cognate-statistics.tsv"), "w") as f:
     f.write("\t".join(["Concept", "Chinese", "Score", "Derivation\n"]))
     for c, colex, d in scores:
         character = chinese[c]

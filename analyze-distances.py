@@ -20,17 +20,18 @@ from pkg.code import (
     get_liusinitic,
     cross_semantic_cognate_statistics,
     get_ordered_taxa,
+    results_path,
     get_revised_taxon_names
 )
 
 
 # Correlation
 concepts = {}
-with UnicodeDictReader("results/cognate-set-comparison.tsv", delimiter="\t") as reader:
+with UnicodeDictReader(results_path("cognate-set-comparison.tsv"), delimiter="\t") as reader:
     concepts = {row["Concept"]: row for row in reader}
 
 with UnicodeDictReader(
-    "results/cross-semantic-cognate-statistics.tsv", delimiter="\t"
+    results_path("cross-semantic-cognate-statistics.tsv"), delimiter="\t"
 ) as reader:
     for row in reader:
         concepts[row["Concept"]].update({"Cognates": row["Score"]})
@@ -77,30 +78,6 @@ print("# Mantel Tests\n")
 print(
     tabulate(
         table, floatfmt=".4f", headers=["Cogid A", "Cogid B", "Mantel coeff", "P-value"]
-    )
-)
-
-# Calculate the similarity between two trees via generalized Robinson-Foulds Distance
-print("\n# Tree Similarity (Generalized Robinson-Foulds Distance)\n")
-rgf_similarity = []
-for tA, tB in combinations(tree_dict, r=2):
-    treeA, treeB = Tree(str(tree_dict[tA])), Tree(str(tree_dict[tB]))
-    rgf_similarity.append([tA, tB, treeA.get_distance(treeB)])
-
-print(
-    tabulate(
-        rgf_similarity,
-        floatfmt=".4f",
-        headers=["Cogid A", "Cogid B", "GRF distance"],
-    )
-)
-
-
-print(
-    tabulate(
-        rgf_similarity,
-        floatfmt=".4f",
-        headers=["Cognates", "GRF distance"],
     )
 )
 

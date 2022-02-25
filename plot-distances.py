@@ -9,6 +9,7 @@ from itertools import combinations, product
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
 from pkg.code import get_liusinitic, get_ordered_taxa, get_revised_taxon_names
+from pkg.code import plots_path
 
 
 part = get_liusinitic()
@@ -42,11 +43,12 @@ for (i, tA), (j, tB) in combinations(enumerate(taxa), r=2):
     matrixL[i][j] = matrixL[j][i] = sum(loose) / len(loose)
     matrixD[i][j] = matrixD[j][i] = sum(loose) / len(loose) - sum(strict) / len(strict)
 
+print("[i] plotting strict cognates")
 plot_heatmap(
     part,
     tree=tree,
     matrix=matrixS,
-    filename=Path("plots", "strict").as_posix(),
+    filename=plots_path("strict").as_posix(),
     cmap=plt.cm.RdBu,
     left=0.09,
     textsize=6.5,
@@ -54,11 +56,12 @@ plot_heatmap(
     labels=labels,
     width=0.85,
 )
+print("[i] plotting loose cognates")
 plot_heatmap(
     part,
     tree=tree,
     matrix=matrixL,
-    filename=Path("plots", "loose").as_posix(),
+    filename=plots_path("loose").as_posix(),
     cmap=plt.cm.RdBu,
     left=0.09,
     textsize=6.5,
@@ -66,11 +69,12 @@ plot_heatmap(
     labels=labels,
     width=0.85,
 )
+print("[i] plotting differences")
 plot_heatmap(
     part,
     tree=tree,
     matrix=matrixD,
-    filename=Path("plots", "difference").as_posix(),
+    filename=plots_path("difference").as_posix(),
     vmax=0.3,
     cmap=plt.cm.RdBu,
     left=0.09,

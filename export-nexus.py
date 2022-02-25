@@ -10,7 +10,6 @@ from lingpy import Wordlist
 from lingpy.convert.strings import matrix2dst
 from collections import defaultdict
 from lingpy.algorithm.clustering import neighbor
-from pathlib import Path
 from lingpy.convert.strings import write_nexus
 
 from pkg.code import (
@@ -20,9 +19,10 @@ from pkg.code import (
     compare_cognate_sets,
     lexical_distances,
     get_revised_taxon_names,
+    nexus_path
 )
 
-part = get_liusinitic(Partial)
+part = get_liusinitic(Partial, add_cognateset_ids=True)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 
@@ -31,8 +31,6 @@ common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
     part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
 )
-part.add_cognate_ids("cogids", "strictid", idtype="strict", override=True)
-part.add_cognate_ids("cogids", "looseid", idtype="loose", override=True)
 
 # An array with all the name of all the full cognate sets.
 cognate_sets = ["strict", "loose", "common", "salient"]
@@ -54,11 +52,11 @@ for idx in part:
 
 wl = Wordlist(D)
 for ref in ["strictid", "looseid", "commonid", "salientid"]:
-    wl.output("paps.nex", filename=Path("nexus", ref).as_posix(), missing="-", ref=ref)
+    wl.output("paps.nex", filename=nexus_path(ref).as_posix(), missing="-", ref=ref)
     write_nexus(
         wl,
         ref=ref,
-        filename=Path("nexus", ref).as_posix(),
+        filename=nexus_path(ref).as_posix(),
         commands=[
             "set autoclose=yes nowarn=yes;",
             "lset coding=noabsencesites rates=gamma;",
