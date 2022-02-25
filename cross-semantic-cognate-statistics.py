@@ -1,5 +1,12 @@
 """
-Computing Cross-Semantic Cognate Statistics (Workflow 2)
+Step 2: Computing Cross-Semantic Cognate Statistics. 
+
+Input:
+Fetch data from lexibank_liusinitic.
+
+Output:
+1. File output: result/cross-semantic-cognate-statistics.tsv
+2. Standard output: concept, Chinese characters, and the cross-semantic cognate scores. 
 """
 
 from pkg.code import cross_semantic_cognate_statistics, get_liusinitic, get_chinese_map

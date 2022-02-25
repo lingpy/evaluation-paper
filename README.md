@@ -25,6 +25,8 @@ quartet distance (NQD)* from two given phylogenies. The [`tqDist`
 website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on
 the installation and usages.
 
+The stand-alone software `MrBayes` was used to compute the Bayesian phylogenies. The installation instruction can be found on [MrBayes website](https://nbisweden.github.io/MrBayes/download.html).
+
 ## Summary of all Scripts
 
 The following summary shows all scripts that you can run at once to replicate the studies discussed in the paper.
@@ -36,6 +38,7 @@ $ python lexical-distances.py
 $ python analyze-distances.py --nqd
 $ python plot-distances.py
 $ python bootstrap.py
+$ Rscript step9-maximum-likelihood-tree.R
 ```
 
 ## Morpheme Annotation with the Help of the EDICTOR

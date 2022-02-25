@@ -1,10 +1,15 @@
 """
-Additional step: 
-Select the data with target concepts and output the data in pep.nex and nex file
+Step 7: Select the data with target concepts (ranks <0.8) and output the data in pep.nex and MrBayes nex file 
 
-The results:
-nexus file
+Input:
+Fetch data from lexibank_liusinitic.
+
+Output:
+File output: 
+    nexus/*.bayes.nex (for MrBayes)
+    nexus/*.paps.nex (for maximum likelihood tree/networks)
 """
+
 from lingpy.compare.partial import Partial
 from lingpy import Wordlist
 from lingpy.convert.strings import matrix2dst
@@ -60,8 +65,12 @@ for ref in ["strictid", "looseid", "commonid", "salientid"]:
         commands=[
             "set autoclose=yes nowarn=yes;",
             "lset coding=noabsencesites rates=gamma;",
+            "taxset MinGroup = FuzhouMin XiamenMin;",
+            "constraint MinGroup 100 = FuzhouMin XiamenMin;",
+            "calibrate MinGroup = gamma(2, 1.15);",
             "constraint root = 1-.;",
             "prset clockratepr=exponential(3e5);",
+            "prset treeagepr = uniform(3.5, 5.5);",
             "prset sampleprob=0.2 samplestrat=random speciationpr=exp(1);",
             "prset extinctionpr=beta(1,1) nodeagepr=calibrated;",
             "prset brlenspr=clock:fossilization clockvarpr=igr;",

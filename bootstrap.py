@@ -1,7 +1,20 @@
 """
-This script is designed only for the bootstrapping purpose.
-"""
+Step 5: Neighbor-joining tree with 1000 iterations (bootstrapping score) 
 
+Input:
+Fetch data from lexibank_liusinitic.
+
+Output:
+File output: 
+    plots/ete-loose.pdf
+    plots/ete-loose.png
+    plots/ete-strict.pdf
+    plots/ete-strict.png
+    plots/ete-common.pdf
+    plots/ete-common.png
+    plots/ete-salient.pdf
+    plots/ete-salient.png
+"""
 from lingpy.compare.partial import Partial
 from lingpy.convert.strings import matrix2dst
 from collections import defaultdict
@@ -28,7 +41,6 @@ from pkg.code import (
 part = get_liusinitic(Partial, add_cognateset_ids=True)
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
-
 common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
 salient_cognates(
     part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
@@ -65,6 +77,7 @@ colors = {
         "Pin": "#DAA520"
         }
 
+
 taxa = [languages[t] for t in part.cols]
 style = NodeStyle(
         shape="square", 
@@ -90,6 +103,7 @@ ts = TreeStyle()
 for k, v in tsparams.items():
     setattr(ts, k, v)
 
+# Generate Neighbor-joining trees and bootstrapping.
 for cognate in cognate_sets:
     paps = [v for k, v in sorted(part.get_paps(ref=cognate+"id").items(), key=lambda
         x: x[0])]
