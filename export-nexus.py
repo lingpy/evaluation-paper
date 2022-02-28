@@ -61,7 +61,7 @@ for ref in ["strictid", "looseid", "commonid", "salientid"]:
     write_nexus(
         wl,
         ref=ref,
-        filename=nexus_path(ref).as_posix(),
+        filename=nexus_path(ref+'.nex').as_posix(),
         commands=[
             "set autoclose=yes nowarn=yes;",
             "lset coding=noabsencesites rates=gamma;",
