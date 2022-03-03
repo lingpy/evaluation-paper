@@ -90,15 +90,12 @@ BEGIN MRBAYES;
     set autoclose=yes nowarn=yes;
     lset coding=noabsencesites rates=gamma;
     taxset MinGroup = FuzhouMin XiamenMin;
-    constraint MinGroup 100 = FuzhouMin XiamenMin;
-    calibrate MinGroup = gamma(2, 1.15);
-    constraint root = 1-.;
     prset clockratepr=exponential(3e5);
-    prset treeagepr = uniform(3.5, 5.5);
+    prset treeagepr = uniform(1.5, 2.5);
     prset sampleprob=0.2 samplestrat=random speciationpr=exp(1);
     prset extinctionpr=beta(1,1) nodeagepr=calibrated;
     prset brlenspr=clock:fossilization clockvarpr=igr;
-    mcmcp ngen=20000000 printfreq=100000 samplefreq=10000 nruns=2 nchains=4 savebrlens=yes filename=looseid-out;
+    mcmcp ngen=20000000 printfreq=100000 samplefreq=10000 nruns=2 nchains=4 savebrlens=yes filename=part-looseid-out;
 END;
 
 

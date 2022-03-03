@@ -49,33 +49,46 @@ print(
     )
 )
 
-D = {0: part.columns}
+D, D2 = {0: part.columns}, {0: part.columns}
 for idx in part:
     if part[idx, "concepts"] in target_concepts:
         D[idx] = part[idx]
         D[idx][part.columns.index("doculect")] = languages[part[idx, "doculect"]]
+        D2[idx] = part[idx]
+    else:
+        D2[idx] = part[idx]
+        D2[idx][part.columns.index("doculect")] = languages[part[idx, "doculect"]]
+
+
+commands = [
+    "set autoclose=yes nowarn=yes;",
+    "lset coding=noabsencesites rates=gamma;",
+    "taxset MinGroup = FuzhouMin XiamenMin;",
+    "prset clockratepr=exponential(3e5);",
+    "prset treeagepr = uniform(1.5, 2.5);",
+    "prset sampleprob=0.2 samplestrat=random speciationpr=exp(1);",
+    "prset extinctionpr=beta(1,1) nodeagepr=calibrated;",
+    "prset brlenspr=clock:fossilization clockvarpr=igr;",
+    "mcmcp ngen=20000000 printfreq=100000 samplefreq=10000 nruns=2 nchains=4 savebrlens=yes"
+    ]
+
 
 wl = Wordlist(D)
 for ref in ["strictid", "looseid", "commonid", "salientid"]:
-    wl.output("paps.nex", filename=nexus_path(ref).as_posix(), missing="-", ref=ref)
+    print("[i] writing {0}".format(ref))
+    new_commands = [c for c in commands]
+    new_commands[-1] += " filename=part-{0}-out;".format(ref)
     write_nexus(
         wl,
         ref=ref,
-        filename=nexus_path(ref+'.nex').as_posix(),
-        commands=[
-            "set autoclose=yes nowarn=yes;",
-            "lset coding=noabsencesites rates=gamma;",
-            "taxset MinGroup = FuzhouMin XiamenMin;",
-            "constraint MinGroup 100 = FuzhouMin XiamenMin;",
-            "calibrate MinGroup = gamma(2, 1.15);",
-            "constraint root = 1-.;",
-            "prset clockratepr=exponential(3e5);",
-            "prset treeagepr = uniform(3.5, 5.5);",
-            "prset sampleprob=0.2 samplestrat=random speciationpr=exp(1);",
-            "prset extinctionpr=beta(1,1) nodeagepr=calibrated;",
-            "prset brlenspr=clock:fossilization clockvarpr=igr;",
-            "mcmcp ngen=20000000 printfreq=100000 samplefreq=10000 nruns=2 nchains=4 savebrlens=yes filename={0}-out;".format(
-                ref
-            ),
-        ],
+        commands=new_commands,
+        filename=nexus_path("part-"+ref+'.nex').as_posix(),
+    )
+    new_commands = [c for c in commands]
+    new_commands[-1] += " filename=full-{0}-out;".format(ref)
+    write_nexus(
+        Wordlist(D2),
+        ref=ref,
+        filename=nexus_path("full-"+ref+'.nex').as_posix(),
+        commands=new_commands,
     )
