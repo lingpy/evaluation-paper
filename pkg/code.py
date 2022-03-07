@@ -22,7 +22,7 @@ def plots_path(*comps):
 
 
 def nexus_path(*comps):
-    return Path(__file__).parent.parent.joinpath("nexus", *comps)
+    return Path(__file__).parent.parent.joinpath("bayes", *comps)
 
 
 
