@@ -128,7 +128,6 @@ for cognate in cognate_sets:
             f.write(t+'\n')
     for node in etetree.iter_descendants(strategy="postorder"):
         node.img_style = style
-        #node.dist = 0.2
     etetree.img_style = style
     for group, color in colors.items():
         selection = [t for t in languages.values() if t.endswith("_"+group)]
@@ -142,7 +141,7 @@ for cognate in cognate_sets:
                 new_style = {k: v for k, v in style.items()}
                 new_style["bgcolor"] = color
                 etetree.get_leaves_by_name(t)[0].img_style = NodeStyle(**new_style)
-    etetree.render(plots_path("ete-"+cognate+".pdf").as_posix(), tree_style=ts)
+    etetree.render(plots_path("-ete-"+cognate+".pdf").as_posix(), tree_style=ts)
 
 
 
