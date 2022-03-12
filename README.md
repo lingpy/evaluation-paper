@@ -38,7 +38,7 @@ $ python lexical-distances.py
 $ python analyze-distances.py --nqd
 $ python plot-distances.py
 $ python bootstrap.py
-$ Rscript step9-maximum-likelihood-tree.R
+$ Rscript maximum_likelihood_experiments.R
 ```
 
 ## Morpheme Annotation with the Help of the EDICTOR
