@@ -63,7 +63,6 @@ for idx in part:
 commands = [
     "set autoclose=yes nowarn=yes;",
     "lset coding=noabsencesites rates=gamma;",
-    "taxset MinGroup = FuzhouMin XiamenMin;",
     "prset clockratepr=exponential(3e5);",
     "prset treeagepr = uniform(1.5, 2.5);",
     "prset sampleprob=0.2 samplestrat=random speciationpr=exp(1);",
