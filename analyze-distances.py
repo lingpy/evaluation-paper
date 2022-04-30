@@ -1,5 +1,5 @@
 """
-Step 6: Analyze the correlation between step 2 and step 3, the correlation of distance matrices, and the tree distances.  
+Step 5: Analyze the correlation between step 2 and step 3, the correlation of distance matrices, and the tree distances.  
 
 Input:
 The plain text and the distance matrices in results/
@@ -62,9 +62,9 @@ cognate_sets = ["common", "loose", "strict", "salient"]
 matrix_doculect, matrix, tree_dict = {}, {}, {}
 for c in cognate_sets:
     matrix_doculect[c], matrix[c] = read_dst(
-        Path("results", "part_" + c + ".dst").as_posix()
+        Path("results", "full_" + c + ".dst").as_posix()
     )
-    tree_dict[c] = open(Path("results", "part_" + c + ".tre").as_posix()).read().strip()
+    tree_dict[c] = open(Path("results", "full_" + c + ".tre").as_posix()).read().strip()
 
 table = []
 for a, b in itertools.combinations(matrix, 2):
@@ -100,9 +100,9 @@ if "--nqd" in argv:
     print("\n# Similarity between Trees (Normalized Quartet Distance)\n")
     nqd_similarity = []
     for tA, tB in combinations(list(tree_dict), r=2):
-        tA_file = "/".join(["results", "part_" + tA + ".tre"])
+        tA_file = "/".join(["results", "full_" + tA + ".tre"])
         #tA_file = "/".join(["nexus-20211230", tA + ".tree.tre"])
-        tB_file = "/".join(["results", "part_" + tB + ".tre"])
+        tB_file = "/".join(["results", "full_" + tB + ".tre"])
         #tB_file = "/".join(["nexus-20211230", tB + ".tree.tre"])
         qd = subprocess.check_output(
             ["quartet_dist", "-v", tA_file, tB_file]

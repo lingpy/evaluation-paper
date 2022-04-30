@@ -1,5 +1,5 @@
 """
-Step 7: Select the data with target concepts (ranks <0.8) and output the data in pep.nex and MrBayes nex file 
+Step 6: Select the data with target concepts (ranks <0.8) and output the data in pep.nex and MrBayes nex file 
 
 Input:
 Fetch data from lexibank_liusinitic.
