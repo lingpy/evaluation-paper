@@ -1,29 +1,35 @@
 """
-Step 2: Computing Cross-Semantic Cognate Statistics. 
+Computing Cross-Semantic Cognate Statistics
 
-Input:
-Fetch data from lexibank_liusinitic.
-
-Output:
-1. File output: result/cross-semantic-cognate-statistics.tsv
-2. Standard output: concept, Chinese characters, and the cross-semantic cognate scores. 
+Step 2 of the workflow creates file
+`result/cross-semantic-cognate-statistics.tsv` and prints results to the
+terminal.
 """
 
-from pkg.code import cross_semantic_cognate_statistics, get_liusinitic, get_chinese_map
-from pkg.code import results_path
+from pkg.code import get_liusinitic, get_chinese_map, results_path
+from lingrex.evaluate import cross_semantic_cognate_statistics
+from tabulate import tabulate
 
-wl = get_liusinitic()
+# get the wordlist
+wordlist = get_liusinitic()
+
+# get a reference to Chinese characters
 chinese = get_chinese_map()
 
-# Calculate the score of cross semantic cognate statistics
+# calculate cross semantic cognate statistics
 scores = cross_semantic_cognate_statistics(
-    wl, ref="cogids", concept="concept", annotation="morphemes"
-)
+    wordlist, ref="cogids", concept="concept", morpheme_glosses="morphemes",
+    ignore_affixes=True)
 
-
+table = []
 with open(results_path("cross-semantic-cognate-statistics.tsv"), "w") as f:
     f.write("\t".join(["Concept", "Chinese", "Score", "Derivation\n"]))
-    for c, colex, d in scores:
+    for c, colex in scores:
         character = chinese[c]
-        f.write("\t".join([c, character, str(round(colex, 2)), d + "\n"]))
-        print("{0:20}| {1:.2f}| {2:15}| {3:15}".format(c, colex, d, character))
+        f.write("\t".join([c, character, "{0:.2f}".format(colex)]) + "\n")
+        table += [[
+            c, 
+            character,
+            "{0:.2f}".format(colex)]] 
+print(tabulate(table, headers=["Concept", "Chinese", "Score"], tablefmt="simple"))
+
