@@ -1,14 +1,8 @@
 """
 Compare Strict and Loose Cognate Sets in the Data.
 
-This is the first step of our workflow.
-
-Input:
-Fetch data from lexibank_liusinitic.
-
-Output:
-1. File output: `result/cognate-set-comparison.tsv` and `liusinitic/raw/liusinitic_ignored_IB.tsv`  
-2. Standard output: concepts, Chinese character, Precision, Recall and F-score.  
+This is the first step of our workflow. It writes results to the file
+`result/cognate-set-comparison.tsv`. 
 """
 
 from lingrex.evaluate import compare_cognate_sets

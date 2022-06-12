@@ -1,5 +1,49 @@
 # Evaluating the Performance of Computational Methods for Language Comparison in South-East-Asian Languages
 
+## Installation
+
+In order to install all code required to run the Python analyses, just type:
+
+```
+$ pip install -r requirements.txt
+```
+
+In order to run the MrBayes analyses, you need to install the MrBayes software.
+
+## Preparing the Wordlist File
+
+Our data is curated within the Lexibank repository and can be accessed in the form of a CLDF datasets at https://github.com/lexibank/liusinitic (we use version 1.2 in our experiments, archived with Zenodo under DOI [10.5281/zenodo.6634125](https://doi.org/10.5281/zenodo.6634125)).
+
+In order to run the code shown here, you won't need this repository, as we already converted the CLDF data into our LingPy wordlist format we need for the analysis. This file can be found at `edictor/liusinitic.tsv`. 
+
+However, if you want to replicate this step of the workflow, you can do so by cloning the GitHub repository and checking out the relevant version:
+
+```
+$ git clone https://github.com/lexibank/liusinitic/
+$ cd liusinitic
+$ git checkout v1.2
+```
+
+Alternatively, you can download the archived version and place it into this repository folder.
+
+Having done this, you can convert the data with the help of the `pyedictor` tool, which you should install first, and the Makefile.
+
+```
+$ pip install pyedictor
+$ make wordlist
+```
+
+This command will add strict, loose, common, and salient cognate identifiers from the partial cognate sets. The methods used for the conversion are described in detail in our paper. 
+
+The conversion to strict and loose cognates is implemented in LingPy (https://github.com/lingpy/lingpy, module `compare.partial`, as part of the `Partial` class). The new conversion methods for common and salient cognates are implemented in LingRex (https://github.com/lingpy/lingrex, as part of the `cognates` module).
+
+## Running Python Analysis with the Makefile
+
+In order to run the analysis up the creation of the Nexus files, you can just use our Makefile, or check the commands that are provided in there.
+
+We have numerated the commands, so typing `make part-one` will trigger the first analysis, `make part-two` will trigger the second analysis, etc.
+
+
 This tutorial supplements the study "Evaluating the Performance of
 Computational Methods for Language Comparison in South-East Asian Languages". In this
 tutorial, we explain in detail how our workflow can be tested and applied.
