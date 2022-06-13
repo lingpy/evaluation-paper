@@ -1,46 +1,28 @@
 """
-Step 3: This step calculates lexicostatistical distances between language pairs.
+Compute Lexical Distances for Different Cognate Codings
 
-Input:
-Fetch data from lexibank_liusinitic.
-
-Output:
-File output: 
-    result/part_*.tre (trees from the subset of data. The subset is drawn by the ranks from step 2. )
-    result/full_*.tre (trees from the post processed full dataset. The one downloaded from step 1.)
-    result/part_*.dst (pairwise distance matrices from the subset of data. The output is in the PHYLIP formats)
-    result/full_*.dst (pairwise distance matrices from post processed full dataset. The one downloaded from step 1. The output is in the PHYLIP formats)
-    result/results/liusinitic.word_cognate (wordlist format)
+The third step of our workflow also produces phylogenetic trees, based on the
+Neighbor-joining algorithm. Trees and distance matrices are written to the
+folder `results`, with matrices having the ending `.dst` and trees the ending
+`.tre`.
 """
-from lingpy.compare.partial import Partial
-from lingpy import Wordlist
 from lingpy.convert.strings import matrix2dst
 from collections import defaultdict
 from lingpy.algorithm.clustering import neighbor
-from lingpy.convert.strings import write_nexus
+from lingrex.evaluate import compare_cognate_sets
 
 from pkg.code import (
     get_liusinitic,
-    common_morpheme_cognates,
-    salient_cognates,
-    compare_cognate_sets,
     lexical_distances,
     get_revised_taxon_names,
     results_path
 )
 
-part = get_liusinitic(Partial, add_cognateset_ids=True)
-
+part = get_liusinitic()
 
 # Rename taxon
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
-
-# Add new cognate sets: common, salient, loose, strict
-common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
-salient_cognates(
-    part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
-)
 
 # An array with all the name of all the full cognate sets.
 cognate_sets = ["strict", "loose", "common", "salient"]
@@ -61,7 +43,7 @@ all_trees = open(results_path("all_trees.tre"), "w")
 
 # Compute the distance matrices
 for cognate in cognate_sets:
-    print("[i] computing phylogenetic trees for "+cognate)
+    print("[i] computing distances and trees "+cognate)
     key = cognate + "_dist"
     matrixP = lexical_distances(part, target_concepts, ref=cognate + "id")
     matrixF = lexical_distances(part, part.rows, ref=cognate + "id")

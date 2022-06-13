@@ -1,31 +1,58 @@
 # Evaluating the Performance of Computational Methods for Language Comparison in South-East-Asian Languages
 
-This tutorial supplements the study "Evaluating the Performance of
-Computational Methods for Language Comparison in South-East Asian Languages". In this
-tutorial, we explain in detail how our workflow can be tested and applied.
+## Installation
 
-We start by installing the dependencies from the command-line. To do so, we
-first download the code and the data from the website and execute the following
-command-lines. Note that you need to install `numpy` first directly, since `scikit-bio` requires the package as a dependency in order to be installed, which caused an error when trying to install all packages in one run.
+In order to install all code required to run the Python analyses, just type:
 
-```{.bash}
-$ cd evaluation-paper
+```
 $ pip install -r requirements.txt
-$ git pull https://github.com/lexibank/liusinitic.git
 ```
 
-You also need to install the data package `liusinitic`:
+In order to run the MrBayes analyses, you need to install the MrBayes software.
+
+## Preparing the Wordlist File
+
+Our data is curated within the Lexibank repository and can be accessed in the form of a CLDF datasets at https://github.com/lexibank/liusinitic (we use version 1.3 in our experiments, archived with Zenodo under DOI [10.5281/zenodo.6634125](https://doi.org/10.5281/zenodo.6637640)).
+
+In order to run the code shown here, you won't need this repository, as we already converted the CLDF data into our LingPy wordlist format we need for the analysis. This file can be found at `edictor/liusinitic.tsv`. 
+
+However, if you want to replicate this step of the workflow, you can do so by cloning the GitHub repository and checking out the relevant version:
 
 ```
-$ pip install -e liusinitic
+$ git clone https://github.com/lexibank/liusinitic/
+$ cd liusinitic
+$ git checkout v1.2
 ```
 
-The stand-alone software `tqDist` was applied to compute the *normalized
-quartet distance (NQD)* from two given phylogenies. The [`tqDist`
-website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on
-the installation and usages.
+Alternatively, you can download the archived version and place it into this repository folder.
 
-The stand-alone software `MrBayes` was used to compute the Bayesian phylogenies. The installation instruction can be found on [MrBayes website](https://nbisweden.github.io/MrBayes/download.html).
+Having done this, you can convert the data with the help of the `pyedictor` tool, which you should install first, and the Makefile.
+
+```
+$ pip install pyedictor
+$ make wordlist
+```
+
+This command will add strict, loose, common, and salient cognate identifiers from the partial cognate sets. The methods used for the conversion are described in detail in our paper. 
+
+The conversion to strict and loose cognates is implemented in LingPy (https://github.com/lingpy/lingpy, module `compare.partial`, as part of the `Partial` class). The new conversion methods for common and salient cognates are implemented in LingRex (https://github.com/lingpy/lingrex, as part of the `cognates` module).
+
+## Running Python Analysis with the Makefile
+
+In order to run the analysis up the creation of the Nexus files, you can just use our Makefile, or check the commands that are provided in there.
+
+We have numerated the commands, so typing `make part-one` will trigger the first analysis, `make part-two` will trigger the second analysis, etc.
+
+So you can just type:
+
+```
+$ make part-one
+$ make part-two
+$ make part-three
+$ make part-four
+$ make part-five
+$ make part-six
+```
 
 ## Summary of all Scripts
 
@@ -35,24 +62,14 @@ The following summary shows all scripts that you can run at once to replicate th
 $ python cognate-set-comparison.py
 $ python cross-semantic-cognate-statistics.py
 $ python lexical-distances.py
-$ python analyze-distances.py --nqd
 $ python plot-distances.py
+$ python analyze-distances.py
 $ python export-nexus.py
 ```
 
-## Morpheme Annotation with the Help of the EDICTOR
-
-Assuming that you are familiar with the basic features of the EDICTOR, you can
-annotate morpheme glosses in your data for saliency by first making sure
-morpheme glosses have been added to your data (see our file at
-`liusinitic/raw/liusinitic.tsv` for an example). When you load your data in
-the EDICTOR interface, you can then toggle the individual morpheme glosses for
-each word by right-clicking the morpheme gloss with the mouse. Check again our
-sample file to see how we have done this for the current dataset on Chinese
-dialects.
 
 
-## Comparing Cognate Sets
+### 1 Comparing Cognate Sets
 
 We first convert the partial cognates to full cognates with **"loose"** and
 **"strict"** conversion methods via LingPy's `add_cognate_ids` function. And
@@ -104,7 +121,7 @@ The output is given in part in the following table.
 | head     | 3.90909  |          |    頭,得腦        |
 | belly    | 3.95     | !derivation! |  肚子,肚皮,肚  |
 
-# Deriving Distance Matrices from Cognate Sets
+### 2 Deriving Distance and Comparing Matrices from Cognate Sets
 
 The script `lexical-distances.py` reports the distance matrices which derive
 from the four types of full cognate sets, namely, "loose", "strict", "greedy",
@@ -114,8 +131,6 @@ account concepts with F-scores lower than 0.8.
 ```
 $ python lexical-distances.py 
 ```
-
-# Statistics and Tree Comparison
 
 The script `analyze-distances.py` calculates four different statistics:
 * the correlation between the cross semantic cognate statistics and the cognate set comparison
@@ -133,8 +148,6 @@ Additionally, adding the argument `--nqd` calculates the NQD distance.
 $ python analyze-distances.py --nqd
 ```
 
-# Visualizing the Distance Matrices
-
 To visualize the distance matrices, simply use the following command:
 
 ```
@@ -143,7 +156,7 @@ $ python plot-distances.py
 
 Results are written to the folder `plots`.
 
-# Bayesian Phylogenetic Analysis
+### 3 Bayesian Phylogenetic Analysis
 
 To export the nexus files for conducting Bayesian phylogenetic analysis, type the following command in the terminal:
 
@@ -151,5 +164,5 @@ To export the nexus files for conducting Bayesian phylogenetic analysis, type th
 $ python export-nexus.py
 ```
 
-The files can be found in the folder `bayes`
+The files can be found in the folder `bayes`. To run individual analyses from MrBayes, you best open the interactive mode in MrBayes and then run `execute filename.nexus`. Afterwards, you type `mcmc` and this should trigger the analysis, which can well take some time, depending on the speed of your machine.
  

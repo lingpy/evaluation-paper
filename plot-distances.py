@@ -1,26 +1,17 @@
 """
-Step 4: Compute heatmaps from the lexical distances.
+Plot Lexical Distances with Heatmaps
 
-Input:
-Fetch data from lexibank_liusinitic.
-
-Output:
-File output: 
-    plots/loose.pdf
-    plots/strict.pdf
-    plots/difference.pdf
+Heatmaps are written to the folder `plots`, along with the underlying matrices.
 """
 
 from lingpy import *
-from pathlib import Path
 from lingpy.convert.plot import plot_heatmap
-from lingpy.compare.partial import Partial
 from itertools import combinations, product
 import matplotlib.colors as colors
 import matplotlib.pyplot as plt
-from pkg.code import get_liusinitic, get_ordered_taxa, get_revised_taxon_names
-from pkg.code import plots_path
-
+from pkg.code import (
+        get_liusinitic, get_ordered_taxa, get_revised_taxon_names,
+        plots_path)
 
 part = get_liusinitic()
 tree, taxa = get_ordered_taxa()
@@ -59,7 +50,7 @@ plot_heatmap(
     tree=tree,
     matrix=matrixS,
     filename=plots_path("strict").as_posix(),
-    cmap=plt.cm.RdBu,
+    cmap=plt.cm.coolwarm,
     left=0.09,
     textsize=6.5,
     figsize=(8.4, 4.5),
@@ -72,7 +63,7 @@ plot_heatmap(
     tree=tree,
     matrix=matrixL,
     filename=plots_path("loose").as_posix(),
-    cmap=plt.cm.RdBu,
+    cmap=plt.cm.coolwarm,
     left=0.09,
     textsize=6.5,
     figsize=(8.4, 4.5),
@@ -86,7 +77,7 @@ plot_heatmap(
     matrix=matrixD,
     filename=plots_path("difference").as_posix(),
     vmax=0.3,
-    cmap=plt.cm.RdBu,
+    cmap=plt.cm.coolwarm,
     left=0.09,
     textsize=6.5,
     width=0.85,
