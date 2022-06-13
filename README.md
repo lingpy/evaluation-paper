@@ -12,7 +12,7 @@ In order to run the MrBayes analyses, you need to install the MrBayes software.
 
 ## Preparing the Wordlist File
 
-Our data is curated within the Lexibank repository and can be accessed in the form of a CLDF datasets at https://github.com/lexibank/liusinitic (we use version 1.2 in our experiments, archived with Zenodo under DOI [10.5281/zenodo.6634125](https://doi.org/10.5281/zenodo.6634125)).
+Our data is curated within the Lexibank repository and can be accessed in the form of a CLDF datasets at https://github.com/lexibank/liusinitic (we use version 1.3 in our experiments, archived with Zenodo under DOI [10.5281/zenodo.6634125](https://doi.org/10.5281/zenodo.6637640)).
 
 In order to run the code shown here, you won't need this repository, as we already converted the CLDF data into our LingPy wordlist format we need for the analysis. This file can be found at `edictor/liusinitic.tsv`. 
 
@@ -43,33 +43,16 @@ In order to run the analysis up the creation of the Nexus files, you can just us
 
 We have numerated the commands, so typing `make part-one` will trigger the first analysis, `make part-two` will trigger the second analysis, etc.
 
-
-This tutorial supplements the study "Evaluating the Performance of
-Computational Methods for Language Comparison in South-East Asian Languages". In this
-tutorial, we explain in detail how our workflow can be tested and applied.
-
-We start by installing the dependencies from the command-line. To do so, we
-first download the code and the data from the website and execute the following
-command-lines. Note that you need to install `numpy` first directly, since `scikit-bio` requires the package as a dependency in order to be installed, which caused an error when trying to install all packages in one run.
-
-```{.bash}
-$ cd evaluation-paper
-$ pip install -r requirements.txt
-$ git pull https://github.com/lexibank/liusinitic.git
-```
-
-You also need to install the data package `liusinitic`:
+So you can just type:
 
 ```
-$ pip install -e liusinitic
+$ make part-one
+$ make part-two
+$ make part-three
+$ make part-four
+$ make part-five
+$ make part-six
 ```
-
-The stand-alone software `tqDist` was applied to compute the *normalized
-quartet distance (NQD)* from two given phylogenies. The [`tqDist`
-website](https://users-cs.au.dk/cstorm/software/tqdist/) gives instructions on
-the installation and usages.
-
-The stand-alone software `MrBayes` was used to compute the Bayesian phylogenies. The installation instruction can be found on [MrBayes website](https://nbisweden.github.io/MrBayes/download.html).
 
 ## Summary of all Scripts
 

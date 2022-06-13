@@ -1,41 +1,27 @@
 """
-Step 6: Select the data with target concepts (ranks <0.8) and output the data in pep.nex and MrBayes nex file 
+Export Data to Nexus Files for Phylogenetic Analysis
 
-Input:
-Fetch data from lexibank_liusinitic.
-
-Output:
-File output: 
-    nexus/*.bayes.nex (for MrBayes)
-    nexus/*.paps.nex (for maximum likelihood tree/networks)
+Final step of our workflow, produces various Nexus files, to be analyzed with
+MrBayes, written to the folder `bayes`.
 """
 
-from lingpy.compare.partial import Partial
 from lingpy import Wordlist
 from lingpy.convert.strings import matrix2dst
 from collections import defaultdict
-from lingpy.algorithm.clustering import neighbor
 from lingpy.convert.strings import write_nexus
+from lingrex.evaluate import compare_cognate_sets
 
 from pkg.code import (
     get_liusinitic,
-    common_morpheme_cognates,
-    salient_cognates,
-    compare_cognate_sets,
     lexical_distances,
     get_revised_taxon_names,
     nexus_path
 )
 
-part = get_liusinitic(Partial, add_cognateset_ids=True)
+part = get_liusinitic()
 languages = get_revised_taxon_names()
 taxa = [languages[t] for t in part.cols]
 
-# add new cognate sets
-common_morpheme_cognates(part, ref="cogids", cognates="commonid", override=True)
-salient_cognates(
-    part, ref="cogids", cognates="salientid", morphemes="morphemes", override=True
-)
 
 # An array with all the name of all the full cognate sets.
 cognate_sets = ["strict", "loose", "common", "salient"]
