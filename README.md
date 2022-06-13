@@ -62,24 +62,14 @@ The following summary shows all scripts that you can run at once to replicate th
 $ python cognate-set-comparison.py
 $ python cross-semantic-cognate-statistics.py
 $ python lexical-distances.py
-$ python analyze-distances.py --nqd
 $ python plot-distances.py
+$ python analyze-distances.py
 $ python export-nexus.py
 ```
 
-## Morpheme Annotation with the Help of the EDICTOR
-
-Assuming that you are familiar with the basic features of the EDICTOR, you can
-annotate morpheme glosses in your data for saliency by first making sure
-morpheme glosses have been added to your data (see our file at
-`liusinitic/raw/liusinitic.tsv` for an example). When you load your data in
-the EDICTOR interface, you can then toggle the individual morpheme glosses for
-each word by right-clicking the morpheme gloss with the mouse. Check again our
-sample file to see how we have done this for the current dataset on Chinese
-dialects.
 
 
-## Comparing Cognate Sets
+### 1 Comparing Cognate Sets
 
 We first convert the partial cognates to full cognates with **"loose"** and
 **"strict"** conversion methods via LingPy's `add_cognate_ids` function. And
@@ -131,7 +121,7 @@ The output is given in part in the following table.
 | head     | 3.90909  |          |    頭,得腦        |
 | belly    | 3.95     | !derivation! |  肚子,肚皮,肚  |
 
-# Deriving Distance Matrices from Cognate Sets
+### 2 Deriving Distance and Comparing Matrices from Cognate Sets
 
 The script `lexical-distances.py` reports the distance matrices which derive
 from the four types of full cognate sets, namely, "loose", "strict", "greedy",
@@ -141,8 +131,6 @@ account concepts with F-scores lower than 0.8.
 ```
 $ python lexical-distances.py 
 ```
-
-# Statistics and Tree Comparison
 
 The script `analyze-distances.py` calculates four different statistics:
 * the correlation between the cross semantic cognate statistics and the cognate set comparison
@@ -160,8 +148,6 @@ Additionally, adding the argument `--nqd` calculates the NQD distance.
 $ python analyze-distances.py --nqd
 ```
 
-# Visualizing the Distance Matrices
-
 To visualize the distance matrices, simply use the following command:
 
 ```
@@ -170,7 +156,7 @@ $ python plot-distances.py
 
 Results are written to the folder `plots`.
 
-# Bayesian Phylogenetic Analysis
+### 3 Bayesian Phylogenetic Analysis
 
 To export the nexus files for conducting Bayesian phylogenetic analysis, type the following command in the terminal:
 
@@ -178,5 +164,5 @@ To export the nexus files for conducting Bayesian phylogenetic analysis, type th
 $ python export-nexus.py
 ```
 
-The files can be found in the folder `bayes`
+The files can be found in the folder `bayes`. To run individual analyses from MrBayes, you best open the interactive mode in MrBayes and then run `execute filename.nexus`. Afterwards, you type `mcmc` and this should trigger the analysis, which can well take some time, depending on the speed of your machine.
  
