@@ -35,7 +35,6 @@ jedi==0.18.1
 joblib==1.1.0
 kiwisolver==1.4.2
 latexcodec==2.0.1
--e git+https://github.com/lexibank/liusinitic.git@e3c9bb13be450047dbd23c47235926236edb8f6e#egg=lexibank_liusinitic&subdirectory=../../liusinitic
 lexibase==0.1.0
 linglit==0.3.0
 lingpy==2.6.9
