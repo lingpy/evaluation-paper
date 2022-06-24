@@ -1,4 +1,4 @@
-# Evaluating the Performance of Computational Methods for Language Comparison in South-East-Asian Languages
+# Annotating Cognates in Phylogenetic Studies of South-East Asian Languages [Supplement]
 
 ## Installation
 
@@ -21,7 +21,7 @@ However, if you want to replicate this step of the workflow, you can do so by cl
 ```
 $ git clone https://github.com/lexibank/liusinitic/
 $ cd liusinitic
-$ git checkout v1.2
+$ git checkout v1.3
 ```
 
 Alternatively, you can download the archived version and place it into this repository folder.
